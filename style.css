@@ -42,11 +42,13 @@ h1,.font-size-36{font-size: 2.25rem;}
 /* Menus */
 header{overflow: hidden;}
 .nav-top{
-    position: fixed;
-    z-index: 1000;
+    position: absolute;
+    /* z-index: 1000; */
     box-shadow: 0 0 1.3rem rgb(30,2,18,.8);
 
 }
+.sticky { position: fixed; top: 0; width: 100%; z-index: 1500; }
+
 .logo-CP{background: url(img/CP-logo.svg) no-repeat; width: 50px; height: 50px;}
 .logo-CP:hover{background: url(img/CP-logo-hover.svg);}
 nav ul{scroll-behavior : smooth ;/* défilement */}
@@ -132,139 +134,8 @@ nav ul{scroll-behavior : smooth ;/* défilement */}
 .kerauto{background: url(img/kerauto-min.jpg)  no-repeat center;}
 .modularite{background: url(img/modularite-min.jpg)  no-repeat center;}
 .flappy-mario{background: url(img/flappy-mario-min.jpg)  no-repeat center;}
-.card {
-    border: none!important;
-    position: relative;
-    border-radius: 0;
-    /* perspective: 150rem;
-    -moz-perspective: 150rem; */
-  }
-  .card__side {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    -webkit-transition: all .8s ease;
-    transition: all .8s ease;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
-    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
 
-  }
-  .card{
-      overflow: hidden;
-  }
-  .card__side--front {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
   
-  .card__side--back {
-    justify-content: center;
-    align-items: center;
-    /* transform: rotateY(-180deg); */
-  }
-  
-  .card:hover .card__side--front {
-    /* transform: rotateY(180deg); */
-    transform: translateX(400px);
-    transition-timing-function : ease-out;
-  }
-  
-  /* .card:hover .card__side--back {
-    transform: rotateY(0);
-  } */
-.download-cv{
-    display: block;
-    width: 3.1725rem;
-    height: 3.125rem;
-    background-image: url(img/logo-cv.svg);
-    
-}
-.download-cv:hover{
-    background-image: url(img/logo-cv-hover.svg);
-}
-/*animation sur btn CV*/
-.heartbeat{
-    -webkit-animation: heartbeat 2s ease-in-out infinite both;
-    animation: heartbeat 2s ease-in-out infinite both;
-}
- @-webkit-keyframes heartbeat {
-    from {
-      -webkit-transform: scale(1);
-              transform: scale(1);
-      -webkit-transform-origin: center center;
-              transform-origin: center center;
-      -webkit-animation-timing-function: ease-out;
-              animation-timing-function: ease-out;
-    }
-    10% {
-      -webkit-transform: scale(0.8);
-              transform: scale(0.8);
-      -webkit-animation-timing-function: ease-in;
-              animation-timing-function: ease-in;
-    }
-    17% {
-      -webkit-transform: scale(0.98);
-              transform: scale(0.98);
-      -webkit-animation-timing-function: ease-out;
-              animation-timing-function: ease-out;
-    }
-    33% {
-      -webkit-transform: scale(0.7);
-              transform: scale(0.7);
-      -webkit-animation-timing-function: ease-in;
-              animation-timing-function: ease-in;
-    }
-    45% {
-      -webkit-transform: scale(1);
-              transform: scale(1);
-      -webkit-animation-timing-function: ease-out;
-              animation-timing-function: ease-out;
-    }
-  }
-  @keyframes heartbeat {
-    from {
-      -webkit-transform: scale(1);
-              transform: scale(1);
-      -webkit-transform-origin: center center;
-              transform-origin: center center;
-      -webkit-animation-timing-function: ease-out;
-              animation-timing-function: ease-out;
-    }
-    10% {
-      -webkit-transform: scale(0.8);
-              transform: scale(0.8);
-      -webkit-animation-timing-function: ease-in;
-              animation-timing-function: ease-in;
-    }
-    17% {
-      -webkit-transform: scale(0.98);
-              transform: scale(0.98);
-      -webkit-animation-timing-function: ease-out;
-              animation-timing-function: ease-out;
-    }
-    33% {
-      -webkit-transform: scale(0.7);
-              transform: scale(0.7);
-      -webkit-animation-timing-function: ease-in;
-              animation-timing-function: ease-in;
-    }
-    45% {
-      -webkit-transform: scale(1);
-              transform: scale(1);
-      -webkit-animation-timing-function: ease-out;
-              animation-timing-function: ease-out;
-    }
-  }
-
-
 
 /* Contact */
 .bg-contact{
@@ -310,9 +181,8 @@ input{
 #footer-menu-legalenotice li a{color: rgb(97,190,223);}
 #copy-akaleya{color: #fff;}
 #copy-akaleya:hover{color: rgb(97,190,223);}
-@media only screen and (max-width: 575px){
+@media only screen and (min-width: 575px){
     .bg-graphiste{
-        height: 100vh;
         background: url(img/graphiste-h576.jpg) left top no-repeat;
     }
     .bg-guitare{background: url(img/guitare-575.png) left bottom 1rem no-repeat;}
@@ -351,9 +221,9 @@ input{
     .bg-contact{background: linear-gradient( rgb(163,116,148) 58%, rgb(162,218,234) 42%);}
     #navigation ul{padding-right: 40%;}
 }
-@media only screen and (max-width: 767px){
+@media only screen and (min-width: 767px){
     .bg-graphiste{
-        height: 100vh;
+        height: 92vh;
         background: url(img/graphiste-h1024.jpg) left top no-repeat;
     }
     .bg-guitare{background: url(img/guitare-767.png) left bottom no-repeat;}
