@@ -1,3 +1,10 @@
+
+.gitignore
+.htaccess
+.git
+favicon.ico
+Modification du site.txt
+recaptcha.php
 # Node rules:
 ## Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
 .grunt
@@ -14,3 +21,12 @@ _book
 *.epub
 *.mobi
 *.pdf
+
+font/
+pokemon-master/
+blueasy/
+doc/
+flappy-mario/
+img/
+vins-francais/
+snowagency/
