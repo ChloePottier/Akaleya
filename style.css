@@ -29,7 +29,7 @@ a:hover{text-decoration: none;}
         url('font/BebasNeue-Regular.woff') format('woff'),
         url('font/BebasNeue-Regular.woff2') format('woff2'),
         url('font/BebasNeue-Regular.ttf') format('ttf');}
-h1,.font-family-bebas{font-family: 'BebasNeue';}
+h1,h2,h3,.font-family-bebas{font-family: 'BebasNeue';}
 h1,.font-size-36{font-size: 2.25rem;}
 .font-size-31{font-size: 1.93rem;}
 .font-size-24{font-size: 1.5rem;}
