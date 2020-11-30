@@ -50,6 +50,8 @@ header{overflow: hidden;}
 
 .nav-top{position: absolute;    box-shadow: 0 0 1.3rem rgb(30,2,18,.8);}
 .sticky { position: fixed; top: 0; width: 100%; z-index: 1500;}
+.dis-none{display:none;}
+.dis-block{display: block; }
 .logo-akaleya{background: url(img/akaleya-logo-menu.png) no-repeat; width: 200px; height: 52px;}
 .logo-akaleya:hover{background: url(img/akaleya-logo-menu.png) no-repeat; }
 nav ul{scroll-behavior : smooth ;/* défilement */}
@@ -89,8 +91,7 @@ nav ul{scroll-behavior : smooth ;/* défilement */}
 }
 .display-none{display:none;}
 .display-flex{display: flex; flex-direction: column;}
-.dis-none{display:none;}
-.dis-block{display: block; }
+
 .burger span:last-child {
     margin-bottom:0px;
 }
@@ -188,19 +189,10 @@ input{
     background-image: url(img/logo-lindekin-hover.svg);
 }
 /* FOOTER */
-#footer-menu-legalenotice li a{
-    color: rgb(97,190,223);
-    /* color: #FFDF30; */
-}
-#footer-menu-legalenotice li a:hover{
-    /* color: rgb(97,190,223); */
-    color: #FFDF30;
-}
+#footer-menu-legalenotice li a{color: rgb(97,190,223);}
+#footer-menu-legalenotice li a:hover{ color: #FFDF30;}
 #copy-akaleya{color: #fff;}
-#copy-akaleya:hover{
-    color: rgb(97,190,223);
-    /* color: #FFDF30; */
-}
+#copy-akaleya:hover{color: rgb(97,190,223);}
 @media only screen and (min-width: 575px){
     .bg-graphiste{
         background: url(img/graphiste-h576.jpg) left top no-repeat;

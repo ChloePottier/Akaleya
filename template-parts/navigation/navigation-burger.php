@@ -8,6 +8,7 @@
             </label>
             <nav class="menu-burger display-none bg-prune-dark-op70 px-auto" id="navigation">
                 <ul class="list-unstyled font-family-bebas font-size-31 text-right pt-9">
+                    <li><a href="index.php">HOME</a></li>
                     <?php  include 'template-parts/navigation/navigation-items.php';?>
                 </ul>
             </nav>
