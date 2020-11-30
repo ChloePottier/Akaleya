@@ -20,6 +20,7 @@
             </div>
             <?php include "template-parts/content/services.php"; ?>
         </div>
+</div>
 </section>
 <section id="portfolio" class="container-fluid">
     <div class="container h-100">

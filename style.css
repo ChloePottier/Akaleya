@@ -49,8 +49,8 @@ header{overflow: hidden;}
 }
 .sticky { position: fixed; top: 0; width: 100%; z-index: 1500; }
 
-.logo-CP{background: url(img/CP-logo.svg) no-repeat; width: 50px; height: 50px;}
-.logo-CP:hover{background: url(img/CP-logo-hover.svg);}
+.logo-akaleya{background: url(img/CP-logo.svg) no-repeat; width: 100px; height: 50px;}
+.logo-akaleya:hover{background: url(img/CP-logo-hover.svg);}
 nav ul{scroll-behavior : smooth ;/* défilement */}
 .menu-nav ul li a{
     padding-left: 1rem;
@@ -122,7 +122,8 @@ nav ul{scroll-behavior : smooth ;/* défilement */}
       transform: rotate(180deg);
     }
   }
-  
+/* SERVICES */
+#services p {text-align: justify; }
 /* Portfolio */
 .h-250{height:250px;}
 .border{border: solid 1px #b2b2b2 !important;}
