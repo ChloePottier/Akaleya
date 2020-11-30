@@ -23,6 +23,7 @@ _book
 *.pdf
 
 font/
+webfonts/
 pokemon-master/
 blueasy/
 doc/

@@ -6,7 +6,10 @@ body{font-family: Arial, Helvetica, sans-serif; font-size: 100%; }
 ::placeholder{color: rgb(91,19,60);}
 .text-white{ color: #fff;}
 .text-prune{color: rgb(145,33,92);}
-.text-blue{color: rgb(97,190,223);}
+.text-blue{
+    color: rgb(97,190,223);
+    /* color: #FFDF30; */
+}
 .bg-blue{background-color: rgb(97,190,223);}
 .bg-blue-light{background-color: rgb(162,218,234);}
 .bg-prune-light{background-color: rgb(163,116,148);}
@@ -30,6 +33,7 @@ a:hover{text-decoration: none;}
         url('font/BebasNeue-Regular.woff2') format('woff2'),
         url('font/BebasNeue-Regular.ttf') format('ttf');}
 h1,h2,h3,.font-family-bebas{font-family: 'BebasNeue';}
+.font-size-56{font-size: 2.5rem;}
 h1,.font-size-36{font-size: 2.25rem;}
 .font-size-31{font-size: 1.93rem;}
 .font-size-24{font-size: 1.5rem;}
@@ -41,22 +45,17 @@ h1,.font-size-36{font-size: 2.25rem;}
 .bold{font-weight: 600;}
 /* Menus */
 header{overflow: hidden;}
-.nav-top{
-    position: absolute;
-    /* z-index: 1000; */
-    box-shadow: 0 0 1.3rem rgb(30,2,18,.8);
-
-}
+.nav-top{position: absolute;    box-shadow: 0 0 1.3rem rgb(30,2,18,.8);}
 .sticky { position: fixed; top: 0; width: 100%; z-index: 1500; }
-
-.logo-akaleya{background: url(img/CP-logo.svg) no-repeat; width: 100px; height: 50px;}
-.logo-akaleya:hover{background: url(img/CP-logo-hover.svg);}
+.logo-akaleya{background: url(img/akaleya-logo-menu.png) no-repeat; width: 200px; height: 52px;}
+.logo-akaleya:hover{background: url(img/akaleya-logo-menu.png) no-repeat; }
 nav ul{scroll-behavior : smooth ;/* défilement */}
 .menu-nav ul li a{
     padding-left: 1rem;
 }
 .menu-nav ul li a:hover{
     color: rgba(97,190,223);
+    /* color: #FFDF30; */
     text-decoration: none;
 }
 #navigation{
@@ -71,6 +70,7 @@ nav ul{scroll-behavior : smooth ;/* défilement */}
 }
 #navigation ul li a:hover{
     color: rgb(97,190,223);
+    /* color: #FFDF30; */
 }
 #navigation ul{padding-right: 35%;}
 .burger {
@@ -124,6 +124,10 @@ nav ul{scroll-behavior : smooth ;/* défilement */}
   }
 /* SERVICES */
 #services p {text-align: justify; }
+#services h3{
+    /* color: #FFDF30; */
+    color:rgb(97,190,223);
+}
 /* Portfolio */
 .h-250{height:250px;}
 .border{border: solid 1px #b2b2b2 !important;}
@@ -179,23 +183,24 @@ input{
     background-image: url(img/logo-lindekin-hover.svg);
 }
 /* FOOTER */
-#footer-menu-legalenotice li a{color: rgb(97,190,223);}
+#footer-menu-legalenotice li a{
+    color: rgb(97,190,223);
+    /* color: #FFDF30; */
+}
+#footer-menu-legalenotice li a:hover{
+    /* color: rgb(97,190,223); */
+    color: #FFDF30;
+}
 #copy-akaleya{color: #fff;}
-#copy-akaleya:hover{color: rgb(97,190,223);}
+#copy-akaleya:hover{
+    color: rgb(97,190,223);
+    /* color: #FFDF30; */
+}
 @media only screen and (min-width: 575px){
     .bg-graphiste{
         background: url(img/graphiste-h576.jpg) left top no-repeat;
     }
     .bg-guitare{background: url(img/guitare-575.png) left bottom 1rem no-repeat;}
-    .download-cv{
-        display: block;
-        width: 4.375rem;
-        height: 4.375rem;
-        background-image: url(img/logo-cv-70.svg);
-    }
-    .download-cv:hover{
-        background-image: url(img/logo-cv-hover-70.svg);
-    }
     .snow-agency{background: url(img/snow-agency-min-sm.jpg) no-repeat center;}
     .blueasy{background: url(img/blueasy-min-sm.jpg) no-repeat center;}
     .vin-fr{background: url(img/vin-fr-min-sm.jpg)  no-repeat center;}
@@ -223,49 +228,20 @@ input{
     #navigation ul{padding-right: 40%;}
 }
 @media only screen and (min-width: 767px){
+    .font-size-56{font-size: 3.5rem;}
+
     .bg-graphiste{
         height: 92vh;
         background: url(img/graphiste-h1024.jpg) left top no-repeat;
     }
     .bg-guitare{background: url(img/guitare-767.png) left bottom no-repeat;}
 
+
     .bg-contact{
         background: linear-gradient( rgb(163,116,148) 62%, rgb(162,218,234) 40%);
     }
     #contact .w-75{width: 100%!important;}
-    #submit_button{width: 100%;}
-    .card {
-        border: none!important;
-        position: relative;
-        
-      }
-      .card .bg-prune-dark{background-color: rgba(0, 0, 0, 0.7);}
-      .card__side {
-        transition: none;
-        position: absolute;
-        width: 95%;
-        bottom: 0;
-        top:auto;
-        left: 0;
-        -webkit-backface-visibility: visible;
-        backface-visibility: visible;
-        border-radius: 0px;
-        -webkit-box-shadow: none;
-        box-shadow: none;
-      }
-      .card__side--front {height: 100%; z-index: 1;}
-      .card__side--back {
-        height: auto;
-        transform: none;
-        z-index: 10;
-      }
-      .card:hover .card__side--front {
-        transform: none;
-      }
-      
-      .card:hover .card__side--back {
-        transform: none;
-      }
+    #submit_button{width: 100%;}   
       .pb-sm-6{padding-bottom: 4rem;}
 }
 

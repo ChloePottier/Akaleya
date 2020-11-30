@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.js">
     <link rel="prelaod" href="css/animate.css"  as="style">
+    <link rel="stylesheet" href="css/all.css"  >
     <link rel="stylesheet" href="style.css"  >
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Akaleya - Graphisme et création de site internet - Petite Montagne - Jura</title>
