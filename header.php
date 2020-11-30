@@ -5,7 +5,7 @@
         <?php include 'template-parts/navigation/navigation-burger.php'; ?>
         <?php include 'template-parts/header/logo-header.php'; ?>
     </div>
-    <div class="container-fluid  nav-top d-none d-md-block nav-top bg-white position-absolute" id="navbar">
+    <div class="container-fluid  nav-top bg-white " id="navbar">
         <?php include 'template-parts/navigation/navigation-top.php'; ?>
     </div>
 </header>

@@ -46,7 +46,7 @@ h1,.font-size-36{font-size: 2.25rem;}
 /* Menus */
 header{overflow: hidden;}
 .nav-top{position: absolute;    box-shadow: 0 0 1.3rem rgb(30,2,18,.8);}
-.sticky { position: fixed; top: 0; width: 100%; z-index: 1500; }
+.sticky { position: fixed; top: 0; width: 100%; z-index: 1500;}
 .logo-akaleya{background: url(img/akaleya-logo-menu.png) no-repeat; width: 200px; height: 52px;}
 .logo-akaleya:hover{background: url(img/akaleya-logo-menu.png) no-repeat; }
 nav ul{scroll-behavior : smooth ;/* défilement */}
@@ -86,6 +86,8 @@ nav ul{scroll-behavior : smooth ;/* défilement */}
 }
 .display-none{display:none;}
 .display-flex{display: flex; flex-direction: column;}
+.dis-none{display:none;}
+.dis-block{display: block; }
 .burger span:last-child {
     margin-bottom:0px;
 }
