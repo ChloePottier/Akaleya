@@ -45,6 +45,9 @@ h1,.font-size-36{font-size: 2.25rem;}
 .bold{font-weight: 600;}
 /* Menus */
 header{overflow: hidden;}
+#navbarTop ul li a{ color: white; margin: 0 1rem;}
+#navbarTop ul li a:hover{ color: rgb(97,190,223);}
+
 .nav-top{position: absolute;    box-shadow: 0 0 1.3rem rgb(30,2,18,.8);}
 .sticky { position: fixed; top: 0; width: 100%; z-index: 1500;}
 .logo-akaleya{background: url(img/akaleya-logo-menu.png) no-repeat; width: 200px; height: 52px;}
@@ -231,17 +234,9 @@ input{
 }
 @media only screen and (min-width: 767px){
     .font-size-56{font-size: 3.5rem;}
-
-    .bg-graphiste{
-        height: 92vh;
-        background: url(img/graphiste-h1024.jpg) left top no-repeat;
-    }
+    .bg-graphiste{        background: url(img/graphiste-h1024.jpg) left top no-repeat;    }
     .bg-guitare{background: url(img/guitare-767.png) left bottom no-repeat;}
-
-
-    .bg-contact{
-        background: linear-gradient( rgb(163,116,148) 62%, rgb(162,218,234) 40%);
-    }
+    .bg-contact{background: linear-gradient( rgb(163,116,148) 62%, rgb(162,218,234) 40%);    }
     #contact .w-75{width: 100%!important;}
     #submit_button{width: 100%;}   
       .pb-sm-6{padding-bottom: 4rem;}

@@ -3,6 +3,7 @@ window.onscroll = function() {
 };
 
 var navbar = document.getElementById("navbar");
+var navbarTop = document.getElementById('navbarTop');
 var sticky = navbar.offsetTop;
 
 // function stickyToScroll() {
@@ -23,6 +24,7 @@ function stickyToScroll() {
         navbar.classList.remove("sticky");
         navbar.classList.remove("dis-block");
         navbar.classList.add("dis-none");
+
 
 
 
