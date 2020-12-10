@@ -10,9 +10,14 @@ function stickyToScroll() {
         navbar.classList.add("sticky");
         navbar.classList.add("dis-block");
         navbar.classList.remove("dis-none");
+        navbar.classList.add('fondu');
+        
     } else {
         navbar.classList.remove("sticky");
         navbar.classList.remove("dis-block");
         navbar.classList.add("dis-none");
+        navbar.classList.remove('fondu');
+        
+
     }
 }

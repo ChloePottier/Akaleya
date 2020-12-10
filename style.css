@@ -30,7 +30,7 @@ a:hover{text-decoration: none;}
         url('font/BebasNeue-Regular.woff') format('woff'),
         url('font/BebasNeue-Regular.woff2') format('woff2'),
         url('font/BebasNeue-Regular.ttf') format('ttf');}
-h1,h2,h3,.font-family-bebas{font-family: 'BebasNeue';}
+h1,h2,h3,.font-family-bebas{font-family: 'BebasNeue'; margin: 0!important;}
 .font-size-56{font-size: 2.5rem;}
 h1,.font-size-36{font-size: 2.25rem;}
 .font-size-31{font-size: 1.93rem;}
@@ -42,10 +42,19 @@ h1,.font-size-36{font-size: 2.25rem;}
 .line-height{line-height: 1.8rem;}
 .bold{font-weight: 600;}
 /* Menus */
+/*
+} */
 header{overflow: hidden;}
-#navbarTop ul li a{ color: white; margin: 0 1rem;}
-#navbarTop ul li a:hover{ color: rgb(97,190,223);}
+.fondu{ animation: 0.5s fondu;}
+@keyframes fondu{
+    0% {filter: alpha(opacity=0);
+        opacity: 0;}
+    100%{filter: alpha(opacity=100);
+        opacity: 100;}
+}
 
+#navbarTop ul li a,#navigation ul li a{ color: white;}
+#navbarTop ul li a:hover,#navigation ul li a:hover{ color: rgb(97,190,223);}
 .nav-top{position: absolute;    box-shadow: 0 0 1.3rem rgb(30,2,18,.8);}
 .sticky { position: fixed; top: 0; width: 100%; z-index: 1500;}
 .dis-none{display:none;}
@@ -62,8 +71,6 @@ nav ul{scroll-behavior : smooth ;/* défilement */}
     height: 110vh;
     right: -50%;
 }
-#navigation ul li a{    color: #fff;}
-#navigation ul li a:hover{    color: rgb(97,190,223);}
 #navigation ul{padding-right: 35%;}
 .burger {
     margin: 0;
@@ -98,14 +105,12 @@ nav ul{scroll-behavior : smooth ;/* défilement */}
 .rotate-90-cw {	animation: rotate-90-cw 60s linear infinite both; }
  @keyframes rotate-90-cw {
     0% {transform: rotate(0); }
-    100% {transform: rotate(180deg);    }
+    100% {transform: rotate(180deg);}
   }
 /* SERVICES */
-#services p {text-align: justify; }
-#services h3{
-    /* color: #FFDF30; */
-    color:rgb(97,190,223);
-}
+#services-graphisme .title,#services-web .title,#services-conseils .title{height: 37px!important; }
+#services h3{color:rgb(97,190,223);}
+#services p {text-align: justify;}
 /* Portfolio */
 #nav-portfolio li a{color: rgb(97,190,223);}
 #nav-portfolio li a:hover{color: rgb(60,0,34);}
