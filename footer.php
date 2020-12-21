@@ -1,7 +1,7 @@
 <footer class="container-fluid bg-prune-dark sub-footer">
     <div class="container">
-        <div class="row py-2">
-            <div class="col-12 col-md-7 text-center text-blue font-size-13 ">
+        <div class="row py-3">
+            <div class="col-12 col-md-7 text-center text-blue font-size-13 mb-3 mb-lg-0 ">
                 <?php include 'template-parts/navigation/navigation-footer-legalnotice.php'; ?>
             </div>
             <div class="col-12 col-md-5 text-center text-md-right text-white font-size-13 ">

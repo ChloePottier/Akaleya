@@ -1,7 +1,8 @@
 body{font-family: Arial, Helvetica, sans-serif; font-size: 100%; }
 .pt-9{padding-top: 9rem;}
-.pb-6{padding-bottom: 4rem;}
+.pb-sm-6{padding-bottom: 4rem;}
 ul li {list-style: none;}
+ul{margin-bottom: 0!important; padding-left: 0!important;}
 /* Colors */
 .text-prune-dark{color: rgb(91,19,60);}
 ::placeholder{color: rgb(91,19,60);}
@@ -19,10 +20,12 @@ ul li {list-style: none;}
 .bg-white{background-color: #fff;}
 .bg-prune-dark-op70{background-color: rgba(91,19,60,.8);}
 .bg-white-op40{background-color: rgba(255,255,255,.4);}
-.bg-graphiste{height: 100vh; background: url(img/graphiste.jpg) left top no-repeat; background-attachment: fixed;}
-.bg-guitare{background: url(img/Chloe-pottier-guitare.png) left top no-repeat;}
+.bg-graphiste{background: url(img/graphiste-h576.jpg) left top no-repeat;    }
+.bg-guitare{background: url(img/guitare-md.png) left bottom 1rem no-repeat;}
 .bg-cover{background-size: cover !important;}
 a:hover{text-decoration: none;}
+.responsive{width:100%; height:auto;}
+#submit_button{width: 100%!important;}
 /* Font */
 @font-face {
     font-family: 'BebasNeue';
@@ -30,7 +33,8 @@ a:hover{text-decoration: none;}
         url('font/BebasNeue-Regular.woff') format('woff'),
         url('font/BebasNeue-Regular.woff2') format('woff2'),
         url('font/BebasNeue-Regular.ttf') format('ttf');}
-h1,h2,h3,.font-family-bebas{font-family: 'BebasNeue'; margin: 0!important;}
+h1,h2,h3,.font-family-bebas{font-family: 'BebasNeue';}
+h1,h2,h3{margin: 0!important;}
 .font-size-56{font-size: 2.5rem;}
 h1,.font-size-36{font-size: 2.25rem;}
 .font-size-31{font-size: 1.93rem;}
@@ -45,14 +49,21 @@ h1,.font-size-36{font-size: 2.25rem;}
 /*
 } */
 header{overflow: hidden;}
-.fondu{ animation: 0.5s fondu;}
+.fondu{ animation: 0.5s fondu linear;}
 @keyframes fondu{
     0% {filter: alpha(opacity=0);
         opacity: 0;}
     100%{filter: alpha(opacity=100);
         opacity: 100;}
 }
-
+.fondu-out{ animation: 0.5s fondu-out linear;}
+@keyframes fondu-out{
+    100%{filter: alpha(opacity=100);
+        opacity: 100;}
+    0% {filter: alpha(opacity=0);
+        opacity: 0;}
+    
+}
 #navbarTop ul li a,#navigation ul li a{ color: white;}
 #navbarTop ul li a:hover,#navigation ul li a:hover{ color: rgb(97,190,223);}
 .nav-top{position: absolute;    box-shadow: 0 0 1.3rem rgb(30,2,18,.8);}
@@ -61,7 +72,7 @@ header{overflow: hidden;}
 .dis-block{display: block; }
 .logo-akaleya{background: url(img/akaleya-logo-menu.png) no-repeat; width: 200px; height: 52px;}
 .logo-akaleya:hover{background: url(img/akaleya-logo-menu.png) no-repeat; }
-nav ul{scroll-behavior : smooth ;/* défilement */}
+nav ul a{scroll-behavior : smooth ;/* défilement */}
 .menu-nav ul li a{padding-left: 1rem;}
 .menu-nav ul li a:hover{color: rgba(97,190,223); text-decoration: none;}
 #navigation{
@@ -111,36 +122,26 @@ nav ul{scroll-behavior : smooth ;/* défilement */}
 #services-graphisme .title,#services-web .title,#services-conseils .title{height: 37px!important; }
 #services h3{color:rgb(97,190,223);}
 #services p {text-align: justify;}
-/* Portfolio */
+/* PORTFOLIO */
 #nav-portfolio li a{color: rgb(97,190,223);}
 #nav-portfolio li a:hover{color: rgb(60,0,34);}
 .h-250{height:250px;}
 .border{border: solid 1px #b2b2b2 !important;}
-.snow-agency{background: url(img/snow-agency-min.jpg) no-repeat center;}
-.blueasy{background: url(img/blueasy-min.jpg) no-repeat center;}
-.vin-fr{background: url(img/vin-fr-min.jpg)  no-repeat center;}
-.chancel{background: url(img/chancel-min.jpg)  no-repeat center;}
+#portfolio p {text-align: justify ; 
+}
 .rumbleinn{background: url(img/rumbleinn-min.jpg)  no-repeat center;}
-.kerauto{background: url(img/kerauto-min.jpg)  no-repeat center;}
-.modularite{background: url(img/modularite-min.jpg)  no-repeat center;}
-.flappy-mario{background: url(img/flappy-mario-min.jpg)  no-repeat center;}
 /* Contact */
-.bg-contact{
-   background: linear-gradient( rgb(163,116,148) 58%, rgb(162,218,234) 42%);   border-top: solid 2px #58133C}
+.bg-contact{   background: linear-gradient( rgb(163,116,148) 58%, rgb(162,218,234) 42%);   border-top: solid 2px #58133C}
 .btn-portfolio{ top:0;}
-input{    height: 40px;}
+input{padding: 1rem 0; height: 40px;}
 #contact .w-75{width: 100%!important;}
 .text-success,.text-success:hover{color:#5b133c!important}
 .text-danger,.text-danger:hover{color:#e71600!important}
-#form-submit,.btn-retour{width: 237px; height: 40px;}
+#form-submit,.btn-retour{width: 100%;}
 #form-submit:hover,.btn-retour{ background-color: rgba(97,190,223); color: #58133C;}
-.envoi{
-    top: 26vh;
-    width: 100vw;}
-.w-66px{
-    width: 66px;
-    height: 66px;
-}
+.envoi{ top: 26vh; width: 100vw;}
+.w-66px{width: 66px;height: 66px;}
+.github, .linkedin, .facebook, .instagram{background-size: contain; background-repeat: no-repeat;}
 .github{    background-image: url(img/logo-github.svg);}
 .github:hover{ background-image: url(img/logo-github-hover.svg);}
 .linkedin{ background-image: url(img/logo-lindekin.svg);}
@@ -155,47 +156,39 @@ input{    height: 40px;}
 #footer-menu-legalenotice li a:hover{ color: #FFDF30;}
 #copy-akaleya{color: #fff;}
 #copy-akaleya:hover{color: rgb(97,190,223);}
-@media only screen and (min-width: 575px){
-    .bg-graphiste{
-        background: url(img/graphiste-h576.jpg) left top no-repeat;
-    }
-    .bg-guitare{background: url(img/guitare-575.png) left bottom 1rem no-repeat;}
-    .snow-agency{background: url(img/snow-agency-min-sm.jpg) no-repeat center;}
-    .blueasy{background: url(img/blueasy-min-sm.jpg) no-repeat center;}
-    .vin-fr{background: url(img/vin-fr-min-sm.jpg)  no-repeat center;}
-    .chancel{background: url(img/chancel-min-sm.jpg)  no-repeat center;}
-    .kerauto{background: url(img/kerauto-min-sm.jpg)  no-repeat center;}
-    .rumbleinn{background: url(img/rumbleinn-min-sm.jpg)  no-repeat center;}
-    .modularite{background: url(img/modularite-min-sm.jpg)  no-repeat center;}
-    .flappy-mario{background: url(img/flappy-mario-min-sm.jpg)  no-repeat center;}
-    .card__side {width: 100%;}
-    /* Formation, expérience */
-    .jaeger, .modularite2, .bac-stt{
-        background: url(img/flower-little-sm.svg) no-repeat;
-        background-position: left 1rem center;
-    }
-    .modularite1, .licence, .dgd-formation,.acs-formation,.JFX{
-        background: url(img/flower-big-sm.svg) no-repeat;
-        background-position: left 1rem center;
-    }
-    #experience .align-items-end,#formation .align-items-end{align-items: start!important;}
-    #experience .justify-content-end{ justify-content: start!important;}
+/* sm */
+@media only screen and (min-width: 576px){
+    .bg-graphiste{background: url(img/graphiste-h576.jpg) left top no-repeat;    }
     .pb-6{padding-bottom: 0;}
     .border-bottom{border-bottom: solid 1px rgb(207, 207, 207)!important;}
-    /* #experience{border-bottom: none;} */
     .bg-contact{background: linear-gradient( rgb(163,116,148) 58%, rgb(162,218,234) 42%);}
     #navigation ul{padding-right: 40%;}
-}
-@media only screen and (min-width: 767px){
-    .font-size-56{font-size: 3.5rem;}
-    .bg-graphiste{        background: url(img/graphiste-h1024.jpg) left top no-repeat;    }
-    .bg-guitare{background: url(img/guitare-767.png) left bottom no-repeat;}
-    .bg-contact{
-         background: linear-gradient(0.25turn, rgb(163,116,148) 50%, rgb(162,218,234) 50%);
-         border-top: solid 2px #58133C
-     }
-         #contact .w-75{width: 75%!important;}
-    #submit_button{width: 100%;}   
-      .pb-sm-6{padding-bottom: 4rem;}
-}
+    .bg-guitare{background: url(img/guitare-sm.png) left bottom 1rem no-repeat;}
 
+}
+/* md */
+@media only screen and (min-width: 768px){
+    .pb-6{padding-bottom: 4rem;}
+    .pb-sm-6{padding-bottom: 0!important;}
+    .font-size-56{font-size: 3.5rem;}
+    .bg-graphiste{background: url(img/graphiste-h768.jpg) left top no-repeat;    }
+    .bg-contact{background: linear-gradient(0.25turn, rgb(163,116,148) 50%, rgb(162,218,234) 50%);
+         border-top: solid 2px #58133C}
+    #contact .w-75{width: 75%!important;}
+    #portfolio p {width:100%!important;}
+    /* .responsive{width: 100%;} */
+    /* #portfolio .row{width: auto;} */
+    .bg-guitare{background: url(img/guitare-md.png) left bottom 1rem no-repeat;}
+
+}
+/* lg */
+@media (min-width: 992px) { 
+    .bg-graphiste{height: 100vh; background: url(img/graphiste-h992.jpg) left top no-repeat; background-attachment: fixed;}
+    .bg-guitare{background: url(img/guitare-lg.png) left bottom 1rem no-repeat;}
+ }
+/* xl */
+@media (min-width: 1200px) {
+    .bg-graphiste{height: 100vh; background: url(img/graphiste-h1024.jpg) left top no-repeat; background-attachment: fixed;}
+    .font-size-18{font-size: 1.3rem;}
+
+}

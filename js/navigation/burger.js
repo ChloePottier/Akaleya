@@ -5,6 +5,7 @@ let burger = document.getElementById("burger");
         let burger3 = document.getElementById("burger3");
             burger.addEventListener("click", function () {
                 navigation.classList.toggle("display-flex");
+                navigation.classList.add("fondu");
                 burger.classList.toggle("bg-none");
                 burger1.classList.toggle("isopen-burger1");
                 burger2.classList.toggle("isopen-burger2");
