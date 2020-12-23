@@ -23,5 +23,7 @@
         <img src="img/conseils.png" alt="création de sites internet" title="" width="50" height="37" class="mr-3" />
         <h3 class="text-center mb-0">Conseils et accompagnement</h3>
     </div>
-    <p>Akaleya est là pour vous orienter tout au long de votre projet. </p>
+    <p>Akaleya est là pour vous orienter tout au long de votre projet. Nous vous conseillerons en fonction de vos envies et de votre budget pour vous offrir un résultat 100% adapté à vos besoins. 
+        Nous pouvons vous proposer des solutions plus respectueux de l'environnemnt. N'hésitez à nous contacter via notre formualaire pour plus de détails.
+    </p>
 </div>

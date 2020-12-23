@@ -1,3 +1,4 @@
+<?php include 'template-parts/header/metadata.php'; ?>
 
 <body>
     <?php include 'header.php'; ?>

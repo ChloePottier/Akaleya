@@ -1,4 +1,3 @@
-<?php include 'template-parts/header/metadata.php'; ?>
 
 <header>
     <div class="container-fluid bg-graphiste bg-cover">
