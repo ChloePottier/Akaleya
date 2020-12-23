@@ -1,4 +1,5 @@
 <?php include 'template-parts/header/metadata.php'; ?>
+
 <header>
     <div class="container-fluid bg-graphiste bg-cover">
         <div class="container d-none d-md-flex justify-content-end pt-3" id="navbarTop">
@@ -22,3 +23,4 @@
         <?php include 'template-parts/navigation/navigation-top.php'; ?>
     </div>
 </header>
+<scroll-container>

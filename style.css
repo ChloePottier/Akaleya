@@ -112,6 +112,14 @@ nav ul a{scroll-behavior : smooth ;/* défilement */}
     display: block;
     margin-bottom: 6px;
 }
+/* scroll */
+  scroll-container {
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+  }
 /* Animation du  logo : rotation infini */
 .rotate-90-cw {	animation: rotate-90-cw 60s linear infinite both; }
  @keyframes rotate-90-cw {
