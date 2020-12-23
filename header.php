@@ -22,4 +22,3 @@
         <?php include 'template-parts/navigation/navigation-top.php'; ?>
     </div>
 </header>
-<scroll-container>

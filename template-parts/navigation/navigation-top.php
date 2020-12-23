@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row bg-white">
         <div class="col d-flex align-items-center">
-            <a class="logo-akaleya my-1" href="index.php"></a>
+            <a class="logo-akaleya my-1" href="#top"></a>
         </div>
         <div class="col d-flex justify-content-end">
             <nav class="menu-nav text-right d-none d-md-flex" >
