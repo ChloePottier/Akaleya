@@ -13,7 +13,7 @@
         <img src="img/site-web.png" alt="création de sites internet" title="" width="50" height="33" class="mr-3" />
         <h3 class="text-center mb-0">Conception Web</h3>
     </div>
-    <p>Vous voulez passer au digital ? Pas de problème ! Akaleya, développe pour vous le contenu web dont vous avez besoin : un site internet standard ou sur-mesure, une boutique en ligne, un site vitrine avec une section e-commerce,...
+    <p>Vous voulez passer au digital ? Pas de problème ! Akaleya, développe pour vous le contenu web dont vous avez besoin et pour tous les supports : un site internet standard ou sur-mesure, une boutique en ligne,...
         Nous intégrons les outils d'analyse du trafic afin de vous permettre d'ajuster votre communication digitale en fonction des résultats.
 
     </p>
@@ -24,6 +24,6 @@
         <h3 class="text-center mb-0">Conseils et accompagnement</h3>
     </div>
     <p>Akaleya est là pour vous orienter tout au long de votre projet. Nous vous conseillerons en fonction de vos envies et de votre budget pour vous offrir un résultat 100% adapté à vos besoins. 
-        Nous pouvons vous proposer des solutions plus respectueux de l'environnemnt. N'hésitez à nous contacter via notre formualaire pour plus de détails.
+        Nous pouvons vous proposer des solutions plus respectueuses de l'environnemnt. N'hésitez à nous contacter via notre formulaire pour plus de détails.
     </p>
 </div>

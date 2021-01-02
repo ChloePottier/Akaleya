@@ -3,13 +3,12 @@
             <div class="container ">
                 <div class="row py-5 d-flex align-items-end bg-guitare">
                     <div class="col-md-2 d-none d-md-flex"></div>
-                    <div class="col-12 col-md-10 text-center pt-5 pb-3">
+                    <div class="col-12 col-md-10 text-center pt-5 pb-5">
                         <!--title et content administrable-->
                         <h2 class="text-prune-dark pb-5 font-size-56">Une solution <br />adaptée à vos besoins <br />print et web</h2>
-                        <p class="text-prune font-size-18">Quelque soit votre projet, vos envies ou vos besoins,
-                            nous pouvons construire une solution à votre image. 
-                            Quelque soit votre projet, vos envies ou vos besoins,
-                            nous pouvons construire une solution à votre image.
+                        <p class="text-prune font-size-18">Quelque soit votre projet, vos envies,
+                            nous pouvons construire une solution à votre image. <br />Que vous soyez un artisan, un commerçant, une association ou un particulier, 
+                            Akaleya développe pour vous toute la communication dont vous avez besoin et selon votre budget.
                         </p>
                     </div>
                 </div>
