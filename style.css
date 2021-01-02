@@ -1,9 +1,11 @@
 body{font-family: Arial, Helvetica, sans-serif; font-size: 100%;     }
 body,html{scroll-behavior: smooth;}
 .pt-9{padding-top: 9rem;}
+.mt-7{margin-top: 3rem;}
 .pb-sm-6{padding-bottom: 4rem;}
 ul li {list-style: none;}
 ul{margin-bottom: 0!important; padding-left: 0!important;}
+.clear{clear: both;}
 /* Colors */
 .text-prune-dark{color: rgb(91,19,60);}
 ::placeholder{color: rgb(91,19,60);}
@@ -21,7 +23,7 @@ ul{margin-bottom: 0!important; padding-left: 0!important;}
 .bg-white{background-color: #fff;}
 .bg-prune-dark-op70{background-color: rgba(91,19,60,.8);}
 .bg-white-op40{background-color: rgba(255,255,255,.4);}
-.bg-graphiste{background: url(img/graphiste-h576.jpg) left top no-repeat;    }
+.bg-graphiste{height: 100vh; background: url(img/graphiste-h576.jpg) left top no-repeat;    }
 .bg-guitare{background: url(img/guitare-md.png) left bottom 1rem no-repeat;}
 .bg-cover{background-size: cover !important;}
 a:hover{text-decoration: none;}
@@ -46,7 +48,7 @@ h1,.font-size-36{font-size: 2.25rem;}
 }
 .line-height{line-height: 1.8rem;}
 .bold{font-weight: 600;}
-
+.text-shadow{text-shadow: 5px 5px 5px black;}
 /* Menus */
 header{overflow: hidden;}
 .fondu{ animation: 0.5s fondu linear;}
@@ -128,15 +130,12 @@ header{overflow: hidden;}
     100% {transform: rotate(180deg);}
   }
 /* SLIDER */
-
-.bg-red{background-color: red;}
-.bg-green{background-color: green;}
-.bg-blue{background-color: blue;}
 .slider-nav{box-sizing: content-box;width: 100%;}
-.slider-wrapper,.slider-items{width: 100%; height: 300px; padding: 0!important;}
+.slider-wrapper,.slider-items{width: 100%; height: auto; padding: 0!important;}
 .slider-items{display: none;}
+.slider-items h1{font-size: 4.1rem;}
 .active{display: block;}
-.slider-next{float:right;}
+.slider-next, .slider-prev{display: none;}
 
 /* SERVICES */
 #services-graphisme .title,#services-web .title,#services-conseils .title{height: 37px!important; }
@@ -184,6 +183,9 @@ input{padding: 1rem 0; height: 40px;}
     .bg-contact{background: linear-gradient( rgb(163,116,148) 58%, rgb(162,218,234) 42%);}
     #navigation ul{padding-right: 40%;}
     .bg-guitare{background: url(img/guitare-sm.png) left bottom 1rem no-repeat;}
+    .slider-next, .slider-prev{display:block; width: 22px; height: 39px; background: no-repeat; cursor: pointer!important;}
+    .slider-prev{background-image:url(img/precedent.png); float:left;}
+    .slider-next{background:url(img/suivant.png) ;float:right;}
 
 }
 /* md */
@@ -199,15 +201,17 @@ input{padding: 1rem 0; height: 40px;}
     /* .responsive{width: 100%;} */
     /* #portfolio .row{width: auto;} */
     .bg-guitare{background: url(img/guitare-md.png) left bottom 1rem no-repeat;}
+    .mt-7{margin-top: 5rem;}
+
 
 }
 /* lg */
-@media (min-width: 992px) { 
+@media  only screen and (min-width: 992px) { 
     .bg-graphiste{height: 100vh; background: url(img/graphiste-h992.jpg) left top no-repeat; background-attachment: fixed;}
     .bg-guitare{background: url(img/guitare-lg.png) left bottom 1rem no-repeat;}
  }
 /* xl */
-@media (min-width: 1200px) {
+@media only screen and  (min-width: 1200px) {
     .bg-graphiste{height: 100vh; background: url(img/graphiste-h1024.jpg) left top no-repeat; background-attachment: fixed;}
     .font-size-18{font-size: 1.3rem;}
 

@@ -8,7 +8,7 @@
                         <h2 class="text-prune-dark pb-5 font-size-56">Une solution <br />adaptée à vos besoins <br />print et web</h2>
                         <p class="text-prune font-size-18">Quelque soit votre projet, vos envies,
                             nous pouvons construire une solution à votre image. <br />Que vous soyez un artisan, un commerçant, une association ou un particulier, 
-                            Akaleya développe pour vous toute la communication dont vous avez besoin et selon votre budget.
+                            Akaleya développe pour vous toute la communication dont vous avez besoin et adaptée à votre budget.
                         </p>
                     </div>
                 </div>

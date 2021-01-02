@@ -14,12 +14,12 @@
    
    slide[counter].classList.add('active');
    //decleche la fct sliding tout les .... sec = autoplay
-   let delay = setInterval(sliding, 3000);
+   let delay = setInterval(sliding, 1000);
    //Bouton next
    next.addEventListener('click', function(){
        //si on clic on arrete l'autoplay
        clearInterval(delay);
-      // alert('next')
+    //   alert('next')
       //on suppr active du slide pour passer au suiv
       slide[counter].classList.remove('active')
       //on incrémente de 1
@@ -32,7 +32,7 @@
       // on ajoute la class active au nvo slide
       slide[counter].classList.add('active')
    });
-   //bouton Suivant
+   //bouton Précédent
    prev.addEventListener('click', function(){
        clearInterval(delay);
       // alert('prev')
@@ -57,7 +57,7 @@
    });
    // quand je sors du survole (quand la souris sort du slide) 
    sliderWrapper.addEventListener('mouseleave', () => {
-       delay = setInterval(sliding, 1000);
+       delay = setInterval(sliding, 3000);
    });
    function sliding(){
        slide[counter].classList.remove('active')
