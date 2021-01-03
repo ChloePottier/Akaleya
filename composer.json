@@ -1,0 +1,6 @@
+{
+    "require": {
+        "symfony/monolog-bridge": "^5.2",
+        "symfony/web-server-bundle": "^4.4"
+    }
+}
