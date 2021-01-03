@@ -14,7 +14,7 @@
    
    slide[counter].classList.add('active');
    //decleche la fct sliding tout les .... sec = autoplay
-   let delay = setInterval(sliding, 1000);
+   let delay = setInterval(sliding, 2000);
    //Bouton next
    next.addEventListener('click', function(){
        //si on clic on arrete l'autoplay
@@ -57,7 +57,7 @@
    });
    // quand je sors du survole (quand la souris sort du slide) 
    sliderWrapper.addEventListener('mouseleave', () => {
-       delay = setInterval(sliding, 3000);
+       delay = setInterval(sliding, 2000);
    });
    function sliding(){
        slide[counter].classList.remove('active')

@@ -186,7 +186,6 @@ input{padding: 1rem 0; height: 40px;}
     .slider-next, .slider-prev{display:block; width: 22px; height: 39px; background: no-repeat; cursor: pointer!important;}
     .slider-prev{background-image:url(img/precedent.png); float:left;}
     .slider-next{background:url(img/suivant.png) ;float:right;}
-
 }
 /* md */
 @media only screen and (min-width: 768px){

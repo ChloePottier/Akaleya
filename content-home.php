@@ -7,7 +7,7 @@
                         <!--title et content administrable-->
                         <h2 class="text-prune-dark pb-5 font-size-56">Une solution <br />adaptée à vos besoins <br />print et web</h2>
                         <p class="text-prune font-size-18">Quelque soit votre projet, vos envies,
-                            nous pouvons construire une solution à votre image. <br />Que vous soyez un artisan, un commerçant, une association ou un particulier, 
+                            nous pouvons construire une solution à votre image. <br />Que vous soyez un artisan, un commerçant, une association ou un particulier,
                             Akaleya développe pour vous toute la communication dont vous avez besoin et adaptée à votre budget.
                         </p>
                     </div>
@@ -16,6 +16,12 @@
         </section>
     </scroll-page>
     <scroll-page id="page-2">
+            <!-- <svg version="1.0" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="138.102px" viewBox="0 0 1024 138.102" enable-background="new 0 0 1024 138.102" xml:space="preserve">
+                <image display="none" overflow="visible" xlink:href="3A4FFA47.jpg" transform="matrix(0.9999 0 0 0.9999 -391.5 17.5)">
+                </image>
+                <polygon fill="#000" points="1024,138.102 0,51.107 0,0 1024,0 " />
+            </svg> -->
+
         <section id="services" class="container-fluid bg-prune-dark text-white">
             <div class="container">
                 <!-- bg en diagonal voir tete de com-->
