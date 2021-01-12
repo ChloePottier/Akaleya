@@ -16,17 +16,17 @@
                 <div class="col d-flex justify-content-end">
                     <nav class="menu-nav text-right d-none d-md-flex">
                         <ul class="  d-flex justify-content-end font-family-bebas font-size-21 align-items-center mb-0 my-3" itemscope itemtype="https://schema.org/BreadcrumbList">
-                            <?php include 'wp-content/themes/akaleya-theme/template-parts/navigation/navigation-items.php'; ?>
+                            <?php  get_template_part('template-parts/navigation/navigation', 'items'); ?>
                         </ul>
                     </nav>
                 </div>
             </div>
         </div>
-        <?php include 'wp-content/themes/akaleya-theme/template-parts/navigation/navigation-burger.php';
-        include 'wp-content/themes/akaleya-theme/template-parts/header/logo-header.php'; 
-        include 'wp-content/themes/akaleya-theme/template-parts/header/slider.php';?>
+        <?php  get_template_part('template-parts/navigation/navigation','burger');
+         get_template_part('template-parts/header/logo','header'); 
+         get_template_part('template-parts/header/','slider');?>
     </div>
     <div class="container-fluid nav-top bg-white dis-none" id="navbar">
-        <?php include 'wp-content/themes/akaleya-theme/template-parts/navigation/navigation-top.php'; ?>
+        <?php  get_template_part('template-parts/navigation/navigation', 'top'); ?>
     </div>
 </header>
