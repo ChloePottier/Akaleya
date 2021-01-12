@@ -64,6 +64,8 @@ $args = array(
 register_post_type( 'slider', $args );
 } 
 add_action( 'init', 'cpt_slider_init' );// Le hook init lance la fonction
+
+
 function cpt_presentation_init() {
     $labels = array(
         'name'                  => _x( 'Présentation', 'Post type general name', 'textdomain' ),
@@ -86,3 +88,35 @@ function cpt_presentation_init() {
     register_post_type( 'presentation', $args );
     } 
     add_action( 'init', 'cpt_presentation_init' );// Le hook init lance la fonction
+
+    
+function cpt_services_init() {
+    $labels = array(
+        'name'                  => _x( 'Services', 'Post type general name', 'textdomain' ),
+        'singular_name'         => _x( 'Service', 'Post type singular name', 'textdomain' ),
+        'menu_name'             => _x( 'Services', 'Admin Menu text', 'textdomain' ),
+        'add_new'               => __( 'Ajouter un service', 'textdomain' ),
+        'add_new_item'          => __( 'Ajouter un nouveau service', 'textdomain' ),
+        'new_item'              => __( 'Nouveau service', 'textdomain' ),
+        'edit_item'             => __( 'Editer le service', 'textdomain' ),
+        'view_item'             => __( 'Voir le service', 'textdomain' ),
+        'all_items'             => __( 'Tous les services', 'textdomain' ),
+        'search_items'          => __( 'Rechercher des service', 'textdomain' ),
+        'archives'              => _x( 'Archives des service', 'The post type archive label used in nav menus', 'textdomain' ),
+    ); 
+    $args = array(
+        'labels'             => $labels,
+        'public'             => true,
+        'query_var'          => true,
+        'rewrite'            => array( 'slug' => 'service' ),
+        'capability_type'    => 'post',
+        'has_archive'        => true,
+        'menu_position'      => null,
+        'menu_icon'          => 'dashicons-admin-tools',
+        'supports'           => array( 'title', 'editor'),
+    ); 
+    register_post_type( 'service', $args );
+    } 
+    add_action( 'init', 'cpt_services_init' );// Le hook init lance la fonction
+    
+    

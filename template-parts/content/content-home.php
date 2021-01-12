@@ -7,10 +7,13 @@
                     <!--title et content administrable-->
                     <h2 class="text-prune-dark pb-5 font-size-56">Une solution <br />adaptée à vos besoins <br />print et web</h2>
                     <?php $loop = new WP_Query(array('post_type' => 'presentation', 'post_status' => 'publish'));
-                    while ($loop->have_posts()) : $loop->the_post(); ?>
+                    if ( $loop->have_posts() ) :
+                        while ($loop->have_posts()) : $loop->the_post(); ?>
                         <div class="text-prune font-size-18"><?php the_content(); ?></div>
-                    <?php endwhile; ?>
-
+                    <?php endwhile;
+                    else :
+                        echo 'Page introuvable';
+                    endif;?>
                 </div>
             </div>
         </div>
