@@ -11,7 +11,7 @@
             while ($loop->have_posts()) : $loop->the_post();?>
                 <div class="slider-items text-white text-center font-size-24">
                     <h1 class=" text-shadow"><?php the_title(); ?></h1>
-                    <p class="w-75 mx-auto text-shadow"><?php the_content(); ?></p>
+                    <div class="w-75 mx-auto text-shadow"><?php the_content(); ?></div>
                 </div>
             <?php endwhile; ?>
         </div>

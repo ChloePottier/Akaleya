@@ -59,8 +59,30 @@ $args = array(
     'has_archive'        => true,
     'menu_position'      => null,
     'menu_icon'          => 'dashicons-star-filled',
-    'supports'           => array( 'title', 'editor',  'thumbnail', 'excerpt' ),
+    'supports'           => array( 'title', 'editor'),
 ); 
 register_post_type( 'slider', $args );
 } 
 add_action( 'init', 'cpt_slider_init' );// Le hook init lance la fonction
+function cpt_presentation_init() {
+    $labels = array(
+        'name'                  => _x( 'Présentation', 'Post type general name', 'textdomain' ),
+        'singular_name'         => _x( 'Présentation', 'Post type singular name', 'textdomain' ),
+        'menu_name'             => _x( 'Présentation', 'Admin Menu text', 'textdomain' ),
+    ); 
+    $args = array(
+        'labels'             => $labels,
+        'public'             => true,
+        'query_var'          => true,
+        'rewrite'            => array( 'slug' => 'presentation' ),
+        'capability_type'    => 'post',
+        'has_archive'        => true,
+        'menu_position'      => null,
+        'menu_icon'          => 'dashicons-universal-access',
+        'supports'           => array( 'title', 'editor', 
+        // 'thumbnail', 'excerpt' 
+        ),
+    ); 
+    register_post_type( 'presentation', $args );
+    } 
+    add_action( 'init', 'cpt_presentation_init' );// Le hook init lance la fonction
