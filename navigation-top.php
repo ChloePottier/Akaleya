@@ -2,7 +2,11 @@
     <div class="row bg-white">
         <div class="col d-flex align-items-center">
             <a class="logo-akaleya my-1" href="#top">
-            <?php the_custom_logo(); ?>
+            <?php // echo get_custom_logo();
+            if ( function_exists( 'the_custom_logo' ) ) {
+                the_custom_logo();
+               }
+            ?>
             </a>
         </div>
         <div class="col d-flex justify-content-end">

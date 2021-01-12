@@ -17,5 +17,17 @@ function wpm_myme_types($mime_types){
     return $mime_types;
 }
 // Ajouter la prise en charge des images mises en avant
-add_theme_support( 'post-thumbnails' );
+// add_theme_support( 'post-thumbnails' );
 
+
+//ajouter le logo
+function themename_custom_logo_setup() {
+    $defaults = array(
+    'height'      => 52,
+    'width'       => 200,
+    'flex-width'  => true,
+    'header-text' => array( 'site-title', 'site-description' )
+    );
+    add_theme_support( 'custom-logo', $defaults );
+   }
+   add_action( 'after_setup_theme', 'themename_custom_logo_setup' );

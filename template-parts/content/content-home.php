@@ -1,4 +1,4 @@
-    <scroll-page id="page-1">
+    <scroll-page id="section-presentation">
         <section id="presentation" class="container-fluid">
             <div class="container ">
                 <div class="row py-5 d-flex align-items-end bg-guitare">
@@ -15,7 +15,7 @@
             </div>
         </section>
     </scroll-page>
-    <scroll-page id="page-2">
+    <scroll-page id="section-services">
             <!-- <svg version="1.0" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="138.102px" viewBox="0 0 1024 138.102" enable-background="new 0 0 1024 138.102" xml:space="preserve">
                 <image display="none" overflow="visible" xlink:href="3A4FFA47.jpg" transform="matrix(0.9999 0 0 0.9999 -391.5 17.5)">
                 </image>
@@ -30,12 +30,12 @@
                         <!--title et content administrable-->
                         <h2 class=" pb-5 font-size-56">Les services proposés</h2>
                     </div>
-                    <?php include "template-parts/content/services.php"; ?>
+                    <?php get_template_part('template-parts/content/content','services'); ?>
                 </div>
             </div>
         </section>
     </scroll-page>
-    <scroll-page id="page-3">
+    <scroll-page id="section-portfolio">
 
         <section id="portfolio" class="container-fluid">
             <div class="container py-5">
@@ -52,19 +52,19 @@
                     </div>
                 </div>
                 <div class="row">
-                    <?php include 'template-parts/content/portfolio.php'; ?>
+                <?php get_template_part('template-parts/content/content','portfolio'); ?>
                 </div>
             </div>
         </section>
     </scroll-page>
-    <scroll-page id="page-4">
+    <scroll-page id="section-contact">
         <section class="container-fluid bg-contact" id="contact">
             <div class="container">
                 <div class="row py-5">
                     <div class="col-12 col-md-6">
                         <h2 class="text-prune-dark pt-0 pt-sm-5">Contactez Akaleya</h2>
                         <p class="text-prune-dark">Pour toute demande de renseignement, devis, ...</p>
-                        <?php include 'template-parts/content/formulaire-contact.php'; ?>
+                        <?php get_template_part('template-parts/content/formulaire','contact'); ?>
 
                     </div>
                     <div class="col-12 col-md-6 d-flex justify-content-center flex-column pt-2 pt-md-0">
