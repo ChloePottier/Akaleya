@@ -31,7 +31,7 @@ ul{margin-bottom: 0!important; padding-left: 0!important;}
 .bg-prune-dark-op70{background-color: rgba(91,19,60,.8);}
 .bg-white-op40{background-color: rgba(255,255,255,.4);}
 .bg-graphiste{height: 100vh; background: url(https://akaleya.fr/wp-content/uploads/2021/01/graphiste.jpg) left top no-repeat; background-attachment: fixed;}
-.bg-guitare{background: url(img/guitare-md.png) left bottom 1rem no-repeat;}
+.bg-guitare{background: url(https://akaleya.fr/wp-content/uploads/2021/01/Chloe-pottier-guitare.png) left bottom 1rem no-repeat;}
 .bg-cover{background-size: cover !important;}
 a:hover{text-decoration: none;}
 .responsive{width:100%; height:auto;}
@@ -193,7 +193,7 @@ input{padding: 1rem 0; height: 40px;}
     .border-bottom{border-bottom: solid 1px rgb(207, 207, 207)!important;}
     .bg-contact{background: linear-gradient( rgb(163,116,148) 58%, rgb(162,218,234) 42%);}
     #navigation ul{padding-right: 40%;}
-    .bg-guitare{background: url(img/guitare-sm.png) left bottom 1rem no-repeat;}
+    /* .bg-guitare{background: url(img/guitare-sm.png) left bottom 1rem no-repeat;} */
     .slider-next, .slider-prev{display:block; width: 22px; height: 39px; background: no-repeat; cursor: pointer!important;}
     .slider-prev{background-image:url(https://akaleya.fr/wp-content/uploads/2021/01/precedent.png); float:left;}
     .slider-next{background:url(https://akaleya.fr/wp-content/uploads/2021/01/suivant.png) ;float:right;}
@@ -210,7 +210,7 @@ input{padding: 1rem 0; height: 40px;}
     #portfolio p {width:100%!important;}
     /* .responsive{width: 100%;} */
     /* #portfolio .row{width: auto;} */
-    .bg-guitare{background: url(img/guitare-md.png) left bottom 1rem no-repeat;}
+    /* .bg-guitare{background: url(img/guitare-md.png) left bottom 1rem no-repeat;} */
     .mt-7{margin-top: 5rem;}
 
 
@@ -218,7 +218,7 @@ input{padding: 1rem 0; height: 40px;}
 /* lg */
 @media  only screen and (min-width: 992px) { 
     .bg-graphiste{height: 100vh; background: url(https://akaleya.fr/wp-content/uploads/2021/01/graphiste.jpg) left top no-repeat; background-attachment: fixed;}
-    .bg-guitare{background: url(img/guitare-lg.png) left bottom 1rem no-repeat;}
+    /* .bg-guitare{background: url(img/guitare-lg.png) left bottom 1rem no-repeat;} */
  }
 /* xl */
 @media only screen and  (min-width: 1200px) {

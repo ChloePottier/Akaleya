@@ -31,3 +31,36 @@ function themename_custom_logo_setup() {
     add_theme_support( 'custom-logo', $defaults );
    }
    add_action( 'after_setup_theme', 'themename_custom_logo_setup' );
+
+// Masquer admin bar
+   show_admin_bar( false );
+   add_filter( 'show_admin_bar', '__return_false' );
+
+function cpt_slider_init() {
+$labels = array(
+    'name'                  => _x( 'Slider', 'Post type general name', 'textdomain' ),
+    'singular_name'         => _x( 'Slide', 'Post type singular name', 'textdomain' ),
+    'menu_name'             => _x( 'Sliders', 'Admin Menu text', 'textdomain' ),
+    'add_new'               => __( 'Ajouter un slide', 'textdomain' ),
+    'add_new_item'          => __( 'Ajouter un nouveau slide', 'textdomain' ),
+    'new_item'              => __( 'Nouveau slide', 'textdomain' ),
+    'edit_item'             => __( 'Editer le slide', 'textdomain' ),
+    'view_item'             => __( 'Voir le slide', 'textdomain' ),
+    'all_items'             => __( 'Tous les slides', 'textdomain' ),
+    'search_items'          => __( 'Rechercher des slides', 'textdomain' ),
+    'archives'              => _x( 'Archives des slides', 'The post type archive label used in nav menus', 'textdomain' ),
+); 
+$args = array(
+    'labels'             => $labels,
+    'public'             => true,
+    'query_var'          => true,
+    'rewrite'            => array( 'slug' => 'slider' ),
+    'capability_type'    => 'post',
+    'has_archive'        => true,
+    'menu_position'      => null,
+    'menu_icon'          => 'dashicons-star-filled',
+    'supports'           => array( 'title', 'editor',  'thumbnail', 'excerpt' ),
+); 
+register_post_type( 'slider', $args );
+} 
+add_action( 'init', 'cpt_slider_init' );// Le hook init lance la fonction

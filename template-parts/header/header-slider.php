@@ -12,7 +12,7 @@
                         <p class="w-75 mx-auto text-shadow">Logos, cartes de visite, flyers, catalogues, retouches d’images, ...</p>
                     </div>
                     <div class="slider-items  text-white text-center font-size-24">
-                        <h1 class=" text-shadow">sites internet</h1>
+                        <h1 class=" text-shadow">Sites internet</h1>
                         <p class="w-75 mx-auto text-shadow">Sites vitrine, sites de e-commerce, développement web, ...</p>
                     </div>
                   

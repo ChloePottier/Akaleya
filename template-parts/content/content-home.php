@@ -1,4 +1,4 @@
-    <scroll-page id="section-presentation">
+<scroll-page id="section-presentation">
         <section id="presentation" class="container-fluid">
             <div class="container ">
                 <div class="row py-5 d-flex align-items-end bg-guitare">
@@ -68,12 +68,13 @@
 
                     </div>
                     <div class="col-12 col-md-6 d-flex justify-content-center flex-column pt-2 pt-md-0">
-                        <!-- retrouvez moi -->
-                        <img src="img/Akaleya-logo.svg" alt="Akaleya - web and print logo" width="289" height="289" class="mx-auto" />
+                        <!-- retrouvez moi -->                      
+                        
+                        <img src="<?php echo get_site_url();?>/wp-content/uploads/2021/01/Akaleya-logo.svg" alt="Akaleya - web and print logo" title="Akaleya - création graphique et web - Jura"width="289" height="289" class="mx-auto" />
                         <p class="font-family-bebas text-prune-dark font-size-31 line-height text-center pt-5">
                             Retrouvez-moi<br />aussi sur :</p>
                         <div class="d-flex flex-row justify-content-center">
-                            <a href="https://facebook.com/akaleya????" target="_blank" class="w-66px facebook d-flex mr-4"></a>
+                            <a href="https://www.facebook.com/AkaleyaWebPrint" target="_blank" class="w-66px facebook d-flex mr-4"></a>
                             <a href="https://instagram.com/akaleya????" target="_blank" class="w-66px instagram d-flex mr-4"></a>
                             <a href="https://github.com/ChloePottier" target="_blank" class="w-66px github d-flex mr-4"></a>
                             <a href="https://www.linkedin.com/in/chlo%C3%A9-pottier-b17b60196/" target="_blank" class=" w-66px linkedin d-flex"></a>
