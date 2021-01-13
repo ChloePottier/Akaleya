@@ -11,6 +11,9 @@
         </div>
     </div>
 </footer>
-<script type="text/javascript" src="wp-content/themes/akaleya-theme/js/navigation/nav-fixed.js" async defer></script>
-<script type="text/javascript" src="wp-content/themes/akaleya-theme/js/navigation/burger.js" async defer></script>
-<script type="text/javascript" src="wp-content/themes/akaleya-theme/js/slider-header.js" async defer></script>
+
+<!-- Script JQUERY pour Ajax -->
+
+<script type="text/javascript" src="wp-content/themes/akaleya-theme/assets/js/navigation/nav-fixed.js" async defer></script>
+<script type="text/javascript" src="wp-content/themes/akaleya-theme/assets/js/navigation/burger.js" async defer></script>
+<script type="text/javascript" src="wp-content/themes/akaleya-theme/assets/js/slider-header.js" async defer></script>
