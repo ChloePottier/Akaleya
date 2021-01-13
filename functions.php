@@ -149,5 +149,6 @@ function cpt_services_init() {
         } 
         add_action( 'init', 'cpt_portfolio_init' );// Le hook init lance la fonction
         
-        
+   
+
     
