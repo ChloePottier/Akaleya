@@ -1,4 +1,4 @@
-<?php $loop = new WP_Query(array('post_type' => 'service'));
+<?php $loop = new WP_Query(array('post_type' => 'service','orderby' => 'ordre_publication','order'   => 'ASC',));
 if ($loop->have_posts()) :
     while ($loop->have_posts()) : $loop->the_post(); ?>
         <div class="col-12 col-md-6 col-lg-4 service mt-3">

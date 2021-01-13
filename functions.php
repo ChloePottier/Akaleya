@@ -143,12 +143,20 @@ function cpt_services_init() {
             'has_archive'        => true,
             'menu_position'      => null,
             'menu_icon'          => 'dashicons-art',
-            'supports'           => array( 'title', 'editor'),
+            'supports'           => array( 'title', 'editor','category'),
         ); 
         register_post_type( 'realisation', $args );
         } 
         add_action( 'init', 'cpt_portfolio_init' );// Le hook init lance la fonction
-        
-   
+// ajouter les category au portfolio
+function category_realisation() {
+    register_taxonomy_for_object_type ( 'category' , 'realisation') ;
+} 
+add_action( 'init', 'category_realisation' );
 
-    
+// ajout format d'image      
+if(function_exists('add_theme_support')):
+    add_image_size('thumbnail_portfolio',370,250,true);
+
+endif;
+
