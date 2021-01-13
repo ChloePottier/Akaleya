@@ -4,8 +4,7 @@
             <div class="row py-5 d-flex align-items-end bg-guitare">
                 <div class="col-md-2 d-none d-md-flex"></div>
                 <div class="col-12 col-md-10 text-center pt-5 pb-5">
-                    <!--title et content administrable-->
-                    <h2 class="text-prune-dark pb-5 font-size-56">Une solution <br />adaptée à vos besoins <br />print et web</h2>
+                    <h2 class="text-prune-dark pb-2 font-size-56">Une solution <br />adaptée à vos besoins <br />print et web</h2>
                     <?php $loop = new WP_Query(array('post_type' => 'presentation', 'post_status' => 'publish'));
                     if ( $loop->have_posts() ) :
                         while ($loop->have_posts()) : $loop->the_post(); ?>
@@ -29,10 +28,9 @@
     <section id="services" class="container-fluid bg-prune-dark text-white">
         <div class="container">
             <!-- bg en diagonal voir tete de com-->
-            <div class="row py-5 d-flex ">
+            <div class="row py-5 d-flex justify-content-md-center justify-content-lg-start">
                 <div class="col-12 text-center pt-5 pb-3">
-                    <!--title et content administrable-->
-                    <h2 class=" pb-5 font-size-56">Les services proposés</h2>
+                    <h2 class=" pb-3 font-size-56">Les services proposés</h2>
                 </div>
                 <?php get_template_part('template-parts/content/content', 'services'); ?>
             </div>

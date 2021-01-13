@@ -119,4 +119,35 @@ function cpt_services_init() {
     } 
     add_action( 'init', 'cpt_services_init' );// Le hook init lance la fonction
     
+
+    function cpt_portfolio_init() {
+        $labels = array(
+            'name'                  => _x( 'Réalisations', 'Post type general name', 'textdomain' ),
+            'singular_name'         => _x( 'Réalisation', 'Post type singular name', 'textdomain' ),
+            'menu_name'             => _x( 'Réalisations', 'Admin Menu text', 'textdomain' ),
+            'add_new'               => __( 'Ajouter une réalisation', 'textdomain' ),
+            'add_new_item'          => __( 'Ajouter une nouvelle réalisation', 'textdomain' ),
+            'new_item'              => __( 'Nouvelle réalisation', 'textdomain' ),
+            'edit_item'             => __( 'Editer la réalisation', 'textdomain' ),
+            'view_item'             => __( 'Voir la réalisation', 'textdomain' ),
+            'all_items'             => __( 'Tous les réalisations', 'textdomain' ),
+            'search_items'          => __( 'Rechercher des réalisations', 'textdomain' ),
+            'archives'              => _x( 'Archives des réalisations', 'The post type archive label used in nav menus', 'textdomain' ),
+        ); 
+        $args = array(
+            'labels'             => $labels,
+            'public'             => true,
+            'query_var'          => true,
+            'rewrite'            => array( 'slug' => 'realisation' ),
+            'capability_type'    => 'post',
+            'has_archive'        => true,
+            'menu_position'      => null,
+            'menu_icon'          => 'dashicons-art',
+            'supports'           => array( 'title', 'editor'),
+        ); 
+        register_post_type( 'realisation', $args );
+        } 
+        add_action( 'init', 'cpt_portfolio_init' );// Le hook init lance la fonction
+        
+        
     
