@@ -45,7 +45,8 @@ ul{margin-bottom: 0!important; padding-left: 0!important;}
         url('font/BebasNeue-Regular.ttf') format('ttf');}
 h1,h2,h3,.font-family-bebas{font-family: 'BebasNeue';}
 h1,h2,h3{margin: 0!important;}
-.font-size-56{font-size: 2.5rem;}
+.font-size-58{font-size: 3.5rem;}
+.font-size-56{font-size: 2.5rem;} /*normalement c'est pas 56*/
 h1,.font-size-36{font-size: 2.25rem;}
 .font-size-31{font-size: 1.93rem;}
 .font-size-24{font-size: 1.5rem;}
@@ -53,6 +54,7 @@ h1,.font-size-36{font-size: 2.25rem;}
 .font-size-18{font-size: 1.125rem;}
 .font-size-13{font-size: .8rem;
 }
+.text-underline{text-decoration: underline;}
 .line-height{line-height: 1.8rem;}
 .bold{font-weight: 600;}
 .text-shadow{text-shadow: 5px 5px 5px black;}
@@ -159,8 +161,8 @@ input{padding: 1rem 0; height: 40px;}
 #form-submit,.btn-retour{width: 100%;}
 #form-submit:hover,.btn-retour{ background-color: rgba(97,190,223); color: #58133C;}
 .envoi{ top: 26vh; width: 100vw;}
-#link-rs a {font-size: 3.5rem; color:  rgb(91,19,60)!important;}
-#link-rs a:hover{color:  rgb(145,33,92)!important;}
+#link-rs a, .link{color:  rgb(91,19,60)!important;}
+#link-rs a:hover, .link:hover{color:  rgb(145,33,92)!important;}
 .w-66px{width: 66px;height: 66px;}
 .grecaptcha-badge{visibility: hidden;}
 /* FOOTER */
