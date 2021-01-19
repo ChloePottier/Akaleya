@@ -19,6 +19,7 @@ get_template_part('template-parts/header/header', 'page');?>
                     endif; ?>
                 
         </div>
+        
     </div>
 </section>
 

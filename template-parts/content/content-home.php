@@ -65,17 +65,15 @@
     <section class="container-fluid bg-contact" id="contact">
         <div class="container">
             <div class="row py-5">
-                <?php if (is_page(83) OR is_page( 'contact' )) : ?>
                     <?php if (have_posts()) : ?>
                         <?php while (have_posts()) : the_post(); ?>
                             <div class="col-12 col-md-6">
                                 <h2 class="text-prune-dark pt-0 pt-sm-5">Contactez Akaleya</h2>
                                 <p class="text-prune-dark">Pour toute demande de renseignement, devis, ...</p>
-                                <?php the_content(); ?>
+                                <?php  the_content();?>
                                 </div>
                         <?php endwhile;
-                        endif;
-                    endif;   ?>
+                        endif;?>
                             <div class="col-12 col-md-6 d-flex justify-content-center flex-column pt-2 pt-md-0">
                                 <!-- retrouvez moi -->
                                 <img src="<?php echo get_site_url(); ?>/wp-content/uploads/2021/01/Akaleya-logo.svg" alt="Akaleya - web and print logo" title="Akaleya - création graphique et web - Jura" width="289" height="289" class="mx-auto" />
