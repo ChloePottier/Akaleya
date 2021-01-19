@@ -67,11 +67,11 @@
             <div class="row py-5">
                     <?php if (have_posts()) : ?>
                         <?php while (have_posts()) : the_post(); ?>
-                            <div class="col-12 col-md-6">
+                            <div class="col-12 col-md-6 ">
                                 <h2 class="text-prune-dark pt-0 pt-sm-5">Contactez Akaleya</h2>
                                 <p class="text-prune-dark">Pour toute demande de renseignement, devis, ...</p>
                                 <?php  the_content();?>
-                                </div>
+                            </div>
                         <?php endwhile;
                         endif;?>
                             <div class="col-12 col-md-6 d-flex justify-content-center flex-column pt-2 pt-md-0">
@@ -83,9 +83,7 @@
                                     <?php $loop = new WP_Query(array('post_type' => 'liens',  'order'   => 'ASC'));
                                     if ($loop->have_posts()) :
                                         while ($loop->have_posts()) : $loop->the_post(); ?>
-
-                                            <a href="<?php the_field('url_profil'); ?>" target="_blank" class="font-size-58 w-66px d-flex mr-4"><?php the_field('icone'); ?></a>
-
+                                            <a href="<?php the_field('url_profil'); ?>" target="_blank" class="font-size-58 w-66px d-flex mx-2"><?php the_field('icone'); ?></a>
                                     <?php endwhile;
                                     endif; ?>
 

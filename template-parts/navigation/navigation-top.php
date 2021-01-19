@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container d-none d-md-block">
     <div class="row bg-white">
         <div class="col d-flex align-items-center">
             <?php the_custom_logo(  ) ?>
