@@ -8,6 +8,8 @@ Text Domain: akaleya-theme */
 body{font-family: Arial, Helvetica, sans-serif; font-size: 100%!important;}
 body,html{scroll-behavior: smooth; margin-top: 0!important;}
 a:hover, ul li a:hover{text-decoration: none!important;}
+a, #link-rs a, .link{color:  rgb(91,19,60);}
+a:hover,#link-rs a:hover, .link:hover{color:  rgb(145,33,92);}
 .pt-9{padding-top: 9rem;}
 .mt-7{margin-top: 3rem;}
 .pb-sm-6{padding-bottom: 4rem;}
@@ -32,10 +34,13 @@ ul{margin-bottom: 0!important; padding-left: 0!important;}
 .bg-prune-dark-op70{background-color: rgba(91,19,60,.8);}
 .bg-white-op40{background-color: rgba(255,255,255,.4);}
 .bg-graphiste{height: 100vh; background: url(https://akaleya.fr/wp-content/uploads/2021/01/graphiste.jpg) left top no-repeat; background-attachment: fixed;}
+.bg-graphiste-small{ background: url(https://akaleya.fr/wp-content/uploads/2021/01/header-200-h.jpg) left top no-repeat; background-attachment: fixed; background-size: contain !important;}
+
 .bg-guitare{background: url(https://akaleya.fr/wp-content/uploads/2021/01/Chloe-pottier-guitare.png) left bottom 1rem no-repeat;}
 .bg-cover{background-size: cover !important;}
 .responsive{width:100%; height:auto;}
 #submit_button{width: 100%!important;}
+.height-200{height: 200px!important;}
 /* Font */
 @font-face {
     font-family: 'BebasNeue';
@@ -81,14 +86,14 @@ header{overflow: hidden;}
 #btnScrollToTop{
     /* display: none;  */
     position: fixed;}
-#navbarTop ul li a,#navigation ul li a{ color: white;}
-#navbarTop ul li a:hover,#navigation ul li a:hover{ color: rgb(97,190,223);}
+#navbarTop ul li a,#navigation ul li a{ color: white!important;}
+#navbarTop ul li a:hover,#navigation ul li a:hover{ color: rgb(97,190,223)!important;}
 .nav-top{position: absolute;    box-shadow: 0 0 1.3rem rgb(30,2,18,.8);}
 .sticky { position: fixed; top: 0; width: 100%; z-index: 1500;}
 .dis-none{display:none;}
 .dis-block{display: block; }
 .menu-nav ul li a{padding-left: 1rem;}
-.menu-nav ul li a:hover{color: rgba(97,190,223); text-decoration: none;}
+.menu-nav ul li a:hover{color: rgba(97,190,223)!important; text-decoration: none;}
 #navigation{
     position: fixed;
     z-index: 1500;
@@ -145,8 +150,8 @@ header{overflow: hidden;}
 .service h3{color:rgb(97,190,223); font-size: 1.5rem!important;}
 .service p {text-align: justify;}
 /* PORTFOLIO */
-#nav-portfolio li a{color: rgb(97,190,223);}
-#nav-portfolio li a:hover{color: rgb(60,0,34);}
+#nav-portfolio li a{color: rgb(97,190,223)!important;}
+#nav-portfolio li a:hover{color: rgb(60,0,34)!important;}
 .h-250{height:250px;}
 .border{border: solid 1px #b2b2b2 !important;}
 #portfolio p {text-align: justify ; 
@@ -161,8 +166,7 @@ input{padding: 1rem 0; height: 40px;}
 #form-submit,.btn-retour{width: 100%;}
 #form-submit:hover,.btn-retour{ background-color: rgba(97,190,223); color: #58133C;}
 .envoi{ top: 26vh; width: 100vw;}
-#link-rs a, .link{color:  rgb(91,19,60)!important;}
-#link-rs a:hover, .link:hover{color:  rgb(145,33,92)!important;}
+
 .w-66px{width: 66px;height: 66px;}
 .grecaptcha-badge{visibility: hidden;}
 /* FOOTER */
