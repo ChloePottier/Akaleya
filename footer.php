@@ -13,7 +13,9 @@
 </footer>
 
 <script type="text/javascript" src="wp-content/themes/akaleya-theme/assets/js/navigation/load-portfolio.js" async defer></script>
-
 <script type="text/javascript" src="wp-content/themes/akaleya-theme/assets/js/navigation/nav-fixed.js" async defer></script>
 <script type="text/javascript" src="wp-content/themes/akaleya-theme/assets/js/navigation/burger.js" async defer></script>
 <script type="text/javascript" src="wp-content/themes/akaleya-theme/assets/js/slider-header.js" async defer></script>
+</body>
+
+</html>

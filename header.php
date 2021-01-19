@@ -6,6 +6,7 @@
  * @version 1.0
  */
 ?>
+<body id="top">
 <header onload=sliding()>
     <div class="container-fluid bg-graphiste bg-cover">
         <div class="container d-none d-md-flex justify-content-end pt-3" id="navbarTop">

@@ -1,9 +1,7 @@
 <div class="container">
     <div class="row bg-white">
         <div class="col d-flex align-items-center">
-            <a class="logo-akaleya my-1" href="#top">
-            <?php the_custom_logo(); ?>
-            </a>
+            <?php the_custom_logo(  ) ?>
         </div>
         <div class="col d-flex justify-content-end">
             <nav class="menu-nav text-right d-none d-md-flex" >
