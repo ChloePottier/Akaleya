@@ -47,13 +47,14 @@
                 </div>
                 <div class="col-12" id="nav-portfolio">
                     <ul class="pl-0 mb-2 d-flex flex-row justify-content-center justify-content-md-end font-family-bebas font-size-21 pb-3 pb-lg-0">
-                        <li class="pr-3"><a href="">tous</a></li>
-                        <li class="pr-3"><a href="">web</a></li>
-                        <li><a href="">graphisme</a></li>
+                        <li class="pr-3"><a  onclick="loadAll()">tous</a></li>
+                        <li class="pr-3"><a  onclick="loadWeb()">web</a></li>
+                        <li><a  onclick="loadPrint()">graphisme</a></li>
                     </ul>
                 </div>
             </div>
-            <div class="row">
+
+            <div class="row" id="content-portfolio">
                 <?php get_template_part('template-parts/content/content', 'portfolio'); ?>
             </div>
         </div>
@@ -77,7 +78,7 @@
                         Retrouvez-moi<br />aussi sur :</p>
                     <div class="d-flex flex-row justify-content-center">
                         <a href="https://www.facebook.com/AkaleyaWebPrint" target="_blank" class="w-66px facebook d-flex mr-4"></a>
-                        <a href="https://instagram.com/akaleya????" target="_blank" class="w-66px instagram d-flex mr-4"></a>
+                        <a href="https://instagram.com/akaleya?????" target="_blank" class="w-66px instagram d-flex mr-4"></a>
                         <a href="https://github.com/ChloePottier" target="_blank" class="w-66px github d-flex mr-4"></a>
                         <a href="https://www.linkedin.com/in/chlo%C3%A9-pottier-b17b60196/" target="_blank" class=" w-66px linkedin d-flex"></a>
                     </div>

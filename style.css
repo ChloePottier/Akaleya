@@ -172,14 +172,14 @@ input{padding: 1rem 0; height: 40px;}
 .envoi{ top: 26vh; width: 100vw;}
 .w-66px{width: 66px;height: 66px;}
 .github, .linkedin, .facebook, .instagram{background-size: contain; background-repeat: no-repeat;}
-.github{    background-image: url(img/logo-github.svg);}
-.github:hover{ background-image: url(img/logo-github-hover.svg);}
-.linkedin{ background-image: url(img/logo-lindekin.svg);}
-.linkedin:hover{ background-image: url(img/logo-lindekin-hover.svg);}
-.facebook {background-image: url(img/logo-facebook.svg);}
-.facebook:hover{ background-image: url(img/logo-facebook-hover.svg);}
-.instagram {background-image: url(img/logo-instagram.svg);}
-.instagram:hover{ background-image: url(img/logo-instagram-hover.svg);}
+.github{    background-image: url(https://akaleya.fr/wp-content/uploads/2021/01/logo-github.svg);}
+.github:hover{ background-image: url(https://akaleya.fr/wp-content/uploads/2021/01/logo-github-hover.svg);}
+.linkedin{ background-image: url(https://akaleya.fr/wp-content/uploads/2021/01/logo-lindekin.svg);}
+.linkedin:hover{ background-image: url(https://akaleya.fr/wp-content/uploads/2021/01/logo-lindekin-hover.svg);}
+.facebook {background-image: url(https://akaleya.fr/wp-content/uploads/2021/01/logo-facebook.svg);}
+.facebook:hover{ background-image: url(https://akaleya.fr/wp-content/uploads/2021/01/logo-facebook-hover.svg);}
+.instagram {background-image: url(https://akaleya.fr/wp-content/uploads/2021/01/logo-instagram.svg);}
+.instagram:hover{ background-image: url(https://akaleya.fr/wp-content/uploads/2021/01/logo-instagram-hover.svg);}
 .grecaptcha-badge{visibility: hidden;}
 /* FOOTER */
 #footer-menu-legalenotice li a{color: rgb(97,190,223);}

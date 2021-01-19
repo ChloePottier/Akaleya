@@ -4,7 +4,7 @@ function wpbootstrap_styles_scripts(){
     wp_enqueue_style('bootstrap', ''. get_template_directory_uri() .'/assets/bootstrap/bootstrap.min.css');
     wp_enqueue_script('jquery');
     wp_enqueue_script('popper',''.get_template_directory_uri().'/assets/popper.min.js', array('jquery'), 1, true);
-    wp_enqueue_script( 'validator',''.get_template_directory_uri(). '/js/validator.min.js' );
+    wp_enqueue_script( 'validator',''.get_template_directory_uri(). '/assets/js/validator.min.js' );
     wp_enqueue_script('bootstrap-js', ''.get_template_directory_uri() .'/assets/bootstrap/bootstrap.min.js', array('jquery', 'popper'), 1, true);
 }
 add_action('wp_enqueue_scripts', 'wpbootstrap_styles_scripts');
@@ -130,7 +130,7 @@ function cpt_services_init() {
             'new_item'              => __( 'Nouvelle réalisation', 'textdomain' ),
             'edit_item'             => __( 'Editer la réalisation', 'textdomain' ),
             'view_item'             => __( 'Voir la réalisation', 'textdomain' ),
-            'all_items'             => __( 'Tous les réalisations', 'textdomain' ),
+            'all_items'             => __( 'Toutes les réalisations', 'textdomain' ),
             'search_items'          => __( 'Rechercher des réalisations', 'textdomain' ),
             'archives'              => _x( 'Archives des réalisations', 'The post type archive label used in nav menus', 'textdomain' ),
         ); 
@@ -148,11 +148,41 @@ function cpt_services_init() {
         register_post_type( 'realisation', $args );
         } 
         add_action( 'init', 'cpt_portfolio_init' );// Le hook init lance la fonction
+
 // ajouter les category au portfolio
 function category_realisation() {
     register_taxonomy_for_object_type ( 'category' , 'realisation') ;
 } 
 add_action( 'init', 'category_realisation' );
+//Custom post type liens Externes
+function cpt_link_init() {
+    $labels = array(
+        'name'                  => _x( 'Liens externe', 'Post type general name', 'textdomain' ),
+        'singular_name'         => _x( 'Lien externe', 'Post type singular name', 'textdomain' ),
+        'menu_name'             => _x( 'Liens externe', 'Admin Menu text', 'textdomain' ),
+        'add_new'               => __( 'Ajouter un lien', 'textdomain' ),
+        'add_new_item'          => __( 'Ajouter un nouveau lien', 'textdomain' ),
+        'new_item'              => __( 'Nouveau lien ', 'textdomain' ),
+        'edit_item'             => __( 'Editer le lien', 'textdomain' ),
+        'view_item'             => __( 'Voir lae lien', 'textdomain' ),
+        'all_items'             => __( 'Tous les liens', 'textdomain' ),
+        'search_items'          => __( 'Rechercher des lien', 'textdomain' ),
+        'archives'              => _x( 'Archives des liens', 'The post type archive label used in nav menus', 'textdomain' ),
+    ); 
+    $args = array(
+        'labels'             => $labels,
+        'public'             => true,
+        'query_var'          => true,
+        'rewrite'            => array( 'slug' => 'liens' ),
+        'capability_type'    => 'post',
+        'has_archive'        => true,
+        'menu_position'      => null,
+        'menu_icon'          => 'dashicons-admin-links',
+        'supports'           => array( 'title', 'editor'),
+    ); 
+    register_post_type( 'liens', $args );
+    } 
+    add_action( 'init', 'cpt_link_init' );// Le hook init lance la fonction
 
 // ajout format d'image      
 if(function_exists('add_theme_support')):
