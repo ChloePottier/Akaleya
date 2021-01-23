@@ -175,6 +175,7 @@ input{padding: 1rem 0; height: 40px;}
 #footer-menu-legalenotice li a:hover{ color: #FFDF30;}
 #copy-akaleya{color: #fff;}
 #copy-akaleya:hover{color: rgb(97,190,223);}
+.diagonale{background: url(img/diagonale1.svg) no-repeat ;  height:190px;}
 /* sm */
 @media only screen and (min-width: 576px){
     .bg-graphiste{background: url(img/graphiste-h576.jpg) left top no-repeat;    }
