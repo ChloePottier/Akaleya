@@ -1,7 +1,7 @@
 <?php // Chargement des styles et des scripts Bootstrap sur WordPress
 function wpbootstrap_styles_scripts(){
     wp_enqueue_style('bootstrap', ''. get_template_directory_uri() .'/assets/bootstrap/bootstrap.min.css');
-    wp_enqueue_style('font-awesome', get_stylesheet_uri() .'/assets/font-awesome/css/all.css');
+    wp_enqueue_style('font-awesome', get_template_directory_uri() .'/assets/font-awesome/css/all.css');
 
     wp_enqueue_script('jquery');
     wp_enqueue_script('popper',''.get_template_directory_uri().'/assets/popper.min.js', array('jquery'), 1, true);

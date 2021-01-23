@@ -115,6 +115,8 @@ header{overflow: hidden;}
 }
 .display-none{display:none;}
 .display-flex{display: flex; flex-direction: column;}
+.display-flex2{display: flex;}
+
 .burger span:last-child {margin-bottom:0px;}
 .isclosed{transform: none; 
     width: 35px;
@@ -144,7 +146,10 @@ header{overflow: hidden;}
 .slider-items h1{font-size: 4.1rem;}
 .active{display: block;}
 .slider-next, .slider-prev{display: none;}
-
+.container-diagonale{overflow: hidden;}
+.container-diagonale{overflow: hidden;}
+.diagonale1{background:url(https://akaleya.fr/wp-content/uploads/2021/01/diagonale1.svg) no-repeat; height:120px;} /*petit écran peut diminuer hauteur*/
+.diagonale2{background:url(https://akaleya.fr/wp-content/uploads/2021/01/diagonale2.svg) no-repeat; height:120px;} /*petit écran peut diminuer hauteur*/
 /* SERVICES */
 .service .title{ height: 37px!important;   white-space: nowrap; overflow:hidden;}
 .service h3{color:rgb(97,190,223); font-size: 1.5rem!important;}
