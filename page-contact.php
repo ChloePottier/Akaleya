@@ -2,7 +2,7 @@
 <?php /* Template Name: Page Contact Akaleya */ ?>
 <?php
 get_template_part('template-parts/header/head', 'metadata');
-get_header(); ?>
+get_template_part('template-parts/header/header', 'page'); ?>
     <section class="container-fluid bg-contact" id="contact">
         <div class="container">
             <div class="row py-5">

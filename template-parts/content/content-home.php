@@ -57,6 +57,12 @@
             <div class="row" id="content-portfolio">
                 <?php get_template_part('template-parts/content/content', 'portfolio'); ?>
             </div>
+            <div class="row" id="content-web">
+                <?php get_template_part('template-parts/content/content', 'portfolio'); ?>
+            </div>
+            <div class="row" id="content-print">
+                <?php get_template_part('template-parts/content/content', 'portfolio'); ?>
+            </div>
         </div>
     </section>
 </scroll-page>

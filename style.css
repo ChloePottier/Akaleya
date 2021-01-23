@@ -8,8 +8,8 @@ Text Domain: akaleya-theme */
 body{font-family: Arial, Helvetica, sans-serif; font-size: 100%!important;}
 body,html{scroll-behavior: smooth; margin-top: 0!important;}
 a:hover, ul li a:hover{text-decoration: none!important;}
-a, #link-rs a, .link{color:  rgb(91,19,60);}
-a:hover,#link-rs a:hover, .link:hover{color:  rgb(145,33,92);}
+p a, #link-rs a, .link{color:  rgb(91,19,60);}
+p a:hover,#link-rs a:hover, .link:hover{color:  rgb(145,33,92);}
 .pt-9{padding-top: 9rem;}
 .mt-7{margin-top: 3rem;}
 .pb-sm-6{padding-bottom: 4rem;}
@@ -154,15 +154,17 @@ header{overflow: hidden;}
 #nav-portfolio li a:hover{color: rgb(60,0,34)!important;}
 .h-250{height:250px;}
 .border{border: solid 1px #b2b2b2 !important;}
-#portfolio p {text-align: justify ; 
-}
+#portfolio p {text-align: justify ; }
 /* Contact */
 .bg-contact{   background: linear-gradient( rgb(163,116,148) 58%, rgb(162,218,234) 42%);   border-top: solid 2px #58133C}
 .btn-portfolio{ top:0;}
 input{padding: 1rem 0; height: 40px;}
+input,textarea{color: #5b133c;}
 #contact .w-75, .wp-block-contact-form-7-contact-form-selector{width: 100%!important;}
 .wp-block-contact-form-7-contact-form-selector{padding-bottom: 4rem;}
-.text-success,.text-success:hover{color:#5b133c!important}
+.wpcf7 form.sent .wpcf7-response-output {
+    border-color: #5b133c; color:#5b133c!important
+}
 .text-danger,.text-danger:hover{color:#e71600!important}
 [type='submit'],.btn-retour{
     width: 100%;
@@ -188,6 +190,7 @@ margin-bottom: 1rem;  }
 #footer-menu-legalenotice li a:hover{ color: #FFDF30;}
 #copy-akaleya{color: #fff;}
 #copy-akaleya:hover{color: rgb(97,190,223);}
+/* Autres pages */
 .page-404{height: 90vh;}
 
 /* sm */

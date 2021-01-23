@@ -193,3 +193,17 @@ if(function_exists('add_theme_support')):
 
 endif;
 
+//menu ajax gallerie
+function galery_assets() {
+
+    // ...
+  
+    // Charger notre script
+    wp_enqueue_script( 'menu-ajax', get_template_directory_uri() . '/assets/js/navigation/nav-ajax-galery.js', array( 'jquery' ), '1.0', true );
+  
+    // Envoyer une variable de PHP à JS proprement
+    wp_localize_script( 'menu-ajax', 'ajaxurl', admin_url( 'admin-ajax.php' ) );
+  
+  }
+  add_action( 'wp_enqueue_scripts', 'galery_assets' );
+
