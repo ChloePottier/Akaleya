@@ -69,21 +69,7 @@ header{overflow: hidden;}
     0% {opacity: 0;}
     100%{opacity: 100;}
 }
-/* @keyframes fondu{
-    0% {filter: alpha(opacity=0);
-        opacity: 0;}
-    100%{filter: alpha(opacity=100);
-        opacity: 100;}
-} */
-.fondu-out{ animation: 0.5s fondu-out linear;}
-/* @keyframes fondu-out{
-    100%{filter: alpha(opacity=100);
-        opacity: 100;}
-    0% {filter: alpha(opacity=0);
-        opacity: 0;}    
-} */
 #btnScrollToTop{
-    /* display: none;  */
     position: fixed;}
 #navbarTop ul li a,#navigation ul li a{ color: white!important;}
 #navbarTop ul li a:hover,#navigation ul li a:hover{ color: rgb(97,190,223)!important;}
@@ -105,7 +91,7 @@ header{overflow: hidden;}
     margin: 0;
     position: absolute;
     top: 3%;
-    right : 7%; /*20%*/
+    right : 7%; 
     z-index: 2000;
     cursor: pointer;
     width: 4.75rem;
@@ -115,8 +101,6 @@ header{overflow: hidden;}
 .display-none{display:none;}
 .display-flex{display: flex; flex-direction: column;}
 .display-flex2{display: flex;}
-
-
 .burger span:last-child {margin-bottom:0px;}
 .isclosed{transform: none; 
     width: 35px;
@@ -144,6 +128,8 @@ header{overflow: hidden;}
 .slider-wrapper,.slider-items{width: 100%; height: auto; padding: 0!important;}
 .slider-items{display: none;}
 .slider-items h1{font-size: 4.1rem;}
+.slider-items div p{font-size: 1.3rem; word-wrap: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; -ms-hyphens: auto; hyphens: auto;}
+/* .slider-content{width: 100%;} */
 .active{display: block;}
 .slider-next, .slider-prev{display: none;}
 .container-diagonale{overflow: hidden;}
@@ -243,6 +229,7 @@ margin-bottom: 1rem;  }
     .bg-contact{background: linear-gradient( rgb(163,116,148) 58%, rgb(162,218,234) 42%);}
     #navigation ul{padding-right: 40%;}
     /* .bg-guitare{background: url(img/guitare-sm.png) left bottom 1rem no-repeat;} */
+    .slider-content{width: 75%;}
     .slider-next, .slider-prev{display:block; width: 22px; height: 39px; background: no-repeat; cursor: pointer!important;}
     .slider-prev{background-image:url(https://akaleya.fr/wp-content/uploads/2021/01/precedent.png); float:left;}
     .slider-next{background:url(https://akaleya.fr/wp-content/uploads/2021/01/suivant.png) ;float:right;}
@@ -252,6 +239,7 @@ margin-bottom: 1rem;  }
 @media only screen and (min-width: 768px){
     .pb-6{padding-bottom: 4rem;}
     .pb-sm-6{padding-bottom: 0!important;}
+    .slider-items div p{font-size: 1.5rem;}
     /* .bg-graphiste{background: url(wp-content/uploads/2021/01/graphiste.jpg) left top no-repeat;    } */
     .bg-contact{background: linear-gradient(0.25turn, rgb(163,116,148) 50%, rgb(162,218,234) 50%);
          border-top: solid 2px #58133C}

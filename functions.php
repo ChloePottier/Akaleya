@@ -21,9 +21,7 @@ function wpm_myme_types($mime_types){
 }
 // Ajouter la prise en charge des images mises en avant
 // add_theme_support( 'post-thumbnails' );
-
-
-//ajouter le logo
+//Ajouter le logo
 function themename_custom_logo_setup() {
     $defaults = array(
     'height'      => 52,
@@ -38,7 +36,7 @@ function themename_custom_logo_setup() {
 // Masquer admin bar
    show_admin_bar( false );
    add_filter( 'show_admin_bar', '__return_false' );
-
+//Custom post type
 function cpt_slider_init() {
 $labels = array(
     'name'                  => _x( 'Slider', 'Post type general name', 'textdomain' ),
