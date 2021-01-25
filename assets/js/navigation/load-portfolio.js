@@ -44,7 +44,6 @@ function loadWeb() {
   portfolio.classList.add("display-none");
   web.classList.add("display-flex2");
   graph.classList.add("display-none");
-
 };
 
 function loadPrint() {

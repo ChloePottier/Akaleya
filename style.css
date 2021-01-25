@@ -7,7 +7,7 @@ License URI: https://github.com/Akaleya
 Text Domain: akaleya-theme */
 body{font-family: Arial, Helvetica, sans-serif; font-size: 100%!important;}
 body,html{scroll-behavior: smooth; margin-top: 0!important;}
-a:hover, ul li a:hover{text-decoration: none!important;}
+a:hover, ul li a:hover{text-decoration: none!important; cursor: pointer!important;}
 p a, #link-rs a, .link{color:  rgb(91,19,60);}
 p a:hover,#link-rs a:hover, .link:hover{color:  rgb(145,33,92);}
 .pt-9{padding-top: 9rem;}
@@ -34,7 +34,6 @@ ul{margin-bottom: 0!important; padding-left: 0!important;}
 .bg-white-op40{background-color: rgba(255,255,255,.4);}
 .bg-graphiste{height: 100vh; background: url(https://akaleya.fr/wp-content/uploads/2021/01/graphiste.jpg) left top no-repeat; background-attachment: fixed;}
 .bg-graphiste-small{ background: url(https://akaleya.fr/wp-content/uploads/2021/01/header-200-h.jpg) left top no-repeat; background-attachment: fixed; background-size: contain !important;}
-
 .bg-guitare{background: url(https://akaleya.fr/wp-content/uploads/2021/01/Chloe-pottier-guitare.png) left bottom 1rem no-repeat;}
 .bg-cover{background-size: cover !important;}
 .responsive{width:100%; height:auto;}
@@ -117,6 +116,7 @@ header{overflow: hidden;}
 .display-flex{display: flex; flex-direction: column;}
 .display-flex2{display: flex;}
 
+
 .burger span:last-child {margin-bottom:0px;}
 .isclosed{transform: none; 
     width: 35px;
@@ -148,15 +148,50 @@ header{overflow: hidden;}
 .slider-next, .slider-prev{display: none;}
 .container-diagonale{overflow: hidden;}
 .container-diagonale{overflow: hidden;}
-.diagonale1{background:url(https://akaleya.fr/wp-content/uploads/2021/01/diagonale1.svg) no-repeat; height:120px;} /*petit écran peut diminuer hauteur*/
-.diagonale2{background:url(https://akaleya.fr/wp-content/uploads/2021/01/diagonale2.svg) no-repeat; height:120px;} /*petit écran peut diminuer hauteur*/
 /* SERVICES */
 .service .title{ height: 37px!important;   white-space: nowrap; overflow:hidden;}
 .service h3{color:rgb(97,190,223); font-size: 1.5rem!important;}
-.service p {text-align: justify;}
+.service p {text-align: justify; line-height: 1.8rem;}
 /* PORTFOLIO */
-#nav-portfolio li a{color: rgb(97,190,223)!important;}
+.card{overflow: hidden; border: none; height: 196px; border-radius: 0!important;}
+.card__side {
+display: flex;
+flex-direction: column;
+height: 100%;
+-webkit-transition: all .8s ease;
+transition: all .8s ease;
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+-webkit-backface-visibility: hidden;
+backface-visibility: hidden;
+}
+
+.card__side--front {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+z-index: 1;
+}
+
+.card__side--back {
+justify-content: center;
+align-items: center;
+transform: translateX(400px);z-index: 100;
+}
+
+.card:hover .card__side--back {
+/* transform: rotateY(180deg); */
+transform: translateX(0px);
+transition-timing-function : ease-out;
+background-color: #58133C;
+}
+
+#nav-portfolio li a{color: rgb(97,190,223)!important; cursor: pointer!important;}
 #nav-portfolio li a:hover{color: rgb(60,0,34)!important;}
+#nav-portfolio li .active2{color: rgb(60,0,34)!important;}
 .h-250{height:250px;}
 .border{border: solid 1px #b2b2b2 !important;}
 #portfolio p {text-align: justify ; }
