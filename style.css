@@ -27,16 +27,16 @@ ul{margin-bottom: 0!important; padding-left: 0!important;}
 .bg-prune{background-color: rgb(145,33,92);}
 /* .bg-prune-dark{background-color: rgb(91,19,60);} */
 .bg-prune-dark{background-color: rgb(60,0,34);} 
-.bg-burger{background: url(https://akaleya.fr/wp-content/uploads/2021/01/bg-burger.svg);}
+.bg-burger{background: url(https://akaleya.fr/wp-content/uploads/2021/01/bg-burger.svg) no-repeat center center; }
 .bg-none{background: none;}
 .bg-white{background-color: #fff;}
 .bg-prune-dark-op70{background-color: rgba(91,19,60,.8);}
 .bg-white-op40{background-color: rgba(255,255,255,.4);}
-.bg-graphiste{height: 100vh; background: url(https://akaleya.fr/wp-content/uploads/2021/01/graphiste.jpg) left top no-repeat; background-attachment: fixed;}
-.bg-graphiste-small{ background: url(https://akaleya.fr/wp-content/uploads/2021/01/header-200-h.jpg) left top no-repeat; background-attachment: fixed; background-size: contain !important;}
-.bg-guitare{background: url(https://akaleya.fr/wp-content/uploads/2021/01/Chloe-pottier-guitare.png) left bottom 1rem no-repeat;}
+.bg-graphiste{height: 100vh; background: url(https://akaleya.fr/wp-content/uploads/2021/01/graphiste.webp)  left top no-repeat; background-attachment: fixed;}
+.bg-graphiste-small{ background: url(https://akaleya.fr/wp-content/uploads/2021/01/header-200-h.webp) left top no-repeat; background-attachment: fixed; background-size: contain !important;}
+.bg-guitare{background: url(https://akaleya.fr/wp-content/uploads/2021/01/Chloe-pottier-guitare.webp) left bottom 1rem no-repeat;}
 .bg-cover{background-size: cover !important;}
-.responsive{width:100%; height:auto;}
+.responsive{width:100%; height: 100%; object-fit: cover;}
 .height-200{height: 200px!important;}
 /* Font */
 @font-face {
@@ -44,7 +44,8 @@ ul{margin-bottom: 0!important; padding-left: 0!important;}
     src: url('font/BebasNeue-Regular.otf') format('otf'),
         url('font/BebasNeue-Regular.woff') format('woff'),
         url('font/BebasNeue-Regular.woff2') format('woff2'),
-        url('font/BebasNeue-Regular.ttf') format('ttf');}
+        url('font/BebasNeue-Regular.ttf') format('ttf');
+        font-display: swap;}
 h1,h2,h3,.font-family-bebas{font-family: 'BebasNeue';}
 h1,h2,h3{margin: 0!important;}
 .font-size-58{font-size: 3.5rem;}
@@ -139,7 +140,7 @@ header{overflow: hidden;}
 .service h3{color:rgb(97,190,223); font-size: 1.5rem!important;}
 .service p {text-align: justify; line-height: 1.8rem;}
 /* PORTFOLIO */
-.card{overflow: hidden; border: none; height: 196px; border-radius: 0!important;}
+.card{overflow: hidden; border: none; border-radius: 0!important;}
 .card__side {
 display: flex;
 flex-direction: column;
@@ -153,28 +154,24 @@ width: 100%;
 -webkit-backface-visibility: hidden;
 backface-visibility: hidden;
 }
-
 .card__side--front {
-display: flex;
+display: inline-block;
+position: relative;
 flex-direction: column;
 align-items: center;
 justify-content: center;
 z-index: 1;
 }
-
 .card__side--back {
 justify-content: center;
 align-items: center;
 transform: translateX(400px);z-index: 100;
 }
-
 .card:hover .card__side--back {
-/* transform: rotateY(180deg); */
 transform: translateX(0px);
 transition-timing-function : ease-out;
 background-color: #58133C;
 }
-
 #nav-portfolio li a{color: rgb(97,190,223)!important; cursor: pointer!important;}
 #nav-portfolio li a:hover{color: rgb(60,0,34)!important;}
 #nav-portfolio li .active2{color: rgb(60,0,34)!important;}
@@ -254,7 +251,7 @@ margin-bottom: 1rem;  }
     /* .service .align-items-center{ align-items: start!important;} */
     .service h3{font-size: 1.5rem!important;}
     .service img{width: 40px; height: auto;}
-    
+    #content-portfolio .card,#content-web .card, #content-print .card{height: 236px;}
 
 }
 /* lg */
@@ -266,11 +263,10 @@ margin-bottom: 1rem;  }
     /* .service .align-items-center{ align-items: center!important;} */
     .service .title{ height: 37px!important;   white-space: nowrap; overflow:hidden;}
 
-
  }
 /* xl */
 @media only screen and  (min-width: 1200px) {
-    .bg-graphiste{height: 100vh; background: url(https://akaleya.fr/wp-content/uploads/2021/01/graphiste.jpg) left top no-repeat; background-attachment: fixed;}
+    .bg-graphiste{height: 100vh; background: url(https://akaleya.fr/wp-content/uploads/2021/01/graphiste.webp) left top no-repeat; background-attachment: fixed;}
     .font-size-18{font-size: 1.3rem;}
     .service h3{font-size: 1.75rem!important;}
 

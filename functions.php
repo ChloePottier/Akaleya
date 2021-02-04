@@ -187,21 +187,17 @@ function cpt_link_init() {
 
 // ajout format d'image      
 if(function_exists('add_theme_support')):
-    add_image_size('thumbnail_portfolio',370,250,true);
+    add_image_size('thumbnail_portfolio_sm',545,368,false);
+    add_image_size('thumbnail_portfolio',370,250,false);    
 
 endif;
 
 //menu ajax gallerie
 function galery_assets() {
-
-    // ...
-  
     // Charger notre script
     wp_enqueue_script( 'menu-ajax', get_template_directory_uri() . '/assets/js/navigation/nav-ajax-galery.js', array( 'jquery' ), '1.0', true );
-  
     // Envoyer une variable de PHP à JS proprement
-    wp_localize_script( 'menu-ajax', 'ajaxurl', admin_url( 'admin-ajax.php' ) );
-  
+    wp_localize_script( 'menu-ajax', 'ajaxurl', admin_url( 'admin-ajax.php' ) );  
   }
   add_action( 'wp_enqueue_scripts', 'galery_assets' );
 

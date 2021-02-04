@@ -10,6 +10,7 @@
             </div>
         </div>
     </div>
+    <?php wp_footer(); ?>
 </footer>
 
 <script type="text/javascript" src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/themes/akaleya-theme/assets/js/navigation/load-portfolio.js" async defer></script>

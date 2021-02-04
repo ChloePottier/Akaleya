@@ -6,7 +6,8 @@
  * @version 1.0
  */
 ?>
-<body id="top">
+<body id="top" <?php body_class(); ?>>
+<?php wp_body_open(); ?>
 <header onload=sliding()>
     <div class="container-fluid bg-graphiste bg-cover">
         <div class="container d-none d-md-flex justify-content-end pt-3" id="navbarTop">
