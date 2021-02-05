@@ -4,7 +4,7 @@
             <div class="row py-5 d-flex align-items-end bg-guitare">
                 <div class="col-md-2 d-none d-md-flex"></div>
                 <div class="col-12 col-md-10 text-center pt-5 pb-5">
-                    <h2 class="text-prune-dark pb-2 font-size-56">Une solution <br />adaptée à vos besoins <br />print et web</h2>
+                    <h2 class="text-prune-dark pb-2 font-size-56 pb-5"><span class="text-prune font-size-36">Une</span> solution <span class="text-prune font-size-36">adaptée<br />à vos </span>besoins <br /></h2>
                     <?php $loop = new WP_Query(array('post_type' => 'presentation', 'post_status' => 'publish'));
                     if ($loop->have_posts()) :
                         while ($loop->have_posts()) : $loop->the_post(); ?>
@@ -23,11 +23,6 @@
     <div class="container-fluid p-0 container-diagonale">
         <img src="https://akaleya.fr/wp-content/uploads/2021/01/diagonale1.svg" width="" height="" alt="background diagonale akaleya" />
     </div>
-    <!-- <svg version="1.0" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="138.102px" viewBox="0 0 1024 138.102" enable-background="new 0 0 1024 138.102" xml:space="preserve">
-                <image display="none" overflow="visible" xlink:href="3A4FFA47.jpg" transform="matrix(0.9999 0 0 0.9999 -391.5 17.5)">
-                </image>
-                <polygon fill="#000" points="1024,138.102 0,51.107 0,0 1024,0 " />
-            </svg> -->
     <section id="services" class="container-fluid bg-prune-dark text-white">
         <div class="container">
             <!-- bg en diagonal voir tete de com-->
@@ -53,7 +48,7 @@
                 </div>
                 <div class="col-12" id="nav-portfolio">
                     <ul class="pl-0 mb-2 d-flex flex-row justify-content-center justify-content-md-end font-family-bebas font-size-21 pb-3 pb-lg-0">
-                        <li class="pr-3"><a class="nav-portfolio-btn" onclick="loadAll()" id="all-gallery">tous</a></li>
+                        <li class="pr-3"><a class="nav-portfolio-btn active2" onclick="loadAll()" id="all-gallery">tous</a></li>
                         <li class="pr-3"><a class="nav-portfolio-btn" onclick="loadWeb()" id="web-gallery">web</a></li>
                         <li><a class="nav-portfolio-btn" onclick="loadPrint()" id="print-gallery">graphisme</a></li>
                     </ul>
@@ -90,7 +85,7 @@
                     <!-- retrouvez moi -->
                     <img src="<?php echo get_site_url(); ?>/wp-content/uploads/2021/01/Akaleya-logo.svg" alt="Akaleya - web and print logo" title="Akaleya - création graphique et web - Jura" width="289" height="289" class="mx-auto" />
                     <p class="font-family-bebas text-prune-dark font-size-31 line-height text-center pt-5">
-                        Retrouvez-moi<br />aussi sur :</p>
+                        Retrouvez-nous<br />aussi sur :</p>
                     <div class="d-flex flex-row justify-content-center" id="link-rs">
                         <?php $loop = new WP_Query(array('post_type' => 'liens',  'order'   => 'ASC'));
                         if ($loop->have_posts()) :
