@@ -179,7 +179,7 @@ function cpt_link_init() {
         'has_archive'        => true,
         'menu_position'      => null,
         'menu_icon'          => 'dashicons-admin-links',
-        'supports'           => array( 'title', 'editor'),
+        'supports'           => array( 'title', 'editor', 'excerpt'),
     ); 
     register_post_type( 'liens', $args );
     } 

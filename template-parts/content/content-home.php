@@ -10,6 +10,7 @@
                         while ($loop->have_posts()) : $loop->the_post(); ?>
                             <div class="text-prune font-size-18"><?php the_content(); ?></div>
                     <?php endwhile;
+                    wp_reset_postdata();
                     else :
                         echo 'Page introuvable';
                     endif; ?>
@@ -21,7 +22,7 @@
 
 <scroll-page id="section-services">
     <div class="container-fluid p-0 container-diagonale">
-        <img src="https://akaleya.fr/wp-content/uploads/2021/01/diagonale1.svg" width="" height="" alt="background diagonale akaleya" />
+        <img src="https://akaleya.fr/wp-content/uploads/2021/01/diagonale1.svg" width="1900" height="190" alt="background diagonale akaleya" />
     </div>
     <section id="services" class="container-fluid bg-prune-dark text-white">
         <div class="container">
@@ -35,7 +36,7 @@
         </div>
     </section>
     <div class="container-fluid p-0 container-diagonale">
-        <img src="https://akaleya.fr/wp-content/uploads/2021/01/diagonale2.svg" width="" height="" alt="background diagonale akaleya" />
+        <img src="https://akaleya.fr/wp-content/uploads/2021/01/diagonale2.svg" width="1900" height="190"  alt="background diagonale akaleya" />
     </div>
 </scroll-page>
 
@@ -92,6 +93,7 @@
                             while ($loop->have_posts()) : $loop->the_post(); ?>
                                 <a href="<?php the_field('url_profil'); ?>" target="_blank" class="font-size-58 w-66px d-flex mx-2"><?php the_field('icone'); ?></a>
                         <?php endwhile;
+                        wp_reset_postdata();
                         endif; ?>
 
                     </div>
