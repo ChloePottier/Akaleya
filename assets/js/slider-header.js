@@ -7,7 +7,7 @@
    let slide = document.querySelectorAll('.slider-items')
    //longueur du tableau. combien de items ?
    let sliderLength = slide.length;
-   //console.log(sliderLength);
+   console.log(sliderLength);
    //état initiale du compteur pour ensuite l'incrémenter
    let counter = 0;
    //on ajoute la class 'active' sur le slide

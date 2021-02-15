@@ -5,7 +5,16 @@
 favicon.ico
 Modification du site.txt
 recaptcha.php
-assets/
+img/
+css/
+assets/bootstrap/
+assets/font-awesome/
+assets/js/form-scripts.js
+assets/js/jquery-1.11.2.min.js
+assets/js/jquery-3.5.1.min.js
+assets/js/popper.min.js
+assets/js/validator.min.js
+google.php
 # Node rules:
 ## Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
 .grunt

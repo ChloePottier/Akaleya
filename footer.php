@@ -10,15 +10,13 @@
             </div>
         </div>
     </div>
+    <?php wp_footer(); ?>
 </footer>
 
-<!-- Script JQUERY pour Ajax -->
-<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
-<script type="text/javascript" src="js/validator.min.js"></script>
-<script type="text/javascript" src="js/form-scripts.js"></script>
-<script type="text/javascript" src="js/navigation/nav-fixed.js" async defer></script>
-<script type="text/javascript" src="js/navigation/burger.js" async defer></script>
-<script type="text/javascript" src="js/slider-header.js" async defer></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-<script src="https://www.google.com/recaptcha/api.js?render=_reCAPTCHA_site_key"></script>
+<script  src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/themes/akaleya-theme/assets/js/navigation/load-portfolio.js" async defer></script>
+<script  src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/themes/akaleya-theme/assets/js/navigation/nav-fixed.js" async defer></script>
+<script  src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/themes/akaleya-theme/assets/js/navigation/burger.js" async defer></script>
+<script  src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/themes/akaleya-theme/assets/js/slider-header.js" async defer></script>
+</body>
+
+</html>

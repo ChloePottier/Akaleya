@@ -1,12 +1,12 @@
     <li class="" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-        <a href="#page-1" class="text-prune-dark" itemprop="item">Présentation</a>
+        <a href="<?php echo esc_url( home_url( '/' ) ); ?>#section-presentation" class="text-prune-dark" itemprop="item">Présentation</a>
     </li>
     <li class="" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-        <a href="#page-2" class="text-prune-dark" itemprop="item">Services</a>
+        <a href="<?php echo esc_url( home_url( '/' ) ); ?>#section-services" class="text-prune-dark" itemprop="item">Services</a>
     </li>
     <li class="" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-        <a href="#page-3" class="text-prune-dark" itemprop="item">réalisations</a>
+        <a href="<?php echo esc_url( home_url( '/' ) ); ?>#section-portfolio" class="text-prune-dark" itemprop="item">réalisations</a>
     </li>
     <li class="" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-        <a href="#page-4" class="text-prune-dark" itemprop="item">Contact</a>
+        <a href="<?php echo esc_url( home_url( '/' ) ); ?>#section-contact" class="text-prune-dark" itemprop="item">Contact</a>
     </li>
