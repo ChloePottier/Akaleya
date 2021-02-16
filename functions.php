@@ -20,7 +20,7 @@ function wpm_myme_types($mime_types){
     return $mime_types;
 }
 // Ajouter la prise en charge des images mises en avant
-// add_theme_support( 'post-thumbnails' );
+add_theme_support( 'post-thumbnails' );
 //Ajouter le logo
 function themename_custom_logo_setup() {
     $defaults = array(
@@ -82,8 +82,7 @@ function cpt_presentation_init() {
         'has_archive'        => true,
         'menu_position'      => null,
         'menu_icon'          => 'dashicons-universal-access',
-        'supports'           => array( 'title', 'editor', 
-        // 'thumbnail', 'excerpt' 
+        'supports'           => array( 'title', 'editor',  // 'thumbnail', 'excerpt' 
         ),
     ); 
     register_post_type( 'presentation', $args );
@@ -144,7 +143,7 @@ function cpt_services_init() {
             'has_archive'        => true,
             'menu_position'      => null,
             'menu_icon'          => 'dashicons-art',
-            'supports'           => array( 'title', 'editor','category'),
+            'supports'           => array( 'title', 'editor','category', 'excerpt','thumbnail' ),
         ); 
         register_post_type( 'realisation', $args );
         } 
@@ -179,7 +178,7 @@ function cpt_link_init() {
         'has_archive'        => true,
         'menu_position'      => null,
         'menu_icon'          => 'dashicons-admin-links',
-        'supports'           => array( 'title', 'editor', 'excerpt'),
+        'supports'           => array( 'title', 'editor',),
     ); 
     register_post_type( 'liens', $args );
     } 
@@ -200,4 +199,5 @@ function galery_assets() {
     wp_localize_script( 'menu-ajax', 'ajaxurl', admin_url( 'admin-ajax.php' ) );  
   }
   add_action( 'wp_enqueue_scripts', 'galery_assets' );
+
 

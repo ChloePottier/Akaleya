@@ -10,7 +10,7 @@
                         while ($loop->have_posts()) : $loop->the_post(); ?>
                             <div class="text-prune font-size-18"><?php the_content(); ?></div>
                     <?php endwhile;
-                    wp_reset_postdata();
+                     wp_reset_postdata();
                     else :
                         echo 'Page introuvable';
                     endif; ?>
@@ -65,6 +65,7 @@
             <div class="row display-none" id="content-print">
                 <?php get_template_part('template-parts/content/content', 'print'); ?>
             </div>
+        
         </div>
     </section>
 </scroll-page>

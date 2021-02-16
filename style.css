@@ -1,7 +1,7 @@
 /* Theme Name: Akaleya
 Author: Chloé Pottier
 Description: Thème Akaleya : graphisme et développement web
-Version: 1.0
+Version: 1.1
 Licence: 1.0
 License URI: https://github.com/Akaleya
 Text Domain: akaleya-theme */
@@ -214,12 +214,10 @@ margin-bottom: 1rem;  }
 #copy-akaleya:hover{color: rgb(97,190,223);}
 /* Autres pages */
 .page-404{height: 90vh;}
-
 /* sm */
 @media only screen and (min-width: 576px){
 .bg-graphiste{height: 100vh; background: url(https://akaleya.fr/wp-content/uploads/2021/02/graphiste-w768.webp)  left top no-repeat; background-attachment: fixed;}
 .font-size-56{font-size: 3.5rem;}
-
     .pb-6{padding-bottom: 0;}
     .border-bottom{border-bottom: solid 1px rgb(207, 207, 207)!important;}
     .bg-contact{background: linear-gradient( rgb(163,116,148) 58%, rgb(162,218,234) 42%);}
