@@ -15,22 +15,13 @@ get_template_part('template-parts/header/header', 'page'); ?>
                         yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
                         } ?>
                     </div>
-                    <div class="col-12 col-md-4">
-                        <?php if (!empty($image)) : ?>
-                            <img src="<?php echo esc_url($image['url']); ?>" class="responsive" width="545" height="368" alt="<?php echo esc_attr($image['alt']); ?>" />
-                        <?php endif; ?>
-                    </div>
-                    <div class="col-12 col-md-8">
+                    <div class="col-12">
                         <h3 class="pt-3 text-prune-dark"><?php the_title(); ?></h3>
                         <div class="text-prune"><?php the_content(); ?></div>
                     </div>
                 </div>
             </div>
         </section>
-
-
-
-
 <?php endwhile;
 endif;
 wp_reset_postdata();

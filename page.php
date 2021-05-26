@@ -16,12 +16,10 @@ get_template_part('template-parts/header/header', 'page');?>
                             <?php the_content(); ?>
                             </div>
                     <?php endwhile;
-                    endif; ?>
-                
+                    endif; ?>               
         </div>
     </div>
 </section>
-
 </scroll-page>
 </body>
 <?php get_footer(); ?>
