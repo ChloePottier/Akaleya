@@ -13,10 +13,5 @@
     <?php wp_footer(); ?>
 </footer>
 
-<script  src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/themes/akaleya-theme/assets/js/navigation/load-portfolio.js" async defer></script>
 <script  src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/themes/akaleya-theme/assets/js/navigation/nav-fixed.js" async defer></script>
 <script  src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/themes/akaleya-theme/assets/js/navigation/burger.js" async defer></script>
-<script  src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/themes/akaleya-theme/assets/js/slider-header.js" async defer></script>
-</body>
-
-</html>

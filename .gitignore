@@ -2,13 +2,14 @@
 .gitignore
 .htaccess
 .git
-akaleya V-1.0/
+akaleya-V-1.0/
 # pages test à suppr quand terminé
 page-test.php
 page-testsauv.php
 favicon.ico
 Modification du site.txt
 recaptcha.php
+google.php
 img/
 css/
 assets/bootstrap/

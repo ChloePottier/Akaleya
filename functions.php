@@ -4,7 +4,7 @@ function wpbootstrap_styles_scripts(){
     wp_enqueue_style('font-awesome', get_template_directory_uri() .'/assets/font-awesome/css/all.css');
 
     wp_enqueue_script('jquery');
-    wp_enqueue_script('popper',''.get_template_directory_uri().'/assets/popper.min.js', array('jquery'), 1, true);
+    wp_enqueue_script('popper',''.get_template_directory_uri().'/assets/js/popper.min.js', array('jquery'), 1, true);
     wp_enqueue_script( 'validator',''.get_template_directory_uri(). '/assets/js/validator.min.js' );
     wp_enqueue_script('bootstrap-js', ''.get_template_directory_uri() .'/assets/bootstrap/bootstrap.min.js', array('jquery', 'popper'), 1, true);
     wp_enqueue_style('style', get_stylesheet_uri());
@@ -190,14 +190,44 @@ if(function_exists('add_theme_support')):
     add_image_size('thumbnail_portfolio',370,250,false);    
 
 endif;
-
 //menu ajax gallerie
-function galery_assets() {
-    // Charger notre script
-    wp_enqueue_script( 'menu-ajax', get_template_directory_uri() . '/assets/js/navigation/nav-ajax-galery.js', array( 'jquery' ), '1.0', true );
-    // Envoyer une variable de PHP à JS proprement
-    wp_localize_script( 'menu-ajax', 'ajaxurl', admin_url( 'admin-ajax.php' ) );  
-  }
-  add_action( 'wp_enqueue_scripts', 'galery_assets' );
+// function galery_assets() {
+//     // Charger notre script
+//     wp_enqueue_script( 'menu-ajax', get_template_directory_uri() . '/assets/js/navigation/nav-ajax-galery.js', array( 'jquery' ), '1.0', true );
+//     // Envoyer une variable de PHP à JS proprement
+//     wp_localize_script( 'menu-ajax', 'ajaxurl', admin_url( 'admin-ajax.php' ) );  
+//   }
+//   add_action( 'wp_enqueue_scripts', 'galery_assets' );
 
+/*** BOUTONS DE PARTAGE RESEAUX SOCIAUX ***/
+function my_sharing_buttons($content) {
+    //si le blog est en page d'accueil ou si c'est un post seul
+    if(is_home() || is_single()){
+        // Récuperer URL de la page en cours 
+        $myCurrentURL = urlencode(get_permalink());
+        // Récuperer TITRE de la page en cours
+        $myCurrentTitle = urlencode(get_the_title()); 
+        // Récuperer MINIATURE si l'image à la une existe
+        if(has_post_thumbnail($post->ID)) {
+            $myCurrentThumbnail = wp_get_attachment_image_src(urlencode(get_the_post_thumbnail()), 'full'); // correction du 9 février 2017
+        }
+        
+        // Construction des URL de partage 
+        $facebookURL = esc_url( 'https://www.facebook.com/sharer/sharer.php?u='.$myCurrentURL );
+        $linkedInURL = esc_url( 'https://www.linkedin.com/shareArticle?mini=true&url='.$myCurrentURL.'&amp;title='.$myCurrentTitle );
+        $email_share = esc_url( 'mailto:?subject=Regarde cet article !&BODY=Hey ! Je voulais partager avec toi cet article intéressant  : '
+        .$myCurrentURL.'&amp;title='.$myCurrentTitle) ;
+        // Ajout des bouton en bas des articles et des pages
+        $content .= '<div class="partage-reseaux-sociaux  d-flex align-items-center justify-content-end">';
+        $content .= __('<span class="font-weight-bold mr-2 partagez">Partagez  : </span>');
+        $content .= '<a class="share-facebook mr-2" href="'.$facebookURL.'&t='.$myCurrentTitle.'" target="_blank"><i class="fab fa-facebook-square"></i></a>';
 
+        // $content .= '<a class="share-facebook mr-2" href="'.$facebookURL.'" target="_blank"><i class="fab fa-facebook-square"></i></a>';
+        $content .= '<a class="share-linkedin mr-2" href="'.$linkedInURL.'" target="_blank"><i class="fab fa-linkedin"></i></a>';
+        $content .= '<a class="share-email" href="'.$email_share.'" target="_blank"><i class="fas fa-envelope"></i></a>';
+        $content .= '</div>';
+        }
+        return $content;
+};
+//ajoute un filtre qui autorise la fonction à s'ajouter lorsqu'on utilise
+add_filter( 'the_content', 'my_sharing_buttons');
