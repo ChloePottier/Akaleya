@@ -19,14 +19,12 @@
         </div>
     </section>
 </scroll-page>
-
 <scroll-page id="section-services">
     <div class="container-fluid p-0 container-diagonale">
         <img src="https://akaleya.fr/wp-content/uploads/2021/01/diagonale1.svg" width="1900" height="190" alt="background diagonale akaleya" />
     </div>
     <section id="services" class="container-fluid bg-prune-dark text-white">
         <div class="container">
-            <!-- bg en diagonal voir tete de com-->
             <div class="row  d-flex justify-content-md-center justify-content-lg-start">
                 <div class="col-12 text-center pb-3">
                     <h2 class=" pb-3 font-size-56">Les services proposés</h2>
@@ -39,7 +37,6 @@
         <img src="https://akaleya.fr/wp-content/uploads/2021/01/diagonale2.svg" width="1900" height="190"  alt="background diagonale akaleya" />
     </div>
 </scroll-page>
-
 <scroll-page id="section-portfolio">
     <section id="portfolio" class="container-fluid">
         <div class="container py-5">
@@ -55,7 +52,6 @@
                     </ul>
                 </div>
             </div>
-
             <div class="row display-flex2" id="content-portfolio">
                 <?php get_template_part('template-parts/content/content', 'portfolio'); ?>
             </div>
@@ -65,12 +61,10 @@
             <div class="row display-none" id="content-print">
                 <?php get_template_part('template-parts/content/content', 'print'); ?>
             </div>
-        
         </div>
     </section>
 </scroll-page>
 <scroll-page id="section-contact">
-
     <section class="container-fluid bg-contact" id="contact">
         <div class="container">
             <div class="row py-5">
@@ -96,11 +90,9 @@
                         <?php endwhile;
                         wp_reset_postdata();
                         endif; ?>
-
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
 </scroll-page>
