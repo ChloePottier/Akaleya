@@ -36,7 +36,7 @@ ul{margin-bottom: 0!important; padding-left: 0!important;}
 .bg-guitare{background: url(https://akaleya.fr/wp-content/uploads/2021/01/Chloe-pottier-guitare.webp) left bottom 1rem no-repeat;}
 .bg-cover{background-size: cover !important;}
 .responsive{width:100%; height: 100%; object-fit: cover;}
-.height-200{height: 200px!important;}
+/* .height-200{height: 200px!important;} */
 /* Font */
 @font-face {
     font-family: 'BebasNeue';
@@ -54,14 +54,12 @@ h1,.font-size-36{font-size: 2.25rem;}
 .font-size-24{font-size: 1.5rem;}
 .font-size-21{font-size: 1.31rem;}
 .font-size-18{font-size: 1.125rem;}
-.font-size-13{font-size: .8rem;
-}
+.font-size-13{font-size: .8rem;}
 .text-underline{text-decoration: underline;}
 .line-height{line-height: 1.8rem;}
 .bold{font-weight: 600;}
 .text-shadow{text-shadow: 5px 5px 5px black;}
 ::placeholder{color: rgb(91,19,60); font-family: 'BebasNeue',Arial, Helvetica, sans-serif;}
-
 /* Menus */
 header{overflow: hidden;}
 .fondu{ animation: 0.5s fondu linear;}
@@ -189,7 +187,7 @@ input,textarea{color: #5b133c;}
     border-color: #5b133c; color:#5b133c!important
 }
 .text-danger,.text-danger:hover{color:#e71600!important}
-[type='submit'],.btn-retour{
+[type='submit'],.btn-retour,.btn-url{
     width: 100%;
     background-color: #58133C; 
     color: rgba(97,190,223); 
@@ -198,16 +196,23 @@ input,textarea{color: #5b133c;}
     font-size: 1.5rem;
     padding: 0!important;
 }
-[type='submit']:hover,.btn-retour{ background-color: rgba(97,190,223); color: #58133C;}
+[type='submit']:hover,.btn-retour,.btn-url{ background-color: rgba(97,190,223); color: #58133C;}
 .envoi{ top: 26vh; width: 100vw;}
 input, textarea{
     background-color: rgba(255,255,255,.4);
     width: 100%;
     border: none;
     padding-left: 1rem;
-margin-bottom: 1rem;  }
+    margin-bottom: 1rem;  }
 .w-66px{width: 66px;height: 66px;}
 .grecaptcha-badge{visibility: hidden;}
+/* Les autres pages */
+#breadcrumbs{font-size: .8rem;}
+.breadcrumb_last{color: }
+.partagez{color:  rgb(91,19,60);}
+.partage-reseaux-sociaux a{color: rgb(97,190,223);}
+.partage-reseaux-sociaux a:hover{color: rgb(145,33,92);}
+.partage-reseaux-sociaux a i{font-size: 1.5rem;}
 /* FOOTER */
 #footer-menu-legalenotice li a{color: rgb(97,190,223);}
 #footer-menu-legalenotice li a:hover{ color: #FFDF30;}
