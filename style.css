@@ -132,7 +132,7 @@ header{overflow: hidden;}
 .container-diagonale{overflow: hidden;}
 .container-diagonale{overflow: hidden;}
 /* CONTENT */
-.content{min-height: 65vh;}
+.content{min-height: 75vh;}
 /* SERVICES */
 .service .title{ height: 37px!important;   white-space: nowrap; overflow:hidden;}
 .service h3{color:rgb(97,190,223); font-size: 1.5rem!important;}
@@ -187,7 +187,7 @@ input,textarea{color: #5b133c;}
     border-color: #5b133c; color:#5b133c!important
 }
 .text-danger,.text-danger:hover{color:#e71600!important}
-[type='submit'],.btn-retour,.btn-url{
+[type='submit'],.btn-retour{
     width: 100%;
     background-color: #58133C; 
     color: rgba(97,190,223); 
@@ -196,7 +196,7 @@ input,textarea{color: #5b133c;}
     font-size: 1.5rem;
     padding: 0!important;
 }
-[type='submit']:hover,.btn-retour,.btn-url{ background-color: rgba(97,190,223); color: #58133C;}
+[type='submit']:hover,.btn-retour{ background-color: rgba(97,190,223); color: #58133C;}
 .envoi{ top: 26vh; width: 100vw;}
 input, textarea{
     background-color: rgba(255,255,255,.4);
@@ -208,7 +208,8 @@ input, textarea{
 .grecaptcha-badge{visibility: hidden;}
 /* Les autres pages */
 #breadcrumbs{font-size: .8rem;}
-.breadcrumb_last{color: }
+.btn-url{color:#fff; background: #58133C; padding: .3rem .5rem;}
+.btn-url:hover{color:#58133C; background: rgb(97,190,223); }
 .partagez{color:  rgb(91,19,60);}
 .partage-reseaux-sociaux a{color: rgb(97,190,223);}
 .partage-reseaux-sociaux a:hover{color: rgb(145,33,92);}

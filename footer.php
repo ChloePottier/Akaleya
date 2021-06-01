@@ -5,7 +5,7 @@
                 <?php include 'template-parts/navigation/navigation-footer-legalnotice.php'; ?>
             </div>
             <div class="col-12 col-md-5 text-center text-md-right text-white font-size-13 ">
-                <p class="mb-0 pb-0">Copyright © 2020 – <a href="" class="font-weight-bold" id="copy-akaleya">Akaleya</a> - Chloé Pottier</p>
+                <p class="mb-0 pb-0">Site éco-conçus par <a href="" class="font-weight-bold" id="copy-akaleya">Akaleya</a> - Copyright © 2021</p>
                 <p>Petite Montage - Jura - Ain - Saône et Loire</p>
             </div>
         </div>

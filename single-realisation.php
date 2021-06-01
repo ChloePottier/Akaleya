@@ -5,7 +5,7 @@ get_template_part('template-parts/header/header', 'page'); ?>
 
 <?php if (have_posts()) :
     while (have_posts()) : the_post();
-        $url = get_field('url_realisation');
+        $urlRea = get_field('url_realisation');
         $image = get_field('image_realisation'); ?>
         <section class="container-fluid content" <?php post_class(); ?> id="post-<?php the_ID(); ?>" >
             <div class="container py-5">
@@ -21,11 +21,10 @@ get_template_part('template-parts/header/header', 'page'); ?>
                         <?php endif; ?>
                     </div>
                     <div class="col-12 col-md-8">
-                        <h3 class="pt-3 text-prune-dark"><?php the_title(); ?></h3>
+                        <h3 class="pt-3 pt-md-0 text-prune-dark"><?php the_title(); ?></h3>
                         <div class="text-prune"><?php the_content(); ?></div>
-                        <?php if (!empty($url)) : ?>
-                            <div><a class="btn-url" href="<?php $url ?>" target="_blank">Voir le site</a></div>
-                        <?php else: ?>
+                        <?php if (!empty($urlRea)) : ?>
+                            <div><a class="btn-url font-family-bebas font-size-21" href="<?php the_field('url_realisation');?>" target="_blank">Voir le site</a></div>
                         <?php endif;?>
                     </div>
                 </div>
