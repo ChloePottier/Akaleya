@@ -46,9 +46,10 @@
             <div class="row py-5">
                 <?php if (have_posts()) : ?>
                     <?php while (have_posts()) : the_post(); ?>
-                        <div class="col-12 col-md-6 ">
+                        <div class="col-12 col-md-6 contact">
                             <h2 class="text-prune-dark pt-0 pt-sm-5">Contactez Akaleya</h2>
                             <p class="text-prune-dark">Pour toute demande de renseignement, devis, ...</p>
+                            <p class="contact-print">n'hésitez pas à nous contacter par mail : contact@akaleya.fr</p>
                             <?php the_content(); ?>
                         </div>
                 <?php endwhile;

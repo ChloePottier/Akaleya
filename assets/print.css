@@ -1,0 +1,9 @@
+@media print {
+    body,h1,h2,h3,p,.contact p{color: #000;}
+    .bg-graphiste{background: none; height:10cm;}
+    #navbar,nav,.slider-nav,.container-diagonale,form,#footer-menu-legalenotice li,#breadcrumbs,.cli-bar-container,.title img{display: none;}
+    .contact-print{display: block;}
+    .contact p{margin: 0;}
+    a{text-decoration: none;}
+    #contact .container .row{flex-direction: column;}    
+}
