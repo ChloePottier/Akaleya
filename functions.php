@@ -32,7 +32,6 @@ function themename_custom_logo_setup() {
     add_theme_support( 'custom-logo', $defaults );
    }
    add_action( 'after_setup_theme', 'themename_custom_logo_setup' );
-
 // Masquer admin bar
    show_admin_bar( false );
    add_filter( 'show_admin_bar', '__return_false' );

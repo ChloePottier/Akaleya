@@ -63,7 +63,7 @@
                         <?php $loop = new WP_Query(array('post_type' => 'liens',  'order'   => 'ASC'));
                         if ($loop->have_posts()) :
                             while ($loop->have_posts()) : $loop->the_post(); ?>
-                                <a href="<?php the_field('url_profil'); ?>" target="_blank" class="font-size-58 w-66px d-flex mx-2"><?php the_field('icone'); ?></a>
+                                <a href="<?php the_field('url_profil'); ?>" target="_blank" rel="noreferrer" class="font-size-58 w-66px d-flex mx-2"><?php the_field('icone'); ?></a>
                         <?php endwhile;
                         wp_reset_postdata();
                         endif; ?>

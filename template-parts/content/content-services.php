@@ -5,7 +5,7 @@ if ($loop->have_posts()) :
             <div class="title d-flex flex-row align-items-center align-items-md-start align-items-lg-center justify-content-md-center mb-3">                          
                 <?php $image = get_field('icone');
                 if( !empty( $image ) ): ?>
-                    <img src="<?php echo esc_url($image['url']); ?>" width="40" height="26" alt="<?php echo esc_attr($image['alt']); ?>" class="mr-3"/>
+                    <img src="<?php echo esc_url($image['url']); ?>" width="40" height="30" alt="<?php echo esc_attr($image['alt']); ?>" class="mr-3"/>
                 <?php endif; ?>
                 <h3 class="text-center mb-0"><?php the_title() ?></h3>
             </div>
