@@ -194,10 +194,17 @@ function my_sharing_buttons($content) {
         return $content;
 };
 // Mot de passe perdu
-// Ajouter le lien pour récupérer le mot de passe, si l'utilisateur ne s'en souvient plus
 add_filter( 'login_form_bottom', 'lien_mot_de_passe_perdu' );
 function lien_mot_de_passe_perdu( $formbottom ) {
 	$formbottom .= '<a href="' . wp_lostpassword_url() . '">Mot de passe perdu ?</a>';
 	return $formbottom;
 }
-
+//interdire l'accès aux non admins
+add_action( 'current_screen', 'redirect_non_authorized_user' );
+function redirect_non_authorized_user() {
+	// Si t'es pas admin, tu vires
+	if ( is_user_logged_in() && ! current_user_can( 'manage_options' ) ) {
+		wp_redirect( home_url( '/' ) );
+		exit();
+	}
+}
