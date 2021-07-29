@@ -193,3 +193,5 @@ function my_sharing_buttons($content) {
         }
         return $content;
 };
+// Formulaire de connexion
+

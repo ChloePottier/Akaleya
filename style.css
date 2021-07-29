@@ -175,12 +175,9 @@ background-color: #58133C;
 .bg-contact{background: linear-gradient( rgb(163,116,148) 58%, rgb(162,218,234) 42%);border-top: solid 2px #58133C}
 .btn-portfolio{top:0;}
 input{padding: 1rem 0; height: 40px;}
-input,textarea{color: #5b133c;}
 #contact .w-75, .wp-block-contact-form-7-contact-form-selector{width: 100%!important;}
 .wp-block-contact-form-7-contact-form-selector{padding-bottom: 4rem;}
-.wpcf7 form.sent .wpcf7-response-output {
-    border-color: #5b133c; color:#5b133c!important
-}
+.wpcf7 form.sent .wpcf7-response-output {border-color: #5b133c; color:#5b133c!important}
 .text-danger,.text-danger:hover{color:#e71600!important}
 [type='submit'],.btn-retour{
     width: 100%;
@@ -193,8 +190,9 @@ input,textarea{color: #5b133c;}
 }
 [type='submit']:hover,.btn-retour{ background: rgba(97,190,223); color: #58133C;}
 .envoi{ top: 26vh; width: 100vw;}
-input, textarea{
+#contact input,#contact textarea{
     background: rgba(255,255,255,.4);
+    color: #5b133c;
     width: 100%;
     border: none;
     padding-left: 1rem;
