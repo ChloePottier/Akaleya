@@ -29,141 +29,143 @@ function themename_custom_logo_setup() {
 // Masquer admin bar
    show_admin_bar( false );
    add_filter( 'show_admin_bar', '__return_false' );
-//Custom post type
-function cpt_slider_init() {
-$labels = array(
-    'name'                  => _x( 'Slider', 'Post type general name', 'textdomain' ),
-    'singular_name'         => _x( 'Slide', 'Post type singular name', 'textdomain' ),
-    'menu_name'             => _x( 'Sliders', 'Admin Menu text', 'textdomain' ),
-    'add_new'               => __( 'Ajouter un slide', 'textdomain' ),
-    'add_new_item'          => __( 'Ajouter un nouveau slide', 'textdomain' ),
-    'new_item'              => __( 'Nouveau slide', 'textdomain' ),
-    'edit_item'             => __( 'Editer le slide', 'textdomain' ),
-    'view_item'             => __( 'Voir le slide', 'textdomain' ),
-    'all_items'             => __( 'Tous les slides', 'textdomain' ),
-    'search_items'          => __( 'Rechercher des slides', 'textdomain' ),
-    'archives'              => _x( 'Archives des slides', 'The post type archive label used in nav menus', 'textdomain' ),
-); 
-$args = array(
-    'labels'             => $labels,
-    'public'             => true,
-    'query_var'          => true,
-    'rewrite'            => array( 'slug' => 'slider' ),
-    'capability_type'    => 'post',
-    'has_archive'        => true,
-    'menu_position'      => null,
-    'menu_icon'          => 'dashicons-star-filled',
-    'supports'           => array( 'title', 'editor'),
-); 
-register_post_type( 'slider', $args );
-} 
-function cpt_presentation_init() {
-    $labels = array(
-        'name'                  => _x( 'Présentation', 'Post type general name', 'textdomain' ),
-        'singular_name'         => _x( 'Présentation', 'Post type singular name', 'textdomain' ),
-        'menu_name'             => _x( 'Présentation', 'Admin Menu text', 'textdomain' ),
-    ); 
-    $args = array(
-        'labels'             => $labels,
-        'public'             => true,
-        'query_var'          => true,
-        'rewrite'            => array( 'slug' => 'presentation' ),
-        'capability_type'    => 'post',
-        'has_archive'        => true,
-        'menu_position'      => null,
-        'menu_icon'          => 'dashicons-universal-access',
-        'supports'           => array( 'title', 'editor',  // 'thumbnail', 'excerpt' 
-        ),
-    ); 
-    register_post_type( 'presentation', $args );
-    }    
-function cpt_services_init() {
-    $labels = array(
-        'name'                  => _x( 'Services', 'Post type general name', 'textdomain' ),
-        'singular_name'         => _x( 'Service', 'Post type singular name', 'textdomain' ),
-        'menu_name'             => _x( 'Services', 'Admin Menu text', 'textdomain' ),
-        'add_new'               => __( 'Ajouter un service', 'textdomain' ),
-        'add_new_item'          => __( 'Ajouter un nouveau service', 'textdomain' ),
-        'new_item'              => __( 'Nouveau service', 'textdomain' ),
-        'edit_item'             => __( 'Editer le service', 'textdomain' ),
-        'view_item'             => __( 'Voir le service', 'textdomain' ),
-        'all_items'             => __( 'Tous les services', 'textdomain' ),
-        'search_items'          => __( 'Rechercher des service', 'textdomain' ),
-        'archives'              => _x( 'Archives des service', 'The post type archive label used in nav menus', 'textdomain' ),
-    ); 
-    $args = array(
-        'labels'             => $labels,
-        'public'             => true,
-        'query_var'          => true,
-        'rewrite'            => array( 'slug' => 'service' ),
-        'capability_type'    => 'post',
-        'has_archive'        => true,
-        'menu_position'      => null,
-        'menu_icon'          => 'dashicons-admin-tools',
-        'supports'           => array( 'title', 'editor'),
-    ); 
-    register_post_type( 'service', $args );
-    }     
-    function cpt_portfolio_init() {
+//Custom post type et categories
+function init_cpt_akaleya(){
+    function cpt_slider_init() {
         $labels = array(
-            'name'                  => _x( 'Réalisations', 'Post type general name', 'textdomain' ),
-            'singular_name'         => _x( 'Réalisation', 'Post type singular name', 'textdomain' ),
-            'menu_name'             => _x( 'Réalisations', 'Admin Menu text', 'textdomain' ),
-            'add_new'               => __( 'Ajouter une réalisation', 'textdomain' ),
-            'add_new_item'          => __( 'Ajouter une nouvelle réalisation', 'textdomain' ),
-            'new_item'              => __( 'Nouvelle réalisation', 'textdomain' ),
-            'edit_item'             => __( 'Editer la réalisation', 'textdomain' ),
-            'view_item'             => __( 'Voir la réalisation', 'textdomain' ),
-            'all_items'             => __( 'Toutes les réalisations', 'textdomain' ),
-            'search_items'          => __( 'Rechercher des réalisations', 'textdomain' ),
-            'archives'              => _x( 'Archives des réalisations', 'The post type archive label used in nav menus', 'textdomain' ),
+            'name'                  => _x( 'Slider', 'Post type general name', 'textdomain' ),
+            'singular_name'         => _x( 'Slide', 'Post type singular name', 'textdomain' ),
+            'menu_name'             => _x( 'Sliders', 'Admin Menu text', 'textdomain' ),
+            'add_new'               => __( 'Ajouter un slide', 'textdomain' ),
+            'add_new_item'          => __( 'Ajouter un nouveau slide', 'textdomain' ),
+            'new_item'              => __( 'Nouveau slide', 'textdomain' ),
+            'edit_item'             => __( 'Editer le slide', 'textdomain' ),
+            'view_item'             => __( 'Voir le slide', 'textdomain' ),
+            'all_items'             => __( 'Tous les slides', 'textdomain' ),
+            'search_items'          => __( 'Rechercher des slides', 'textdomain' ),
+            'archives'              => _x( 'Archives des slides', 'The post type archive label used in nav menus', 'textdomain' ),
         ); 
         $args = array(
             'labels'             => $labels,
             'public'             => true,
             'query_var'          => true,
-            'rewrite'            => array( 'slug' => 'realisation' ),
+            'rewrite'            => array( 'slug' => 'slider' ),
             'capability_type'    => 'post',
             'has_archive'        => true,
             'menu_position'      => null,
-            'menu_icon'          => 'dashicons-art',
-            'supports'           => array( 'title', 'editor','category', 'excerpt','thumbnail' ),
+            'menu_icon'          => 'dashicons-star-filled',
+            'supports'           => array( 'title', 'editor'),
         ); 
-        register_post_type( 'realisation', $args );
+        register_post_type( 'slider', $args );
         } 
-
-// ajouter les category au portfolio
-function category_realisation() {
-    register_taxonomy_for_object_type ( 'category' , 'realisation') ;
-} 
-//Custom post type liens Externes
-function cpt_link_init() {
-    $labels = array(
-        'name'                  => _x( 'Liens externe', 'Post type general name', 'textdomain' ),
-        'singular_name'         => _x( 'Lien externe', 'Post type singular name', 'textdomain' ),
-        'menu_name'             => _x( 'Liens externe', 'Admin Menu text', 'textdomain' ),
-        'add_new'               => __( 'Ajouter un lien', 'textdomain' ),
-        'add_new_item'          => __( 'Ajouter un nouveau lien', 'textdomain' ),
-        'new_item'              => __( 'Nouveau lien ', 'textdomain' ),
-        'edit_item'             => __( 'Editer le lien', 'textdomain' ),
-        'view_item'             => __( 'Voir lae lien', 'textdomain' ),
-        'all_items'             => __( 'Tous les liens', 'textdomain' ),
-        'search_items'          => __( 'Rechercher des lien', 'textdomain' ),
-        'archives'              => _x( 'Archives des liens', 'The post type archive label used in nav menus', 'textdomain' ),
-    ); 
-    $args = array(
-        'labels'             => $labels,
-        'public'             => true,
-        'query_var'          => true,
-        'rewrite'            => array( 'slug' => 'liens' ),
-        'capability_type'    => 'post',
-        'has_archive'        => true,
-        'menu_position'      => null,
-        'menu_icon'          => 'dashicons-admin-links',
-        'supports'           => array( 'title', 'editor',),
-    ); 
-    register_post_type( 'liens', $args );
-    } 
+        function cpt_presentation_init() {
+            $labels = array(
+                'name'                  => _x( 'Présentation', 'Post type general name', 'textdomain' ),
+                'singular_name'         => _x( 'Présentation', 'Post type singular name', 'textdomain' ),
+                'menu_name'             => _x( 'Présentation', 'Admin Menu text', 'textdomain' ),
+            ); 
+            $args = array(
+                'labels'             => $labels,
+                'public'             => true,
+                'query_var'          => true,
+                'rewrite'            => array( 'slug' => 'presentation' ),
+                'capability_type'    => 'post',
+                'has_archive'        => true,
+                'menu_position'      => null,
+                'menu_icon'          => 'dashicons-universal-access',
+                'supports'           => array( 'title', 'editor',  // 'thumbnail', 'excerpt' 
+                ),
+            ); 
+            register_post_type( 'presentation', $args );
+            }    
+        function cpt_services_init() {
+            $labels = array(
+                'name'                  => _x( 'Services', 'Post type general name', 'textdomain' ),
+                'singular_name'         => _x( 'Service', 'Post type singular name', 'textdomain' ),
+                'menu_name'             => _x( 'Services', 'Admin Menu text', 'textdomain' ),
+                'add_new'               => __( 'Ajouter un service', 'textdomain' ),
+                'add_new_item'          => __( 'Ajouter un nouveau service', 'textdomain' ),
+                'new_item'              => __( 'Nouveau service', 'textdomain' ),
+                'edit_item'             => __( 'Editer le service', 'textdomain' ),
+                'view_item'             => __( 'Voir le service', 'textdomain' ),
+                'all_items'             => __( 'Tous les services', 'textdomain' ),
+                'search_items'          => __( 'Rechercher des service', 'textdomain' ),
+                'archives'              => _x( 'Archives des service', 'The post type archive label used in nav menus', 'textdomain' ),
+            ); 
+            $args = array(
+                'labels'             => $labels,
+                'public'             => true,
+                'query_var'          => true,
+                'rewrite'            => array( 'slug' => 'service' ),
+                'capability_type'    => 'post',
+                'has_archive'        => true,
+                'menu_position'      => null,
+                'menu_icon'          => 'dashicons-admin-tools',
+                'supports'           => array( 'title', 'editor'),
+            ); 
+            register_post_type( 'service', $args );
+            }     
+            function cpt_portfolio_init() {
+                $labels = array(
+                    'name'                  => _x( 'Réalisations', 'Post type general name', 'textdomain' ),
+                    'singular_name'         => _x( 'Réalisation', 'Post type singular name', 'textdomain' ),
+                    'menu_name'             => _x( 'Réalisations', 'Admin Menu text', 'textdomain' ),
+                    'add_new'               => __( 'Ajouter une réalisation', 'textdomain' ),
+                    'add_new_item'          => __( 'Ajouter une nouvelle réalisation', 'textdomain' ),
+                    'new_item'              => __( 'Nouvelle réalisation', 'textdomain' ),
+                    'edit_item'             => __( 'Editer la réalisation', 'textdomain' ),
+                    'view_item'             => __( 'Voir la réalisation', 'textdomain' ),
+                    'all_items'             => __( 'Toutes les réalisations', 'textdomain' ),
+                    'search_items'          => __( 'Rechercher des réalisations', 'textdomain' ),
+                    'archives'              => _x( 'Archives des réalisations', 'The post type archive label used in nav menus', 'textdomain' ),
+                ); 
+                $args = array(
+                    'labels'             => $labels,
+                    'public'             => true,
+                    'query_var'          => true,
+                    'rewrite'            => array( 'slug' => 'realisation' ),
+                    'capability_type'    => 'post',
+                    'has_archive'        => true,
+                    'menu_position'      => null,
+                    'menu_icon'          => 'dashicons-art',
+                    'supports'           => array( 'title', 'editor','category', 'excerpt','thumbnail' ),
+                ); 
+                register_post_type( 'realisation', $args );
+                } 
+        
+        // ajouter les category au portfolio
+        function category_realisation() {
+            register_taxonomy_for_object_type ( 'category' , 'realisation') ;
+        } 
+        //Custom post type liens Externes
+        function cpt_link_init() {
+            $labels = array(
+                'name'                  => _x( 'Liens externe', 'Post type general name', 'textdomain' ),
+                'singular_name'         => _x( 'Lien externe', 'Post type singular name', 'textdomain' ),
+                'menu_name'             => _x( 'Liens externe', 'Admin Menu text', 'textdomain' ),
+                'add_new'               => __( 'Ajouter un lien', 'textdomain' ),
+                'add_new_item'          => __( 'Ajouter un nouveau lien', 'textdomain' ),
+                'new_item'              => __( 'Nouveau lien ', 'textdomain' ),
+                'edit_item'             => __( 'Editer le lien', 'textdomain' ),
+                'view_item'             => __( 'Voir lae lien', 'textdomain' ),
+                'all_items'             => __( 'Tous les liens', 'textdomain' ),
+                'search_items'          => __( 'Rechercher des lien', 'textdomain' ),
+                'archives'              => _x( 'Archives des liens', 'The post type archive label used in nav menus', 'textdomain' ),
+            ); 
+            $args = array(
+                'labels'             => $labels,
+                'public'             => true,
+                'query_var'          => true,
+                'rewrite'            => array( 'slug' => 'liens' ),
+                'capability_type'    => 'post',
+                'has_archive'        => true,
+                'menu_position'      => null,
+                'menu_icon'          => 'dashicons-admin-links',
+                'supports'           => array( 'title', 'editor',),
+            ); 
+            register_post_type( 'liens', $args );
+            } 
+}
 /*** BOUTONS DE PARTAGE RESEAUX SOCIAUX ***/
 function my_sharing_buttons($content) {
     //si le blog est en page d'accueil ou si c'est un post seul
