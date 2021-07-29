@@ -3,7 +3,6 @@
    let sliderWrapper = document.querySelector('.slider-wrapper');
    let slide = document.querySelectorAll('.slider-items');
    let sliderLength = slide.length;
-   console.log(sliderLength);
    let counter = 0; 
    slide[counter].classList.add('active');
    let delay = setInterval(sliding, 2000);
