@@ -1,26 +1,21 @@
-<?php // Chargement des styles et des scripts Bootstrap sur WordPress
-function wpbootstrap_styles_scripts(){
+<?php
+require 'hooks.php';
+// Chargement des styles et des scripts Bootstrap sur WordPress
+function akaleya_styles_scripts(){
     wp_enqueue_style('bootstrap', ''. get_template_directory_uri() .'/assets/bootstrap/bootstrap.min.css');
     wp_enqueue_style('font-awesome', get_template_directory_uri() .'/assets/font-awesome/css/all.css');
-
     wp_enqueue_script('jquery');
     wp_enqueue_script('popper',''.get_template_directory_uri().'/assets/js/popper.min.js', array('jquery'), 1, true);
     wp_enqueue_script( 'validator',''.get_template_directory_uri(). '/assets/js/validator.min.js' );
     wp_enqueue_script('bootstrap-js', ''.get_template_directory_uri() .'/assets/bootstrap/bootstrap.min.js', array('jquery', 'popper'), 1, true);
+    wp_enqueue_style('print', get_template_directory_uri() .'/assets/print.css', array(), '1.0', 'print');
     wp_enqueue_style('style', get_stylesheet_uri());
-
 }
-add_action('wp_enqueue_scripts', 'wpbootstrap_styles_scripts');
-
-/* Autoriser l'upload de tous types de format dans les médias */
-add_filter('upload_mimes', 'wpm_myme_types', 1, 1);
 function wpm_myme_types($mime_types){
     $mime_types['svg'] = 'image/svg+xml'; //On autorise les .svg
     $mime_types['webp'] = 'image/webp'; //On autorise les .webp
     return $mime_types;
 }
-// Ajouter la prise en charge des images mises en avant
-add_theme_support( 'post-thumbnails' );
 //Ajouter le logo
 function themename_custom_logo_setup() {
     $defaults = array(
@@ -31,7 +26,6 @@ function themename_custom_logo_setup() {
     );
     add_theme_support( 'custom-logo', $defaults );
    }
-   add_action( 'after_setup_theme', 'themename_custom_logo_setup' );
 // Masquer admin bar
    show_admin_bar( false );
    add_filter( 'show_admin_bar', '__return_false' );
@@ -63,9 +57,6 @@ $args = array(
 ); 
 register_post_type( 'slider', $args );
 } 
-add_action( 'init', 'cpt_slider_init' );// Le hook init lance la fonction
-
-
 function cpt_presentation_init() {
     $labels = array(
         'name'                  => _x( 'Présentation', 'Post type general name', 'textdomain' ),
@@ -85,10 +76,7 @@ function cpt_presentation_init() {
         ),
     ); 
     register_post_type( 'presentation', $args );
-    } 
-    add_action( 'init', 'cpt_presentation_init' );// Le hook init lance la fonction
-
-    
+    }    
 function cpt_services_init() {
     $labels = array(
         'name'                  => _x( 'Services', 'Post type general name', 'textdomain' ),
@@ -115,10 +103,7 @@ function cpt_services_init() {
         'supports'           => array( 'title', 'editor'),
     ); 
     register_post_type( 'service', $args );
-    } 
-    add_action( 'init', 'cpt_services_init' );// Le hook init lance la fonction
-    
-
+    }     
     function cpt_portfolio_init() {
         $labels = array(
             'name'                  => _x( 'Réalisations', 'Post type general name', 'textdomain' ),
@@ -146,13 +131,11 @@ function cpt_services_init() {
         ); 
         register_post_type( 'realisation', $args );
         } 
-        add_action( 'init', 'cpt_portfolio_init' );// Le hook init lance la fonction
 
 // ajouter les category au portfolio
 function category_realisation() {
     register_taxonomy_for_object_type ( 'category' , 'realisation') ;
 } 
-add_action( 'init', 'category_realisation' );
 //Custom post type liens Externes
 function cpt_link_init() {
     $labels = array(
@@ -181,23 +164,6 @@ function cpt_link_init() {
     ); 
     register_post_type( 'liens', $args );
     } 
-    add_action( 'init', 'cpt_link_init' );// Le hook init lance la fonction
-
-// ajout format d'image      
-if(function_exists('add_theme_support')):
-    add_image_size('thumbnail_portfolio_sm',545,368,false);
-    add_image_size('thumbnail_portfolio',370,250,false);    
-
-endif;
-//menu ajax gallerie
-// function galery_assets() {
-//     // Charger notre script
-//     wp_enqueue_script( 'menu-ajax', get_template_directory_uri() . '/assets/js/navigation/nav-ajax-galery.js', array( 'jquery' ), '1.0', true );
-//     // Envoyer une variable de PHP à JS proprement
-//     wp_localize_script( 'menu-ajax', 'ajaxurl', admin_url( 'admin-ajax.php' ) );  
-//   }
-//   add_action( 'wp_enqueue_scripts', 'galery_assets' );
-
 /*** BOUTONS DE PARTAGE RESEAUX SOCIAUX ***/
 function my_sharing_buttons($content) {
     //si le blog est en page d'accueil ou si c'est un post seul
@@ -228,5 +194,3 @@ function my_sharing_buttons($content) {
         }
         return $content;
 };
-//ajoute un filtre qui autorise la fonction à s'ajouter lorsqu'on utilise
-add_filter( 'the_content', 'my_sharing_buttons');

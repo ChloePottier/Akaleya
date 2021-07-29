@@ -1,4 +1,5 @@
 
+template-parts/content/-content-portfolio-img.php
 .gitignore
 .htaccess
 .git
@@ -22,6 +23,8 @@ assets/js/jquery-3.5.1.min.js
 assets/js/popper.min.js
 assets/js/validator.min.js
 google.php
+screenshot.png
+
 # Node rules:
 ## Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
 .grunt

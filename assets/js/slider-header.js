@@ -9,7 +9,7 @@
    let delay = setInterval(sliding, 2000);
    next.addEventListener('click', function(){
        clearInterval(delay);
-      slide[counter].classList.remove('active')
+      slide[counter].classList.remove('active');
       counter++;
       if(counter >= sliderLength){
           counter = 0;
