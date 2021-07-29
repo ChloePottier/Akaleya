@@ -199,12 +199,24 @@ function lien_mot_de_passe_perdu( $formbottom ) {
 	$formbottom .= '<a href="' . wp_lostpassword_url() . '">Mot de passe perdu ?</a>';
 	return $formbottom;
 }
-//interdire l'accès aux non admins
+//interdire l'accès aux non admin
 add_action( 'current_screen', 'redirect_non_authorized_user' );
 function redirect_non_authorized_user() {
 	// Si t'es pas admin, tu vires
 	if ( is_user_logged_in() && ! current_user_can( 'manage_options' ) ) {
 		wp_redirect( home_url( '/' ) );
 		exit();
+	}
+}
+// Proposer un contenu uniques aux utilisateurs autorisés
+// bonnes pratiques : mettre le tout dans une fonction et initialiser le hook
+// add_action( 'init', 'nomFonction' );
+add_shortcode( 'private-content', 'private_content' );
+function private_content( $atts, $content ) {
+	if ( is_user_logged_in() ) {
+		return $content;
+	} else {
+		// Affiche un lien vers la page login de WordPress, puis redirige vers la page précédente
+		return '<a href="' . wp_login_url( get_permalink() ) . '">Connectez-vous pour lire ce contenu</a>';
 	}
 }

@@ -30,7 +30,9 @@ get_template_part('template-parts/header/header', 'page');?>
                             'value_remember' => false //se souvenir par défaut ?
                         ));
                     } else {
-                        echo '<a href="' . admin_url('user-edit.php?user_id='. get_current_user_id()) .'">Gérer mon profil</a>';
+                        //pour le moment je choisis que mes clients ne peuvent pas modifier leur profil
+                        // echo '<a href="' . admin_url('user-edit.php?user_id='. get_current_user_id()) .'">Gérer mon profil</a>';
+                        echo '<p>Vous êtes connecté !</p>';
                         echo '<a href="' . wp_logout_url(site_url('/')) .'">Se déconnecter</a>';
                     } ?>
                 </div>
