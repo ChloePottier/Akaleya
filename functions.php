@@ -173,7 +173,7 @@ function my_sharing_buttons($content) {
         $myCurrentTitle = urlencode(get_the_title()); 
         // Récuperer MINIATURE si l'image à la une existe
         if(has_post_thumbnail($post->ID)) {
-            $myCurrentThumbnail = wp_get_attachment_image_src(urlencode(get_the_post_thumbnail()), 'full'); // correction du 9 février 2017
+            $myCurrentThumbnail = wp_get_attachment_image_src(get_post_thumbnail_id( $post->ID ), 'full'); // correction du 9 février 2017
         }
         
         // Construction des URL de partage 
