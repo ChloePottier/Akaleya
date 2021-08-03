@@ -1,7 +1,7 @@
 /* Theme Name: Akaleya
 Author: Chloé Pottier
 Description: Thème Akaleya : graphisme et développement web
-Version: 1.0
+Version: 1.2
 Licence: 1.0
 License URI: https://github.com/Akaleya
 Text Domain: akaleya-theme */
@@ -65,8 +65,6 @@ header{overflow: hidden;}
     0% {opacity: 0;}
     100%{opacity: 100;}
 }
-#btnScrollToTop{
-    position: fixed;}
 .nav-top{position: absolute;    box-shadow: 0 0 1.3rem rgb(30,2,18,.8);}
 .sticky { position: fixed; top: 0; width: 100%; z-index: 1500;}
 .dis-none{display:none;}
@@ -134,7 +132,7 @@ header{overflow: hidden;}
 .service h3{ font-size: 1.5rem!important;}
 .service p {text-align: justify; line-height: 1.8rem;}
 /* PORTFOLIO */
-.card{overflow: hidden; border: none; border-radius: 0!important;}
+.card{overflow: hidden; border: none; border-radius: 0!important;height:236px;}
 .card__side {
 display: flex;
 flex-direction: column;
@@ -172,16 +170,23 @@ background-color: #58133C;
 .border{border: solid 1px #b2b2b2 !important;}
 #portfolio p {text-align: justify; }
 /* Contact */
+.contact-print{display: none;}
 .bg-contact{background: linear-gradient( rgb(163,116,148) 58%, rgb(162,218,234) 42%);border-top: solid 2px #58133C}
 .btn-portfolio{top:0;}
 input{padding: 1rem 0; height: 40px;}
-input,textarea{color: #5b133c;}
 #contact .w-75, .wp-block-contact-form-7-contact-form-selector{width: 100%!important;}
 .wp-block-contact-form-7-contact-form-selector{padding-bottom: 4rem;}
-.wpcf7 form.sent .wpcf7-response-output {
-    border-color: #5b133c; color:#5b133c!important
-}
+.wpcf7 form.sent .wpcf7-response-output {border-color: #5b133c; color:#5b133c!important}
 .text-danger,.text-danger:hover{color:#e71600!important}
+
+.envoi{ top: 26vh; width: 100vw;}
+#contact input[type='text'],#contact input[type='tel'],#contact input[type='email'],#contact textarea{
+    background: rgba(255,255,255,.4);
+    color: #5b133c;
+    width: 100%;
+    border: none;
+    padding-left: 1rem;
+    margin-bottom: 1rem;  }
 [type='submit'],.btn-retour{
     width: 100%;
     background-color: #58133C; 
@@ -192,13 +197,6 @@ input,textarea{color: #5b133c;}
     padding: 0!important;
 }
 [type='submit']:hover,.btn-retour{ background: rgba(97,190,223); color: #58133C;}
-.envoi{ top: 26vh; width: 100vw;}
-input, textarea{
-    background: rgba(255,255,255,.4);
-    width: 100%;
-    border: none;
-    padding-left: 1rem;
-    margin-bottom: 1rem;  }
 .w-66px{width: 66px;height: 66px;}
 .grecaptcha-badge{visibility: hidden;}
 /* Les autres pages */
@@ -251,7 +249,6 @@ input, textarea{
     .font-size-18{font-size: 1.3rem;}
     .service h3{font-size: 1.75rem!important;}
     .bg-graphiste-small{ background: url(https://akaleya.fr/wp-content/uploads/2021/05/graphiste-1900-2.webp) center no-repeat;}
-    .contact-print{display: none;}
 }
 
 
