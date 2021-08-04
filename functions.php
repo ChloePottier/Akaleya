@@ -159,7 +159,7 @@ function cpt_link_init() {
         'has_archive'        => true,
         'menu_position'      => null,
         'menu_icon'          => 'dashicons-admin-links',
-        'supports'           => array( 'title', 'editor',),
+        'supports'           => array( 'title', 'editor'),
     ); 
     register_post_type( 'liens', $args );
     } 
@@ -208,15 +208,13 @@ function redirect_non_authorized_user() {
 		exit();
 	}
 }
-// Proposer un contenu uniques aux utilisateurs autorisés
-// bonnes pratiques : mettre le tout dans une fonction et initialiser le hook
-// add_action( 'init', 'nomFonction' );
 add_shortcode( 'private-content', 'private_content' );
 function private_content( $atts, $content ) {
 	if ( is_user_logged_in() ) {
 		return $content;
 	} else {
-		// Affiche un lien vers la page login de WordPress, puis redirige vers la page précédente
+		// Affiche un lien vers la page login de WordPress, 
+		// puis redirige ensuite automatiquement vers la page précédente
 		return '<a href="' . wp_login_url( get_permalink() ) . '">Connectez-vous pour lire ce contenu</a>';
 	}
 }

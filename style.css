@@ -1,6 +1,6 @@
 /* Theme Name: Akaleya
 Author: Chloé Pottier
-Description: Thème Akaleya : graphisme et développement web
+Description: Thème Akaleya : graphisme et développement web. Création d'un espace membres
 Version: 1.2
 Licence: 1.0
 License URI: https://github.com/Akaleya
@@ -178,6 +178,13 @@ input{padding: 1rem 0; height: 40px;}
 .wp-block-contact-form-7-contact-form-selector{padding-bottom: 4rem;}
 .wpcf7 form.sent .wpcf7-response-output {border-color: #5b133c; color:#5b133c!important}
 .text-danger,.text-danger:hover{color:#e71600!important}
+#contact input[type='text'],#contact input[type='tel'],#contact input[type='email'],#contact textarea{
+    background: rgba(255,255,255,.4);
+    color: #5b133c;
+    width: 100%;
+    border: none;
+    padding-left: 1rem;
+    margin-bottom: 1rem;  }
 [type='submit'],.btn-retour{
     width: 100%;
     background-color: #58133C; 
@@ -189,13 +196,7 @@ input{padding: 1rem 0; height: 40px;}
 }
 [type='submit']:hover,.btn-retour{ background: rgba(97,190,223); color: #58133C;}
 .envoi{ top: 26vh; width: 100vw;}
-#contact input,#contact textarea{
-    background: rgba(255,255,255,.4);
-    color: #5b133c;
-    width: 100%;
-    border: none;
-    padding-left: 1rem;
-    margin-bottom: 1rem;  }
+
 .w-66px{width: 66px;height: 66px;}
 .grecaptcha-badge{visibility: hidden;}
 /* Les autres pages */

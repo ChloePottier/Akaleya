@@ -13,6 +13,5 @@ add_action( 'init', 'cpt_link_init' );
 if(function_exists('add_theme_support')):
     add_image_size('thumbnail_portfolio_sm',545,368,false);
     add_image_size('thumbnail_portfolio',370,250,false);    
-
 endif;
 add_filter( 'the_content', 'my_sharing_buttons');

@@ -5,7 +5,6 @@
 get_template_part('template-parts/header/header', 'page');?>
 
 <scroll-page id=''>
-
     <section class='container-fluid content' id=''>
         <div class='container'>
             <div class='row py-5'>
@@ -16,7 +15,7 @@ get_template_part('template-parts/header/header', 'page');?>
                     <?php // Formulaire de connexion
                     if (! is_user_logged_in()) {
                         wp_login_form(array(
-                            'redirect'       => site_url('/'), // par défaut renvoie vers la page courante
+                            'redirect'       => get_permalink(), // par défaut renvoie vers la page courante
                             'label_username' => 'Login',
                             'label_password' => 'Mot de passe',
                             'label_remember' => 'Se souvenir de moi',

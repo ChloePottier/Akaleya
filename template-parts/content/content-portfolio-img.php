@@ -1,3 +1,4 @@
+<!-- Images en background, lien sur single-realisation -->
 <div class="col-12 col-sm-6 col-lg-4 d-flex flex-column  mb-3 ">
     <?php
     $url = get_field('url_realisation');
