@@ -193,6 +193,24 @@ function my_sharing_buttons($content) {
         }
         return $content;
 };
+///Logo page connexion BO
+function my_login_logo() { ?>
+    <style type="text/css">
+        #login h1 a,.login h1 a {
+            background-image: url(<?php echo get_home_url();?>/wp-content/uploads/img/Akaleya-logo.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 120px;
+            width: 120px;
+        }
+    </style>
+    <?php }    
+function my_login_logo_url(){
+    return home_url();
+}
+function my_login_logo_url_title(){
+    return get_bloginfo('description');
+}
 // Mot de passe perdu
 function lien_mot_de_passe_perdu( $formbottom ) {
 	$formbottom .= '<a href="' . wp_lostpassword_url() . '">Mot de passe perdu ?</a>';

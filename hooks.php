@@ -15,9 +15,17 @@ if(function_exists('add_theme_support')):
     add_image_size('thumbnail_portfolio',370,250,false);    
 endif;
 add_filter( 'the_content', 'my_sharing_buttons');
+add_action( 'login_enqueue_scripts', 'my_login_logo' );
+add_filter( 'login_headerurl', 'my_login_logo_url' );
+add_filter( 'login_headertext', 'my_login_logo_url_title' );
 // espace membres
 add_filter( 'login_form_bottom', 'lien_mot_de_passe_perdu' );
 add_action( 'current_screen', 'redirect_non_authorized_user' );
 add_shortcode( 'private-content', 'private_content' );
-$capabilities = ['edit_posts' => false, 'delete_posts' => false, 'read'=> true,];
-add_role('abonne_wordpress','Abonné Wordpress',$capabilities);
+// ajout rôle
+add_role('abonne_wordpress','Abonné.e Wordpress',['edit_posts' => false, 'delete_posts' => false, 'read'=> true]);
+add_role('abonne_woocommerce','Abonné.e Woocommerce',['edit_posts' => false, 'delete_posts' => false, 'read'=> true]);
+add_role('abonne_prestashop','Abonné.e Prestashop',['edit_posts' => false, 'delete_posts' => false, 'read'=> true]);
+remove_role('subscriber');
+remove_role('editor');
+remove_role('contributor');
