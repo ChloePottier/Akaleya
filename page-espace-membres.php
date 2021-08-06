@@ -34,7 +34,7 @@ get_template_part('template-parts/header/header', 'page');?>
                         $user = new WP_User(get_current_user_id());
                         // var_dump($user);
                         echo '<p>Bonjour <b>'.$user->display_name.'</b> !</p>';
-                        
+                        echo '<p>'.the_content().'</p>';
                         echo '<a href="' . wp_logout_url(site_url('/')) .'">Se déconnecter</a>';
                     } ?>
                 </div>
