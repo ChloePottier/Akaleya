@@ -194,13 +194,12 @@ function my_sharing_buttons($content) {
         return $content;
 };
 // Mot de passe perdu
-add_filter( 'login_form_bottom', 'lien_mot_de_passe_perdu' );
 function lien_mot_de_passe_perdu( $formbottom ) {
 	$formbottom .= '<a href="' . wp_lostpassword_url() . '">Mot de passe perdu ?</a>';
 	return $formbottom;
 }
+
 //interdire l'accès aux non admin
-add_action( 'current_screen', 'redirect_non_authorized_user' );
 function redirect_non_authorized_user() {
 	// Si t'es pas admin, tu vires
 	if ( is_user_logged_in() && ! current_user_can( 'manage_options' ) ) {
@@ -208,7 +207,6 @@ function redirect_non_authorized_user() {
 		exit();
 	}
 }
-add_shortcode( 'private-content', 'private_content' );
 function private_content( $atts, $content ) {
 	if ( is_user_logged_in() ) {
 		return $content;

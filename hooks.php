@@ -15,3 +15,9 @@ if(function_exists('add_theme_support')):
     add_image_size('thumbnail_portfolio',370,250,false);    
 endif;
 add_filter( 'the_content', 'my_sharing_buttons');
+// espace membres
+add_filter( 'login_form_bottom', 'lien_mot_de_passe_perdu' );
+add_action( 'current_screen', 'redirect_non_authorized_user' );
+add_shortcode( 'private-content', 'private_content' );
+$capabilities = ['edit_posts' => false, 'delete_posts' => false, 'read'=> true,];
+add_role('abonne_wordpress','Abonné Wordpress',$capabilities);
