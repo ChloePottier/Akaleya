@@ -1,9 +1,7 @@
 <?php /* Template Name: Modèle de page Akaleya */ ?>
 
 <?php get_template_part('template-parts/header/head', 'metadata');
-// get_header();
 get_template_part('template-parts/header/header', 'page');?>
-
 <scroll-page id=''>
     <section class='container-fluid content' id=''>
         <div class='container'>

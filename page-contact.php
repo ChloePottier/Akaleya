@@ -14,16 +14,14 @@ get_template_part('template-parts/header/header', 'page'); ?>
                                 <p class="text-prune-dark">Pour toute demande de renseignement, devis, ...</p>
                                 <?php the_content(); ?>
                             </div>
-                <?php endwhile;
-                    
-                    else:
-                        echo 'Désolé, cette page n\'existe pas';
-            endif;
-                endif;   ?>
+                        <?php endwhile;                    
+                        else:
+                            echo 'Désolé, cette page n\'existe pas';
+                        endif;
+                    endif;   ?>
 
                 <div class="col-12 col-md-6 d-flex justify-content-center flex-column pt-2 pt-md-0">
                     <!-- retrouvez moi -->
-
                     <img src="<?php echo get_site_url(); ?>/wp-content/uploads/2021/01/Akaleya-logo.svg" alt="Akaleya - web and print logo" title="Akaleya - création graphique et web - Jura" width="289" height="289" class="mx-auto" />
                     <p class="font-family-bebas text-prune-dark font-size-31 line-height text-center pt-5">
                         Retrouvez-moi<br />aussi sur :</p>

@@ -172,9 +172,9 @@ function my_sharing_buttons($content) {
         // Récuperer TITRE de la page en cours
         $myCurrentTitle = urlencode(get_the_title()); 
         // Récuperer MINIATURE si l'image à la une existe
-        if(has_post_thumbnail($post->ID)) {
-            $myCurrentThumbnail = wp_get_attachment_image_src(get_post_thumbnail_id( $post->ID ), 'full'); // correction du 9 février 2017
-        }
+        // if(has_post_thumbnail($post->ID)) {
+        //     $myCurrentThumbnail = wp_get_attachment_image_src(get_post_thumbnail_id( $post->ID ), 'full'); // correction du 9 février 2017
+        // }
         
         // Construction des URL de partage 
         $facebookURL = esc_url( 'https://www.facebook.com/sharer/sharer.php?u='.$myCurrentURL );
@@ -234,3 +234,6 @@ function private_content( $atts, $content ) {
 		return '<a href="' . wp_login_url( get_permalink() ) . '">Connectez-vous pour lire ce contenu</a>';
 	}
 }
+
+
+
