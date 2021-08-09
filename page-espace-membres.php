@@ -30,11 +30,25 @@ get_template_part('template-parts/header/header', 'page');?>
                         //pour le moment je choisis que mes clients ne peuvent pas modifier leur profil
                         // echo '<a href="' . admin_url('user-edit.php?user_id='. get_current_user_id()) .'">Gérer mon profil</a>';
                         $user = new WP_User(get_current_user_id());
-                        // var_dump($user);
+                        var_dump($user);
                         echo '<p>Bonjour <b>'.$user->display_name.'</b> !</p>';
                         echo '<p>'.the_content().'</p>';
-                        echo '<a href="' . wp_logout_url(site_url('/')) .'">Se déconnecter</a>';
-                    } ?>
+                        $loop = new WP_Query( array('post_type'  => 'post', 'post_status' => 'publish','category_name' => 'user_wp') );
+
+                        echo '<h2 class="text-prune-dark pt-0 pt-sm-5">Mes tutos</h2>';
+                        echo '<ul class="liste-articles mb-5">';
+                        if ($loop->have_posts()) : ?>
+                        <?php while ($loop->have_posts()) : $loop->the_post(); ?>
+                                <li class='text-prune-dark py-2 bold border-bottom'>
+                                    
+                                <?php the_title(); ?>
+                            </li>
+                        <?php endwhile;
+                        endif;
+                            echo '</ul>';
+                            echo '<a href="' . wp_logout_url(site_url('/')) .'">Se déconnecter</a>';
+                        }
+                        ; ?>
                 </div>
                 <?php endwhile;
                     endif; ?>
