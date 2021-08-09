@@ -30,7 +30,7 @@ get_template_part('template-parts/header/header', 'page');?>
                         //pour le moment je choisis que mes clients ne peuvent pas modifier leur profil
                         // echo '<a href="' . admin_url('user-edit.php?user_id='. get_current_user_id()) .'">Gérer mon profil</a>';
                         $user = new WP_User(get_current_user_id());
-                        var_dump($user);
+                        print_r($user);
                         echo '<p>Bonjour <b>'.$user->display_name.'</b> !</p>';
                         echo '<p>'.the_content().'</p>';
                         $loop = new WP_Query( array('post_type'  => 'post', 'post_status' => 'publish','category_name' => 'user_wp') );
@@ -40,8 +40,9 @@ get_template_part('template-parts/header/header', 'page');?>
                         if ($loop->have_posts()) : ?>
                         <?php while ($loop->have_posts()) : $loop->the_post(); ?>
                                 <li class='text-prune-dark py-2 bold border-bottom'>
-                                    
-                                <?php the_title(); ?>
+                                    <a class="" href="<?php echo esc_url(get_permalink($post->ID)); ?>" ><?php the_title(); ?></a>
+                                </li>
+                                
                             </li>
                         <?php endwhile;
                         endif;
