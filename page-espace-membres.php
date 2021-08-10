@@ -30,22 +30,35 @@ get_template_part('template-parts/header/header', 'page');?>
                         //pour le moment je choisis que mes clients ne peuvent pas modifier leur profil
                         // echo '<a href="' . admin_url('user-edit.php?user_id='. get_current_user_id()) .'">Gérer mon profil</a>';
                         $user = new WP_User(get_current_user_id());
-                        print_r($user);
-                        echo '<p>Bonjour <b>'.$user->display_name.'</b> !</p>';
-                        echo '<p>'.the_content().'</p>';
-                        $loop = new WP_Query( array('post_type'  => 'post', 'post_status' => 'publish','category_name' => 'user_wp') );
+                        // print_r($user);
+                        echo '<p>Bonjour <b>'.$user->display_name.'</b> !</p>';?>
+                        <p><?php the_content();?></p>
+                        <h2 class="text-prune-dark pt-0 pt-sm-5">Mes tutos</h2>
+                        <?php $user = wp_get_current_user();           
+                        $userRole = $user->roles[0];
+                        // $userRole == 'abonne_wordpress' 
+                        if($userRole == 'abonne_wordpress'):
+                            $loop = new WP_Query( array('post_type'  => 'post', 'post_status' => 'publish','category_name' => 'user_wp', 'orderby' => 'type','order' => 'ASC') );
+                        elseif($userRole == 'abonne_woocommerce'):
+                            $loop = new WP_Query( array('post_type'  => 'post', 'post_status' => 'publish','category_name' => 'user_wp,user_wc', 'orderby' => 'title','order' => 'ASC') );
+                        elseif($userRole == 'abonne_prestashop'):
+                                $loop = new WP_Query( array('post_type'  => 'post', 'post_status' => 'publish','category_name' => 'user_ps', 'orderby' => 'title','order' => 'ASC') );
+                        elseif(current_user_can('edit_posts')):
+                            $loop = new WP_Query( array('post_type'  => 'post', 'post_status' => 'publish','order' => 'ASC'));
+                        endif;
+                        
 
-                        echo '<h2 class="text-prune-dark pt-0 pt-sm-5">Mes tutos</h2>';
                         echo '<ul class="liste-articles mb-5">';
                         if ($loop->have_posts()) : ?>
                         <?php while ($loop->have_posts()) : $loop->the_post(); ?>
                                 <li class='text-prune-dark py-2 bold border-bottom'>
                                     <a class="" href="<?php echo esc_url(get_permalink($post->ID)); ?>" ><?php the_title(); ?></a>
-                                </li>
-                                
+                                </li>                                
                             </li>
                         <?php endwhile;
+                        wp_reset_postdata();
                         endif;
+                        
                             echo '</ul>';
                             echo '<a href="' . wp_logout_url(site_url('/')) .'">Se déconnecter</a>';
                         }

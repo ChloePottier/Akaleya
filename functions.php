@@ -127,14 +127,46 @@ function cpt_portfolio_init() {
         'has_archive'        => true,
         'menu_position'      => null,
         'menu_icon'          => 'dashicons-art',
-        'supports'           => array( 'title', 'editor','category', 'excerpt','thumbnail' ),
+        'supports'           => array( 'title', 'editor', 'excerpt','thumbnail' ),
     ); 
     register_post_type( 'realisation', $args );
 } 
-// ajouter les category au portfolio
-function category_realisation() {
-    register_taxonomy_for_object_type ( 'category' , 'realisation') ;
-} 
+//Ajouter une taxonomie
+// function create_galerie_tax() {
+//     register_taxonomy( 'type', 'realisation', array(
+//         'label'        => __( 'Type', 'textdomain' ),
+//         'rewrite'      => array( 'slug' => 'type' ),
+//         'hierarchical' => true,
+//     ) );
+// }
+
+function create_galerie_tax() {
+    $labels = array(
+        'name'              => _x( 'Types', 'taxonomy general name', 'textdomain' ),
+        'singular_name'     => _x( 'Type', 'taxonomy singular name', 'textdomain' ),
+        'search_items'      => __( 'Chercher un type', 'textdomain' ),
+        'all_items'         => __( 'Tous les types', 'textdomain' ),
+        'view_item'         => __( 'Voir le Type', 'textdomain' ),
+        'edit_item'         => __( 'Editer le Type', 'textdomain' ),
+        'update_item'       => __( 'Mettre à jour le Type', 'textdomain' ),
+        'add_new_item'      => __( 'Ajouter un nouveau type', 'textdomain' ),
+        'new_item_name'     => __( 'Nouveau Nom', 'textdomain' ),
+        'not_found'         => __( 'Aucun Type trouvé', 'textdomain' ),
+        'back_to_items'     => __( 'Retour aux Types de  réalisations', 'textdomain' ),
+        'menu_name'         => __( 'Types de réalisation', 'textdomain' ),
+    ); 
+    $args = array(
+        'labels'            => $labels,
+        'hierarchical'      => true,
+        'public'            => true,
+        'show_ui'           => true,
+        'show_admin_column' => true,
+        'query_var'         => true,
+        'rewrite'           => array( 'slug' => 'type' ),
+        'show_in_rest'      => true,
+    );
+    register_taxonomy('type','realisation',$args);
+}
 //Custom post type liens Externes
 function cpt_link_init() {
     $labels = array(

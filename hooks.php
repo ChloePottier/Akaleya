@@ -7,7 +7,7 @@ add_action( 'init', 'cpt_slider_init' );
 add_action( 'init', 'cpt_presentation_init' );
 add_action( 'init', 'cpt_services_init' );
 add_action( 'init', 'cpt_portfolio_init' );
-add_action( 'init', 'category_realisation' );
+add_action( 'init', 'create_galerie_tax', 0 );
 add_action( 'init', 'cpt_link_init' );
 // ajout format d'image      
 if(function_exists('add_theme_support')):

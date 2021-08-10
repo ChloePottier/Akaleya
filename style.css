@@ -15,11 +15,12 @@ ul li {list-style: none;}
 ul{margin-bottom: 0!important; padding-left: 0!important;}
 .clear{clear: both;}
 /* Colors */
-.text-prune-dark,p a, #link-rs a,.link,::placeholder,.partagez{color: rgb(91,19,60);}
+.text-prune-dark,::placeholder{color: rgb(91,19,60);}
 .text-white,#navbarTop ul li a,#navigation ul li a,#copy-akaleya{ color: #fff!important;}
-.text-prune,p a:hover,#link-rs a:hover, .link:hover,.partage-reseaux-sociaux a:hover{color: rgb(145,33,92);}
+.text-prune,#link-rs a:hover, .link:hover,.partage-reseaux-sociaux a:hover{color: rgb(145,33,92)!important;}
 a,.text-blue,#navbarTop ul li a:hover,#navigation ul li a:hover,#nav-portfolio li a,.service h3,#breadcrumbs,.partage-reseaux-sociaux a,
 #footer-menu-legalenotice li a,#copy-akaleya:hover{ color: rgb(97,190,223)!important;}
+#link-rs a,.menu-nav ul li a,.link,.partagez{color: rgb(91,19,60)!important;}
 .bg-blue{background-color: rgb(97,190,223);}
 .bg-blue-light{background-color: rgb(162,218,234);}
 .bg-prune-light{background-color: rgb(163,116,148);}
