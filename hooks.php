@@ -23,8 +23,6 @@ add_filter( 'login_form_bottom', 'lien_mot_de_passe_perdu' );
 add_action( 'current_screen', 'redirect_non_authorized_user' );
 add_shortcode( 'private-content', 'private_content' );
 
-add_shortcode( 'private-content', 'private_content' );
-
 // ajout rôle
 add_role('abonne_wordpress','Abonné.e Wordpress',['edit_posts' => false, 'delete_posts' => false, 'read'=> true]);
 add_role('abonne_woocommerce','Abonné.e Woocommerce',['edit_posts' => false, 'delete_posts' => false, 'read'=> true]);
@@ -35,3 +33,5 @@ remove_role('contributor');
 if ( ! current_user_can( 'manage_options' ) ) {
     add_filter( 'show_admin_bar', '__return_false' );
 }
+// menu
+add_action('menu_top','menu_top_user_logged_in');

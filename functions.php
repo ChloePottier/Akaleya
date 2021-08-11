@@ -247,6 +247,7 @@ function redirect_non_authorized_user() {
 		exit();
 	}
 }
+// shortcode private
 function private_content( $atts, $content ) {
 	if ( is_user_logged_in() ) {
 		return $content;
@@ -256,6 +257,14 @@ function private_content( $atts, $content ) {
 		return '<a href="' . wp_login_url( get_permalink() ) . '">Connectez-vous pour lire ce contenu</a>';
 	}
 }
+function menu_top_user_logged_in(){
+    if(is_user_logged_in()):
+        get_template_part('template-parts/navigation/navigation', 'items-private');
+    else :
+        get_template_part('template-parts/navigation/navigation', 'items');
+    endif;
+}
+
 
 
 
