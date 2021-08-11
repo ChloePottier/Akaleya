@@ -4,8 +4,8 @@ require 'hooks.php';
 function akaleya_styles_scripts(){
     wp_enqueue_style('bootstrap', ''. get_template_directory_uri() .'/assets/bootstrap/bootstrap.min.css');
     wp_enqueue_style('font-awesome', get_template_directory_uri() .'/assets/font-awesome/css/all.css');
-    wp_enqueue_script('jquery');
-    wp_enqueue_script('popper',''.get_template_directory_uri().'/assets/js/popper.min.js', array('jquery'), 1, true);
+    // wp_enqueue_script('jquery');
+    // wp_enqueue_script('popper',''.get_template_directory_uri().'/assets/js/popper.min.js', array('jquery'), 1, true);
     wp_enqueue_script( 'validator',''.get_template_directory_uri(). '/assets/js/validator.min.js' );
     wp_enqueue_script('bootstrap-js', ''.get_template_directory_uri() .'/assets/bootstrap/bootstrap.min.js', array('jquery', 'popper'), 1, true);
     wp_enqueue_style('print', get_template_directory_uri() .'/assets/print.css', array(), '1.0', 'print');
@@ -26,9 +26,7 @@ function themename_custom_logo_setup() {
     );
     add_theme_support( 'custom-logo', $defaults );
    }
-// // Masquer admin bar
-//    show_admin_bar( false );
-//    add_filter( 'show_admin_bar', '__return_false' );
+
 //Custom post type
 function cpt_slider_init() {
     $labels = array(
@@ -131,15 +129,7 @@ function cpt_portfolio_init() {
     ); 
     register_post_type( 'realisation', $args );
 } 
-//Ajouter une taxonomie
-// function create_galerie_tax() {
-//     register_taxonomy( 'type', 'realisation', array(
-//         'label'        => __( 'Type', 'textdomain' ),
-//         'rewrite'      => array( 'slug' => 'type' ),
-//         'hierarchical' => true,
-//     ) );
-// }
-
+// TAxonomie 'type' pour galerie
 function create_galerie_tax() {
     $labels = array(
         'name'              => _x( 'Types', 'taxonomy general name', 'textdomain' ),
@@ -194,7 +184,7 @@ function cpt_link_init() {
         'supports'           => array( 'title', 'editor'),
     ); 
     register_post_type( 'liens', $args );
-    } 
+} 
 /*** BOUTONS DE PARTAGE RESEAUX SOCIAUX ***/
 function my_sharing_buttons($content) {
     //si le blog est en page d'accueil ou si c'est un post seul
@@ -204,10 +194,10 @@ function my_sharing_buttons($content) {
         // Récuperer TITRE de la page en cours
         $myCurrentTitle = urlencode(get_the_title()); 
         // Récuperer MINIATURE si l'image à la une existe
-        // if(has_post_thumbnail($post->ID)) {
-        //     $myCurrentThumbnail = wp_get_attachment_image_src(get_post_thumbnail_id( $post->ID ), 'full'); // correction du 9 février 2017
-        // }
-        
+        if(has_post_thumbnail()) {
+            $imgId=wp_get_attachment_image_src(get_post_thumbnail_id(), 'full'); 
+            echo $imgID;
+        }         
         // Construction des URL de partage 
         $facebookURL = esc_url( 'https://www.facebook.com/sharer/sharer.php?u='.$myCurrentURL );
         $linkedInURL = esc_url( 'https://www.linkedin.com/shareArticle?mini=true&url='.$myCurrentURL.'&amp;title='.$myCurrentTitle );

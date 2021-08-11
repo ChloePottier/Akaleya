@@ -7,7 +7,7 @@ get_template_part('template-parts/header/header', 'page'); ?>
     while (have_posts()) : the_post();
         $urlRea = get_field('url_realisation');
         $image = get_field('image_realisation'); ?>
-        <section class="container-fluid content" <?php post_class(); ?> id="post-<?php the_ID(); ?>" >
+        <section class="container-fluid content" <?php post_class(); ?> id="post-realisation-<?php the_ID(); ?>" >
             <div class="container py-5">
                 <div class="row">
                     <div class="col-12">

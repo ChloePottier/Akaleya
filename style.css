@@ -1,4 +1,4 @@
-/* Theme Name: Akaleya
+/* Theme Name: Akaleya Espace Membres
 Author: Chloé Pottier
 Description: Thème Akaleya : graphisme et développement web. Création d'un espace membres
 Version: 1.2
@@ -17,10 +17,10 @@ ul{margin-bottom: 0!important; padding-left: 0!important;}
 /* Colors */
 .text-prune-dark,::placeholder{color: rgb(91,19,60);}
 .text-white,#navbarTop ul li a,#navigation ul li a,#copy-akaleya{ color: #fff!important;}
-.text-prune,#link-rs a:hover, .link:hover,.partage-reseaux-sociaux a:hover{color: rgb(145,33,92)!important;}
+.text-prune,#link-rs a:hover, .link:hover,.partage-reseaux-sociaux a:hover,#breadcrumbs a:hover{color: rgb(145,33,92)!important;}
 a,.text-blue,#navbarTop ul li a:hover,#navigation ul li a:hover,#nav-portfolio li a,.service h3,#breadcrumbs,.partage-reseaux-sociaux a,
 #footer-menu-legalenotice li a,#copy-akaleya:hover{ color: rgb(97,190,223)!important;}
-#link-rs a,.menu-nav ul li a,.link,.partagez{color: rgb(91,19,60)!important;}
+#link-rs a,.menu-nav ul li a,.link,.partagez,#breadcrumbs a{color: rgb(91,19,60)!important;}
 .bg-blue{background-color: rgb(97,190,223);}
 .bg-blue-light{background-color: rgb(162,218,234);}
 .bg-prune-light{background-color: rgb(163,116,148);}
@@ -198,7 +198,6 @@ input{padding: 1rem 0; height: 40px;}
 }
 [type='submit']:hover,.btn-retour{ background: rgba(97,190,223); color: #58133C;}
 .envoi{ top: 26vh; width: 100vw;}
-
 .w-66px{width: 66px;height: 66px;}
 .grecaptcha-badge{visibility: hidden;}
 /* Les autres pages */
@@ -206,6 +205,11 @@ input{padding: 1rem 0; height: 40px;}
 .btn-url{color:#fff; background: #58133C; padding: .3rem .5rem;}
 .btn-url:hover{color:#58133C; background: rgb(97,190,223); }
 .partage-reseaux-sociaux a i{font-size: 1.5rem;}
+#login-form .login-username, #login-form .login-password{display: flex; flex-direction: column;}
+#login-form p{padding-bottom: 1rem;}
+#login-form p label{text-align: center; font-weight: 600;}
+#login-form .login-remember label{display: flex; align-items: center;}
+#login-form .login-remember label input{margin-right: .8rem;}
 /* FOOTER */
 #footer-menu-legalenotice li a:hover{ color: #FFDF30!important;}
 .page-404{height: 90vh;}
@@ -229,8 +233,7 @@ input{padding: 1rem 0; height: 40px;}
     .pb-sm-6{padding-bottom: 0!important;}
     .slider-items div p{font-size: 1.5rem;}
     .bg-graphiste{height: 100vh; background: url(https://akaleya.fr/wp-content/uploads/2021/01/graphiste.webp) left top no-repeat; background-attachment: fixed;}
-    .bg-contact{background: linear-gradient(0.25turn, rgb(163,116,148) 50%, rgb(162,218,234) 50%);
-         border-top: solid 2px #58133C}
+    .bg-contact{background: linear-gradient(0.25turn, rgb(163,116,148) 50%, rgb(162,218,234) 50%); border-top: solid 2px #58133C}
     #contact .w-75,.wp-block-contact-form-7-contact-form-selector{width: 75%!important;}
     .wp-block-contact-form-7-contact-form-selector{padding-bottom: 0;}
     #portfolio p {width:100%!important;}

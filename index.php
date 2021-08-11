@@ -1,5 +1,5 @@
-<?php /*Template Name: AkaleyaAccueil*/?>
-<?php get_template_part('template-parts/header/head', 'metadata');
+<?php /*Template Name: AkaleyaAccueil*/
+get_template_part('template-parts/header/head', 'metadata');
 get_template_part('template-parts/header/header', 'page');?>
 <section class='container-fluid content' id=''>
     <div class='container'>
