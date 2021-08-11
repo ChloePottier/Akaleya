@@ -37,24 +37,39 @@ get_template_part('template-parts/header/header', 'page');?>
                             // print_r($user);
                             echo '<p>Bonjour <b>'.$user->display_name.'</b> !</p>';?>
                             <p><?php the_content();?></p>
-                            <h2 class="text-prune-dark pt-0 pt-sm-5">Mes tutos</h2>
+                            <h2 class='text-prune-dark pt-0 pt-sm-5 pb-2'>Mes articles disponibles</h2>
                             <?php $user = wp_get_current_user();           
                             $userRole = $user->roles[0];
-                            // $userRole == 'abonne_wordpress' 
-                            if($userRole == 'abonne_wordpress'):
+                            if($userRole == 'user_wp'):
+                                echo '<h3>Wordpress</h3>';
                                 $loop = new WP_Query( array('post_type'  => 'post', 'post_status' => 'publish','category_name' => 'user_wp', 'order' => 'ASC') );
-                                // require 'template-parts/content/loop/loop-espacemembres.php';
-                            elseif($userRole == 'abonne_woocommerce'):
-                                $loop = new WP_Query( array('post_type'  => 'post', 'post_status' => 'publish','category_name' => 'user_wp,user_wc', 'order' => 'ASC') );
-                                // require 'template-parts/content/loop/loop-espacemembres.php';
-                            elseif($userRole == 'abonne_prestashop'):
+                                require 'template-parts/content/loop/loop-espacemembres.php';
+                            elseif($userRole == 'user_wc'):
+                                echo '<h3>Wordpress</h3>';
+                                $loop = new WP_Query( array('post_type'  => 'post', 'post_status' => 'publish','category_name' => 'user_wp', 'order' => 'ASC') );
+                                require 'template-parts/content/loop/loop-espacemembres.php'; 
+                                echo '<h3>Woocommerce</h3>';
+                                $loop = new WP_Query( array('post_type'  => 'post', 'post_status' => 'publish','category_name' => 'user_wc', 'order' => 'ASC') );
+                                require 'template-parts/content/loop/loop-espacemembres.php'; 
+                            elseif($userRole == 'user_ps'):
+                                echo '<h3>Prestashop</h3>';
                                 $loop = new WP_Query( array('post_type'  => 'post', 'post_status' => 'publish','category_name' => 'user_ps', 'order' => 'ASC') );
-                                // require 'template-parts/content/loop/loop-espacemembres.php';
+                                require 'template-parts/content/loop/loop-espacemembres.php';
                             elseif(current_user_can('edit_posts')):
-                                $loop = new WP_Query( array('post_type'  => 'post', 'post_status' => 'publish','order' => 'ASC'));
-                                // require 'template-parts/content/loop/loop-espacemembres.php';
-                            endif;
-                            require 'template-parts/content/loop/loop-espacemembres.php';
+                                echo '<h3>Les articles du blog</h3>';
+                                $loop = new WP_Query( array('post_type'  => 'post', 'post_status' => 'publish','category_name' => 'non-classe', 'order' => 'ASC') );
+                                require 'template-parts/content/loop/loop-espacemembres.php';
+                                // $loop = new WP_Query( array('post_type'  => 'post', 'post_status' => 'publish','order' => 'ASC'));
+                                echo '<h3>Wordpress</h3>';
+                                $loop = new WP_Query( array('post_type'  => 'post', 'post_status' => 'publish','category_name' => 'user_wp', 'order' => 'ASC') );
+                                require 'template-parts/content/loop/loop-espacemembres.php';
+                                echo '<h3>Woocommerce</h3>';
+                                $loop = new WP_Query( array('post_type'  => 'post', 'post_status' => 'publish','category_name' => 'user_wc', 'order' => 'ASC') );
+                                require 'template-parts/content/loop/loop-espacemembres.php'; 
+                                echo '<h3>Prestashop</h3>';
+                                $loop = new WP_Query( array('post_type'  => 'post', 'post_status' => 'publish','category_name' => 'user_wc', 'order' => 'ASC') );
+                                require 'template-parts/content/loop/loop-espacemembres.php'; 
+                            endif;                           
                                 echo '<a href="' . wp_logout_url(site_url('/')) .'" class="pb-3">Se déconnecter</a>';
                             }; ?>
                             </div>

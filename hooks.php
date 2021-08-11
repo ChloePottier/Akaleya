@@ -24,9 +24,9 @@ add_action( 'current_screen', 'redirect_non_authorized_user' );
 add_shortcode( 'private-content', 'private_content' );
 
 // ajout rôle
-add_role('abonne_wordpress','Abonné.e Wordpress',['edit_posts' => false, 'delete_posts' => false, 'read'=> true]);
-add_role('abonne_woocommerce','Abonné.e Woocommerce',['edit_posts' => false, 'delete_posts' => false, 'read'=> true]);
-add_role('abonne_prestashop','Abonné.e Prestashop',['edit_posts' => false, 'delete_posts' => false, 'read'=> true]);
+add_role('user_wp','Abonné.e Wordpress',['edit_posts' => false, 'delete_posts' => false, 'read'=> true]);
+add_role('user_wc','Abonné.e Woocommerce',['edit_posts' => false, 'delete_posts' => false, 'read'=> true]);
+add_role('user_ps','Abonné.e Prestashop',['edit_posts' => false, 'delete_posts' => false, 'read'=> true]);
 remove_role('subscriber');
 remove_role('editor');
 remove_role('contributor');
