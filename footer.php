@@ -14,3 +14,5 @@
 </footer>
 <script src='<?php echo get_template_directory_uri(); ?>/assets/js/navigation/nav-fixed.js' async defer></script>
 <script src='<?php echo get_template_directory_uri(); ?>/assets/js/navigation/burger.js' async defer></script>
+<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" type="text/javascript"></script> -->
+<script src="<?php echo get_template_directory_uri(); ?>/assets/js/gallery.js" type="text/javascript"></script>
