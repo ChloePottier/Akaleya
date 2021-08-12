@@ -18,7 +18,7 @@ ul{margin-bottom: 0!important; padding-left: 0!important;}
 .text-prune-dark,::placeholder{color: rgb(91,19,60);}
 .text-white,#navbarTop ul li a,#navigation ul li a,#copy-akaleya{ color: #fff!important;}
 .text-prune,#link-rs a:hover, .link:hover,.partage-reseaux-sociaux a:hover,#breadcrumbs a:hover{color: rgb(145,33,92)!important;}
-a,.text-blue,#navbarTop ul li a:hover,#navigation ul li a:hover,#nav-portfolio li a,.service h3,#breadcrumbs,.partage-reseaux-sociaux a,
+a:not(.cookie_action_close_header,.cookie_action_close_header_reject),.text-blue,#navbarTop ul li a:hover,#navigation ul li a:hover,#nav-portfolio li a,.service h3,#breadcrumbs,.partage-reseaux-sociaux a,
 #footer-menu-legalenotice li a,#copy-akaleya:hover{ color: rgb(97,190,223)!important;}
 #link-rs a,.menu-nav ul li a,.link,.partagez,#breadcrumbs a{color: rgb(91,19,60)!important;}
 .bg-blue{background-color: rgb(97,190,223);}
@@ -67,7 +67,7 @@ header{overflow: hidden;}
     0% {opacity: 0;}
     100%{opacity: 100;}
 }
-.nav-top{position: absolute;    box-shadow: 0 0 1.3rem rgb(30,2,18,.8);}
+.nav-top{position: absolute; box-shadow: 0 0 1.3rem rgb(30,2,18,.8);}
 .sticky { position: fixed; top: 0; width: 100%; z-index: 1500;}
 .dis-none{display:none;}
 .dis-block{display: block; }
@@ -79,6 +79,9 @@ header{overflow: hidden;}
     width: 200vw;
     height: 110vh;
     right: -50%;
+}
+#header_small #navigation{
+    top: -5vh;
 }
 #navigation ul{padding-right: 35%;}
 .burger {

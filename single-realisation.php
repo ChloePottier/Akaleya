@@ -1,9 +1,8 @@
 <?php /* Template Name: Page Single Réalisation Akaleya */ ?>
 <?php
 get_template_part('template-parts/header/head', 'metadata');
-get_template_part('template-parts/header/header', 'page'); ?>
-
-<?php if (have_posts()) :
+get_template_part('template-parts/header/header', 'page');
+if (have_posts()) :
     while (have_posts()) : the_post();
         $urlRea = get_field('url_realisation');
         $image = get_field('image_realisation'); ?>
@@ -30,10 +29,6 @@ get_template_part('template-parts/header/header', 'page'); ?>
                 </div>
             </div>
         </section>
-
-
-
-
 <?php endwhile;
 endif;
 wp_reset_postdata();

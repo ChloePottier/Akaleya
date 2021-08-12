@@ -10,5 +10,5 @@ a continuer : https://www.w3schools.com/howto/howto_js_scroll_to_top.asp -->
     get_footer(); ?>
     <script  src='<?php echo get_template_directory_uri(); ?>/assets/js/slider-header.js' async defer></script>
     <script src='<?php echo get_template_directory_uri(); ?>/assets/js/gallery.js' async defer></script>
-
+</footer>
 </html>
