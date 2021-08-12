@@ -40,4 +40,6 @@ get_template_part('template-parts/header/header', 'page'); ?>
     </section>
 </body>
 <?php get_footer(); ?>
+</footer>
+
 </html>

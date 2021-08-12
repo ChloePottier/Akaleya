@@ -81,5 +81,5 @@ get_template_part('template-parts/header/header', 'page');?>
 </scroll-page>
 </body>
 <?php get_footer(); ?>
-
+</footer>
 </html>
