@@ -34,16 +34,20 @@ get_template_part('template-parts/header/header', 'page');?>
                             <?php //pour le moment je choisis que mes clients ne peuvent pas modifier leur profil
                             // echo '<a href="' . admin_url('user-edit.php?user_id='. get_current_user_id()) .'">Gérer mon profil</a>';
                             $user = new WP_User(get_current_user_id());
-                            $user = wp_get_current_user();
-                            // print_r($user);
+                            $userUrl = $user->user_url;
+                            $userRole = $user->roles[0];
+                            // var_dump($user);
+                            $userData = get_user_meta(get_current_user_id());
+                            var_dump($userData);
+                            $userDetails =  $userData['description'][0];
+
+                            // $user = wp_get_current_user();
                             echo '<p>Bonjour <b>'.$user->display_name.'</b> !</p>';?>
                             <p><?php the_content();?></p>
-                            <p>Votre site est : <?php echo $user->user_url ?></p>
+                            <p>Votre site est : <a href='<?php echo $userUrl ?>'><?php echo $userUrl ?></a></p>
+                            <p>Description / Biographie : <?php echo $userDetails ?></p>
                             <h2 class='text-prune-dark pt-0 pt-sm-5 pb-2'>Mes articles disponibles</h2>
-                            <?php 
-                            // var_dump($user)        ;   
-                            $userRole = $user->roles[0];
-                            if($userRole == 'user_wp'):
+                            <?php  if($userRole == 'user_wp'):
                                 echo '<h3>Wordpress</h3>';
                                 $loop = new WP_Query( array('post_type'  => 'post', 'post_status' => 'publish','category_name' => 'user_wp', 'order' => 'ASC') );
                                 require 'template-parts/content/loop/loop-espacemembres.php';

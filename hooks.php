@@ -21,11 +21,11 @@ add_filter( 'login_headertext', 'my_login_logo_url_title' );
 // espace membres
 add_filter( 'login_form_bottom', 'lien_mot_de_passe_perdu' );
 add_action( 'current_screen', 'redirect_non_authorized_user' );
-add_shortcode( 'private-content', 'private_content' );
-
 // ajout rôle
 add_action( 'init', 'roles_users');
-
+//Shortcodes
+add_shortcode( 'private-content', 'private_content' );
+add_shortcode( 'url_user', 'display_url_user' );
 
 if ( ! current_user_can( 'manage_options' ) ) {
     add_filter( 'show_admin_bar', '__return_false' );

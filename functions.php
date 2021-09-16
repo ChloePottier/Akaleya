@@ -277,8 +277,6 @@ function display_url_user(){
        return $current_user->user_url; 
     } 
 }
-add_shortcode( 'url_user', 'display_url_user' );
-
 
 //affichage menu
 function menu_top_user_logged_in(){
