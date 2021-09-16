@@ -25,7 +25,11 @@ add_action( 'current_screen', 'redirect_non_authorized_user' );
 add_action( 'init', 'roles_users');
 //Shortcodes
 add_shortcode( 'private-content', 'private_content' );
-add_shortcode( 'url_user', 'display_url_user' );
+add_shortcode( 'website_user', 'display_url_user' );
+add_shortcode( 'dashboard_user', 'display_dashboard_user' );
+
+
+
 
 if ( ! current_user_can( 'manage_options' ) ) {
     add_filter( 'show_admin_bar', '__return_false' );

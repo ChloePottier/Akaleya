@@ -271,10 +271,22 @@ function roles_users(){
 }
 //shortcode : afficher url
 function display_url_user(){
-    $current_user = wp_get_current_user();
-    if ( $current_user->has_prop( 'user_url' ) ) {
-       return $current_user->user_url; 
-    } 
+    $userData = get_user_meta(get_current_user_id());
+    $userUrl = $userData['website_user'][0];
+        if ( $userUrl != '' ) {
+       return '<a href="'.$userUrl.'" target="blank" rel="noreferrer">'.$userUrl.'</a>'; 
+    } else {  
+        return 'https://mon-site.fr';
+    }
+}
+function display_dashboard_user(){
+    $userData = get_user_meta(get_current_user_id());
+    $userUrl = $userData['dashboard_user'][0];
+        if ( $userUrl != '' ) {
+       return '<a href="'.$userUrl.'" target="blank" rel="noreferrer">'.$userUrl.'</a>'; 
+    } else {
+        return 'https://mon-site.fr/admin';
+    }
 }
 
 //affichage menu
@@ -290,17 +302,17 @@ function menu_top_user_logged_in(){
 //ajout champs dans profil utilisateur
 function extra_user_profile_fields( $user ) { ?>
 	<h3>Les informations concernant votre projet</h3>
-	<table class="form-table">
+	<table class='form-table'>
 		<tbody>
             <tr>
 				<th>URL de votre site internet<br />
                 <small>Front-office</small></th>
-				<td><input class='regular-text' id='url_website_user' type='text' name='website_user' value="<?php echo esc_attr( get_the_author_meta( 'URL du front-office', $user->ID ) ); ?>" /></td>
+				<td><input class='regular-text' id='url_website_user' type='text' name='website_user' value="<?php echo esc_attr( get_the_author_meta( 'website_user', $user->ID ) ); ?>" /></td>
 			</tr>
 			<tr>
 				<th>URL de votre administration<br />
                 <small>Back-office</small></th>
-				<td><input class='regular-text' id='url_dashboard_user' type='text' name='dashboard_user' value="<?php echo esc_attr( get_the_author_meta( 'URL du back-office', $user->ID ) ); ?>" /></td>
+				<td><input class='regular-text' id='url_dashboard_user' type='text' name='dashboard_user' value="<?php echo esc_attr( get_the_author_meta( 'dashboard_user', $user->ID ) ); ?>" /></td>
 			</tr>
 		</tbody>
 	</table>	
