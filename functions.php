@@ -258,13 +258,7 @@ function private_content( $atts, $content ) {
 	}
 }
 
-// function display_url_user(){
-//     $user = new WP_User( $id , $name , $blog_id  );
-//     $current_user = wp_get_current_user();
-//     if ( $current_user->has_prop( 'user_url' ) ) {
-//        return $current_user->has_prop( 'user_url' ); 
-//     } 
-// }
+
 function roles_users(){
     remove_role('subscriber');
     remove_role('editor');
@@ -275,9 +269,17 @@ function roles_users(){
     $cap_user_client = ['edit_posts' => false, 'delete_posts' => false, 'read'=> true];
     add_role('user_wp','Abonné.e Wordpress',$cap_user_client);
     add_role('user_wc','Abonné.e Woocommerce',$cap_user_client);
-    add_role('user_ps','Abonné.e Prestashop',$cap_user_client);
- 
+    add_role('user_ps','Abonné.e Prestashop',$cap_user_client); 
 }
+function display_url_user(){
+    $current_user = wp_get_current_user();
+    if ( $current_user->has_prop( 'user_url' ) ) {
+       return $current_user->user_url; 
+    } 
+}
+add_shortcode( 'url_user', 'display_url_user' );
+
+
 //affichage menu
 function menu_top_user_logged_in(){
     if(is_user_logged_in() &&  is_home()  OR is_front_page()):
