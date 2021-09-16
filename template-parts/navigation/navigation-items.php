@@ -20,6 +20,6 @@
     </li>
     <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'>
         <a href='<?php echo esc_url( home_url( "/" ) ); ?>espace-membres' class='text-prune-dark' itemprop='item'>
-            <span itemprop='name'>Privé</span><meta itemprop='position' content='5'/>
+            <span itemprop='name'>Pro</span><meta itemprop='position' content='5'/>
         </a>
     </li>

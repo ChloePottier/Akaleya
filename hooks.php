@@ -24,12 +24,9 @@ add_action( 'current_screen', 'redirect_non_authorized_user' );
 add_shortcode( 'private-content', 'private_content' );
 
 // ajout rôle
-add_role('user_wp','Abonné.e Wordpress',['edit_posts' => false, 'delete_posts' => false, 'read'=> true]);
-add_role('user_wc','Abonné.e Woocommerce',['edit_posts' => false, 'delete_posts' => false, 'read'=> true]);
-add_role('user_ps','Abonné.e Prestashop',['edit_posts' => false, 'delete_posts' => false, 'read'=> true]);
-remove_role('subscriber');
-remove_role('editor');
-remove_role('contributor');
+add_action( 'init', 'roles_users');
+
+
 if ( ! current_user_can( 'manage_options' ) ) {
     add_filter( 'show_admin_bar', '__return_false' );
 }

@@ -34,11 +34,14 @@ get_template_part('template-parts/header/header', 'page');?>
                             <?php //pour le moment je choisis que mes clients ne peuvent pas modifier leur profil
                             // echo '<a href="' . admin_url('user-edit.php?user_id='. get_current_user_id()) .'">Gérer mon profil</a>';
                             $user = new WP_User(get_current_user_id());
+                            $user = wp_get_current_user();
                             // print_r($user);
                             echo '<p>Bonjour <b>'.$user->display_name.'</b> !</p>';?>
                             <p><?php the_content();?></p>
+                            <p>Votre site est : <?php echo $user->user_url ?></p>
                             <h2 class='text-prune-dark pt-0 pt-sm-5 pb-2'>Mes articles disponibles</h2>
-                            <?php $user = wp_get_current_user();           
+                            <?php 
+                            // var_dump($user)        ;   
                             $userRole = $user->roles[0];
                             if($userRole == 'user_wp'):
                                 echo '<h3>Wordpress</h3>';
@@ -59,7 +62,6 @@ get_template_part('template-parts/header/header', 'page');?>
                                 echo '<h3>Les articles du blog</h3>';
                                 $loop = new WP_Query( array('post_type'  => 'post', 'post_status' => 'publish','category_name' => 'non-classe', 'order' => 'ASC') );
                                 require 'template-parts/content/loop/loop-espacemembres.php';
-                                // $loop = new WP_Query( array('post_type'  => 'post', 'post_status' => 'publish','order' => 'ASC'));
                                 echo '<h3>Wordpress</h3>';
                                 $loop = new WP_Query( array('post_type'  => 'post', 'post_status' => 'publish','category_name' => 'user_wp', 'order' => 'ASC') );
                                 require 'template-parts/content/loop/loop-espacemembres.php';
@@ -67,7 +69,7 @@ get_template_part('template-parts/header/header', 'page');?>
                                 $loop = new WP_Query( array('post_type'  => 'post', 'post_status' => 'publish','category_name' => 'user_wc', 'order' => 'ASC') );
                                 require 'template-parts/content/loop/loop-espacemembres.php'; 
                                 echo '<h3>Prestashop</h3>';
-                                $loop = new WP_Query( array('post_type'  => 'post', 'post_status' => 'publish','category_name' => 'user_wc', 'order' => 'ASC') );
+                                $loop = new WP_Query( array('post_type'  => 'post', 'post_status' => 'publish','category_name' => 'user_ps', 'order' => 'ASC') );
                                 require 'template-parts/content/loop/loop-espacemembres.php'; 
                             endif;                           
                                 echo '<a href="' . wp_logout_url(site_url('/')) .'" class="pb-3">Se déconnecter</a>';

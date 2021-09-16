@@ -257,11 +257,35 @@ function private_content( $atts, $content ) {
 		return '<a href="' . wp_login_url( get_permalink() ) . '">Connectez-vous pour lire ce contenu</a>';
 	}
 }
+
+// function display_url_user(){
+//     $user = new WP_User( $id , $name , $blog_id  );
+//     $current_user = wp_get_current_user();
+//     if ( $current_user->has_prop( 'user_url' ) ) {
+//        return $current_user->has_prop( 'user_url' ); 
+//     } 
+// }
+function roles_users(){
+    remove_role('subscriber');
+    remove_role('editor');
+    remove_role('contributor');
+    remove_role('abonne_wordpress');
+    remove_role('abonne_woocommerce');
+    remove_role('abonne_prestashop');
+    $cap_user_client = ['edit_posts' => false, 'delete_posts' => false, 'read'=> true];
+    add_role('user_wp','Abonné.e Wordpress',$cap_user_client);
+    add_role('user_wc','Abonné.e Woocommerce',$cap_user_client);
+    add_role('user_ps','Abonné.e Prestashop',$cap_user_client);
+ 
+}
+//affichage menu
 function menu_top_user_logged_in(){
-    if(is_user_logged_in()):
-        get_template_part('template-parts/navigation/navigation', 'items-private');
-    else :
-        get_template_part('template-parts/navigation/navigation', 'items');
+    if(is_user_logged_in() &&  is_home()  OR is_front_page()):
+        return get_template_part('template-parts/navigation/navigation', 'items');
+    elseif(is_user_logged_in() &&  ! is_home()  OR is_front_page()):
+            return get_template_part('template-parts/navigation/navigation', 'items-private');
+    elseif(!is_user_logged_in()) :
+        return get_template_part('template-parts/navigation/navigation', 'items');
     endif;
 }
 
