@@ -32,3 +32,8 @@ if ( ! current_user_can( 'manage_options' ) ) {
 }
 // menu
 add_action('menu_top','menu_top_user_logged_in');
+//ajout champs profil utilisateur
+add_action( 'show_user_profile', 'extra_user_profile_fields' );
+add_action( 'edit_user_profile', 'extra_user_profile_fields' );
+add_action( 'personal_options_update', 'save_extra_user_profile_fields' );
+add_action( 'edit_user_profile_update', 'save_extra_user_profile_fields' );

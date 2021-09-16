@@ -257,8 +257,6 @@ function private_content( $atts, $content ) {
 		return '<a href="' . wp_login_url( get_permalink() ) . '">Connectez-vous pour lire ce contenu</a>';
 	}
 }
-
-
 function roles_users(){
     remove_role('subscriber');
     remove_role('editor');
@@ -271,6 +269,7 @@ function roles_users(){
     add_role('user_wc','Abonné.e Woocommerce',$cap_user_client);
     add_role('user_ps','Abonné.e Prestashop',$cap_user_client); 
 }
+//shortcode : afficher url
 function display_url_user(){
     $current_user = wp_get_current_user();
     if ( $current_user->has_prop( 'user_url' ) ) {
@@ -287,6 +286,31 @@ function menu_top_user_logged_in(){
     elseif(!is_user_logged_in()) :
         return get_template_part('template-parts/navigation/navigation', 'items');
     endif;
+}
+//ajout champs dans profil utilisateur
+function extra_user_profile_fields( $user ) { ?>
+	<h3>Les informations concernant votre projet</h3>
+	<table class="form-table">
+		<tbody>
+            <tr>
+				<th>URL de votre site internet<br />
+                <small>Front-office</small></th>
+				<td><input class='regular-text' id='url_website_user' type='text' name='website_user' value="<?php echo esc_attr( get_the_author_meta( 'URL du front-office', $user->ID ) ); ?>" /></td>
+			</tr>
+			<tr>
+				<th>URL de votre administration<br />
+                <small>Back-office</small></th>
+				<td><input class='regular-text' id='url_dashboard_user' type='text' name='dashboard_user' value="<?php echo esc_attr( get_the_author_meta( 'URL du back-office', $user->ID ) ); ?>" /></td>
+			</tr>
+		</tbody>
+	</table>	
+<?php }
+function save_extra_user_profile_fields( $user_id ) {
+	if ( !current_user_can( 'edit_user', $user_id ) ) { 
+		return false; 
+	}
+	update_user_meta( $user_id, 'website_user', $_POST['website_user'] );
+    update_user_meta( $user_id, 'dashboard_user', $_POST['dashboard_user'] );	
 }
 
 

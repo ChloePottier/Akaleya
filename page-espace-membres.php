@@ -40,8 +40,6 @@ get_template_part('template-parts/header/header', 'page');?>
                             $userData = get_user_meta(get_current_user_id());
                             var_dump($userData);
                             $userDetails =  $userData['description'][0];
-
-                            // $user = wp_get_current_user();
                             echo '<p>Bonjour <b>'.$user->display_name.'</b> !</p>';?>
                             <p><?php the_content();?></p>
                             <p>Votre site est : <a href='<?php echo $userUrl ?>'><?php echo $userUrl ?></a></p>
