@@ -288,7 +288,6 @@ function display_dashboard_user(){
         return 'https://mon-site.fr/admin';
     }
 }
-
 //affichage menu
 function menu_top_user_logged_in(){
     if(is_user_logged_in() &&  is_home()  OR is_front_page()):

@@ -36,15 +36,26 @@ get_template_part('template-parts/header/header', 'page');?>
                             $user = new WP_User(get_current_user_id());                      
                             $userRole = $user->roles[0];
                             $userData = get_user_meta(get_current_user_id());
-                            $userUrl = $userData['website_user'][0];
-                            $userDashboard = $userData['dashboard_user'][0];
                             $userDetails =  $userData['description'][0];
                             echo $userRole;
                             echo '<p>Bonjour <b>'.$user->display_name.'</b> !</p>';?>
                             <p><?php the_content();?></p>
-                            <p><b>L'URL de votre site est :</b> <a href='<?php echo $userUrl ?>'><?php echo $userUrl ?></a></p>            
-                            <p><b>L'URL de l'administration est :</b> <a href='<?php echo $userUrl ?>'><?php echo $userDashboard ?></a></p>
-                            <p>Description / Biographie : <?php echo $userDetails ?></p>
+                            <p><b>L'URL de votre site est :</b> 
+                            <?php if(isset($userData['website_user'][0])):
+                                $userUrl = $userData['website_user'][0];
+                                echo "<a href='$userUrl'>$userUrl </a>";
+                            else:
+                                echo "Vous n'avez pas encore de lien disponible.";
+                            endif; ?>
+                            </p>            
+                            <p><b>L'URL de l'administration est :</b>
+                            <?php if(isset($userData['website_user'][0])):
+                                $userDashboard = $userData['dashboard_user'][0];
+                                echo "<a href='$userDashboard'>$userDashboard</a>";
+                            else:
+                                echo "Vous n'avez pas encore de lien disponible.";
+                            endif; ?>                            
+                            <p>Biographie : <?php echo $userDetails ?></p>
                             <h2 class='text-prune-dark pt-0 pt-sm-5 pb-2'>Mes articles disponibles</h2>
                             <?php  if($userRole == 'user_wp'):
                                 echo '<h3>Wordpress</h3>';
