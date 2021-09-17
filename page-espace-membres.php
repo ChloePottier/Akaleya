@@ -7,9 +7,8 @@ get_template_part('template-parts/header/header', 'page');?>
         <div class='container'>
             <div class='row py-5'>
             <?php if (have_posts()) :
-                    while (have_posts()) : the_post(); ?>
-                    
-                        <?php // Formulaire de connexion
+                    while (have_posts()) : the_post();
+                    // Formulaire de connexion
                         if (! is_user_logged_in()) {?>
                         <div class='col-12 col-md-6 mx-auto'>
                         <h1 class='text-prune-dark pt-0 pt-sm-5 pb-5'><?php the_title(); ?></h1>
@@ -36,8 +35,6 @@ get_template_part('template-parts/header/header', 'page');?>
                             $user = new WP_User(get_current_user_id());                      
                             $userRole = $user->roles[0];
                             $userData = get_user_meta(get_current_user_id());
-                            $userDetails =  $userData['description'][0];
-                            echo $userRole;
                             echo '<p>Bonjour <b>'.$user->display_name.'</b> !</p>';?>
                             <p><?php the_content();?></p>
                             <p><b>L'URL de votre site est :</b> 
@@ -55,7 +52,6 @@ get_template_part('template-parts/header/header', 'page');?>
                             else:
                                 echo "Vous n'avez pas encore de lien disponible.";
                             endif; ?>                            
-                            <p>Biographie : <?php echo $userDetails ?></p>
                             <h2 class='text-prune-dark pt-0 pt-sm-5 pb-2'>Mes articles disponibles</h2>
                             <?php  if($userRole == 'user_wp'):
                                 echo '<h3>Wordpress</h3>';
@@ -86,7 +82,6 @@ get_template_part('template-parts/header/header', 'page');?>
                                 $loop = new WP_Query( array('post_type'  => 'post', 'post_status' => 'publish','category_name' => 'user_ps', 'order' => 'ASC') );
                                 require 'template-parts/content/loop/loop-espacemembres.php'; 
                             endif;                           
-                                echo '<a href="' . wp_logout_url(site_url('/')) .'" class="pb-3">Se déconnecter</a>';
                             }; ?>
                             </div>
                 <?php endwhile;

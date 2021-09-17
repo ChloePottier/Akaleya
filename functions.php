@@ -187,30 +187,20 @@ function cpt_link_init() {
 } 
 /*** BOUTONS DE PARTAGE RESEAUX SOCIAUX ***/
 function my_sharing_buttons($content) {
-    //si le blog est en page d'accueil ou si c'est un post seul
-    if(is_home() || is_single()){
-        // Récuperer URL de la page en cours 
+    if(is_home() || is_single() && get_post_type() == 'realisation' || in_category('non-classe')){
+        // Récuperer URL et titre page en cours 
         $myCurrentURL = urlencode(get_permalink());
-        // Récuperer TITRE de la page en cours
-        $myCurrentTitle = urlencode(get_the_title()); 
-        // Récuperer MINIATURE si l'image à la une existe
-        // if(has_post_thumbnail()) {
-        //     $imgId=wp_get_attachment_image_src(get_post_thumbnail_id(), 'full'); 
-        //     echo $imgID;
-        // }         
-        // Construction des URL de partage 
+        $myCurrentTitle = urlencode(get_field('titre_article'));      
+        // Construction des URL de partage (image mise en avant en JPG) 
         $facebookURL = esc_url( 'https://www.facebook.com/sharer/sharer.php?u='.$myCurrentURL );
-        $linkedInURL = esc_url( 'https://www.linkedin.com/shareArticle?mini=true&url='.$myCurrentURL.'&amp;title='.$myCurrentTitle );
-        $email_share = esc_url( 'mailto:?subject=Regarde cet article !&BODY=Hey ! Je voulais partager avec toi cet article intéressant  : '
-        .$myCurrentURL.'&amp;title='.$myCurrentTitle) ;
+        $linkedInURL = esc_url( 'https://www.linkedin.com/shareArticle?mini=true&url='.$myCurrentURL );
+        $email_share = esc_url( 'mailto:?subject='.$myCurrentTitle.'&BODY=Voici un article intéressant sur "'.$myCurrentTitle.'". En savoir plus : '.$myCurrentURL) ;
         // Ajout des bouton en bas des articles et des pages
         $content .= '<div class="partage-reseaux-sociaux  d-flex align-items-center justify-content-end">';
         $content .= __('<span class="font-weight-bold mr-2 partagez">Partagez  : </span>');
-        $content .= '<a class="share-facebook mr-2" href="'.$facebookURL.'&t='.$myCurrentTitle.'" target="_blank"><i class="fab fa-facebook-square"></i></a>';
-
-        // $content .= '<a class="share-facebook mr-2" href="'.$facebookURL.'" target="_blank"><i class="fab fa-facebook-square"></i></a>';
-        $content .= '<a class="share-linkedin mr-2" href="'.$linkedInURL.'" target="_blank"><i class="fab fa-linkedin"></i></a>';
-        $content .= '<a class="share-email" href="'.$email_share.'" target="_blank"><i class="fas fa-envelope"></i></a>';
+        $content .= '<a class="share-facebook mr-2" href="'.$facebookURL.'&t='.$myCurrentTitle.'" target="_blank" rel="noopener"><i class="fab fa-facebook-square"></i></a>';
+        $content .= '<a class="share-linkedin mr-2" href="'.$linkedInURL.'" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>';
+        $content .= '<a class="share-email" href="'.$email_share.'" target="_blank" rel="noopener"><i class="fas fa-envelope"></i></a>';
         $content .= '</div>';
         }
         return $content;
@@ -238,15 +228,13 @@ function lien_mot_de_passe_perdu( $formbottom ) {
 	$formbottom .= '<a href="' . wp_lostpassword_url() . '">Mot de passe perdu ?</a>';
 	return $formbottom;
 }
-
 //interdire l'accès aux non admin
 function redirect_non_authorized_user() {
 	// Si t'es pas admin, tu vires
 	if ( is_user_logged_in() && ! current_user_can( 'manage_options' ) ) {
 		wp_redirect( home_url( '/' ) );
 		exit();
-	}
-}
+	}}
 // shortcode private
 function private_content( $atts, $content ) {
 	if ( is_user_logged_in() ) {
@@ -255,8 +243,7 @@ function private_content( $atts, $content ) {
 		// Affiche un lien vers la page login de WordPress, 
 		// puis redirige ensuite automatiquement vers la page précédente
 		return '<a href="' . wp_login_url( get_permalink() ) . '">Connectez-vous pour lire ce contenu</a>';
-	}
-}
+	}}
 function roles_users(){
     remove_role('subscriber');
     remove_role('editor');
@@ -272,21 +259,21 @@ function roles_users(){
 //shortcode : afficher url
 function display_url_user(){
     $userData = get_user_meta(get_current_user_id());
-    $userUrl = $userData['website_user'][0];
-        if ( $userUrl != '' ) {
-       return '<a href="'.$userUrl.'" target="blank" rel="noreferrer">'.$userUrl.'</a>'; 
-    } else {  
+    if(isset($userData['website_user'])):
+        $userUrl = $userData['website_user'][0];
+        return '<a href="'.$userUrl.'" target="blank" rel="noreferrer">'.$userUrl.'</a>';
+    else:
         return 'https://mon-site.fr';
-    }
+    endif;
 }
 function display_dashboard_user(){
     $userData = get_user_meta(get_current_user_id());
-    $userUrl = $userData['dashboard_user'][0];
-        if ( $userUrl != '' ) {
-       return '<a href="'.$userUrl.'" target="blank" rel="noreferrer">'.$userUrl.'</a>'; 
-    } else {
+    if(isset($userData['dashboard_user'][0])):
+        $userUrl = $userData['dashboard_user'][0];
+        return '<a href="'.$userUrl.'" target="blank" rel="noreferrer">'.$userUrl.'</a>'; 
+    else:
         return 'https://mon-site.fr/admin';
-    }
+    endif;
 }
 //affichage menu
 function menu_top_user_logged_in(){

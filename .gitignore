@@ -1,5 +1,6 @@
 
 template-parts/content/-content-portfolio-img.php
+template-parts/-akaleya-pagination.php
 .gitignore
 .htaccess
 .git

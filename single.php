@@ -1,4 +1,4 @@
-<?php /* Template Name: Modèle de page Akaleya */ 
+<?php /* Template Name: Modèle de page Akaleya */
 get_template_part('template-parts/header/head', 'metadata');
 get_template_part('template-parts/header/header', 'page');?>
 <section class='container-fluid content' id='post-<?php the_ID(); ?>'>
@@ -6,20 +6,36 @@ get_template_part('template-parts/header/header', 'page');?>
         <div class='row py-5'>
             <?php if (have_posts()) :
                     while (have_posts()) : the_post(); ?>
-                    <div class="col-12">
-                    <?php if ( function_exists('yoast_breadcrumb') ) {
-                        yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
-                        } ?>
-                    </div>
-                    <div class='col-12 '>
-                        <h1 class='text-prune-dark pt-0 pt-sm-5'><?php the_title(); ?></h1>
-                        <?php the_content(); ?>
-                        </div>
-                <?php endwhile;
-                endif; ?>                
+            <div class="col-12">
+                <?php if (function_exists('yoast_breadcrumb')) {
+                        yoast_breadcrumb('<p id="breadcrumbs">', '</p>');
+                    } ?>
+            </div>
+            <div class='col-12' id='content-post'>
+                <h1 class='text-prune-dark pt-0 pt-sm-5'><?php the_title(); ?>
+                </h1>
+                <?php the_content(); ?>
+            </div>
+            <?php endwhile;
+                endif; ?>
         </div>
+        <div class='row'>
+            <div class='col-12'>
+                <div id='nav-faq' class='d-flex justify-content-between pb-5'>
+                    <div>
+                        <?php previous_post_link('%link', '&lsaquo; %title'); ?>
+                    </div>
+                    <div>
+                        <?php next_post_link('%link', '%title &rsaquo;'); ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
     </div>
 </section>
 </body>
 <?php get_footer(); ?>
+
 </html>
