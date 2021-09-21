@@ -19,19 +19,7 @@ get_template_part('template-parts/header/header', 'page');?>
             <?php endwhile;
                 endif; ?>
         </div>
-        <div class='row'>
-            <div class='col-12'>
-                <div id='nav-faq' class='d-flex justify-content-between pb-5'>
-                    <div>
-                        <?php previous_post_link('%link', '&lsaquo; %title'); ?>
-                    </div>
-                    <div>
-                        <?php next_post_link('%link', '%title &rsaquo;'); ?>
-                    </div>
-                </div>
-            </div>
-        </div>
-
+        <?php do_action('akaleya_pagination'); ?>
     </div>
     </div>
 </section>

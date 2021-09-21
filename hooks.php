@@ -24,10 +24,8 @@ add_action( 'current_screen', 'redirect_non_authorized_user' );
 // ajout rôle
 add_action( 'init', 'roles_users');
 //Shortcodes
-add_shortcode( 'private-content', 'private_content' );
-add_shortcode( 'website_user', 'display_url_user' );
-add_shortcode( 'dashboard_user', 'display_dashboard_user' );
 
+add_action( 'init', 'add_custom_shortcode' );
 
 
 
@@ -36,6 +34,8 @@ if ( ! current_user_can( 'manage_options' ) ) {
 }
 // menu
 add_action('menu_top','menu_top_user_logged_in');
+add_action('akaleya_pagination','post_pagination');
+
 //ajout champs profil utilisateur
 add_action( 'show_user_profile', 'extra_user_profile_fields' );
 add_action( 'edit_user_profile', 'extra_user_profile_fields' );

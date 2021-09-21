@@ -235,15 +235,7 @@ function redirect_non_authorized_user() {
 		wp_redirect( home_url( '/' ) );
 		exit();
 	}}
-// shortcode private
-function private_content( $atts, $content ) {
-	if ( is_user_logged_in() ) {
-		return $content;
-	} else {
-		// Affiche un lien vers la page login de WordPress, 
-		// puis redirige ensuite automatiquement vers la page précédente
-		return '<a href="' . wp_login_url( get_permalink() ) . '">Connectez-vous pour lire ce contenu</a>';
-	}}
+
 function roles_users(){
     remove_role('subscriber');
     remove_role('editor');
@@ -256,25 +248,41 @@ function roles_users(){
     add_role('user_wc','Abonné.e Woocommerce',$cap_user_client);
     add_role('user_ps','Abonné.e Prestashop',$cap_user_client); 
 }
-//shortcode : afficher url
-function display_url_user(){
-    $userData = get_user_meta(get_current_user_id());
-    if(isset($userData['website_user'])):
-        $userUrl = $userData['website_user'][0];
-        return '<a href="'.$userUrl.'" target="blank" rel="noreferrer">'.$userUrl.'</a>';
-    else:
-        return 'https://mon-site.fr';
-    endif;
+
+function add_custom_shortcode(){
+    // shortcode private
+    function private_content( $atts, $content ) {
+        if ( is_user_logged_in() ) {
+            return $content;
+        } else {
+            // Affiche un lien vers la page login de WordPress, 
+            // puis redirige ensuite automatiquement vers la page précédente
+            return '<a href="' . wp_login_url( get_permalink() ) . '">Connectez-vous pour lire ce contenu</a>';
+	}}
+    //shortcode : afficher url
+    function display_url_user($userUrl){
+        $userData = get_user_meta(get_current_user_id());
+        if(isset($userData['website_user'])):
+            $userUrl = $userData['website_user'][0];
+            return '<a href="'.$userUrl.'" target="blank" rel="noreferrer">'.$userUrl.'</a>';
+        else:
+            return 'https://mon-site.fr';
+        endif;
+    }
+    function display_dashboard_user(){
+        $userData = get_user_meta(get_current_user_id());
+        if(isset($userData['dashboard_user'][0])):
+            $userUrl = $userData['dashboard_user'][0];
+            return '<a href="'.$userUrl.'" target="blank" rel="noreferrer">'.$userUrl.'</a>'; 
+        else:
+            return 'https://mon-site.fr/admin';
+        endif;
+    }
+    add_shortcode( 'private-content', 'private_content' );
+    add_shortcode( 'website_user', 'display_url_user' );
+    add_shortcode( 'dashboard_user', 'display_dashboard_user' );
 }
-function display_dashboard_user(){
-    $userData = get_user_meta(get_current_user_id());
-    if(isset($userData['dashboard_user'][0])):
-        $userUrl = $userData['dashboard_user'][0];
-        return '<a href="'.$userUrl.'" target="blank" rel="noreferrer">'.$userUrl.'</a>'; 
-    else:
-        return 'https://mon-site.fr/admin';
-    endif;
-}
+
 //affichage menu
 function menu_top_user_logged_in(){
     if(is_user_logged_in() &&  is_home()  OR is_front_page()):
@@ -284,6 +292,22 @@ function menu_top_user_logged_in(){
     elseif(!is_user_logged_in()) :
         return get_template_part('template-parts/navigation/navigation', 'items');
     endif;
+}
+function post_pagination(){
+    if(is_user_logged_in()) :?>
+        <div class='row'>
+            <div class='col-12'>
+                <div id='nav-faq' class='d-flex justify-content-between pb-5'>
+                    <div>
+                        <?php previous_post_link('%link', '&lsaquo; %title'); ?>
+                    </div>
+                    <div>
+                        <?php next_post_link('%link', '%title &rsaquo;'); ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <?php endif;
 }
 //ajout champs dans profil utilisateur
 function extra_user_profile_fields( $user ) { ?>
