@@ -255,8 +255,6 @@ function add_custom_shortcode(){
         if ( is_user_logged_in() ) {
             return $content;
         } else {
-            // Affiche un lien vers la page login de WordPress, 
-            // puis redirige ensuite automatiquement vers la page précédente
             return '<a href="' . wp_login_url( get_permalink() ) . '">Connectez-vous pour lire ce contenu</a>';
 	}}
     //shortcode : afficher url

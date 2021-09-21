@@ -1,6 +1,5 @@
-<?php /* Template Name: Modèle de page Akaleya */ ?>
-
-<?php get_template_part('template-parts/header/head', 'metadata');
+<?php /* Template Name: Modèle de page Akaleya */ 
+get_template_part('template-parts/header/head', 'metadata');
 get_template_part('template-parts/header/header', 'page');?>
 <scroll-page id='espace_membres'>
     <section class='container-fluid content' id='private_zone'>
@@ -81,9 +80,10 @@ get_template_part('template-parts/header/header', 'page');?>
                                 echo '<h3>Prestashop</h3>';
                                 $loop = new WP_Query( array('post_type'  => 'post', 'post_status' => 'publish','category_name' => 'user_ps', 'order' => 'ASC') );
                                 require 'template-parts/content/loop/loop-espacemembres.php'; 
-                            endif;                           
-                            }; ?>
-                            </div>
+                            endif;?> 
+                            </div>                          
+                           <?php }; ?>
+                            
                 <?php endwhile;
                     endif; ?>
             </div>

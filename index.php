@@ -44,7 +44,6 @@ get_template_part('template-parts/header/header', 'page');?>
                     echo "<h1 class='text-prune-dark pt-0 pt-sm-5'>Article réservé aux abonnés</h1>";
                     echo '<a href="'.home_url('/').'espace-membres">Connectez-vous pour lire ce contenu.</a>';
                 endif;
-                
             endif; ?>
             </div>
         </div>
