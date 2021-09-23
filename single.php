@@ -12,8 +12,7 @@ get_template_part('template-parts/header/header', 'page');?>
                     } ?>
             </div>
             <div class='col-12' id='content-post'>
-                <h1 class='text-prune-dark pt-0 pt-sm-5'><?php the_title(); ?>
-                </h1>
+                <h1 class='text-prune-dark pt-0 pt-sm-5'><?php the_title(); ?></h1>
                 <?php the_content(); ?>
             </div>
             <?php endwhile;

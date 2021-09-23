@@ -26,7 +26,6 @@ jQuery(function($){
             contentWeb.removeClass('display-flex2');
             contentWeb.addClass('display-none');
             webGalleryNav.removeClass('active2');
-            
         });
         $(allGalleryNav).on('click', function(event){
             contentPortfolio.addClass('display-flex2');
@@ -34,9 +33,9 @@ jQuery(function($){
             allGalleryNav.addClass('active2');            
             contentPrint.removeClass('display-flex2');
             contentPrint.addClass('display-none');
-            printGalleryNav.remove('active2');
             contentWeb.removeClass('display-flex2');
             contentWeb.addClass('display-none');
-            webGalleryNav.remove('active2');
+            webGalleryNav.removeClass('active2');
+            printGalleryNav.removeClass('active2');
         });
 });

@@ -11,9 +11,8 @@ if ($loop->have_posts()) :
             </div>
             <p><?php the_content(); ?></p>
         </div>
-
 <?php endwhile;
- wp_reset_postdata();
+    wp_reset_postdata();
 else :
     echo '<p>Page introuvable</p>';
 endif; ?>
