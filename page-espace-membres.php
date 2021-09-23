@@ -9,24 +9,11 @@ get_template_part('template-parts/header/header', 'page');?>
                     while (have_posts()) : the_post();
                     // Formulaire de connexion
                         if (! is_user_logged_in()) {?>
-                        <div class='col-12 col-md-6 mx-auto'>
-                        <h1 class='text-prune-dark pt-0 pt-sm-5 pb-5'><?php the_title(); ?></h1>
-                            <?php wp_login_form(array(
-                                'redirect'       => get_permalink(), // par défaut renvoie vers la page courante
-                                'label_username' => 'Identifiant',
-                                'label_password' => 'Mot de passe',
-                                'label_remember' => 'Se souvenir de moi',
-                                'label_log_in'   => 'Se connecter',
-                                'form_id'        => 'login-form',
-                                'id_username'    => 'user-login',
-                                'id_password'    => 'user-pass',
-                                'id_remember'    => 'rememberme',
-                                'id_submit'      => 'wp-submit',
-                                'remember'       => true, //afficher l'option se souvenir de moi
-                                'value_remember' => false //se souvenir par défaut ?
-                            ));
-                            echo '</div>';
-                        } else {?>
+                            <div class='col-12 col-md-6 mx-auto'>
+                                <h1 class='text-prune-dark pt-0 pt-sm-5'><?php the_title(); ?></h1>
+                                <?php get_template_part('template-parts/content/content','form-connection' );?>
+                            </div>
+                        <?php } else {?>
                         <div class='col-12'>
                             <h1 class='text-prune-dark pt-0 pt-sm-5 pb-5'><?php the_title(); ?></h1>
                             <?php //pour le moment je choisis que mes clients ne peuvent pas modifier leur profil

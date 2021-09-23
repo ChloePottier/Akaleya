@@ -291,22 +291,18 @@ function menu_top_user_logged_in(){
         return get_template_part('template-parts/navigation/navigation', 'items');
     endif;
 }
-function post_pagination(){
-    if(is_user_logged_in()) :?>
-        <div class='row'>
-            <div class='col-12'>
-                <div id='nav-faq' class='d-flex justify-content-between pb-5'>
+function post_pagination(){?>
+        
+                <div class='d-flex justify-content-between pb-5'>
                     <div>
-                        <?php previous_post_link('%link', '&lsaquo; %title'); ?>
+                        <?php previous_post_link('%link', '&lsaquo; %title',true); ?>
                     </div>
                     <div>
-                        <?php next_post_link('%link', '%title &rsaquo;'); ?>
+                        <?php next_post_link('%link', '%title &rsaquo;',true); ?>
                     </div>
                 </div>
-            </div>
-        </div>
-    <?php endif;
-}
+
+<?php }
 //ajout champs dans profil utilisateur
 function extra_user_profile_fields( $user ) { ?>
 	<h3>Les informations concernant votre projet</h3>
