@@ -14,9 +14,12 @@ get_template_part('template-parts/header/header', 'page');?>
                         $categoryPost = get_the_category();
                         if(!is_user_logged_in()):
                             if($categoryPost[0]->slug == 'non-classe'):?>
-                                <div class='col-12' id='content-post'> 
+                                <div class='col-12 pb-5' id='content-post'> 
                                     <h1 class='text-prune-dark'><?php the_title(); ?></h1>
                                     <?php the_content();?>
+                                </div>
+                                <div class='col-12'>
+                                    <?php do_action('akaleya_pagination'); //uniquement pour les user connectés?>
                                 </div>
                             <?php else:?>
                                 <div class='col-12 col-md-6 mx-auto'> 
@@ -27,12 +30,13 @@ get_template_part('template-parts/header/header', 'page');?>
                         else:?>
                             <div class='col-12 pb-5' id='content-post'> 
                                 <h1 class='text-prune-dark'><?php the_title(); ?></h1>
-                                <?php the_content();?>
-                            </div>                            
+                                <?php the_content();?>                                
+                            </div>                    
+                            <div class='col-12'>
+                                <?php do_action('akaleya_pagination'); //uniquement pour les user connectés?>
+                            </div>        
                          <?php endif;?>
-                         <div class='col-12'> 
-                            <?php do_action('akaleya_pagination'); //uniquement pour les user connectés?>
-                        </div> 
+                         
                     <?php endwhile;
             endif; ?>
     </div>

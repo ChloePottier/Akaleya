@@ -1,6 +1,5 @@
 
 template-parts/content/-content-portfolio-img.php
--single.php
 .gitignore
 .htaccess
 .git
