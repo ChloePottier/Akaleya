@@ -18,8 +18,13 @@
             <span itemprop='name'>Contact</span><meta itemprop='position' content='4'/>
         </a>
     </li>
+    <!-- <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'>
+        <a href='<?php //echo esc_url( home_url( "/" ) ); ?>category/non-classe/' itemprop='item'>
+            <span itemprop='name'>Blog</span><meta itemprop='position' content='5'/>
+        </a>
+    </li> -->
     <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'>
         <a href='<?php echo esc_url( home_url( "/" ) ); ?>espace-membres' itemprop='item'>
-            <span itemprop='name'>Pro</span><meta itemprop='position' content='5'/>
+            <span itemprop='name'>Pro</span><meta itemprop='position' content='6'/>
         </a>
     </li>

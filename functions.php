@@ -187,7 +187,7 @@ function cpt_link_init() {
 } 
 /*** BOUTONS DE PARTAGE RESEAUX SOCIAUX ***/
 function my_sharing_buttons($content) {
-    if(is_home() || is_single() && get_post_type() == 'realisation' || in_category('non-classe')){
+    if(is_single() && get_post_type() == 'realisation' || in_category('non-classe')){
         // Récuperer URL et titre page en cours 
         $myCurrentURL = urlencode(get_permalink());
         $myCurrentTitle = urlencode(get_field('titre_article'));      

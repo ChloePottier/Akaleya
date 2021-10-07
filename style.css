@@ -15,7 +15,10 @@ a:hover{color: rgb(91,19,60);}
 .pb-sm-6{padding-bottom: 4rem;}
 ul li {list-style: none;}
 #content-post ul li{list-style: inside;}
+#content-post h1,#content-post h2,#content-post h3,#content-post h4,#content-post p{padding-bottom: 1rem;}
 ul{margin-bottom: 0!important; padding-left: 0!important;}
+img{height: auto!important; vertical-align: middle;}
+figcaption{font-size: .8rem;font-style: italic;}
 .clear{clear: both;}
 /* Colors */
 .text-prune-dark,::placeholder{color: rgb(91,19,60);}
@@ -48,10 +51,10 @@ ul{margin-bottom: 0!important; padding-left: 0!important;}
         url('font/BebasNeue-Regular.woff2') format('woff2'),
         url('font/BebasNeue-Regular.ttf') format('ttf');
         font-display: swap;}
-h1,h2,h3,.font-family-bebas{font-family: 'BebasNeue', Arial, Helvetica, sans-serif;}
+h1,h2,h3,h4,h5,.font-family-bebas{font-family: 'BebasNeue', Arial, Helvetica, sans-serif;}
 h1,h2,h3{margin: 0!important;}
-.font-size-58,#content-post h1{font-size: 3.5rem;}
-.font-size-56{font-size: 2.5rem;}
+.font-size-58{font-size: 3.5rem;}
+.font-size-56,#content-post h1{font-size: 2.5rem;}
 h1,.font-size-36{font-size: 2.25rem;}
 .font-size-31{font-size: 1.93rem;}
 h3,.font-size-24{font-size: 1.5rem;}
@@ -176,7 +179,7 @@ background-color: #58133C;
 #nav-portfolio li a:hover,#nav-portfolio li .active2{color: rgb(60,0,34)!important;}
 .h-250{height:250px;}
 .border{border: solid 1px #b2b2b2 !important;}
-#portfolio p {text-align: justify; }
+#portfolio p,#content-post p{text-align: justify;}
 /* Contact */
 .contact-print{display: none;}
 .bg-contact{background: linear-gradient( rgb(163,116,148) 58%, rgb(162,218,234) 42%);border-top: solid 2px #58133C}
@@ -222,7 +225,7 @@ input{padding: 1rem 0; height: 40px;}
 /* sm */
 @media only screen and (min-width: 576px){
     .bg-graphiste-small{ background: url(https://akaleya.fr/wp-content/uploads/2021/01/header-200-h.webp) left no-repeat;}
-    .font-size-56{font-size: 3.5rem;}
+    .font-size-56,#content-post h1{font-size: 3.5rem;}
     .pb-6{padding-bottom: 0;}
     .border-bottom{border-bottom: solid 1px rgb(207, 207, 207)!important;}
     .bg-contact{background: linear-gradient( rgb(163,116,148) 58%, rgb(162,218,234) 42%);}
