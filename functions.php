@@ -292,15 +292,22 @@ function menu_top_user_logged_in(){
     endif;
 }
 function post_pagination(){?>
-        
-                <div class='d-flex justify-content-between pb-5'>
-                    <div>
-                        <?php previous_post_link('%link', '&lsaquo; %title',true); ?>
-                    </div>
-                    <div>
-                        <?php next_post_link('%link', '%title &rsaquo;',true); ?>
-                    </div>
-                </div>
+    <div class='d-none d-sm-flex justify-content-between pb-5'>
+        <div>
+            <?php previous_post_link('%link', '&lsaquo; %title',true); ?>
+        </div>
+        <div>
+            <?php next_post_link('%link', '%title &rsaquo;',true); ?>
+        </div>
+    </div>
+    <div class='d-flex d-sm-none justify-content-between pb-5'>
+        <div>
+            <?php previous_post_link('%link', '&lsaquo; Précédent',true); ?>
+        </div>
+        <div>
+            <?php next_post_link('%link', 'Suivant &rsaquo;',true); ?>
+        </div>
+    </div>
 
 <?php }
 //ajout champs dans profil utilisateur

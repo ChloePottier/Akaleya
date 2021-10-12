@@ -12,7 +12,12 @@ add_action( 'init', 'cpt_link_init' );
 // ajout format d'image      
 if(function_exists('add_theme_support')):
     add_image_size('thumbnail_portfolio_sm',545,368,false);
-    add_image_size('thumbnail_portfolio',370,250,false);    
+    add_image_size('thumbnail_portfolio',370,250,false);  
+    $centerTop =array('center','top');
+    add_image_size('thumbnail_blog_sm',515,200,$centerTop);
+    add_image_size('thumbnail_blog_md',350,200,$centerTop);
+    // add_image_size('thumbnail_blog_lg',290,200,$centerTop);
+
 endif;
 add_filter( 'the_content', 'my_sharing_buttons');
 add_action( 'login_enqueue_scripts', 'my_login_logo' );

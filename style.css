@@ -21,8 +21,9 @@ img{height: auto!important; vertical-align: middle;}
 figcaption{font-size: .8rem;font-style: italic;}
 .clear{clear: both;}
 /* Colors */
-.text-prune-dark,::placeholder{color: rgb(91,19,60);}
+.text-prune-dark,::placeholder,#all-posts h2{color: rgb(91,19,60);}
 .text-white,#navbarTop ul li a,#navigation ul li a,#copy-akaleya{ color: #fff!important;}
+.text-white-op8{color: rgba(255,255,255,.8);}
 .text-prune,#link-rs a:hover, .link:hover,.partage-reseaux-sociaux a:hover,#breadcrumbs a:hover{color: rgb(145,33,92)!important;}
 #wt-cli-privacy-save-btn,.text-blue,#navbarTop ul li a:hover,#navigation ul li a:hover,#nav-portfolio li a,.service h3,#breadcrumbs,.partage-reseaux-sociaux a,
 #footer-menu-legalenotice li a,#copy-akaleya:hover,.services-link{ color: rgb(97,190,223)!important;}
@@ -66,6 +67,7 @@ h3,.font-size-24{font-size: 1.5rem;}
 .bold{font-weight: 600;}
 .text-shadow{text-shadow: 5px 5px 5px black;}
 ::placeholder{ font-family: 'BebasNeue',Arial, Helvetica, sans-serif;}
+#all-posts .card img{width: 100%;}
 /* Menus */
 header{overflow: hidden;}
 .fondu{ animation: 0.5s fondu linear;}
@@ -86,9 +88,7 @@ header{overflow: hidden;}
     height: 110vh;
     right: -50%;
 }
-#header_small #navigation{
-    top: -5vh;
-}
+#header_small #navigation{top: -5vh;}
 #navigation ul{padding-right: 35%;}
 .burger {
     margin: 0;
@@ -143,7 +143,9 @@ header{overflow: hidden;}
 .service h3{ font-size: 1.5rem!important;}
 .service p {text-align: justify; line-height: 1.8rem;}
 /* PORTFOLIO */
-.card{overflow: hidden; border: none; border-radius: 0!important;height:236px;}
+
+ #portfolio .card{height:236px;}
+ .card{overflow: hidden; border: none; border-radius: 0!important;}
 .card__side {
 display: flex;
 flex-direction: column;
@@ -220,7 +222,7 @@ input{padding: 1rem 0; height: 40px;}
 #login-form .login-remember label{display: flex; align-items: center;}
 #login-form .login-remember label input{margin-right: .8rem;}
 /* FOOTER */
-#footer-menu-legalenotice li a:hover,.services-link:hover{ color: #FFDF30!important;}
+.text-yellow, #footer-menu-legalenotice li a:hover,.services-link:hover,.btn-blog:hover{ color: #FFDF30!important;}
 .page-404{height: 90vh;}
 /* sm */
 @media only screen and (min-width: 576px){
