@@ -9,6 +9,7 @@ add_action( 'init', 'cpt_services_init' );
 add_action( 'init', 'cpt_portfolio_init' );
 add_action( 'init', 'create_galerie_tax', 0 );
 add_action( 'init', 'cpt_link_init' );
+add_action( 'init', 'cpt_lexique_init' );
 // ajout format d'image      
 if(function_exists('add_theme_support')):
     add_image_size('thumbnail_portfolio_sm',545,368,false);

@@ -185,6 +185,33 @@ function cpt_link_init() {
     ); 
     register_post_type( 'liens', $args );
 } 
+function cpt_lexique_init() {
+    $labels = array(
+        'name'                  => _x( 'Lexique', 'Post type general name', 'textdomain' ),
+        'singular_name'         => _x( 'Traduction', 'Post type singular name', 'textdomain' ),
+        'menu_name'             => _x( 'Lexique', 'Admin Menu text', 'textdomain' ),
+        'add_new'               => __( 'Ajouter une traduction', 'textdomain' ),
+        'add_new_item'          => __( 'Ajouter une nouvelle traduction', 'textdomain' ),
+        'new_item'              => __( 'Nouvelle traduction', 'textdomain' ),
+        'edit_item'             => __( 'Editer la traduction', 'textdomain' ),
+        'view_item'             => __( 'Voir la traduction', 'textdomain' ),
+        'all_items'             => __( 'Tout le lexique', 'textdomain' ),
+        'search_items'          => __( 'Rechercher des traductions', 'textdomain' ),
+        'archives'              => _x( 'Archives des traductions', 'The post type archive label used in nav menus', 'textdomain' ),
+    ); 
+    $args = array(
+        'labels'             => $labels,
+        'public'             => true,
+        'query_var'          => true,
+        'rewrite'            => array( 'slug' => 'lexique' ),
+        'capability_type'    => 'post',
+        'has_archive'        => true,
+        'menu_position'      => null,
+        'menu_icon'          => 'dashicons-welcome-learn-more',
+        'supports'           => array( 'title', 'editor', 'excerpt','thumbnail' ),
+    ); 
+    register_post_type( 'lexique', $args );
+} 
 /*** BOUTONS DE PARTAGE RESEAUX SOCIAUX ***/
 function my_sharing_buttons($content) {
     if(is_single() && get_post_type() == 'realisation' || in_category('non-classe')){
@@ -204,7 +231,8 @@ function my_sharing_buttons($content) {
         $content .= '</div>';
         }
         return $content;
-};
+}
+
 ///Logo page connexion BO
 function my_login_logo() { ?>
     <style type="text/css">
@@ -255,7 +283,7 @@ function add_custom_shortcode(){
         if ( is_user_logged_in() ) {
             return $content;
         } else {
-            return '<a href="' . wp_login_url( get_permalink() ) . '">Connectez-vous pour lire ce contenu</a>';
+            return '<a href="' . wp_login_url( get_permalink() ) . '">Merci de vous connecter pour lire ce contenu.</a>';
 	}}
     //shortcode : afficher url
     function display_url_user($userUrl){
@@ -292,7 +320,7 @@ function menu_top_user_logged_in(){
     endif;
 }
 function post_pagination(){?>
-    <div class='d-none d-sm-flex justify-content-between pb-5'>
+    <div class='d-none d-sm-flex justify-content-between'>
         <div>
             <?php previous_post_link('%link', '&lsaquo; %title',true); ?>
         </div>
@@ -300,7 +328,7 @@ function post_pagination(){?>
             <?php next_post_link('%link', '%title &rsaquo;',true); ?>
         </div>
     </div>
-    <div class='d-flex d-sm-none justify-content-between pb-5'>
+    <div class='d-flex d-sm-none justify-content-between'>
         <div>
             <?php previous_post_link('%link', '&lsaquo; Précédent',true); ?>
         </div>

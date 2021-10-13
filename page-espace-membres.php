@@ -26,7 +26,7 @@ get_template_part('template-parts/header/header', 'page');?>
                             <p><b>L'URL de votre site est :</b> 
                             <?php if(isset($userData['website_user'][0])):
                                 $userUrl = $userData['website_user'][0];
-                                echo "<a href='$userUrl'>$userUrl </a>";
+                                echo "<a href='$userUrl' class='font-weight-bold'>$userUrl </a>";
                             else:
                                 echo "Vous n'avez pas encore de lien disponible.";
                             endif; ?>
@@ -34,7 +34,7 @@ get_template_part('template-parts/header/header', 'page');?>
                             <p><b>L'URL de l'administration est :</b>
                             <?php if(isset($userData['website_user'][0])):
                                 $userDashboard = $userData['dashboard_user'][0];
-                                echo "<a href='$userDashboard'>$userDashboard</a>";
+                                echo "<a href='$userDashboard' class='font-weight-bold'>$userDashboard</a>";
                             else:
                                 echo "Vous n'avez pas encore de lien disponible.";
                             endif; ?>                            

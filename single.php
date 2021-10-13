@@ -32,7 +32,7 @@ get_template_part('template-parts/header/header', 'page');?>
                                 <h1 class='text-prune-dark'><?php the_title(); ?></h1>
                                 <?php the_content();?>                                
                             </div>                    
-                            <div class='col-12'>
+                            <div class='col-12 font-weight-bold pb-5'>
                                 <?php do_action('akaleya_pagination'); //uniquement pour les user connectés?>
                             </div>        
                          <?php endif;?>
