@@ -208,7 +208,7 @@ function cpt_lexique_init() {
         'has_archive'        => true,
         'menu_position'      => null,
         'menu_icon'          => 'dashicons-welcome-learn-more',
-        'supports'           => array( 'title', 'editor', 'excerpt','thumbnail' ),
+        'supports'           => array( 'title', 'editor'),
     ); 
     register_post_type( 'lexique', $args );
 } 

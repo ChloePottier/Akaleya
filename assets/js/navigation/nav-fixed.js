@@ -4,6 +4,7 @@ window.onscroll = function() {
 var navbar = document.getElementById('navbar');
 var navbarTop = document.getElementById('navbarTop');
 var sticky = navbar.offsetTop;
+console.log(sticky);
 function stickyToScroll() {
     if (window.pageYOffset > sticky ) {
         navbar.classList.add('sticky');

@@ -26,7 +26,7 @@ get_template_part('template-parts/header/header', 'page');?>
                             <p><b>L'URL de votre site est :</b> 
                             <?php if(isset($userData['website_user'][0])):
                                 $userUrl = $userData['website_user'][0];
-                                echo "<a href='$userUrl' class='font-weight-bold'>$userUrl </a>";
+                                echo "<a href='$userUrl' class='font-weight-bold' target='_blank' rel='noreferrer noopener'>$userUrl </a>";
                             else:
                                 echo "Vous n'avez pas encore de lien disponible.";
                             endif; ?>
@@ -34,11 +34,16 @@ get_template_part('template-parts/header/header', 'page');?>
                             <p><b>L'URL de l'administration est :</b>
                             <?php if(isset($userData['website_user'][0])):
                                 $userDashboard = $userData['dashboard_user'][0];
-                                echo "<a href='$userDashboard' class='font-weight-bold'>$userDashboard</a>";
+                                echo "<a href='$userDashboard' class='font-weight-bold' target='_blank' rel='noreferrer noopener'>$userDashboard</a>";
                             else:
                                 echo "Vous n'avez pas encore de lien disponible.";
-                            endif; ?>                            
+                            endif; ?>   
                             <h2 class='text-prune-dark pt-0 pt-sm-5 pb-2'>Mes articles disponibles</h2>
+                            <ul class='liste-articles mb-3'>
+                                <li class='text-prune-dark py-2 bold'>
+                                    <a class='tutos-items' href='https://akaleya.fr/lexique/' target='_blank'>Glossaire du Web</a>
+                                </li>          
+                            </ul> 
                             <?php  if($userRole == 'user_wp'):
                                 echo '<h3>Wordpress</h3>';
                                 $loop = new WP_Query( array('post_type'  => 'post', 'post_status' => 'publish','category_name' => 'user_wp', 'order' => 'ASC') );
