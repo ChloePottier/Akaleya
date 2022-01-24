@@ -10,6 +10,8 @@ add_action( 'init', 'cpt_portfolio_init' );
 add_action( 'init', 'create_galerie_tax', 0 );
 add_action( 'init', 'cpt_link_init' );
 add_action( 'init', 'cpt_lexique_init' );
+add_action( 'init', 'cpt_espace_membres_init' );
+add_action( 'init', 'create_tutos_tax', 0 );
 // ajout format d'image      
 if(function_exists('add_theme_support')):
     add_image_size('thumbnail_portfolio_sm',545,368,false);
@@ -42,3 +44,6 @@ add_action( 'show_user_profile', 'extra_user_profile_fields' );
 add_action( 'edit_user_profile', 'extra_user_profile_fields' );
 add_action( 'personal_options_update', 'save_extra_user_profile_fields' );
 add_action( 'edit_user_profile_update', 'save_extra_user_profile_fields' );
+add_action('shutdown', function() {
+    while (@ob_end_flush());
+ });

@@ -1,4 +1,4 @@
-<?php /* Template Name: Modèle de page Lexique */ 
+<?php /* Template Name: Modèle des archives Lexique */ 
 get_template_part('template-parts/header/head', 'meta-google');
 get_template_part('template-parts/header/header', 'page');?>
 <section class='container-fluid content' id='archive-lexique'>

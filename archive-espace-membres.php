@@ -1,11 +1,10 @@
-<?php /* Template Name: Modèle de page Akaleya */ 
+<?php /* Template Name: Modèle des archives Espace Membres Akaleya */ 
 get_template_part('template-parts/header/head', 'meta-google');
 get_template_part('template-parts/header/header', 'page');?>
 <scroll-page id='espace_membres'>
     <section class='container-fluid content' id='private_zone'>
         <div class='container pb-5'>
-            <?php if (have_posts()) :
-                    while (have_posts()) : the_post();
+            <?php
                     // Formulaire de connexion
                         if (! is_user_logged_in()) {?>
                             <div class="row">
@@ -48,51 +47,63 @@ get_template_part('template-parts/header/header', 'page');?>
                             <div class='row py-5'>
                                     <h2 class=' col-12 text-prune-dark pb-2'>Mes tutoriels d'utlisation</h2>
                                     <div class='card col-12 col-md-6 col-lg-4 mt-5' >
-                                        <!-- <div class='card d-md-none'><?php //the_post_thumbnail('thumbnail_blog_xs'); ?></div>
-                                        <div class='card d-none d-md-block '><?php //the_post_thumbnail('thumbnail_blog_md'); ?></div> -->
+                                
                                         <div class='card-body bg-prune-dark text-white-op8'>
                                             <h4 class='card-title font-family-bebas text-white'>Glossaire du web</h4>
                                             <p>Vous trouverez ici tous le lexique du web ! Gardez le sous la main lorque vous parcourez vos tutoriels, il vous sera utile.</p>
                                             <a href='https://akaleya.fr/lexique/' class='btn-blog'>Lire la suite</a>
                                         </div>
                                     </div>
-                                    <?php $loop = new WP_Query( array('post_type'  => 'post', 'post_status' => 'publish','category_name' => $user->display_name, 'order' => 'ASC') );
+                                    <?php 
+                                    $loop = new WP_Query( array('post_type'  => 'espace-membres', 'post_status' => 'publish','tax_query' => array(
+                                        array('taxonomy' => 'categorie-tutos','field' => 'slug','terms' => $user->display_name,)
+                                    ), 'order' => 'ASC'));
                                     require 'template-parts/content/loop/loop-post.php'; ?>
-                                </div>
-                            <?php  if($userRole == 'user_wp'):
-                            echo"<div class='row py-5'>";
-                                echo '<h3 class="col-12 text-prune">Wordpress</h3>';
-                                $loop = new WP_Query( array('post_type'  => 'post', 'post_status' => 'publish','category_name' => 'user_wp', 'order' => 'ASC') );
+                                </div>        
+                            <?php 
+                             $userWP = array('post_type'  => 'espace-membres', 'post_status' => 'publish','tax_query' => array(
+                                array('taxonomy' => 'categorie-tutos','field' => 'slug','terms' => 'user_wp',)
+                            ), 'order' => 'ASC');
+                            $userWC = array('post_type'  => 'espace-membres', 'post_status' => 'publish','tax_query' => array(
+                                array('taxonomy' => 'categorie-tutos','field' => 'slug','terms' => 'user_wc',)
+                            ), 'order' => 'ASC');
+                            $userPS = array('post_type'  => 'espace-membres', 'post_status' => 'publish','tax_query' => array(
+                                array('taxonomy' => 'categorie-tutos','field' => 'slug','terms' => 'user_ps',)
+                            ), 'order' => 'ASC');
+                            if($userRole == 'user_ps'):
+                                echo"<div class='row py-5'>";
+                                echo '<h3 class="col-12 text-prune">WordPress</h3>';
+                                $loop = new WP_Query( $userWP );
                                 require 'template-parts/content/loop/loop-post.php';
                                 echo '</div>';
                             elseif($userRole == 'user_wc'):
                                 echo"<div class='row py-5'>";
-                                echo '<h3 class="col-12  text-prune">Wordpress</h3>';
-                                $loop = new WP_Query( array('post_type'  => 'post', 'post_status' => 'publish','category_name' => 'user_wp', 'order' => 'ASC') );
+                                echo '<h3 class="col-12  text-prune">WordPress</h3>';
+                                $loop = new WP_Query($userWP);
                                 require 'template-parts/content/loop/loop-post.php'; 
                                 echo "</div> <div class='row py-5'>";
-                                echo '<h3 class="col-12 text-prune">Woocommerce</h3>';
-                                $loop = new WP_Query( array('post_type'  => 'post', 'post_status' => 'publish','category_name' => 'user_wc', 'order' => 'ASC') );
+                                echo '<h3 class="col-12 text-prune">WooCommerce</h3>';
+                                $loop = new WP_Query($userWC);
                                 require 'template-parts/content/loop/loop-post.php'; 
                                 echo "</div>";
                             elseif($userRole == 'user_ps'):
                                 echo"<div class='row py-5'>";
-                                echo '<h3 class="col-12 text-prune">Prestashop</h3>';
-                                $loop = new WP_Query( array('post_type'  => 'post', 'post_status' => 'publish','category_name' => 'user_ps', 'order' => 'ASC') );
-                                require 'template-parts/content/loop/loop-espacemembres.php';
+                                echo '<h3 class="col-12 text-prune">PrestaShop</h3>';
+                                $loop = new WP_Query($userPS);
+                                require 'template-parts/content/loop/loop-post.php';
                                 echo "</div>";
                             elseif(current_user_can('edit_posts')):                                                              
                                 echo "<div class='row py-5'>";
-                                echo '<h3 class="col-12 text-prune">Wordpress</h3>';
-                                $loop = new WP_Query( array('post_type'  => 'post', 'post_status' => 'publish','category_name' => 'user_wp', 'order' => 'ASC') );
+                                echo '<h3 class="col-12 text-prune">WordPress</h3>';
+                                $loop = new WP_Query($userWP);
                                 require 'template-parts/content/loop/loop-post.php';
                                 echo "</div> <div class='row py-5'>";
-                                echo '<h3 class="col-12 text-prune">Woocommerce</h3>';
-                                $loop = new WP_Query( array('post_type'  => 'post', 'post_status' => 'publish','category_name' => 'user_wc', 'order' => 'ASC') );
+                                echo '<h3 class="col-12 text-prune">WooCommerce</h3>';
+                                $loop = new WP_Query($userWC);
                                 require 'template-parts/content/loop/loop-post.php'; 
                                 echo "</div> <div class='row py-5'>";
-                                echo '<h3 class="col-12 text-prune">Prestashop</h3>';
-                                $loop = new WP_Query( array('post_type'  => 'post', 'post_status' => 'publish','category_name' => 'user_ps', 'order' => 'ASC') );
+                                echo '<h3 class="col-12 text-prune">PrestaShop</h3>';
+                                $loop = new WP_Query($userPS);
                                 require 'template-parts/content/loop/loop-post.php'; 
                                 echo "</div> 
                                 <div class='row py-5'> 
@@ -106,9 +117,7 @@ get_template_part('template-parts/header/header', 'page');?>
                                         </div>';
                                 endif; 
                             endif;
-                            };
-                    endwhile;
-                endif; ?>
+                            };?>
         </div>
     </section>
 </scroll-page>

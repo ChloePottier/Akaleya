@@ -1,4 +1,4 @@
-<?php /* Template Name: Modèle de page Réalisations */ ?>
+<?php /* Template Name: Modèle des archives Réalisations */ ?>
 
 <?php get_template_part('template-parts/header/head', 'meta-google');
 get_template_part('template-parts/header/header', 'page');

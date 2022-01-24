@@ -85,8 +85,8 @@ function cpt_services_init() {
         'edit_item'             => __( 'Editer le service', 'textdomain' ),
         'view_item'             => __( 'Voir le service', 'textdomain' ),
         'all_items'             => __( 'Tous les services', 'textdomain' ),
-        'search_items'          => __( 'Rechercher des service', 'textdomain' ),
-        'archives'              => _x( 'Archives des service', 'The post type archive label used in nav menus', 'textdomain' ),
+        'search_items'          => __( 'Rechercher des services', 'textdomain' ),
+        'archives'              => _x( 'Archives des services', 'The post type archive label used in nav menus', 'textdomain' ),
     ); 
     $args = array(
         'labels'             => $labels,
@@ -211,6 +211,61 @@ function cpt_lexique_init() {
     ); 
     register_post_type( 'lexique', $args );
 } 
+function cpt_espace_membres_init() {
+    $labels = array(
+        'name'                  => _x( 'Espace Membres', 'Post type general name', 'textdomain' ),
+        'singular_name'         => _x( 'Tuto', 'Post type singular name', 'textdomain' ),
+        'menu_name'             => _x( 'Espace Membres', 'Admin Menu text', 'textdomain' ),
+        'add_new'               => __( 'Ajouter un tutoriel', 'textdomain' ),
+        'add_new_item'          => __( 'Ajouter un nouveau tuto', 'textdomain' ),
+        'new_item'              => __( 'Nouveau tuto', 'textdomain' ),
+        'edit_item'             => __( 'Editer le tutoriel', 'textdomain' ),
+        'view_item'             => __( 'Voir le tutoriel', 'textdomain' ),
+        'all_items'             => __( 'Tous les tutos', 'textdomain' ),
+        'search_items'          => __( 'Rechercher des tutos', 'textdomain' ),
+        'archives'              => _x( 'Archives des tutos', 'The post type archive label used in nav menus', 'textdomain' ),
+    ); 
+    $args = array(
+        'labels'             => $labels,
+        'public'             => true,
+        'query_var'          => true,
+        'rewrite'            => array( 'slug' => 'espace-membres' ),
+        'capability_type'    => 'post',
+        'has_archive'        => true,
+        'menu_position'      => null,
+        'menu_icon'          => 'dashicons-admin-network',
+        'supports'           => array( 'title', 'editor', 'thumbnail','excerpt'),
+        'show_in_rest'      => true, // pour activer guthenberg
+    ); 
+register_post_type( 'espace-membres', $args );
+}    
+function create_tutos_tax() {
+    $labels = array(
+        'name'              => _x( 'Catégories de tutos', 'taxonomy general name', 'textdomain' ),
+        'singular_name'     => _x( 'Catégorie de tutos', 'taxonomy singular name', 'textdomain' ),
+        'search_items'      => __( 'Chercher une catégorie', 'textdomain' ),
+        'all_items'         => __( 'Toutes les catégories', 'textdomain' ),
+        'view_item'         => __( 'Voir la catégorie', 'textdomain' ),
+        'edit_item'         => __( 'Editer la catégorie', 'textdomain' ),
+        'update_item'       => __( 'Mettre à jour la catégorie', 'textdomain' ),
+        'add_new_item'      => __( 'Ajouter une nouvelle catégorie', 'textdomain' ),
+        'new_item_name'     => __( 'Nouvelle catégorie', 'textdomain' ),
+        'back_to_items'     => __( 'Retour aux catégories de tutos', 'textdomain' ),
+        'menu_name'         => __( 'Catégories', 'textdomain' ),
+    ); 
+    $args = array(
+        'labels'            => $labels,
+        'hierarchical'      => true,
+        'public'            => true,
+        'show_ui'           => true,
+        'show_admin_column' => true,
+        'query_var'         => true,
+        'rewrite'           => array( 'slug' => 'categorie-tutos' ),
+
+    );
+    register_taxonomy('categorie-tutos','espace-membres',$args);
+}
+
 /*** BOUTONS DE PARTAGE RESEAUX SOCIAUX ***/
 function my_sharing_buttons($content) {
     if(is_single() && get_post_type() == 'realisation' || in_category('non-classe')){

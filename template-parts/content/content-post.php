@@ -29,7 +29,7 @@
             $userData = get_user_meta(get_current_user_id());
             if($userRole == 'user_wp'):
                 echo '<div class="row py-5">';
-                echo '<h2 class="col-12">Wordpress</h2>';
+                echo '<h2 class="col-12">WordPress</h2>';
                 $loop = new WP_Query( array('post_type'  => 'post', 'post_status' => 'publish','category_name' => 'user_wp', 'order' => 'ASC') );
                 require 'loop/loop-post.php';
                 echo '</div>';
