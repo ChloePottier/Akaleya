@@ -1,84 +1,114 @@
 <?php /* Template Name: Modèle de page Akaleya */ 
-get_template_part('template-parts/header/head', 'metadata');
+get_template_part('template-parts/header/head', 'meta-google');
 get_template_part('template-parts/header/header', 'page');?>
 <scroll-page id='espace_membres'>
     <section class='container-fluid content' id='private_zone'>
-        <div class='container'>
-            <div class='row py-5'>
+        <div class='container pb-5'>
             <?php if (have_posts()) :
                     while (have_posts()) : the_post();
                     // Formulaire de connexion
                         if (! is_user_logged_in()) {?>
-                            <div class='col-12 col-md-6 mx-auto'>
-                                <h1 class='text-prune-dark pt-0 pt-sm-5'><?php the_title(); ?></h1>
-                                <?php get_template_part('template-parts/content/content','form-connection' );?>
+                            <div class="row">
+                                <div class='col-12 col-md-6 mx-auto'>
+                                    <h1 class='text-prune-dark pt-0 pt-sm-5'><?php the_title(); ?></h1>
+                                    <?php get_template_part('template-parts/content/content','form-connection' );?>
+                                </div>
                             </div>
                         <?php } else {?>
-                        <div class='col-12'>
-                            <h1 class='text-prune-dark pt-0 pt-sm-5 pb-5'><?php the_title(); ?></h1>
-                            <?php //pour le moment je choisis que mes clients ne peuvent pas modifier leur profil
-                            // echo '<a href="' . admin_url('user-edit.php?user_id='. get_current_user_id()) .'">Gérer mon profil</a>';
-                            $user = new WP_User(get_current_user_id());                      
-                            $userRole = $user->roles[0];
-                            $userData = get_user_meta(get_current_user_id());
-                            echo '<p>Bonjour <b>'.$user->display_name.'</b> !</p>';?>
-                            <p><?php the_content();?></p>
-                            <p><b>L'URL de votre site est :</b> 
-                            <?php if(isset($userData['website_user'][0])):
-                                $userUrl = $userData['website_user'][0];
-                                echo "<a href='$userUrl' class='font-weight-bold' target='_blank' rel='noreferrer noopener'>$userUrl </a>";
-                            else:
-                                echo "Vous n'avez pas encore de lien disponible.";
-                            endif; ?>
-                            </p>            
-                            <p><b>L'URL de l'administration est :</b>
-                            <?php if(isset($userData['website_user'][0])):
-                                $userDashboard = $userData['dashboard_user'][0];
-                                echo "<a href='$userDashboard' class='font-weight-bold' target='_blank' rel='noreferrer noopener'>$userDashboard</a>";
-                            else:
-                                echo "Vous n'avez pas encore de lien disponible.";
-                            endif; ?>   
-                            <h2 class='text-prune-dark pt-0 pt-sm-5 pb-2'>Mes articles disponibles</h2>
-                            <ul class='liste-articles mb-3'>
-                                <li class='text-prune-dark py-2 bold'>
-                                    <a class='tutos-items' href='https://akaleya.fr/lexique/' target='_blank'>Glossaire du Web</a>
-                                </li>          
-                            </ul> 
+                            <div class='row'>
+                                <div class='col-12'>
+                                    <h1 class='text-prune-dark pt-5 pb-5'><?php the_title(); ?></h1>
+                                    <?php //pour le moment je choisis que mes clients ne peuvent pas modifier leur profil
+                                    // echo '<a href="' . admin_url('user-edit.php?user_id='. get_current_user_id()) .'">Gérer mon profil</a>';
+                                    $user = new WP_User(get_current_user_id());      
+                                    $userRole = $user->roles[0];
+                                    $userData = get_user_meta(get_current_user_id());
+                                    echo '<p>Bonjour <b>'.$user->display_name.'</b> !</p>';?>
+                                    <p><?php the_content();?></p>
+                                    <div class= 'bg-light-grey p-3'>
+                                    <p><b>L'URL de votre site est :</b> 
+                                    <?php if(isset($userData['website_user'][0])):
+                                        $userUrl = $userData['website_user'][0];
+                                        echo "<a href='$userUrl' class='font-weight-bold' target='_blank' rel='noreferrer noopener'>$userUrl </a>";
+                                    else:
+                                        echo "Vous n'avez pas encore de lien disponible.";
+                                    endif; ?>
+                                    </p>            
+                                    <p><b>L'URL de l'administration est :</b>
+                                    <?php if(isset($userData['website_user'][0])):
+                                        $userDashboard = $userData['dashboard_user'][0];
+                                        echo "<a href='$userDashboard' class='font-weight-bold' target='_blank' rel='noreferrer noopener'>$userDashboard</a>";
+                                    else:
+                                        echo "Vous n'avez pas encore de lien disponible.";
+                                    endif; ?> 
+                                    </p>  
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='row py-5'>
+                                    <h2 class=' col-12 text-prune-dark pb-2'>Mes tutoriels d'utlisation</h2>
+                                    <div class='card col-12 col-md-6 col-lg-4 mt-5' >
+                                        <!-- <div class='card d-md-none'><?php //the_post_thumbnail('thumbnail_blog_xs'); ?></div>
+                                        <div class='card d-none d-md-block '><?php //the_post_thumbnail('thumbnail_blog_md'); ?></div> -->
+                                        <div class='card-body bg-prune-dark text-white-op8'>
+                                            <h4 class='card-title font-family-bebas text-white'>Glossaire du web</h4>
+                                            <p>Vous trouverez ici tous le lexique du web ! Gardez le sous la main lorque vous parcourez vos tutoriels, il vous sera utile.</p>
+                                            <a href='https://akaleya.fr/lexique/' class='btn-blog'>Lire la suite</a>
+                                        </div>
+                                    </div>
+                                    <?php $loop = new WP_Query( array('post_type'  => 'post', 'post_status' => 'publish','category_name' => $user->display_name, 'order' => 'ASC') );
+                                    require 'template-parts/content/loop/loop-post.php'; ?>
+                                </div>
                             <?php  if($userRole == 'user_wp'):
-                                echo '<h3>Wordpress</h3>';
+                            echo"<div class='row py-5'>";
+                                echo '<h3 class="col-12 text-prune">Wordpress</h3>';
                                 $loop = new WP_Query( array('post_type'  => 'post', 'post_status' => 'publish','category_name' => 'user_wp', 'order' => 'ASC') );
-                                require 'template-parts/content/loop/loop-espacemembres.php';
+                                require 'template-parts/content/loop/loop-post.php';
+                                echo '</div>';
                             elseif($userRole == 'user_wc'):
-                                echo '<h3>Wordpress</h3>';
+                                echo"<div class='row py-5'>";
+                                echo '<h3 class="col-12  text-prune">Wordpress</h3>';
                                 $loop = new WP_Query( array('post_type'  => 'post', 'post_status' => 'publish','category_name' => 'user_wp', 'order' => 'ASC') );
-                                require 'template-parts/content/loop/loop-espacemembres.php'; 
-                                echo '<h3>Woocommerce</h3>';
+                                require 'template-parts/content/loop/loop-post.php'; 
+                                echo "</div> <div class='row py-5'>";
+                                echo '<h3 class="col-12 text-prune">Woocommerce</h3>';
                                 $loop = new WP_Query( array('post_type'  => 'post', 'post_status' => 'publish','category_name' => 'user_wc', 'order' => 'ASC') );
-                                require 'template-parts/content/loop/loop-espacemembres.php'; 
+                                require 'template-parts/content/loop/loop-post.php'; 
+                                echo "</div>";
                             elseif($userRole == 'user_ps'):
-                                echo '<h3>Prestashop</h3>';
+                                echo"<div class='row py-5'>";
+                                echo '<h3 class="col-12 text-prune">Prestashop</h3>';
                                 $loop = new WP_Query( array('post_type'  => 'post', 'post_status' => 'publish','category_name' => 'user_ps', 'order' => 'ASC') );
                                 require 'template-parts/content/loop/loop-espacemembres.php';
-                            elseif(current_user_can('edit_posts')):
-                                echo '<h3>Les articles du blog</h3>';
-                                $loop = new WP_Query( array('post_type'  => 'post', 'post_status' => 'publish','category_name' => 'non-classe', 'order' => 'ASC') );
-                                require 'template-parts/content/loop/loop-espacemembres.php';
-                                echo '<h3>Wordpress</h3>';
+                                echo "</div>";
+                            elseif(current_user_can('edit_posts')):                                                              
+                                echo "<div class='row py-5'>";
+                                echo '<h3 class="col-12 text-prune">Wordpress</h3>';
                                 $loop = new WP_Query( array('post_type'  => 'post', 'post_status' => 'publish','category_name' => 'user_wp', 'order' => 'ASC') );
-                                require 'template-parts/content/loop/loop-espacemembres.php';
-                                echo '<h3>Woocommerce</h3>';
+                                require 'template-parts/content/loop/loop-post.php';
+                                echo "</div> <div class='row py-5'>";
+                                echo '<h3 class="col-12 text-prune">Woocommerce</h3>';
                                 $loop = new WP_Query( array('post_type'  => 'post', 'post_status' => 'publish','category_name' => 'user_wc', 'order' => 'ASC') );
-                                require 'template-parts/content/loop/loop-espacemembres.php'; 
-                                echo '<h3>Prestashop</h3>';
+                                require 'template-parts/content/loop/loop-post.php'; 
+                                echo "</div> <div class='row py-5'>";
+                                echo '<h3 class="col-12 text-prune">Prestashop</h3>';
                                 $loop = new WP_Query( array('post_type'  => 'post', 'post_status' => 'publish','category_name' => 'user_ps', 'order' => 'ASC') );
-                                require 'template-parts/content/loop/loop-espacemembres.php'; 
-                            endif;?> 
-                            </div>                          
-                           <?php }; ?>
-                            
-                <?php endwhile;
-                    endif; ?>
-            </div>
+                                require 'template-parts/content/loop/loop-post.php'; 
+                                echo "</div> 
+                                <div class='row py-5'> 
+                                    <h2 class='col-12 text-prune-dark'>Les articles du blog</h2>";
+                                $loop = new WP_Query( array('post_type'  => 'post', 'post_status' => 'publish','category_name' => 'non-classe', 'order' => 'ASC', 'paged' => $paged) );
+                                if(isset($loop->posts[0])):
+                                    require 'template-parts/content/loop/loop-post.php';
+                                else:
+                                    echo '<div class="col-12 d-flex justify-content-center align-items-center my-5">
+                                            <p class="text-prune font-size-24">Aucun article n\'est disponible pour le moment.</p>
+                                        </div>';
+                                endif; 
+                            endif;
+                            };
+                    endwhile;
+                endif; ?>
         </div>
     </section>
 </scroll-page>

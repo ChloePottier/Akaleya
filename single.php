@@ -1,5 +1,5 @@
 <?php /* Template Name: Modèle d'article Akaleya */
-get_template_part('template-parts/header/head', 'metadata');
+get_template_part('template-parts/header/head', 'meta-google');
 get_template_part('template-parts/header/header', 'page');?>
 <section class='container-fluid content' id='post-<?php the_ID(); ?>'>
 <div class='container'>
@@ -15,21 +15,21 @@ get_template_part('template-parts/header/header', 'page');?>
                         if(!is_user_logged_in()):
                             if($categoryPost[0]->slug == 'non-classe'):?>
                                 <div class='col-12 pb-5' id='content-post'> 
-                                    <h1 class='text-prune-dark'><?php the_title(); ?></h1>
+                                    <h1 class='text-prune-dark pt-0 pt-sm-5'><?php the_title(); ?></h1>
                                     <?php the_content();?>
                                 </div>
                                 <div class='col-12'>
                                     <?php do_action('akaleya_pagination'); //uniquement pour les user connectés?>
                                 </div>
                             <?php else:?>
-                                <div class='col-12 col-md-6 mx-auto'> 
+                                <div class='col-12 col-md-6 mx-auto' id='content-post'> 
                                     <h1 class='text-prune-dark pt-0 pt-sm-5'><?php the_title(); ?></h1>
                                     <?php get_template_part('template-parts/content/content','form-connection' );?>
                                 </div>
                             <?php endif;
                         else:?>
                             <div class='col-12 pb-5' id='content-post'> 
-                                <h1 class='text-prune-dark'><?php the_title(); ?></h1>
+                                <h1 class='text-prune-dark pt-0 pt-sm-5'><?php the_title(); ?></h1>
                                 <?php the_content();?>                                
                             </div>                    
                             <div class='col-12 font-weight-bold pb-5'>

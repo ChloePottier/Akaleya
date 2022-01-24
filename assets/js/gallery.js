@@ -26,6 +26,7 @@ jQuery(function($){
             contentWeb.removeClass('display-flex2');
             contentWeb.addClass('display-none');
             webGalleryNav.removeClass('active2');
+           
         });
         $(allGalleryNav).on('click', function(event){
             contentPortfolio.addClass('display-flex2');

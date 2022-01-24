@@ -1,6 +1,6 @@
 <?php /* Template Name: Modèle de page Réalisations */ ?>
 
-<?php get_template_part('template-parts/header/head', 'metadata');
+<?php get_template_part('template-parts/header/head', 'meta-google');
 get_template_part('template-parts/header/header', 'page');
 get_template_part('template-parts/content/content', 'gallery');
 get_footer(); ?>

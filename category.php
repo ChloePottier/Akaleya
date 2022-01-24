@@ -1,5 +1,5 @@
 <?php /* Template Name: Catégorie d'articles Akaleya */
-get_template_part('template-parts/header/head', 'metadata');
+get_template_part('template-parts/header/head', 'meta-google');
 get_template_part('template-parts/header/header', 'page');?>
 <scroll-page id='category'>
     <section class='container-fluid content' id='category-post-<?php the_ID(); ?>'>

@@ -1,6 +1,6 @@
 <?php /*Template Name: AkaleyaAccueil*/?>
 
-<?php get_template_part('template-parts/header/head','metadata');
+<?php get_template_part('template-parts/header/head','meta-google');
     get_header(); 
     get_template_part('template-parts/content/content','home');
     get_footer(); ?>

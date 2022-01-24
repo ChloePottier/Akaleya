@@ -26,7 +26,6 @@ function themename_custom_logo_setup() {
     );
     add_theme_support( 'custom-logo', $defaults );
    }
-
 //Custom post type
 function cpt_slider_init() {
     $labels = array(
@@ -98,7 +97,7 @@ function cpt_services_init() {
         'has_archive'        => true,
         'menu_position'      => null,
         'menu_icon'          => 'dashicons-admin-tools',
-        'supports'           => array( 'title', 'editor'),
+        'supports'           => array( 'title', 'editor', 'thumbnail'),
     ); 
 register_post_type( 'service', $args );
 }     
@@ -232,7 +231,6 @@ function my_sharing_buttons($content) {
         }
         return $content;
 }
-
 ///Logo page connexion BO
 function my_login_logo() { ?>
     <style type="text/css">
@@ -263,7 +261,6 @@ function redirect_non_authorized_user() {
 		wp_redirect( home_url( '/' ) );
 		exit();
 	}}
-
 function roles_users(){
     remove_role('subscriber');
     remove_role('editor');

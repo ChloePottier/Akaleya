@@ -30,18 +30,13 @@ add_action( 'current_screen', 'redirect_non_authorized_user' );
 // ajout rôle
 add_action( 'init', 'roles_users');
 //Shortcodes
-
 add_action( 'init', 'add_custom_shortcode' );
-
-
-
 if ( ! current_user_can( 'manage_options' ) ) {
     add_filter( 'show_admin_bar', '__return_false' );
 }
 // menu
 add_action('menu_top','menu_top_user_logged_in');
 add_action('akaleya_pagination','post_pagination');
-
 //ajout champs profil utilisateur
 add_action( 'show_user_profile', 'extra_user_profile_fields' );
 add_action( 'edit_user_profile', 'extra_user_profile_fields' );
