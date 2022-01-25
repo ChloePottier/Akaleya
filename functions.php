@@ -375,10 +375,11 @@ function menu_top_user_logged_in(){
         return get_template_part('template-parts/navigation/navigation', 'items');
     endif;
 }
+//pagination uniquement pour les post
 function post_pagination(){?>
     <div class='d-none d-sm-flex justify-content-between'>
         <div>
-            <?php previous_post_link('%link', '&lsaquo; %title',true); ?>
+            <?php previous_post_link('%link', '&lsaquo; %title', true); ?>
         </div>
         <div>
             <?php next_post_link('%link', '%title &rsaquo;',true); ?>
@@ -394,6 +395,7 @@ function post_pagination(){?>
     </div>
 
 <?php }
+
 //ajout champs dans profil utilisateur
 function extra_user_profile_fields( $user ) { ?>
 	<h3>Les informations concernant votre projet</h3>

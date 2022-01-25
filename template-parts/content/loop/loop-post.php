@@ -8,7 +8,7 @@ if ($loop->have_posts()) :
             <div class='card-body bg-prune-dark text-white-op8'>
                 <h4 class='card-title font-family-bebas text-white'><?php the_title(); ?></h4>
                 <?php the_excerpt(); ?>
-                <a href='<?php echo esc_url(get_permalink( ))?>' class='btn-blog' target='_blank'>Lire la suite</a>
+                <a href='<?php echo esc_url(get_permalink( ))?>' class='btn-blog' target='_blank' rel='bookmark'>Lire la suite</a>
             </div>
         </div>
     <?php endwhile;

@@ -66,13 +66,13 @@ get_template_part('template-parts/header/header', 'page');?>
                             <?php 
                              $userWP = array('post_type'  => 'espace-membres', 'post_status' => 'publish','tax_query' => array(
                                 array('taxonomy' => 'categorie-tutos','field' => 'slug','terms' => 'user_wp',)
-                            ), 'order' => 'ASC');
+                            ), 'order' => 'ASC','paged' => $paged);
                             $userWC = array('post_type'  => 'espace-membres', 'post_status' => 'publish','tax_query' => array(
                                 array('taxonomy' => 'categorie-tutos','field' => 'slug','terms' => 'user_wc',)
-                            ), 'order' => 'ASC');
+                            ), 'order' => 'ASC','paged' => $paged);
                             $userPS = array('post_type'  => 'espace-membres', 'post_status' => 'publish','tax_query' => array(
                                 array('taxonomy' => 'categorie-tutos','field' => 'slug','terms' => 'user_ps',)
-                            ), 'order' => 'ASC');
+                            ), 'order' => 'ASC','paged' => $paged);
                             if($userRole == 'user_ps'):
                                 echo"<div class='row py-5'>";
                                 echo '<h3 class="col-12 text-prune">WordPress</h3>';
