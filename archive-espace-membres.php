@@ -62,7 +62,7 @@ get_template_part('template-parts/header/header', 'page');?>
                                         array('taxonomy' => 'categorie-tutos','field' => 'slug','terms' => $user->display_name,)
                                     ), 'order' => 'ASC'));
                                     require 'template-parts/content/loop/loop-post.php'; ?>
-                                </div>        
+                            </div>        
                             <?php 
                              $userWP = array('post_type'  => 'espace-membres', 'post_status' => 'publish','tax_query' => array(
                                 array('taxonomy' => 'categorie-tutos','field' => 'slug','terms' => 'user_wp',)
@@ -108,17 +108,7 @@ get_template_part('template-parts/header/header', 'page');?>
                                 echo '<h3 class="col-12 text-prune">PrestaShop</h3>';
                                 $loop = new WP_Query($userPS);
                                 require 'template-parts/content/loop/loop-post.php'; 
-                                echo "</div> 
-                                <div class='row py-5'> 
-                                    <h2 class='col-12 text-prune-dark'>Les articles du blog</h2>";
-                                $loop = new WP_Query( array('post_type'  => 'post', 'post_status' => 'publish','category_name' => 'non-classe', 'order' => 'ASC', 'paged' => $paged) );
-                                if(isset($loop->posts[0])):
-                                    require 'template-parts/content/loop/loop-post.php';
-                                else:
-                                    echo '<div class="col-12 d-flex justify-content-center align-items-center my-5">
-                                            <p class="text-prune font-size-24">Aucun article n\'est disponible pour le moment.</p>
-                                        </div>';
-                                endif; 
+                                echo '</div>';
                             endif;
                             };?>
         </div>

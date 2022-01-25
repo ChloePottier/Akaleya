@@ -375,27 +375,64 @@ function menu_top_user_logged_in(){
         return get_template_part('template-parts/navigation/navigation', 'items');
     endif;
 }
-//pagination uniquement pour les post
-function post_pagination(){?>
-    <div class='d-none d-sm-flex justify-content-between'>
-        <div>
-            <?php previous_post_link('%link', '&lsaquo; %title', true); ?>
-        </div>
-        <div>
-            <?php next_post_link('%link', '%title &rsaquo;',true); ?>
-        </div>
-    </div>
-    <div class='d-flex d-sm-none justify-content-between'>
-        <div>
-            <?php previous_post_link('%link', '&lsaquo; Précédent',true); ?>
-        </div>
-        <div>
-            <?php next_post_link('%link', 'Suivant &rsaquo;',true); ?>
-        </div>
-    </div>
+//pagination
+function post_pagination(){
+    switch(get_post_type()){
+        case 'post':?>
+            <div class='d-none d-sm-flex justify-content-between'>
+                <div>
+                    <?php previous_post_link('%link', '&lsaquo; %title', true); ?>
+                </div>
+                <div>
+                    <?php next_post_link('%link', '%title &rsaquo;',true); ?>
+                </div>
+            </div>
+            <div class='d-flex d-sm-none justify-content-between'>
+                <div>
+                    <?php previous_post_link('%link', '&lsaquo; Précédent',true); ?>
+                </div>
+                <div>
+                    <?php next_post_link('%link', 'Suivant &rsaquo;',true); ?>
+                </div>
+            </div><?php            
+            break;
+        case 'espace-membres':?>
+                <div class='d-none d-sm-flex justify-content-between'><div>
+                        <?php previous_post_link('%link', '&lsaquo; %title', true, ' ', 'categorie-tutos'); ?>
+                    </div>
+                    <div>
+                        <?php next_post_link('%link', '%title &rsaquo;',true, ' ', 'categorie-tutos'); ?>
+                    </div>
+                </div>
+                <div class='d-flex d-sm-none justify-content-between'>
+                    <div>
+                        <?php previous_post_link('%link', '&lsaquo; Précédent',true, ' ', 'categorie-tutos'); ?>
+                    </div>
+                    <div>
+                        <?php next_post_link('%link', 'Suivant &rsaquo;',true, ' ', 'categorie-tutos'); ?>
+                    </div>
+                </div><?php
+            break;   
+            case 'realisation':?>
+                <div class='d-none d-sm-flex justify-content-between'><div>
+                        <?php previous_post_link('%link', '&lsaquo; %title', true, ' ', 'type'); ?>
+                    </div>
+                    <div>
+                        <?php next_post_link('%link', '%title &rsaquo;',true, ' ', 'type'); ?>
+                    </div>
+                </div>
+                <div class='d-flex d-sm-none justify-content-between'>
+                    <div>
+                        <?php previous_post_link('%link', '&lsaquo; Précédent',true, ' ', 'type'); ?>
+                    </div>
+                    <div>
+                        <?php next_post_link('%link', 'Suivant &rsaquo;',true, ' ', 'type'); ?>
+                    </div>
+                </div><?php
+            break;     
 
-<?php }
-
+    }
+}
 //ajout champs dans profil utilisateur
 function extra_user_profile_fields( $user ) { ?>
 	<h3>Les informations concernant votre projet</h3>
