@@ -48,7 +48,7 @@ function cpt_slider_init() {
         'rewrite'            => array( 'slug' => 'slider' ),
         'capability_type'    => 'post',
         'has_archive'        => true,
-        'menu_position'      => null,
+        'menu_position'      => 30,
         'menu_icon'          => 'dashicons-star-filled',
         'supports'           => array( 'title', 'editor'),
     ); 
@@ -67,10 +67,9 @@ function cpt_presentation_init() {
         'rewrite'            => array( 'slug' => 'presentation' ),
         'capability_type'    => 'post',
         'has_archive'        => true,
-        'menu_position'      => null,
+        'menu_position'      => 30,
         'menu_icon'          => 'dashicons-universal-access',
-        'supports'           => array( 'title', 'editor',  // 'thumbnail', 'excerpt' 
-        ),
+        'supports'           => array( 'title', 'editor' ),
     ); 
 register_post_type( 'presentation', $args );
 }    
@@ -95,7 +94,7 @@ function cpt_services_init() {
         'rewrite'            => array( 'slug' => 'service' ),
         'capability_type'    => 'post',
         'has_archive'        => true,
-        'menu_position'      => null,
+        'menu_position'      => 30,
         'menu_icon'          => 'dashicons-admin-tools',
         'supports'           => array( 'title', 'editor', 'thumbnail'),
     ); 
@@ -122,9 +121,10 @@ function cpt_portfolio_init() {
         'rewrite'            => array( 'slug' => 'realisation' ),
         'capability_type'    => 'post',
         'has_archive'        => true,
-        'menu_position'      => null,
+        'menu_position'      => 30,
         'menu_icon'          => 'dashicons-art',
         'supports'           => array( 'title', 'editor', 'excerpt','thumbnail' ),
+        'show_in_rest'      => true, 
     ); 
     register_post_type( 'realisation', $args );
 } 
@@ -153,22 +153,23 @@ function create_galerie_tax() {
         'query_var'         => true,
         'rewrite'           => array( 'slug' => 'type' ),
         'show_in_rest'      => true,
+        'rest_base'         => 'genre',
     );
-    register_taxonomy('type','realisation',$args);
+    register_taxonomy('type',array('realisation'),$args);
 }
 //Custom post type liens Externes
 function cpt_link_init() {
     $labels = array(
         'name'                  => _x( 'Liens externe', 'Post type general name', 'textdomain' ),
         'singular_name'         => _x( 'Lien externe', 'Post type singular name', 'textdomain' ),
-        'menu_name'             => _x( 'Liens externe', 'Admin Menu text', 'textdomain' ),
+        'menu_name'             => _x( 'Liens réseaux sociaux', 'Admin Menu text', 'textdomain' ),
         'add_new'               => __( 'Ajouter un lien', 'textdomain' ),
         'add_new_item'          => __( 'Ajouter un nouveau lien', 'textdomain' ),
         'new_item'              => __( 'Nouveau lien ', 'textdomain' ),
         'edit_item'             => __( 'Editer le lien', 'textdomain' ),
-        'view_item'             => __( 'Voir lae lien', 'textdomain' ),
+        'view_item'             => __( 'Voir le lien', 'textdomain' ),
         'all_items'             => __( 'Tous les liens', 'textdomain' ),
-        'search_items'          => __( 'Rechercher des lien', 'textdomain' ),
+        'search_items'          => __( 'Rechercher des liens', 'textdomain' ),
         'archives'              => _x( 'Archives des liens', 'The post type archive label used in nav menus', 'textdomain' ),
     ); 
     $args = array(
@@ -178,7 +179,7 @@ function cpt_link_init() {
         'rewrite'            => array( 'slug' => 'liens' ),
         'capability_type'    => 'post',
         'has_archive'        => true,
-        'menu_position'      => null,
+        'menu_position'      => 30,
         'menu_icon'          => 'dashicons-admin-links',
         'supports'           => array( 'title', 'editor'),
     ); 
@@ -205,7 +206,7 @@ function cpt_lexique_init() {
         'rewrite'            => array( 'slug' => 'lexique' ),
         'capability_type'    => 'post',
         'has_archive'        => true,
-        'menu_position'      => null,
+        'menu_position'      => 20,
         'menu_icon'          => 'dashicons-welcome-learn-more',
         'supports'           => array( 'title', 'editor'),
     ); 
@@ -232,10 +233,11 @@ function cpt_espace_membres_init() {
         'rewrite'            => array( 'slug' => 'espace-membres' ),
         'capability_type'    => 'post',
         'has_archive'        => true,
-        'menu_position'      => null,
+        'menu_position'      => 20,
         'menu_icon'          => 'dashicons-admin-network',
-        'supports'           => array( 'title', 'editor', 'thumbnail','excerpt'),
+        'supports'           => array( 'title', 'editor', 'thumbnail','excerpt', 'page-attributes','post-formats'),
         'show_in_rest'      => true, // pour activer guthenberg
+        'hierarchical'      => true, // 
     ); 
 register_post_type( 'espace-membres', $args );
 }    
@@ -261,9 +263,11 @@ function create_tutos_tax() {
         'show_admin_column' => true,
         'query_var'         => true,
         'rewrite'           => array( 'slug' => 'categorie-tutos' ),
+        'show_in_rest'      => true,
+        'rest_base'         => 'categories-tutos',
 
     );
-    register_taxonomy('categorie-tutos','espace-membres',$args);
+    register_taxonomy('categorie-tutos',array('espace-membres'),$args);
 }
 
 /*** BOUTONS DE PARTAGE RESEAUX SOCIAUX ***/

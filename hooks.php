@@ -12,6 +12,10 @@ add_action( 'init', 'cpt_link_init' );
 add_action( 'init', 'cpt_lexique_init' );
 add_action( 'init', 'cpt_espace_membres_init' );
 add_action( 'init', 'create_tutos_tax', 0 );
+// Supprimer l'onglet commentaires du menu admin
+add_action('admin_menu', function () {
+    remove_menu_page('edit-comments.php');
+});
 // ajout format d'image      
 if(function_exists('add_theme_support')):
     add_image_size('thumbnail_portfolio_sm',545,368,false);

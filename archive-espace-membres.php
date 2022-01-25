@@ -9,22 +9,25 @@ get_template_part('template-parts/header/header', 'page');?>
                         if (! is_user_logged_in()) {?>
                             <div class="row">
                                 <div class='col-12 col-md-6 mx-auto'>
-                                    <h1 class='text-prune-dark pt-0 pt-sm-5'><?php the_title(); ?></h1>
+                                    <h1 class='text-prune-dark pt-0 pt-sm-5'>Espace membres</h1>
                                     <?php get_template_part('template-parts/content/content','form-connection' );?>
                                 </div>
                             </div>
                         <?php } else {?>
                             <div class='row'>
                                 <div class='col-12'>
-                                    <h1 class='text-prune-dark pt-5 pb-5'><?php the_title(); ?></h1>
+                                    <h1 class='text-prune-dark pt-5 pb-5'>Espace membres</h1>
                                     <?php //pour le moment je choisis que mes clients ne peuvent pas modifier leur profil
                                     // echo '<a href="' . admin_url('user-edit.php?user_id='. get_current_user_id()) .'">Gérer mon profil</a>';
                                     $user = new WP_User(get_current_user_id());      
                                     $userRole = $user->roles[0];
                                     $userData = get_user_meta(get_current_user_id());
                                     echo '<p>Bonjour <b>'.$user->display_name.'</b> !</p>';?>
-                                    <p><?php the_content();?></p>
-                                    <div class= 'bg-light-grey p-3'>
+                                    <p>Bienvenue dans votre espace personnel ! <br />
+                                    Cette zone vous permet d'accéder à la liste de tous les tutoriels d'utilisation concernant votre site internet (ou boutique en ligne).</p>
+                                    <p>Pour toute question supplémentaire, n'hésitez pas à nous contacter via notre formulaire de contact.<br />
+                                    Nous restons à votre disposition.</p>
+                                    <div class= 'bg-light-grey p-3 mt-5'>
                                     <p><b>L'URL de votre site est :</b> 
                                     <?php if(isset($userData['website_user'][0])):
                                         $userUrl = $userData['website_user'][0];
