@@ -6,7 +6,6 @@ get_template_part('template-parts/header/header', 'page'); ?>
     <section class='container-fluid' id='page-contact'>
         <div class='container'>
             <div class='row py-5'>
-                
                     <?php if (have_posts()) : ?>
                         <?php while (have_posts()) : the_post(); ?>
                             <div class='col-12 text-prune-dark'>

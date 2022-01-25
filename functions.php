@@ -48,7 +48,7 @@ function cpt_slider_init() {
         'rewrite'            => array( 'slug' => 'slider' ),
         'capability_type'    => 'post',
         'has_archive'        => true,
-        'menu_position'      => 30,
+        'menu_position'      => 25,
         'menu_icon'          => 'dashicons-star-filled',
         'supports'           => array( 'title', 'editor'),
     ); 
@@ -67,7 +67,7 @@ function cpt_presentation_init() {
         'rewrite'            => array( 'slug' => 'presentation' ),
         'capability_type'    => 'post',
         'has_archive'        => true,
-        'menu_position'      => 30,
+        'menu_position'      => 25,
         'menu_icon'          => 'dashicons-universal-access',
         'supports'           => array( 'title', 'editor' ),
     ); 
@@ -94,7 +94,7 @@ function cpt_services_init() {
         'rewrite'            => array( 'slug' => 'service' ),
         'capability_type'    => 'post',
         'has_archive'        => true,
-        'menu_position'      => 30,
+        'menu_position'      => 25,
         'menu_icon'          => 'dashicons-admin-tools',
         'supports'           => array( 'title', 'editor', 'thumbnail'),
     ); 
@@ -121,7 +121,7 @@ function cpt_portfolio_init() {
         'rewrite'            => array( 'slug' => 'realisation' ),
         'capability_type'    => 'post',
         'has_archive'        => true,
-        'menu_position'      => 30,
+        'menu_position'      => 25,
         'menu_icon'          => 'dashicons-art',
         'supports'           => array( 'title', 'editor', 'excerpt','thumbnail' ),
         'show_in_rest'      => true, 
@@ -179,7 +179,7 @@ function cpt_link_init() {
         'rewrite'            => array( 'slug' => 'liens' ),
         'capability_type'    => 'post',
         'has_archive'        => true,
-        'menu_position'      => 30,
+        'menu_position'      => 25,
         'menu_icon'          => 'dashicons-admin-links',
         'supports'           => array( 'title', 'editor'),
     ); 
@@ -235,7 +235,7 @@ function cpt_espace_membres_init() {
         'has_archive'        => true,
         'menu_position'      => 20,
         'menu_icon'          => 'dashicons-admin-network',
-        'supports'           => array( 'title', 'editor', 'thumbnail','excerpt', 'page-attributes','post-formats'),
+        'supports'           => array( 'title', 'editor', 'thumbnail','excerpt'),
         'show_in_rest'      => true, // pour activer guthenberg
         'hierarchical'      => true, // 
     ); 
@@ -265,7 +265,6 @@ function create_tutos_tax() {
         'rewrite'           => array( 'slug' => 'categorie-tutos' ),
         'show_in_rest'      => true,
         'rest_base'         => 'categories-tutos',
-
     );
     register_taxonomy('categorie-tutos',array('espace-membres'),$args);
 }

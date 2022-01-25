@@ -16,14 +16,13 @@ get_template_part('template-parts/header/header', 'page');?>
                                     <?php the_content();?>
                                 </div>
                                 <div class='col-12 font-weight-bold'>
-                                    <?php do_action('akaleya_pagination'); //uniquement pour les user connectés?>
+                                    <?php do_action('akaleya_pagination');?>
                                 </div>
                     <?php endwhile;
             endif; 
             wp_reset_postdata();
             wp_reset_query();?>
     </div>
-
 </div>
 </section>
 </body>

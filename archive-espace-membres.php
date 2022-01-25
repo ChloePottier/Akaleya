@@ -54,7 +54,7 @@ get_template_part('template-parts/header/header', 'page');?>
                                         <div class='card-body bg-prune-dark text-white-op8'>
                                             <h4 class='card-title font-family-bebas text-white'>Glossaire du web</h4>
                                             <p>Vous trouverez ici tous le lexique du web ! Gardez le sous la main lorque vous parcourez vos tutoriels, il vous sera utile.</p>
-                                            <a href='https://akaleya.fr/lexique/' class='btn-blog'>Lire la suite</a>
+                                            <a href='https://akaleya.fr/lexique/' class='btn-blog' target='_blank' rel='bookmark'>Lire la suite</a>
                                         </div>
                                     </div>
                                     <?php 
@@ -109,7 +109,14 @@ get_template_part('template-parts/header/header', 'page');?>
                                 $loop = new WP_Query($userPS);
                                 require 'template-parts/content/loop/loop-post.php'; 
                                 echo '</div>';
-                            endif;
+                            endif;?>
+                            <div class='row py-5'>
+                                <h3 class="col-12 text-prune">Les autres plateformes</h3><?php 
+                                $loop = new WP_Query( array('post_type'  => 'espace-membres', 'post_status' => 'publish','tax_query' => array(
+                                    array('taxonomy' => 'categorie-tutos','field' => 'slug','terms' => 'autres-plateformes',)
+                                ), 'order' => 'ASC','paged' => $paged));
+                                require 'template-parts/content/loop/loop-post.php';
+                                echo '</div>';
                             };?>
         </div>
     </section>
