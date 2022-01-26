@@ -1,12 +1,14 @@
 <?php /* Template Name: Modèle d'article Akaleya */
 get_template_part('template-parts/header/head', 'meta-google');
 get_template_part('template-parts/header/header', 'page');?>
-<section class='container-fluid content' id='private-tuto-<?php the_ID(); ?>'>
+<article class='container-fluid content' id='private-tuto-<?php the_ID(); ?>'>
 <div class='container'>
     <?php if (! is_user_logged_in()) :?>
         <div class='row'>
             <div class='col-12 col-md-6 mx-auto'>
-                <?php get_template_part('template-parts/content/content','private' );?>
+                <h1 class='text-prune-dark pt-0 pt-sm-5'>Article réservé aux abonnés</h1>
+                <?php get_template_part('template-parts/content/content','form-connection' );?>
+                <div class="bold py-5"><a href="https://akaleya.fr" class=""><i class="fas fa-arrow-left"></i> Retour accueil</a></div>
             </div>
         </div>
     <?php else :?>
@@ -36,7 +38,7 @@ get_template_part('template-parts/header/header', 'page');?>
         endif;?>
     </div>
 </div>
-</section>
+</article>
 </body>
 <?php get_footer(); ?>
 </footer>

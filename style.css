@@ -81,8 +81,8 @@ header{overflow: hidden;}
 .sticky { position: fixed; top: 0; width: 100%; z-index: 1500;}
 .dis-none{display:none;}
 .dis-block{display: block; }
-.menu-nav ul li a{padding-left: 1rem;}
-.menu-nav ul li a:hover{color: rgba(97,190,223)!important; text-decoration: none;}
+.menu-nav ul li a{padding-left: 1rem;white-space: nowrap;}
+.menu-nav ul li a:hover{color: rgba(97,190,223)!important; text-decoration: none; }
 #navigation{
     position: fixed;
     z-index: 1500;
@@ -217,7 +217,7 @@ input{padding: 1rem 0; height: 40px;}
     color: #5b133c;
     width: 100%;
     border: solid 1px #5b133c;
-    border-radius: 3px;
+    /* border-radius: 3px; */
     padding-left: 1rem;
     margin-bottom: 1rem;  }
 #page-contact [type='submit']{

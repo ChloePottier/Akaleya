@@ -1,7 +1,7 @@
 <?php /* Template Name: Modèle d'article Akaleya */
 get_template_part('template-parts/header/head', 'meta-google');
 get_template_part('template-parts/header/header', 'page');?>
-<section class='container-fluid content' id='post-<?php the_ID(); ?>'>
+<article class='container-fluid content' id='post-<?php the_ID(); ?>'>
 <div class='container'>
     <div class='row py-5'>
         <div class='col-12'>
@@ -28,7 +28,7 @@ get_template_part('template-parts/header/header', 'page');?>
             wp_reset_query();?>
     </div>
 </div>
-</section>
+</article>
 </body>
 <?php get_footer(); ?>
 </footer>

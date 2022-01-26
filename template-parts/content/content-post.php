@@ -13,8 +13,8 @@
                 else:
                     echo '<div class="col-12 text-prune-dark my-5">
                             <p class="font-size-24">Désolé, il n\'y a pas d\'article disponible pour le moment.</p>
-                            <p>Pour toute question, rendez-vous sur notre page <a href="'. get_home_url().'/#section-contact" class="bold">Contact</a>. Nous vous répondrons dans les plus bref délais.</p>
-                            <div class="bold pt-5"><a href="'. get_home_url().'" class=""><i class="fas fa-arrow-left"></i> Retour accueil</a></div>
+                            <p>Pour toute question, rendez-vous sur notre page <a href="https://akaleya.fr/#section-contact" class="bold">Contact</a>. Nous vous répondrons dans les plus bref délais.</p>
+                            <div class="bold pt-5"><a href="https://akaleya.fr" class=""><i class="fas fa-arrow-left"></i> Retour accueil</a></div>
                         </div>';                      
                 endif;?>  
             </div>                     

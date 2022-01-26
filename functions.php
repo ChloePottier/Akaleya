@@ -365,14 +365,14 @@ function add_custom_shortcode(){
 }
 
 //affichage menu
-function menu_top_user_logged_in(){
-    if(is_user_logged_in() &&  is_home()  OR is_front_page()):
-        return get_template_part('template-parts/navigation/navigation', 'items');
-    elseif(is_user_logged_in() &&  ! is_home()  OR is_front_page()):
-            return get_template_part('template-parts/navigation/navigation', 'items-private');
-    elseif(!is_user_logged_in()) :
-        return get_template_part('template-parts/navigation/navigation', 'items');
-    endif;
+// function menu_top_user_logged_in(){
+//     if(is_user_logged_in() &&  is_home()  OR is_front_page()):
+//         return get_template_part('template-parts/navigation/navigation', 'items');
+//     elseif(is_user_logged_in() &&  ! is_home()  OR is_front_page()):
+//             return get_template_part('template-parts/navigation/navigation', 'items-private');
+//     elseif(!is_user_logged_in()) :
+//         return get_template_part('template-parts/navigation/navigation', 'items');
+//     endif;
 }
 //pagination
 function post_pagination(){

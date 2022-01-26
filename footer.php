@@ -12,4 +12,6 @@
     </div>
     <?php wp_footer(); ?>
     <script src='<?php echo get_template_directory_uri(); ?>/assets/js/navigation/burger.js' async defer></script>
+    <script src='<?php echo get_template_directory_uri(); ?>/assets/js/navigation/nav-fixed.js' async defer></script>
+
 
