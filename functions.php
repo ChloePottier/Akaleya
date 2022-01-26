@@ -380,18 +380,18 @@ function post_pagination(){
         case 'post':?>
             <div class='d-none d-sm-flex justify-content-between'>
                 <div>
-                    <?php previous_post_link('%link', '&lsaquo; %title', true); ?>
+                    <?php next_post_link('%link', '&lsaquo; %title',true); ?>
                 </div>
                 <div>
-                    <?php next_post_link('%link', '%title &rsaquo;',true); ?>
+                    <?php previous_post_link('%link',  '%title &rsaquo;', true); ?>
                 </div>
             </div>
             <div class='d-flex d-sm-none justify-content-between'>
                 <div>
-                    <?php previous_post_link('%link', '&lsaquo; Précédent',true); ?>
+                    <?php next_post_link('%link', '&lsaquo; Précédent',true); ?>
                 </div>
                 <div>
-                    <?php next_post_link('%link', 'Suivant &rsaquo;',true); ?>
+                    <?php previous_post_link('%link', 'Suivant &rsaquo;',true); ?>
                 </div>
             </div><?php            
             break;
@@ -413,19 +413,21 @@ function post_pagination(){
                 </div><?php
             break;   
             case 'realisation':?>
-                <div class='d-none d-sm-flex justify-content-between'><div>
-                        <?php previous_post_link('%link', '&lsaquo; %title', true, ' ', 'type'); ?>
+                <div class='d-none d-sm-flex justify-content-between'>
+                    <div>
+                        <?php next_post_link('%link', '&lsaquo; %title',true, ' ', 'type'); ?>
                     </div>
                     <div>
-                        <?php next_post_link('%link', '%title &rsaquo;',true, ' ', 'type'); ?>
+                        <?php previous_post_link('%link', '%title &rsaquo;', true, ' ', 'type'); ?>
                     </div>
                 </div>
                 <div class='d-flex d-sm-none justify-content-between'>
                     <div>
-                        <?php previous_post_link('%link', '&lsaquo; Précédent',true, ' ', 'type'); ?>
+                        <?php next_post_link('%link', '&lsaquo; Précédent',true, ' ', 'type'); ?>
                     </div>
                     <div>
-                        <?php next_post_link('%link', 'Suivant &rsaquo;',true, ' ', 'type'); ?>
+                        <?php previous_post_link('%link', 'Suivant &rsaquo;',true, ' ', 'type'); ?>
+
                     </div>
                 </div><?php
             break;     

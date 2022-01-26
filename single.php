@@ -10,14 +10,18 @@ get_template_part('template-parts/header/header', 'page');?>
                 } ?>
         </div> 
         <?php if (have_posts()) :
-                    while (have_posts()) : the_post(); ?>
-                                <div class='col-12 pb-5' id='content-post'> 
-                                    <h1 class='text-prune-dark pt-0 pt-sm-5'><?php the_title(); ?></h1>
-                                    <?php the_content();?>
-                                </div>
-                                <div class='col-12 font-weight-bold'>
-                                    <?php do_action('akaleya_pagination');?>
-                                </div>
+                    while (have_posts()) : the_post();
+                        $urlRea = get_field('url_realisation'); ?>
+                        <div class='col-12 pb-5' id='content-post'> 
+                            <h1 class='text-prune-dark pt-0 pt-sm-5'><?php the_title(); ?></h1>
+                            <?php the_content();?>
+                            <?php if (!empty($urlRea)) : ?>
+                                <div><a class='btn-url font-family-bebas font-size-21' href='<?php the_field('url_realisation');?>' target='_blank'>Voir le site</a></div>
+                            <?php endif;?>
+                        </div>
+                        <div class='col-12 font-weight-bold'>
+                            <?php do_action('akaleya_pagination');?>
+                        </div>
                     <?php endwhile;
             endif; 
             wp_reset_postdata();

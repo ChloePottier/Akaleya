@@ -67,7 +67,7 @@ h3{font-size: 1.8rem;}
 .font-size-13{font-size: .8rem;}
 .text-underline{text-decoration: underline;}
 .line-height{line-height: 1.8rem;}
-.bold{font-weight: 600;}
+.bold, #login-form a{font-weight: 600;}
 .text-shadow{text-shadow: 5px 5px 5px black;}
 #all-posts .card img, #espace_membres .card img{width: 100%;}
 /* Menus */

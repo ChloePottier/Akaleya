@@ -19,6 +19,11 @@
                     "color": "#61bedf"
                 },
                 {
+                    "name": "Light Grey",
+                    "slug": "light-grey",
+                    "color": "#efefef"
+                },
+                {
                     "name": "Blanc",
                     "slug": "blanc",
                     "color": "#ffffff"

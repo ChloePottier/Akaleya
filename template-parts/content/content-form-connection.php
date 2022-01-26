@@ -1,4 +1,4 @@
-<p class='pb-5'>Pour visualiser cette page, merci de vous connecter.</p>
+<p class='py-5'>Pour visualiser cette page, merci de vous connecter.</p>
 <?php wp_login_form(array(
     'redirect'       => get_permalink(), // par défaut renvoie vers la page courante
     'label_username' => 'Identifiant',

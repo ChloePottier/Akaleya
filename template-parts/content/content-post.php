@@ -11,9 +11,11 @@
                 if(isset($loop->posts[0])):
                     require 'loop/loop-post.php';
                 else:
-                    echo '<div class="col-12 d-flex justify-content-center align-items-center my-5">
-                            <p class="text-prune font-size-24">Aucun article n\'est disponible pour le moment.</p>
-                        </div>';
+                    echo '<div class="col-12 text-prune-dark my-5">
+                            <p class="font-size-24">Désolé, il n\'y a pas d\'article disponible pour le moment.</p>
+                            <p>Pour toute question, rendez-vous sur notre page <a href="'. get_home_url().'/#section-contact" class="bold">Contact</a>. Nous vous répondrons dans les plus bref délais.</p>
+                            <div class="bold pt-5"><a href="'. get_home_url().'" class=""><i class="fas fa-arrow-left"></i> Retour accueil</a></div>
+                        </div>';                      
                 endif;?>  
             </div>                     
         </div>
