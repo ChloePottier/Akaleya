@@ -21,7 +21,7 @@
     </li> -->
     <?php if (! is_user_logged_in()) :?>
         <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'>
-        <a href='https://akaleya.fr/#section-contact' itemprop='item'>
+        <a href='https://akaleya.fr/contactez-nous/' itemprop='item'>
             <span itemprop='name'>Contact</span><meta itemprop='position' content='4'/>
         </a>
     </li>
@@ -37,7 +37,7 @@
         </a>
     </li>
     <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'>
-        <a href='https://akaleya.fr/#section-contact' itemprop='item'>
+        <a href='https://akaleya.fr/contactez-nous/' itemprop='item'>
             <span itemprop='name'>Contact</span><meta itemprop='position' content='6'/>
         </a>
     </li>

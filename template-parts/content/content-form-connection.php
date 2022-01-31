@@ -1,6 +1,6 @@
 <p class='py-5'>Pour visualiser cette page, merci de vous connecter.</p>
 <?php wp_login_form(array(
-    'redirect'       => get_permalink(), // par défaut renvoie vers la page courante
+    // par défaut renvoie vers la page courante
     'label_username' => 'Identifiant',
     'label_password' => 'Mot de passe',
     'label_remember' => 'Se souvenir de moi',

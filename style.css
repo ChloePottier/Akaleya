@@ -1,7 +1,7 @@
 /* Theme Name: Akaleya Espace Membres
 Author: Chloé Pottier
 Description: Thème Akaleya : graphisme et développement web. Création d'un espace membres
-Version: 1.4
+Version: 1.5
 Licence: 1.0
 License URI: https://github.com/Akaleya
 Text Domain: akaleya-espacemembres*/
@@ -25,14 +25,15 @@ figcaption{font-size: .8rem;font-style: italic;}
 .text-prune-dark,::placeholder,#all-posts h2{color: rgb(91,19,60);}
 .text-white,#navbarTop ul li a,#navigation ul li a,#copy-akaleya{ color: #fff!important;}
 .text-white-op8{color: rgba(255,255,255,.8);}
-.text-prune,#link-rs a:hover, .link:hover,.partage-reseaux-sociaux a:hover,#breadcrumbs a:hover{color: rgb(145,33,92)!important;}
+.text-prune,.partage-reseaux-sociaux a:hover,#breadcrumbs a:hover{color: rgb(145,33,92)!important;}
 #wt-cli-privacy-save-btn,.text-blue,#navbarTop ul li a:hover,#navigation ul li a:hover,#nav-portfolio li a,.service h3,#breadcrumbs,.partage-reseaux-sociaux a,
 #footer-menu-legalenotice li a,#copy-akaleya:hover,.services-link{ color: rgb(97,190,223)!important;}
-#link-rs a,.menu-nav ul li a,.link,.partagez,#breadcrumbs a{color: rgb(91,19,60)!important;}
-.bg-blue{background: rgb(97,190,223);}
+#link-rs a,.menu-nav ul li a,.link,.partagez,#breadcrumbs a,#page-contact [type='submit']:hover{color: rgb(91,19,60)!important;}
+#link-rs a:hover, .link:hover{color: rgb(97,190,223)!important;}
+.bg-blue,#page-contact [type='submit']:hover{background: rgb(97,190,223);}
 .bg-blue-light{background: rgb(162,218,234);}
 .bg-prune-light{background: rgb(163,116,148);}
-.bg-prune,#page-contact [type='submit']:hover{background: rgb(145,33,92);}
+.bg-prune{background: rgb(145,33,92);}
 .bg-light-grey{background: #efefef;}
 .bg-prune-dark,#wt-cli-privacy-save-btn{background-color: rgb(60,0,34);} 
 .bg-burger{background: url(https://akaleya.fr/wp-content/uploads/2021/01/bg-burger.svg) no-repeat center center; }
@@ -195,6 +196,7 @@ input{padding: 1rem 0; height: 40px;}
 .wp-block-contact-form-7-contact-form-selector{padding-bottom: 4rem;}
 .wpcf7 form.sent .wpcf7-response-output {border-color: #5b133c; color:#5b133c!important}
 .text-danger,.text-danger:hover{color:#e71600!important}
+/* SECTION contact accueil */
 #contact input[type='text'],#contact input[type='tel'],#contact input[type='email'],#contact textarea{
     background: rgba(255,255,255,.4);
     color: #5b133c;
@@ -204,25 +206,25 @@ input{padding: 1rem 0; height: 40px;}
     margin-bottom: 1rem;  }
 [type='submit'],.btn-retour{
     width: 100%;
-    background-color: #58133C; 
+    background-color: rgb(60,0,34); 
     color: rgba(97,190,223); 
     border: none; 
     font-family: 'BebasNeue',Arial, Helvetica, sans-serif;
     font-size: 1.5rem;
     padding: 0!important;
 }
-[type='submit']:hover,.btn-retour{ background: rgba(97,190,223); color: #58133C;}
-
+[type='submit']:hover,.btn-retour{ background: rgba(97,190,223); color: rgb(60,0,34);}
+/* PAGE CONTACT */
 #page-contact input[type='text'],#page-contact input[type='tel'],#page-contact input[type='email'],#page-contact textarea{
-    color: #5b133c;
+    color: rgb(60,0,34);
     width: 100%;
-    border: solid 1px #5b133c;
-    /* border-radius: 3px; */
-    padding-left: 1rem;
-    margin-bottom: 1rem;  }
+    border:none;
+    border-bottom: solid 1px rgb(60,0,34);
+    padding: 0 0 0 .5rem;
+    margin-bottom: .7rem;  }
 #page-contact [type='submit']{
     width: 100%;
-    background-color: #58133C; 
+    background-color: rgb(60,0,34); 
     color: #fff; 
     border: none; 
     font-family: 'BebasNeue',Arial, Helvetica, sans-serif;
@@ -236,8 +238,8 @@ textarea{height: 150px;}
 .grecaptcha-badge{visibility: hidden;}
 /* Les autres pages */
 #breadcrumbs{font-size: .8rem;}
-.btn-url{color:#fff; background: #58133C; padding: .3rem .5rem;}
-.btn-url:hover{color:#58133C; background: rgb(97,190,223); }
+.btn-url{color:#fff; background: rgb(60,0,34); padding: .3rem .5rem;}
+.btn-url:hover{color:rgb(60,0,34); background: rgb(97,190,223); }
 .partage-reseaux-sociaux a i{font-size: 1.5rem;}
 #login-form .login-username, #login-form .login-password{display: flex; flex-direction: column;}
 #login-form p{padding-bottom: 1rem;}
@@ -284,12 +286,15 @@ textarea{height: 150px;}
     .service img{width: 40px; height: auto;}
     /* .service h3{font-size: 1.5rem;} */
     .service .title{ height: 37px!important;   white-space: nowrap; overflow:hidden;}
+    #archive-portfolio h2{width: 30%;}
  }
 /* xl */
 @media only screen and  (min-width: 1024px) {
     .font-size-18{font-size: 1.3rem;}
     .service h3{font-size: 1.75rem!important;}
     .bg-graphiste-small{ background: url(https://akaleya.fr/wp-content/uploads/2021/05/graphiste-1900-2.webp) center no-repeat;}
+    #archive-portfolio h2{width: 25%;}
+
 }
 
 
