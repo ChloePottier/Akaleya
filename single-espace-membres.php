@@ -1,4 +1,5 @@
-<?php /* Template Name: Modèle d'article Akaleya */
+<?php /* Template Name: article Espace Membres
+ Akaleya */
 get_template_part('template-parts/header/head', 'meta-google');
 get_template_part('template-parts/header/header', 'page');?>
 <article class='container-fluid content' id='private-tuto-<?php the_ID(); ?>'>

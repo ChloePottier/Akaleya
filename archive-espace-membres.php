@@ -72,7 +72,7 @@ get_template_part('template-parts/header/header', 'page');?>
             $userPS = array('post_type'  => 'espace-membres', 'post_status' => 'publish','tax_query' => array(
                 array('taxonomy' => 'categorie-tutos','field' => 'slug','terms' => 'user_ps',)
             ), 'order' => 'ASC','paged' => $paged);
-            if($userRole == 'user_ps'):
+            if($userRole == 'user_wp'):
                 echo"<div class='row py-5'>";
                 echo '<h3 class="col-12 text-prune">WordPress</h3>';
                 $loop = new WP_Query( $userWP );
