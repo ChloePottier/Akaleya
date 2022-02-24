@@ -373,7 +373,7 @@ function add_custom_shortcode(){
 //     elseif(!is_user_logged_in()) :
 //         return get_template_part('template-parts/navigation/navigation', 'items');
 //     endif;
-}
+//}
 //pagination
 function post_pagination(){
     switch(get_post_type()){

@@ -5,7 +5,7 @@
         'field'    => 'slug',
         'terms'    => 'web',
     )),
-'orderby' => 'meta_value_num',  'meta_key'  => 'ordre_publication', 'order'   => 'ASC','posts_per_page' => '6',));
+'order'   => 'DESC','posts_per_page' => '6',));
 if ($loop->have_posts()) :
     while ($loop->have_posts()) : $loop->the_post(); 
     get_template_part('template-parts/content/content', 'portfolio-img');
