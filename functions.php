@@ -257,6 +257,8 @@ function create_tutos_tax() {
     ); 
     $args = array(
         'labels'            => $labels,
+        'public'            => true,
+        'sort'              => true,
         'hierarchical'      => true,
         'public'            => true,
         'show_ui'           => true,

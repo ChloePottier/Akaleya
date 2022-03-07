@@ -22,7 +22,8 @@ img{height: auto!important; vertical-align: middle;}
 figcaption{font-size: .8rem;font-style: italic;}
 .clear{clear: both;}
 /* Colors */
-.text-prune-dark,::placeholder,#all-posts h2{color: rgb(91,19,60);}
+.text-black,::placeholder{color:#000!important;}
+.text-prune-dark,#all-posts h2{color: rgb(91,19,60);}
 .text-white,#navbarTop ul li a,#navigation ul li a,#copy-akaleya{ color: #fff!important;}
 .text-white-op8{color: rgba(255,255,255,.8);}
 .text-prune,.partage-reseaux-sociaux a:hover,#breadcrumbs a:hover{color: rgb(145,33,92)!important;}
@@ -216,12 +217,14 @@ input{padding: 1rem 0; height: 40px;}
 [type='submit']:hover,.btn-retour{ background: rgba(97,190,223); color: rgb(60,0,34);}
 /* PAGE CONTACT */
 #page-contact input[type='text'],#page-contact input[type='tel'],#page-contact input[type='email'],#page-contact textarea{
+    background: #F3F3F3;
     color: rgb(60,0,34);
     width: 100%;
     border:none;
-    border-bottom: solid 1px rgb(60,0,34);
     padding: 0 0 0 .5rem;
-    margin-bottom: .7rem;  }
+    margin: .5rem 0;  
+
+}
 #page-contact [type='submit']{
     width: 100%;
     background-color: rgb(60,0,34); 
