@@ -1,5 +1,6 @@
 <?php 
 add_action('wp_enqueue_scripts', 'akaleya_styles_scripts');
+add_action( 'wp_enqueue_scripts', 'remove_block_library_css' );
 add_filter('upload_mimes', 'wpm_myme_types', 1, 1);
 add_theme_support( 'post-thumbnails' );
 add_action( 'after_setup_theme', 'themename_custom_logo_setup' );

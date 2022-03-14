@@ -11,6 +11,12 @@ function akaleya_styles_scripts(){
     wp_enqueue_style('print', get_template_directory_uri() .'/assets/print.css', array(), '1.0', 'print');
     wp_enqueue_style('style', get_stylesheet_uri());
 }
+function remove_block_library_css(){
+    if(is_front_page()):
+        wp_dequeue_style('wp-block-library');
+
+    endif;
+    }
 function wpm_myme_types($mime_types){
     $mime_types['svg'] = 'image/svg+xml'; //On autorise les .svg
     $mime_types['webp'] = 'image/webp'; //On autorise les .webp

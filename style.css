@@ -30,7 +30,8 @@ figcaption{font-size: .8rem;font-style: italic;}
 #wt-cli-privacy-save-btn,.text-blue,#navbarTop ul li a:hover,#navigation ul li a:hover,#nav-portfolio li a,.service h3,#breadcrumbs,.partage-reseaux-sociaux a,
 #footer-menu-legalenotice li a,#copy-akaleya:hover,.services-link{ color: rgb(97,190,223)!important;}
 #link-rs a,.menu-nav ul li a,.link,.partagez,#breadcrumbs a,#page-contact [type='submit']:hover{color: rgb(91,19,60)!important;}
-#link-rs a:hover, .link:hover{color: rgb(97,190,223)!important;}
+#link-rs-footer,#link-rs a:hover, .link:hover{color: rgb(97,190,223)!important;}
+.text-yellow, #footer-menu-legalenotice li a:hover,.services-link:hover,#link-rs-footer a:hover,.btn-blog:hover{ color: #FFDF30!important;}
 .bg-blue,#page-contact [type='submit']:hover{background: rgb(97,190,223);}
 .bg-blue-light{background: rgb(162,218,234);}
 .bg-prune-light{background: rgb(163,116,148);}
@@ -59,7 +60,7 @@ figcaption{font-size: .8rem;font-style: italic;}
 .font-family-bebas,h1,h2,h3,h4,h5{font-family: 'BebasNeue', Arial, Helvetica, sans-serif;}
 h1,h2,h3{margin: 0!important;}
 .font-size-58{font-size: 3.5rem;}
-.font-size-56,#content-post h1{font-size: 2.5rem;}
+.font-size-56,#content-post h1,#link-rs-footer a{font-size: 2.5rem;}
 h1,.font-size-36{font-size: 2.25rem;}
 .font-size-31{font-size: 1.93rem;}
 h3{font-size: 1.8rem;}
@@ -235,8 +236,9 @@ input{padding: 1rem 0; height: 40px;}
     padding: 0!important;
 }
 textarea{height: 150px;}
+#link-rs-footer a{margin-right: .7rem;}
 #link-rs a{margin-right: 1.5rem;}
-#link-rs a:last-child{margin-right: 0;}
+#link-rs a:last-child,#link-rs-footer a:last-child{margin-right: 0;}
 .envoi{ top: 26vh; width: 100vw;}
 .grecaptcha-badge{visibility: hidden;}
 /* Les autres pages */
@@ -251,13 +253,11 @@ textarea{height: 150px;}
 #login-form .login-remember label input{margin-right: .8rem;}
 #content-post .wp-block-image img{box-shadow: #cfcfcf 2px 2px 8px;}
 .wp-block-image .aligncenter{text-align: center;}
-/* FOOTER */
-.text-yellow, #footer-menu-legalenotice li a:hover,.services-link:hover,.btn-blog:hover{ color: #FFDF30!important;}
 .page-404{height: 90vh;}
 /* sm */
 @media only screen and (min-width: 576px){
     .bg-graphiste-small{ background: url(https://akaleya.fr/wp-content/uploads/2021/01/header-200-h.webp) left no-repeat;}
-    .font-size-56,#content-post h1{font-size: 3.5rem;}
+    .font-size-56, #content-post h1{font-size: 3.5rem;}
     .pb-6{padding-bottom: 0;}
     .border-bottom{border-bottom: solid 1px rgb(207, 207, 207)!important;}
     .bg-contact{background: linear-gradient( rgb(163,116,148) 58%, rgb(162,218,234) 42%);}
