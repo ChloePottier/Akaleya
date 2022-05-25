@@ -48,7 +48,7 @@ figcaption{font-size: .8rem;font-style: italic;}
 .bg-guitare{background: url(https://akaleya.fr/wp-content/uploads/2021/01/Chloe-pottier-guitare.webp) left bottom 1rem no-repeat;}
 .bg-cover{background-size: cover !important;}
 .responsive{width:100%; height: 100%; object-fit: cover;}
-/* Font */
+/* Text */
 @font-face {
     font-family: 'BebasNeue';
     src: url('font/BebasNeue-Regular.otf') format('otf'),
@@ -60,8 +60,8 @@ figcaption{font-size: .8rem;font-style: italic;}
 .font-family-bebas,h1,h2,h3,h4,h5{font-family: 'BebasNeue', Arial, Helvetica, sans-serif;}
 h1,h2,h3{margin: 0!important;}
 .font-size-58{font-size: 3.5rem;}
-.font-size-56,#content-post h1,#link-rs-footer a{font-size: 2.5rem;}
-h1,.font-size-36{font-size: 2.25rem;}
+.font-size-56,#content-post h1{font-size: 2.5rem;}
+h1,.font-size-36,#link-rs-footer a{font-size: 2.25rem;}
 .font-size-31{font-size: 1.93rem;}
 h3{font-size: 1.8rem;}
 .font-size-24{font-size: 1.5rem;}
@@ -73,6 +73,7 @@ h3{font-size: 1.8rem;}
 .bold, #login-form a{font-weight: 600;}
 .text-shadow{text-shadow: 5px 5px 5px black;}
 #all-posts .card img, #espace_membres .card img{width: 100%;}
+.text-align-center, #footer-menu-legalenotice{text-align: center;}
 /* Menus */
 header{overflow: hidden;}
 .fondu{ animation: 0.5s fondu linear;}
@@ -236,7 +237,7 @@ input{padding: 1rem 0; height: 40px;}
     padding: 0!important;
 }
 textarea{height: 150px;}
-#link-rs-footer a{margin-right: .7rem;}
+#link-rs-footer a{margin-right: 1rem;}
 #link-rs a{margin-right: 1.5rem;}
 #link-rs a:last-child,#link-rs-footer a:last-child{margin-right: 0;}
 .envoi{ top: 26vh; width: 100vw;}
@@ -283,6 +284,7 @@ textarea{height: 150px;}
     .service h3{font-size: 1.5rem!important;}
     #content-portfolio .card,#content-web .card, #content-print .card{height: 236px;}
     .responsive{height: auto!important;}
+    .#footer-menu-legalenotice{text-align: start;}
 }
 /* lg */
 @media  only screen and (min-width: 992px) { 
