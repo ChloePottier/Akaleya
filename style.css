@@ -151,7 +151,7 @@ li .separate-menu{background: #fff; height: 3px; display: inline-block; width: 1
 .service h3{ font-size: 1.5rem!important;}
 .service p {text-align: justify; line-height: 1.8rem;}
 /* PORTFOLIO */
- #portfolio .card{height:236px;}
+ #portfolio .card{height:auto;}
  .card{overflow: hidden; border: none; border-radius: 0!important;}
 .card__side {
 display: flex;
@@ -282,14 +282,12 @@ textarea{height: 150px;}
     .mt-7{margin-top: 5rem;}
     .service .title{height: 52px!important;  white-space: normal; overflow: visible;}
     .service h3{font-size: 1.5rem!important;}
-    #content-portfolio .card,#content-web .card, #content-print .card{height: 236px;}
     .responsive{height: auto!important;}
     .#footer-menu-legalenotice{text-align: start;}
 }
 /* lg */
 @media  only screen and (min-width: 992px) { 
     .service img{width: 40px; height: auto;}
-    /* .service h3{font-size: 1.5rem;} */
     .service .title{ height: 37px!important;   white-space: nowrap; overflow:hidden;}
     #archive-portfolio h2{width: 30%;}
  }
