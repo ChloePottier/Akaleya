@@ -1,4 +1,4 @@
-<?php $loop = new WP_Query(array('post_type' => 'service','orderby' => 'meta_value_num',  'meta_key'  => 'ordre_publication', 'order'   => 'ASC','posts_per_page' => '6',));
+<?php $loop = new WP_Query(array('post_type' => 'service', 'order'   => 'ASC','posts_per_page' => '6',));
 if ($loop->have_posts()) :
     while ($loop->have_posts()) : $loop->the_post(); ?>
         <div class="col-12 col-md-6 col-lg-4 service mt-3">
@@ -9,7 +9,8 @@ if ($loop->have_posts()) :
                 <?php endif; ?>
                 <h3 class="text-center mb-0"><?php the_title() ?></h3>
             </div>
-            <p><?php the_content(); ?></p>
+            <p> <?php the_field('resume_service'); ?></p>
+            <a href='<?php echo esc_url(get_permalink()); ?>'>En savoir plus...</a>
         </div>
 <?php endwhile;
     wp_reset_postdata();

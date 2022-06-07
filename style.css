@@ -23,7 +23,7 @@ figcaption{font-size: .8rem;font-style: italic;}
 .clear{clear: both;}
 /* Colors */
 .text-black,::placeholder{color:#000!important;}
-.text-prune-dark,#all-posts h2{color: rgb(91,19,60);}
+.text-prune-dark,#all-posts h2,h2{color: rgb(91,19,60)!important;}
 .text-white,#navbarTop ul li a,#navigation ul li a,#copy-akaleya{ color: #fff!important;}
 .text-white-op8{color: rgba(255,255,255,.8);}
 .text-prune,.partage-reseaux-sociaux a:hover,#breadcrumbs a:hover{color: rgb(145,33,92)!important;}
@@ -282,14 +282,12 @@ textarea{height: 150px;}
     .mt-7{margin-top: 5rem;}
     .service .title{height: 52px!important;  white-space: normal; overflow: visible;}
     .service h3{font-size: 1.5rem!important;}
-    /* #content-portfolio .card,#content-web .card, #content-print .card{height: 236px;} */
     .responsive{height: auto!important;}
-    .#footer-menu-legalenotice{text-align: start;}
+    #footer-menu-legalenotice{text-align: start;}
 }
 /* lg */
 @media  only screen and (min-width: 992px) { 
     .service img{width: 40px; height: auto;}
-    /* .service h3{font-size: 1.5rem;} */
     .service .title{ height: 37px!important;   white-space: nowrap; overflow:hidden;}
     #archive-portfolio h2{width: 30%;}
  }

@@ -27,7 +27,7 @@
         <div class='container'>
             <div class='row  d-flex justify-content-md-center justify-content-lg-start'>
                 <div class='col-12 text-center pb-3'>
-                    <h2 class=' pb-3 font-size-56'>Les services proposés</h2>
+                    <h2 class='text-white pb-3 font-size-56'>Les services proposés</h2>
                 </div>
                 <?php get_template_part('template-parts/content/content', 'services'); ?>
             </div>
@@ -40,3 +40,4 @@
 <scroll-page id='section-portfolio'>
   <?php get_template_part('template-parts/content/content', 'gallery'); ?>
 </scroll-page>
+
