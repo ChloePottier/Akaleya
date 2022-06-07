@@ -30,8 +30,9 @@ figcaption{font-size: .8rem;font-style: italic;}
 #wt-cli-privacy-save-btn,.text-blue,#navbarTop ul li a:hover,#navigation ul li a:hover,#nav-portfolio li a,.service h3,#breadcrumbs,.partage-reseaux-sociaux a,
 #footer-menu-legalenotice li a,#copy-akaleya:hover,.services-link{ color: rgb(97,190,223)!important;}
 #link-rs a,.menu-nav ul li a,.link,.partagez,#breadcrumbs a,#page-contact [type='submit']:hover{color: rgb(91,19,60)!important;}
-#link-rs-footer,#link-rs a:hover, .link:hover{color: rgb(97,190,223)!important;}
-.text-yellow, #footer-menu-legalenotice li a:hover,.services-link:hover,#link-rs-footer a:hover,.btn-blog:hover{ color: #FFDF30!important;}
+#link-rs-footer,#link-rs a:hover, .link:hover,.savoir-plus:hover{color: rgb(97,190,223)!important;}
+.text-yellow, #footer-menu-legalenotice li a:hover,.services-link:hover,#link-rs-footer a:hover,.btn-blog:hover,
+.savoir-plus{ color: #FFDF30!important;}
 .bg-blue,#page-contact [type='submit']:hover{background: rgb(97,190,223);}
 .bg-blue-light{background: rgb(162,218,234);}
 .bg-prune-light{background: rgb(163,116,148);}
@@ -60,8 +61,10 @@ figcaption{font-size: .8rem;font-style: italic;}
 .font-family-bebas,h1,h2,h3,h4,h5{font-family: 'BebasNeue', Arial, Helvetica, sans-serif;}
 h1,h2,h3{margin: 0!important;}
 .font-size-58{font-size: 3.5rem;}
-.font-size-56,#content-post h1{font-size: 2.5rem;}
-h1,.font-size-36,#link-rs-footer a{font-size: 2.25rem;}
+/* .font-size-56,#content-post h1{font-size: 2.5rem;}
+h1,.font-size-36,#link-rs-footer a{font-size: 2.25rem;} */
+#content-post h1{font-size: 2.5rem;}
+h1,#link-rs-footer a{font-size: 2.25rem;}
 .font-size-31{font-size: 1.93rem;}
 h3{font-size: 1.8rem;}
 .font-size-24{font-size: 1.5rem;}
@@ -147,9 +150,12 @@ li .separate-menu{background: #fff; height: 3px; display: inline-block; width: 1
 /* CONTENT */
 .content{min-height: 75vh;}
 /* SERVICES */
+.service{margin-bottom: 3rem;}
+.service:last-child{margin-bottom: 0;}
 .service .title{ height: 37px!important;   white-space: nowrap; overflow:hidden;}
 .service h3{ font-size: 1.5rem!important;}
 .service p {text-align: justify; line-height: 1.8rem;}
+.savoir-plus{border: solid 1px;border-radius: 5rem;padding: 0 2%;}
 /* PORTFOLIO */
  #portfolio .card{height:auto;}
  .card{overflow: hidden; border: none; border-radius: 0!important;}
@@ -259,6 +265,7 @@ textarea{height: 150px;}
 @media only screen and (min-width: 576px){
     .bg-graphiste-small{ background: url(https://akaleya.fr/wp-content/uploads/2021/01/header-200-h.webp) left no-repeat;}
     .font-size-56, #content-post h1{font-size: 3.5rem;}
+    .font-size-36{font-size: 2.25rem;}
     .pb-6{padding-bottom: 0;}
     .border-bottom{border-bottom: solid 1px rgb(207, 207, 207)!important;}
     .bg-contact{background: linear-gradient( rgb(163,116,148) 58%, rgb(162,218,234) 42%);}
@@ -287,6 +294,7 @@ textarea{height: 150px;}
 }
 /* lg */
 @media  only screen and (min-width: 992px) { 
+    .service{margin-bottom: 0;}
     .service img{width: 40px; height: auto;}
     .service .title{ height: 37px!important;   white-space: nowrap; overflow:hidden;}
     #archive-portfolio h2{width: 30%;}

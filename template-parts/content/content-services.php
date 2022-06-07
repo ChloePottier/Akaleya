@@ -10,7 +10,7 @@ if ($loop->have_posts()) :
                 <h3 class="text-center mb-0"><?php the_title() ?></h3>
             </div>
             <p> <?php the_field('resume_service'); ?></p>
-            <a href='<?php echo esc_url(get_permalink()); ?>'>En savoir plus...</a>
+            <a href='<?php echo esc_url(get_permalink());?>' class='savoir-plus font-size-24'>+</a>
         </div>
 <?php endwhile;
     wp_reset_postdata();
