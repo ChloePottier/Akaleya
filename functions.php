@@ -5,7 +5,6 @@ function akaleya_styles_scripts(){
     wp_enqueue_style('bootstrap', ''. get_template_directory_uri() .'/assets/bootstrap/bootstrap.min.css');
     wp_enqueue_style('font-awesome', get_template_directory_uri() .'/assets/font-awesome/css/all.css');
     wp_enqueue_script('jquery');
-    // wp_enqueue_script('popper',''.get_template_directory_uri().'/assets/js/popper.min.js', array('jquery'), 1, true);
     wp_enqueue_script( 'validator',''.get_template_directory_uri(). '/assets/js/validator.min.js' );
     wp_enqueue_script('bootstrap-js', ''.get_template_directory_uri() .'/assets/bootstrap/bootstrap.min.js', array('jquery', 'popper'), 1, true);
     wp_enqueue_style('print', get_template_directory_uri() .'/assets/print.css', array(), '1.0', 'print');
@@ -98,11 +97,13 @@ function cpt_services_init() {
         'public'             => true,
         'query_var'          => true,
         'rewrite'            => array( 'slug' => 'service' ),
-        'capability_type'    => 'post',
+        'capability_type'    => 'page',
         'has_archive'        => true,
         'menu_position'      => 25,
         'menu_icon'          => 'dashicons-admin-tools',
-        'supports'           => array( 'title', 'editor', 'thumbnail'),
+        'supports'           => array( 'title', 'editor', 'thumbnail','page-attributes'),
+        'show_in_rest'      => true, 
+        'hierarchical'       => true, 
     ); 
 register_post_type( 'service', $args );
 }     

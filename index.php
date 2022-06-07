@@ -1,7 +1,7 @@
 <?php /*Template Name: Akaleya Index*/
 get_template_part('template-parts/header/head', 'meta-google');
 get_template_part('template-parts/header/header', 'page'); ?>
-<section class='container-fluid content' id='index'>
+<section class='container-fluid content <?php the_taxonomies(); ?> ' id='index'>
     <div class='container'>
         <div class='row py-5'>
             <?php 
