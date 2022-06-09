@@ -1,7 +1,8 @@
 <?php $loop = new WP_Query(array('post_type' => 'service', 'order'   => 'ASC','posts_per_page' => '9',));
 if ($loop->have_posts()) :
     while ($loop->have_posts()) : $loop->the_post(); ?>
-        <div class='col-12 col-md-6 col-lg-4 service mt-3'>
+        <div class='col-12 col-md-6 col-lg-4 service mt-3 '>
+            <div class='bg-prune-dark card-body'>
             <div class='title d-flex flex-row align-items-center align-items-md-start align-items-lg-center justify-content-md-center mb-3'>                          
                 <?php $image = get_field('icone');
                 if( !empty( $image ) ): ?>
@@ -11,6 +12,7 @@ if ($loop->have_posts()) :
             </div>
             <p> <?php the_field('resume_service'); ?></p>
             <a href='<?php echo esc_url(get_permalink());?>' class='savoir-plus font-size-24'>+</a>
+            </div>
         </div>
 <?php endwhile;
     wp_reset_postdata();
