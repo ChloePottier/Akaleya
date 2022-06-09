@@ -31,6 +31,7 @@ add_filter( 'the_content', 'my_sharing_buttons');
 add_action( 'login_enqueue_scripts', 'my_login_logo' );
 add_filter( 'login_headerurl', 'my_login_logo_url' );
 add_filter( 'login_headertext', 'my_login_logo_url_title' );
+// add_action( 'widgets_init', 'akaleya_widgets_init');
 // espace membres
 add_filter( 'login_form_bottom', 'lien_mot_de_passe_perdu' );
 add_action( 'current_screen', 'redirect_non_authorized_user' );

@@ -8,14 +8,14 @@ get_template_part('template-parts/header/header', 'page');?>
         if (! is_user_logged_in()) {?>
             <div class='row'>
                 <div class='col-12 col-md-6 mx-auto'>
-                    <h1 class='text-prune-dark pt-0 pt-sm-5'>Espace membres</h1>
+                    <h1 class='pt-0 pt-sm-5'>Espace membres</h1>
                     <?php get_template_part('template-parts/content/content','form-connection' );?>
                 </div>
             </div>
         <?php } else {?>
             <div class='row'>
                 <div class='col-12'>
-                    <h1 class='text-prune-dark pt-5 pb-5'>Espace membres</h1>
+                    <h1 class='pt-5 pb-5'>Espace membres</h1>
                     <?php //pour le moment je choisis que mes clients ne peuvent pas modifier leur profil
                     // echo '<a href="' . admin_url('user-edit.php?user_id='. get_current_user_id()) .'">Gérer mon profil</a>';
                     $user = new WP_User(get_current_user_id());      

@@ -10,7 +10,7 @@
             <?php $loop = new WP_Query(array('post_type' => 'slider'));
             while ($loop->have_posts()) : $loop->the_post();?>
                 <div class='slider-items text-white text-center'>
-                    <h1 class=' text-shadow'><?php the_title(); ?></h1>
+                    <h1 class='text-white text-shadow'><?php the_title(); ?></h1>
                     <div class='slider-content mx-auto text-shadow'><?php the_content(); ?></div>
                 </div>
             <?php endwhile; ?>

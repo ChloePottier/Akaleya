@@ -10,7 +10,7 @@ get_template_part('template-parts/header/header', 'page'); ?>
                 } ?>
         </div> 
             <div class='col-12 pb-5'>
-                <h1 class='text-center font-size-56 text-prune-dark'>Quelques réalisations</h1>
+                <h1 class='text-center'>Quelques réalisations</h1>
             </div>
             <?php
             if (have_posts()) :

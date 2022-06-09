@@ -7,11 +7,12 @@ get_template_part('template-parts/header/header', 'page');?>
             <?php if (have_posts()) :
                     while (have_posts()) : the_post(); ?>
                     <div class='col-12 '>
-                        <h1 class='text-prune-dark pt-0 pt-sm-5'><?php the_title(); ?></h1>
+                        <h1 class='pt-0 pt-sm-5'><?php the_title(); ?></h1>
                         <?php the_content(); ?>
                         </div>
                 <?php endwhile;
-                endif; ?>                
+                endif; 
+                wp_reset_postdata();?>                
         </div>
     </div>
 </section>

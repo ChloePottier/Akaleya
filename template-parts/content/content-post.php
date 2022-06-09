@@ -3,7 +3,7 @@
         <div class='container pb-5'>
             <div class='row'>
                 <div class='col-12'>
-                    <h1 class='text-prune-dark pt-5'>Les articles du blog</h1>
+                    <h1 class='pt-5'>Les articles du blog</h1>
                 </div>
             </div>
             <div class='row pb-5'>

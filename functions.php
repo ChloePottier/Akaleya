@@ -77,7 +77,7 @@ function cpt_presentation_init() {
         'supports'           => array( 'title', 'editor' ),
     ); 
 register_post_type( 'presentation', $args );
-}    
+}   
 function cpt_services_init() {
     $labels = array(
         'name'                  => _x( 'Services', 'Post type general name', 'textdomain' ),
@@ -368,9 +368,36 @@ function add_custom_shortcode(){
             return 'https://mon-site.fr/admin';
         endif;
     }
+    function services_akaleya_archives($atts){
+            extract(shortcode_atts(array(
+                'type' => 'service',
+                'perpage' => 9
+            ), $atts));
+            $output = '';
+            $loop_services = new WP_Query(array('post_type' => 'service', 'order' => 'ASC','posts_per_page' => '9','post_parent'=> 0));
+            while ($loop_services->have_posts()) : $loop_services->the_post();
+                $output .= '<div class="col-12 col-md-6 col-lg-4 service mt-3"> <div class="title d-flex flex-row align-items-center align-items-md-start align-items-lg-center justify-content-md-center mb-3">';                          
+                $image = get_field('icone');
+                if( !empty( $image ) ):
+                    $output .= '<img src="'. esc_url($image['url']) .'" width="40" height="30" alt="'.  esc_attr($image['alt']) .'" class="mr-3"/>';
+                endif; 
+                $output .= '<h3 class="text-center mb-0">'.get_the_title().'</h3>';
+                $output .= '</div>';
+                $output .= '<p>'. get_field('resume_service').'</p>';
+                $output .= '<a href='. esc_url(get_permalink()).' class="savoir-plus font-size-24" title="en savoir plus...">+</a>' ;         
+                $output .= '<div class="clear"></div>';
+                $output .= '</div>';
+            endwhile;
+            wp_reset_query();
+            // $output .= '</div>';
+            
+            return $output;
+        
+    }
     add_shortcode( 'private-content', 'private_content' );
     add_shortcode( 'website_user', 'display_url_user' );
     add_shortcode( 'dashboard_user', 'display_dashboard_user' );
+    add_shortcode( 'services_block', 'services_akaleya_archives');
 }
 
 //affichage menu

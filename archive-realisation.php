@@ -7,8 +7,9 @@ get_template_part('template-parts/header/header', 'page'); ?>
     <div class='container py-5'>
         <div class='row '>
             <div class='col-12 pt-5 pb-3'>
-                <h1 class='text-center font-size-56 text-prune-dark'>Quelques réalisations</h1>
+                <h1 class='text-center'>Quelques réalisations</h1>
             </div>
+        </div>
             <div class='row mt-2' id='archives-web'>
                 <div class='col-12 mb-4'>
                     <h2 class='bg-prune-dark text-white pl-2 pt-1'>Les réalisations web</h2>
