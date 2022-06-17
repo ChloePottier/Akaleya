@@ -29,7 +29,10 @@
                 <div class='col-12 text-center pb-3'>
                     <h2 class='text-white pb-3 font-size-56'>Les services proposés</h2>
                 </div>
-                <?php get_template_part('template-parts/content/content', 'services'); ?>
+                <?php 
+                //  get_template_part('template-parts/content/content', 'services'); 
+               echo do_shortcode('[services_block]');
+                ?>
             </div>
         </div>
     </section>
@@ -41,3 +44,35 @@
   <?php get_template_part('template-parts/content/content', 'gallery'); ?>
 </scroll-page>
 
+<scroll-page id='section-contact'>
+    <div class='container mb-5'>
+        <div class='row bg-prune-medium text-white py-5 text-center'>
+            <h2 class='col-12 text-white mb-2'>Un projet graphique ou web ?</h2>
+            <p class='col-12 mb-3 text-blue'>
+                La réalisation de chaque nouveau projet passe par ces 4 étapes :
+            </p>
+            <div class='col-12 col-sm-6 col-lg-3 d-flex flex-column'>
+                <span class='contact-order mb-3'>1</span>
+                <p>Description du projet par mail</p>
+
+            </div>
+            <div class='col-12 col-sm-6 col-lg-3 d-flex flex-column'>
+                <span class='contact-order mb-3'>2</span>
+                <p>Discutons un peu de votre projet</p>
+
+            </div>
+            <div class='col-12 col-sm-6 col-lg-3 d-flex flex-column'>
+                <span class='contact-order mb-3'>3</span>
+                <p>Réalisation du devis sur-mesure</p>
+
+            </div>
+            <div class='col-12 col-sm-6 col-lg-3 d-flex flex-column'>
+                <span class='contact-order mb-3'>4</span>
+                <p>Maquettage et conception du projet</p>
+            </div>
+            <div class='col-12 pt-3'>
+                <a href='https://akaleya.fr/contactez-nous/' class='bouton btn-blue'>Contactez-nous</a>
+            </div>
+        </div>
+    </div>
+</scroll-page>

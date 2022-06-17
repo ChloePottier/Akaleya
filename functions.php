@@ -3,7 +3,8 @@ require 'hooks.php';
 // Chargement des styles et des scripts Bootstrap sur WordPress
 function akaleya_styles_scripts(){
     wp_enqueue_style('bootstrap', ''. get_template_directory_uri() .'/assets/bootstrap/bootstrap.min.css');
-    wp_enqueue_style('font-awesome', get_template_directory_uri() .'/assets/font-awesome/css/all.css');
+    wp_enqueue_style('font-awesome', get_template_directory_uri() .'/assets/fontawesome6/css/all.css');
+
     wp_enqueue_script('jquery');
     wp_enqueue_script( 'validator',''.get_template_directory_uri(). '/assets/js/validator.min.js' );
     wp_enqueue_script('bootstrap-js', ''.get_template_directory_uri() .'/assets/bootstrap/bootstrap.min.js', array('jquery', 'popper'), 1, true);
@@ -400,16 +401,6 @@ function add_custom_shortcode(){
     add_shortcode( 'services_block', 'services_akaleya_archives');
 }
 
-//affichage menu
-// function menu_top_user_logged_in(){
-//     if(is_user_logged_in() &&  is_home()  OR is_front_page()):
-//         return get_template_part('template-parts/navigation/navigation', 'items');
-//     elseif(is_user_logged_in() &&  ! is_home()  OR is_front_page()):
-//             return get_template_part('template-parts/navigation/navigation', 'items-private');
-//     elseif(!is_user_logged_in()) :
-//         return get_template_part('template-parts/navigation/navigation', 'items');
-//     endif;
-//}
 //pagination
 function post_pagination(){
     switch(get_post_type()){

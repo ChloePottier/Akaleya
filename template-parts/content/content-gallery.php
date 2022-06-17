@@ -8,7 +8,7 @@
                 <div class='col-12' id='nav-portfolio'>
                     <ul class='pl-0 mb-2 d-flex flex-row justify-content-center justify-content-md-end font-family-bebas font-size-21 pb-3 pb-lg-0'>
                         <li class='pr-3'><a class='nav-portfolio-btn active2' id='all-gallery'>tous</a></li>
-                        <li class='pr-3'><a class='nav-portfolio-btn' id='web-gallery'>web</a></li>
+                        <li class='pr-3'><a class='nav-portfolio-btn' id='web-gallery' >web</a></li>
                         <li><a class='nav-portfolio-btn' id='print-gallery'>graphisme</a></li>
                     </ul>
                 </div>

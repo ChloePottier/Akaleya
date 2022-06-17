@@ -3,9 +3,6 @@
 .htaccess
 .git
 screenshot.png
-# pages test à suppr quand terminé
-page-test.php
-page-testsauv.php
 favicon.ico
 Modification du site.txt
 recaptcha.php
@@ -13,6 +10,7 @@ uploads/
 images/
 assets/bootstrap/
 assets/font-awesome/
+assets/fontawesome6/
 assets/js/form-scripts.js
 assets/js/jquery-1.11.2.min.js
 assets/js/jquery-3.5.1.min.js
@@ -20,6 +18,7 @@ assets/js/popper.min.js
 assets/js/validator.min.js
 font/
 template-parts/header/head-meta-google.php
+template-parts/content/content-portfolio-img-copy.php
 
 # Node rules:
 ## Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
