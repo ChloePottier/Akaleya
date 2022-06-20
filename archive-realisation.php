@@ -12,7 +12,7 @@ get_template_part('template-parts/header/header', 'page'); ?>
         </div>
             <div class='row mt-2' id='archives-web'>
                 <div class='col-12 mb-4'>
-                    <h2 class='bg-prune-dark text-white pl-2 pt-1'>Les réalisations web</h2>
+                    <h2 class='bg-prune-dark text-white ps-2 pt-1'>Les réalisations web</h2>
                 </div>
                 <?php $loop = new WP_Query(array(
                     'post_type' => 'realisation',
@@ -35,7 +35,7 @@ get_template_part('template-parts/header/header', 'page'); ?>
             </div>
             <div class='row my-5' id='archives-print'>
                 <div class='col-12 mb-4 '>
-                    <h2 class='bg-prune-dark text-white pl-2 pt-1'>Les réalisations print</h2>
+                    <h2 class='bg-prune-dark text-white ps-2 pt-1'>Les réalisations print</h2>
                 </div>
                 <?php $loop = new WP_Query(array(
                     'post_type' => 'realisation',

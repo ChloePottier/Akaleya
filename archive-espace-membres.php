@@ -30,7 +30,7 @@ get_template_part('template-parts/header/header', 'page');?>
                     <p><b>L'URL de votre site est :</b> 
                     <?php if(isset($userData['website_user'][0])):
                         $userUrl = $userData['website_user'][0];
-                        echo "<a href='$userUrl' class='font-weight-bold' target='_blank' rel='noreferrer noopener'>$userUrl </a>";
+                        echo "<a href='$userUrl' class='fw-bold' target='_blank' rel='noreferrer noopener'>$userUrl </a>";
                     else:
                         echo "Vous n'avez pas encore de lien disponible.";
                     endif; ?>
@@ -38,7 +38,7 @@ get_template_part('template-parts/header/header', 'page');?>
                     <p><b>L'URL de l'administration est :</b>
                     <?php if(isset($userData['website_user'][0])):
                         $userDashboard = $userData['dashboard_user'][0];
-                        echo "<a href='$userDashboard' class='font-weight-bold' target='_blank' rel='noreferrer noopener'>$userDashboard</a>";
+                        echo "<a href='$userDashboard' class='fw-bold' target='_blank' rel='noreferrer noopener'>$userDashboard</a>";
                     else:
                         echo "Vous n'avez pas encore de lien disponible.";
                     endif; ?> 

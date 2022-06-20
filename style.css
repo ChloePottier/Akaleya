@@ -8,7 +8,7 @@ Text Domain: akaleya-espace-membres2*/
 .font-arial,body{font-family: Arial, Helvetica, sans-serif;}
 body{font-size: 100%!important;}
 body,html{scroll-behavior: smooth; margin-top: 0!important;}
-a:hover, ul li a:hover{text-decoration: none!important; cursor: pointer!important;}
+a, a:hover, ul li a:hover{text-decoration: none!important; cursor: pointer!important;}
 a{color: rgb(97,190,223);}
 a:hover{color: rgb(91,19,60);}
 .pt-9{padding-top: 9rem;}
@@ -25,7 +25,7 @@ figcaption{font-size: .8rem;font-style: italic;}
 .text-black,::placeholder{color:#000!important;}
 .text-prune-dark,h1,#all-posts h2,h2,.btn-blue{color: rgb(91,19,60)!important;}
 .text-white,#navbarTop ul li a,#navigation ul li a,#copy-akaleya{ color: #fff!important;}
-/* .text-white-op8{color: rgba(255,255,255,.8);} */
+.text-white-op8{color: rgba(255,255,255,.8);} 
 .text-prune,.partage-reseaux-sociaux a:hover,#breadcrumbs a:hover{color: rgb(145,33,92)!important;}
 #wt-cli-privacy-save-btn,.text-blue,#navbarTop ul li a:hover,#navigation ul li a:hover,#nav-portfolio li a,.service h3,#breadcrumbs,.partage-reseaux-sociaux a,
 #footer-menu-legalenotice li a,#copy-akaleya:hover,.services-link{ color: rgb(97,190,223)!important;}
@@ -78,6 +78,7 @@ h3{font-size: 1.8rem;}
 .text-shadow{text-shadow: 5px 5px 5px black;}
 #all-posts .card img, #espace_membres .card img{width: 100%;}
 .text-align-center, #footer-menu-legalenotice{text-align: center;}
+.padding-1rem,#all-services .card-body{padding: 1rem;}
 /* Menus */
 header{overflow: hidden;}
 .fondu{ animation: 0.5s fondu linear;}
@@ -159,7 +160,6 @@ li .separate-menu{background: #fff; height: 3px; display: inline-block; width: 1
 .savoir-plus{border: solid 1px;border-radius: 5rem;float: right;
     line-height: 13px;
     padding: 5px;}
-#all-services .card-body{padding-bottom: 3rem;}
 /* PORTFOLIO */
  #portfolio .card{height:auto;}
  .card{overflow: hidden; border: none; border-radius: 0!important;}

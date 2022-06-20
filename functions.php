@@ -2,12 +2,13 @@
 require 'hooks.php';
 // Chargement des styles et des scripts Bootstrap sur WordPress
 function akaleya_styles_scripts(){
-    wp_enqueue_style('bootstrap', ''. get_template_directory_uri() .'/assets/bootstrap/bootstrap.min.css');
+    wp_enqueue_style('bootstrap', ''. get_template_directory_uri() .'/assets/bootstrap-5.2/bootstrap.min.css');
+    // wp_enqueue_style('bootstrap', ''. get_template_directory_uri() .'/assets/bootstrap/bootstrap.min.css');
     wp_enqueue_style('font-awesome', get_template_directory_uri() .'/assets/fontawesome6/css/all.css');
-
     wp_enqueue_script('jquery');
     wp_enqueue_script( 'validator',''.get_template_directory_uri(). '/assets/js/validator.min.js' );
-    wp_enqueue_script('bootstrap-js', ''.get_template_directory_uri() .'/assets/bootstrap/bootstrap.min.js', array('jquery', 'popper'), 1, true);
+    wp_enqueue_script('bootstrap-js', ''.get_template_directory_uri() .'/assets/bootstrap-5.2/bootstrap.min.js', array('jquery', 'popper'), 1, true);
+    // wp_enqueue_script('bootstrap-js', ''.get_template_directory_uri() .'/assets/bootstrap/bootstrap.min.js', array('jquery', 'popper'), 1, true);
     wp_enqueue_style('print', get_template_directory_uri() .'/assets/print.css', array(), '1.0', 'print');
     wp_enqueue_style('style', get_stylesheet_uri());
 }
@@ -292,9 +293,9 @@ function my_sharing_buttons($content) {
         $email_share = esc_url( 'mailto:?subject='.$myCurrentTitle.'&BODY=Voici un article intéressant sur "'.$myCurrentTitle.'". En savoir plus : '.$myCurrentURL) ;
         // Ajout des bouton en bas des articles et des pages
         $content .= '<div class="partage-reseaux-sociaux  d-flex align-items-center justify-content-end">';
-        $content .= __('<span class="font-weight-bold mr-2 partagez">Partagez  : </span>');
-        $content .= '<a class="share-facebook mr-2" href="'.$facebookURL.'&t='.$myCurrentTitle.'" target="_blank" rel="noopener"><i class="fab fa-facebook-square"></i></a>';
-        $content .= '<a class="share-linkedin mr-2" href="'.$linkedInURL.'" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>';
+        $content .= __('<span class="font-weight-bold me-2 partagez">Partagez  : </span>');
+        $content .= '<a class="share-facebook me-2" href="'.$facebookURL.'&t='.$myCurrentTitle.'" target="_blank" rel="noopener"><i class="fab fa-facebook-square"></i></a>';
+        $content .= '<a class="share-linkedin me-2" href="'.$linkedInURL.'" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>';
         $content .= '<a class="share-email" href="'.$email_share.'" target="_blank" rel="noopener"><i class="fas fa-envelope"></i></a>';
         $content .= '</div>';
         }
@@ -381,7 +382,7 @@ function add_custom_shortcode(){
                 $output .= '<div class="col-12 col-md-6 col-lg-4 service mt-3 py-5 "><div class="bg-prune-dark card-body"> <div class="title d-flex flex-row align-items-center align-items-md-start align-items-lg-center justify-content-md-center mb-3">';                          
                 $image = get_field('icone');
                 if( !empty( $image ) ):
-                    $output .= '<img src="'. esc_url($image['url']) .'" width="40" height="30" alt="'.  esc_attr($image['alt']) .'" class="mr-3"/>';
+                    $output .= '<img src="'. esc_url($image['url']) .'" width="40" height="30" alt="'.  esc_attr($image['alt']) .'" class="me-3"/>';
                 endif; 
                 $output .= '<h3 class="text-center mb-0">'.get_the_title().'</h3>';
                 $output .= '</div>';
