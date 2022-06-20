@@ -4,7 +4,7 @@
         </a>
     </li> -->
     <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'>
-        <a href='http://localhost/service' itemprop='item'>
+        <a href='http://localhost/Akaleya/service' itemprop='item'>
             <span itemprop='name'>Services</span><meta itemprop='position' content='2'/>
         </a>
     </li>
@@ -56,7 +56,7 @@
         </a>
     </li>
     <?php endif; ?>
-
+<!-- 
 
 
     <nav>
@@ -65,4 +65,4 @@
                 <a href=""></a>
             </li>
         </ul>
-    </nav>
+    </nav> -->

@@ -22,16 +22,17 @@ function wpm_myme_types($mime_types){
     $mime_types['webp'] = 'image/webp'; //On autorise les .webp
     return $mime_types;
 }
-//Ajouter le logo
-function themename_custom_logo_setup() {
-    $defaults = array(
-    'height'      => 52,
-    'width'       => 200,
-    'flex-width'  => true,
-    'header-text' => array( 'site-title', 'site-description' )
-    );
-    add_theme_support( 'custom-logo', $defaults );
-   }
+
+function akaleya_theme_setup(){
+    add_theme_support( 'title-tag' );
+    add_theme_support( 'post-thumbnails' );
+    add_theme_support( 'custom-logo',array(
+            'height'      => 52,
+            'width'       => 200,
+            'flex-width'  => true,
+            'header-text' => array( 'site-title', 'site-description' ) 
+               ) );
+}
 //Custom post type
 function cpt_slider_init() {
     $labels = array(
@@ -377,7 +378,7 @@ function add_custom_shortcode(){
             $output = '';
             $loop_services = new WP_Query(array('post_type' => 'service', 'order' => 'ASC','posts_per_page' => '9','post_parent'=> 0));
             while ($loop_services->have_posts()) : $loop_services->the_post();
-                $output .= '<div class="col-12 col-md-6 col-lg-4 service mt-3"> <div class="title d-flex flex-row align-items-center align-items-md-start align-items-lg-center justify-content-md-center mb-3">';                          
+                $output .= '<div class="col-12 col-md-6 col-lg-4 service mt-3 py-5 "><div class="bg-prune-dark card-body"> <div class="title d-flex flex-row align-items-center align-items-md-start align-items-lg-center justify-content-md-center mb-3">';                          
                 $image = get_field('icone');
                 if( !empty( $image ) ):
                     $output .= '<img src="'. esc_url($image['url']) .'" width="40" height="30" alt="'.  esc_attr($image['alt']) .'" class="mr-3"/>';
@@ -387,7 +388,7 @@ function add_custom_shortcode(){
                 $output .= '<p>'. get_field('resume_service').'</p>';
                 $output .= '<a href='. esc_url(get_permalink()).' class="savoir-plus font-size-24" title="en savoir plus...">+</a>' ;         
                 $output .= '<div class="clear"></div>';
-                $output .= '</div>';
+                $output .= '</div></div>';
             endwhile;
             wp_reset_query();
             // $output .= '</div>';

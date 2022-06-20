@@ -50,6 +50,8 @@ figcaption{font-size: .8rem;font-style: italic;}
 .bg-guitare{background: url(https://akaleya.fr/wp-content/uploads/2021/01/Chloe-pottier-guitare.webp) left bottom 1rem no-repeat;}
 .bg-cover{background-size: cover !important;}
 .responsive{width:100%; height: 100%; object-fit: cover;}
+#content-portfolio a.card{width: 350px!important; height: 250px!important;}
+.img-link-galery img{width: 100%; object-fit: cover;}
 /* Text */
 @font-face {
     font-family: 'BebasNeue';

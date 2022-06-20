@@ -29,10 +29,7 @@
                 <div class='col-12 text-center pb-3'>
                     <h2 class='text-white pb-3 font-size-56'>Les services proposés</h2>
                 </div>
-                <?php 
-                //  get_template_part('template-parts/content/content', 'services'); 
-               echo do_shortcode('[services_block]');
-                ?>
+                <?php echo do_shortcode('[services_block]'); ?>
             </div>
         </div>
     </section>

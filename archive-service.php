@@ -7,7 +7,7 @@ get_template_part('template-parts/header/header', 'page'); ?>
             <h1 class='col-12'>Les services proposés</h1>
         </div>
         <div class='row py-3 mb-5 text-white'>
-            <?php get_template_part('template-parts/content/content' , 'services') ?>
+            <?php echo do_shortcode('[services_block]' );?>
         </div>
     </div>
 </section>
