@@ -4,12 +4,12 @@
         </a>
     </li> -->
     <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'>
-        <a href='http://localhost/Akaleya/service' itemprop='item'>
+        <a href='http://akaleya.fr/service' itemprop='item'>
             <span itemprop='name'>Services</span><meta itemprop='position' content='2'/>
         </a>
     </li>
     <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'>
-        <a href='https://akaleya.fr/#section-portfolio' itemprop='item'>
+        <a href='https://akaleya.fr/realisation itemprop='item'>
             <span itemprop='name'>Réalisations</span><meta itemprop='position' content='3'/>
         </a>
     </li>
@@ -32,7 +32,7 @@
     </li>
     <?php else: ?>
     <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'>
-        <a href='https://akaleya.fr//espace-membres' class='text-prune-dark' itemprop='item'>
+        <a href='https://akaleya.fr/espace-membres' class='text-prune-dark' itemprop='item'>
             <span itemprop='name'>Mon espace</span><meta itemprop='position' content='5'/>
         </a>
     </li>

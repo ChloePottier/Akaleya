@@ -3,12 +3,10 @@ require 'hooks.php';
 // Chargement des styles et des scripts Bootstrap sur WordPress
 function akaleya_styles_scripts(){
     wp_enqueue_style('bootstrap', ''. get_template_directory_uri() .'/assets/bootstrap-5.2/bootstrap.min.css');
-    // wp_enqueue_style('bootstrap', ''. get_template_directory_uri() .'/assets/bootstrap/bootstrap.min.css');
     wp_enqueue_style('font-awesome', get_template_directory_uri() .'/assets/fontawesome6/css/all.css');
     wp_enqueue_script('jquery');
     wp_enqueue_script( 'validator',''.get_template_directory_uri(). '/assets/js/validator.min.js' );
     wp_enqueue_script('bootstrap-js', ''.get_template_directory_uri() .'/assets/bootstrap-5.2/bootstrap.min.js', array('jquery', 'popper'), 1, true);
-    // wp_enqueue_script('bootstrap-js', ''.get_template_directory_uri() .'/assets/bootstrap/bootstrap.min.js', array('jquery', 'popper'), 1, true);
     wp_enqueue_style('print', get_template_directory_uri() .'/assets/print.css', array(), '1.0', 'print');
     wp_enqueue_style('style', get_stylesheet_uri());
 }
@@ -28,11 +26,10 @@ function akaleya_theme_setup(){
     add_theme_support( 'title-tag' );
     add_theme_support( 'post-thumbnails' );
     add_theme_support( 'custom-logo',array(
-            'height'      => 52,
-            'width'       => 200,
-            'flex-width'  => true,
-            'header-text' => array( 'site-title', 'site-description' ) 
-               ) );
+        'height'      => 52,
+        'width'       => 200,
+        'flex-width'  => true,
+    ) );
 }
 //Custom post type
 function cpt_slider_init() {
@@ -379,8 +376,9 @@ function add_custom_shortcode(){
             $output = '';
             $loop_services = new WP_Query(array('post_type' => 'service', 'order' => 'ASC','posts_per_page' => '9','post_parent'=> 0));
             while ($loop_services->have_posts()) : $loop_services->the_post();
-                $output .= '<div class="col-12 col-md-6 col-lg-4 service mt-3 py-5 "><div class="bg-prune-dark card-body"> <div class="title d-flex flex-row align-items-center align-items-md-start align-items-lg-center justify-content-md-center mb-3">';                          
-                $image = get_field('icone');
+            $output .= '<div class="col-12 col-md-6 col-lg-4 service py-5 px-md-4 px-xl-5">
+            <div class="bg-prune-dark card-body"> <div class="title d-flex flex-row align-items-center align-items-md-start align-items-lg-center justify-content-md-center mb-3">';                          
+            $image = get_field('icone');
                 if( !empty( $image ) ):
                     $output .= '<img src="'. esc_url($image['url']) .'" width="40" height="30" alt="'.  esc_attr($image['alt']) .'" class="me-3"/>';
                 endif; 
@@ -391,18 +389,14 @@ function add_custom_shortcode(){
                 $output .= '<div class="clear"></div>';
                 $output .= '</div></div>';
             endwhile;
-            wp_reset_query();
-            // $output .= '</div>';
-            
-            return $output;
-        
+            wp_reset_query();          
+            return $output;        
     }
     add_shortcode( 'private-content', 'private_content' );
     add_shortcode( 'website_user', 'display_url_user' );
     add_shortcode( 'dashboard_user', 'display_dashboard_user' );
     add_shortcode( 'services_block', 'services_akaleya_archives');
 }
-
 //pagination
 function post_pagination(){
     switch(get_post_type()){
@@ -459,8 +453,7 @@ function post_pagination(){
 
                     </div>
                 </div><?php
-            break;     
-
+            break;    
     }
 }
 //ajout champs dans profil utilisateur
@@ -488,6 +481,3 @@ function save_extra_user_profile_fields( $user_id ) {
 	update_user_meta( $user_id, 'website_user', $_POST['website_user'] );
     update_user_meta( $user_id, 'dashboard_user', $_POST['dashboard_user'] );	
 }
-
-
-

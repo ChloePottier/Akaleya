@@ -5,7 +5,7 @@ jQuery(function($){
     var contentPortfolio = $('#content-portfolio');
     var contentPrint = $('#content-print');
     var contentWeb = $('#content-web');
-        $(webGalleryNav).on('click', function(event){
+        $(webGalleryNav).on('click', function(event){          
             contentWeb.addClass('display-flex2');
             contentWeb.removeClass('display-none');
             webGalleryNav.addClass('active2');;

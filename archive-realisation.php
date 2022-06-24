@@ -2,7 +2,6 @@
 
 <?php get_template_part('template-parts/header/head', 'meta-google');
 get_template_part('template-parts/header/header', 'page'); ?>
-
 <section id='archive-portfolio' class='container-fluid'>
     <div class='container py-5'>
         <div class='row '>
@@ -25,7 +24,7 @@ get_template_part('template-parts/header/header', 'page'); ?>
                     'orderby' => 'meta_value_num',  'meta_key'  => 'ordre_publication', 'order'   => 'ASC',
                 ));
                 if ($loop->have_posts()) :
-                    while ($loop->have_posts()) : $loop->the_post();
+                    while ($loop->have_posts()) : $loop->the_post()
                         get_template_part('template-parts/content/content', 'portfolio-img');
                     endwhile;
                     wp_reset_postdata();

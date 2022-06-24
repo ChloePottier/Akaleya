@@ -22,11 +22,11 @@ get_template_part('template-parts/header/header', 'page');?>
                     $userRole = $user->roles[0];
                     $userData = get_user_meta(get_current_user_id());
                     echo '<p>Bonjour <b>'.$user->display_name.'</b> !</p>';?>
-                    <p>Bienvenue dans votre espace personnel ! <br />
-                    Cette zone vous permet d'accéder à la liste de tous les tutoriels d'utilisation concernant votre site internet (ou boutique en ligne).</p>
-                    <p>Pour toute question supplémentaire, n'hésitez pas à nous contacter via notre formulaire de contact.<br />
+                    <p class='text-justify'>Bienvenue dans <b>votre espace personnel</b> ! <br />
+                    Cette zone vous permet d'accéder à la liste de tous <b>les tutoriels d'utilisation</b> concernant votre site internet (ou boutique en ligne).</p>
+                    <p class='text-justify'><b>Pour toutes questions</b> supplémentaires, n'hésitez pas à nous contacter via <b><a href ='https://akaleya.fr/contactez-nous/'>notre formulaire de contact</a></b>.<br />
                     Nous restons à votre disposition.</p>
-                    <div class= 'bg-light-grey p-3 mt-5'>
+                    <div class= 'bg-light-grey p-3 mt-5 block-75'>
                     <p><b>L'URL de votre site est :</b> 
                     <?php if(isset($userData['website_user'][0])):
                         $userUrl = $userData['website_user'][0];
