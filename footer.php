@@ -14,11 +14,11 @@
                     wp_reset_query(); ?>
                 </div>
             </div>
-            <div class='col-12 col-md-4 text-blue font-size-13 mb-3 mb-lg-0'><!--Menu pages légales-->
+            <div class='col-12 col-md-4 text-blue font-size-13 mb-3 mb-lg-0 bold'><!--Menu pages légales-->
                 <?php include 'template-parts/navigation/navigation-footer-legalnotice.php';?>
             </div>
             <div class='col-12 col-md-4 text-center text-white font-size-13' id='copyrightinfo' >
-            <p class='mb-0 pb-0'>Site éco-conçus par <a href='https://akaleya.fr' class='font-weight-bold' id='copy-akaleya' title='Akaleya, Web & Print'>Akaleya</a> - Copyright © 2021</p>
+            <p class='mb-0 pb-0'>Site éco-conçus par <a href='https://akaleya.fr' class='fw-bold' id='copy-akaleya' title='Akaleya, Web & Print'>Akaleya</a> - Copyright © 2021</p>
             <p>Petite Montage - Jura - Ain - Saône et Loire</p>
             </div>               
         </div>

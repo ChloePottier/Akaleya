@@ -22,7 +22,7 @@
                 </div>
                 <div class='col d-flex justify-content-end' id='menu-page'>
                     <nav class='menu-nav text-right d-none d-lg-flex' >
-                        <ul class='  d-flex justify-content-end font-family-bebas font-size-21 align-items-center mb-0 my-3' itemscope itemtype='https://schema.org/BreadcrumbList'>
+                        <ul class='  d-flex justify-content-end font-family-bebas font-size-21 align-items-center mb-0' itemscope itemtype='https://schema.org/BreadcrumbList'>
                             <?php get_template_part('template-parts/navigation/navigation', 'items');?>                            
                         </ul>
                     </nav>
@@ -31,7 +31,7 @@
         </div>
         <?php  get_template_part('template-parts/navigation/navigation','burger');?>
     </div>
-    <div class='container-fluid nav-top bg-white dis-none' id='navbar'>
+    <div class='container-fluid nav-top bg-white dis-none py-2' id='navbar'>
         <?php  get_template_part('template-parts/navigation/navigation', 'top'); ?>
     </div>
 </header>

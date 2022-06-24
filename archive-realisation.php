@@ -11,7 +11,7 @@ get_template_part('template-parts/header/header', 'page'); ?>
         </div>
             <div class='row mt-2' id='archives-web'>
                 <div class='col-12 mb-4'>
-                    <h2 class='bg-prune-dark text-white ps-2 pt-1'>Les réalisations web</h2>
+                    <h2 class='d-inline bg-prune-dark text-white px-2 pt-1'>Les réalisations web</h2>
                 </div>
                 <?php $loop = new WP_Query(array(
                     'post_type' => 'realisation',
@@ -24,7 +24,7 @@ get_template_part('template-parts/header/header', 'page'); ?>
                     'orderby' => 'meta_value_num',  'meta_key'  => 'ordre_publication', 'order'   => 'ASC',
                 ));
                 if ($loop->have_posts()) :
-                    while ($loop->have_posts()) : $loop->the_post()
+                    while ($loop->have_posts()) : $loop->the_post();
                         get_template_part('template-parts/content/content', 'portfolio-img');
                     endwhile;
                     wp_reset_postdata();
@@ -34,7 +34,7 @@ get_template_part('template-parts/header/header', 'page'); ?>
             </div>
             <div class='row my-5' id='archives-print'>
                 <div class='col-12 mb-4 '>
-                    <h2 class='bg-prune-dark text-white ps-2 pt-1'>Les réalisations print</h2>
+                    <h2 class='d-inline  bg-prune-dark text-white px-2 pt-1'>Les réalisations print</h2>
                 </div>
                 <?php $loop = new WP_Query(array(
                     'post_type' => 'realisation',

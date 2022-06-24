@@ -290,7 +290,7 @@ function my_sharing_buttons($content) {
         $email_share = esc_url( 'mailto:?subject='.$myCurrentTitle.'&BODY=Voici un article intéressant sur "'.$myCurrentTitle.'". En savoir plus : '.$myCurrentURL) ;
         // Ajout des bouton en bas des articles et des pages
         $content .= '<div class="partage-reseaux-sociaux  d-flex align-items-center justify-content-end">';
-        $content .= __('<span class="font-weight-bold me-2 partagez">Partagez  : </span>');
+        $content .= __('<span class="fw-bold me-2 partagez">Partagez  : </span>');
         $content .= '<a class="share-facebook me-2" href="'.$facebookURL.'&t='.$myCurrentTitle.'" target="_blank" rel="noopener"><i class="fab fa-facebook-square"></i></a>';
         $content .= '<a class="share-linkedin me-2" href="'.$linkedInURL.'" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>';
         $content .= '<a class="share-email" href="'.$email_share.'" target="_blank" rel="noopener"><i class="fas fa-envelope"></i></a>';

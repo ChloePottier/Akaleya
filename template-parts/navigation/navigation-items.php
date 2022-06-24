@@ -1,15 +1,10 @@
-    <!-- <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'>
-        <a href='https://akaleya.fr/#section-presentation' itemprop='item' >
-            <span itemprop='name'>Présentation</span><meta itemprop='position' content='1'/>
-        </a>
-    </li> -->
     <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'>
         <a href='http://akaleya.fr/service' itemprop='item'>
             <span itemprop='name'>Services</span><meta itemprop='position' content='2'/>
         </a>
     </li>
     <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'>
-        <a href='https://akaleya.fr/realisation itemprop='item'>
+        <a href='https://akaleya.fr/realisation' itemprop='item'>
             <span itemprop='name'>Réalisations</span><meta itemprop='position' content='3'/>
         </a>
     </li>

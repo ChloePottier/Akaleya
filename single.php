@@ -19,7 +19,7 @@ get_template_part('template-parts/header/header', 'page');?>
                                 <div><a class='bouton btn-url font-family-bebas font-size-21' href='<?php the_field('url_realisation');?>' target='_blank'>Voir le site</a></div>
                             <?php endif;?>
                         </div>
-                        <div class='col-12 font-weight-bold'>
+                        <div class='col-12 fw-bold'>
                             <?php do_action('akaleya_pagination');?>
                         </div>
                     <?php endwhile;
