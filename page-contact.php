@@ -1,6 +1,6 @@
 <?php /* Template Name: Page Contact Akaleya */ ?>
 <?php
-get_template_part('template-parts/header/head', 'meta-google');
+get_template_part('template-parts/header/head', 'meta');
 get_template_part('template-parts/header/header', 'page'); ?>
 <section class='container-fluid' id='page-contact'>
     <div class='container'>

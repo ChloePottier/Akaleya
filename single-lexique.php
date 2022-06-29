@@ -1,6 +1,6 @@
 <?php /* Template Name: Page Single Lexique Akaleya */ ?>
 <?php
-get_template_part('template-parts/header/head', 'meta-google');
+get_template_part('template-parts/header/head', 'meta');
 get_template_part('template-parts/header/header', 'page');
 if (have_posts()) :
     while (have_posts()) : the_post();

@@ -1,5 +1,5 @@
 <?php /* Template Name: Modèle des archives Espace Membres Akaleya */ 
-get_template_part('template-parts/header/head', 'meta-google');
+get_template_part('template-parts/header/head', 'meta');
 get_template_part('template-parts/header/header', 'page');?>
 <scroll-page id='espace_membres'>
     <section class='container-fluid content' id='private_zone'>

@@ -1,6 +1,6 @@
 <?php /* Template Name: Page 404 Akaleya */ ?>
 
-<?php get_template_part('template-parts/header/head', 'meta-google');
+<?php get_template_part('template-parts/header/head', 'meta');
 get_template_part('template-parts/header/header', 'page');?>
     <section class='container-fluid page-404' id='404'>
         <div class='container h-100'>

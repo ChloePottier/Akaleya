@@ -1,5 +1,5 @@
 <?php /*Template Name: Akaleya Archives Service*/
-get_template_part('template-parts/header/head', 'meta-google');
+get_template_part('template-parts/header/head', 'meta');
 get_template_part('template-parts/header/header', 'page'); ?>
 <section class='container-fluid content' id='all-services'>
     <div class='container'>

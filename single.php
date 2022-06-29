@@ -1,5 +1,5 @@
 <?php /* Template Name: Modèle d'article Akaleya */
-get_template_part('template-parts/header/head', 'meta-google');
+get_template_part('template-parts/header/head', 'meta');
 get_template_part('template-parts/header/header', 'page');?>
 <article class='container-fluid content' id='post-<?php the_ID(); ?>'>
 <div class='container'>
