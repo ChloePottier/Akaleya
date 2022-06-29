@@ -66,7 +66,7 @@ figcaption{font-size: .8rem;font-style: italic;}
         url('font/BebasNeue-Regular.ttf') format('ttf');
         font-display: swap;
     }
-.font-family-bebas,h1,h2,h3,h4,h5,#page-contact [type='submit'],.bouton{font-family: 'BebasNeue', Arial, Helvetica, sans-serif;}
+.font-family-bebas,h1,h2,h3,h4,h5,[type='submit'],.bouton,.button{font-family: 'BebasNeue', Arial, Helvetica, sans-serif;}
 h1,h2,h3{margin: 0!important;}
 .font-size-58{font-size: 3.5rem;}
 h1{font-size: 2.5rem;}
@@ -85,7 +85,9 @@ h3{font-size: 1.8rem;}
 .text-shadow{text-shadow: 5px 5px 5px black;}
 #all-posts .card img, #espace_membres .card img{width: 100%;}
 .text-align-center, #footer-menu-legalenotice{text-align: center;}
-.padding-1rem,#all-services .card-body{padding: 1rem;}
+.padding-1rem{padding: 1rem;}
+#all-services .card-body{padding: 1.5rem;}
+#section-services .card-body{padding: 0 3rem!important;}
 /* Menus */
 header{overflow: hidden;}
 .fondu{ animation: 0.5s fondu linear;}
@@ -105,11 +107,8 @@ header{overflow: hidden;}
     right: -50%;
 }
 #header_small #navigation{top: -5vh;}
-#navigation ul{
-    /* padding-right: 35%; */
-    margin-left: 40%;
-}
-.burger {
+#navigation ul{margin-left: 40%;}
+.burger{
     margin: 0;
     position: absolute;
     top: 3%;
@@ -173,35 +172,35 @@ li .separate-menu{background: #fff; height: 3px; display: inline-block; width: 1
 .portfolio-gallery-container{height: auto; max-width: 370px;}
 .card{overflow: hidden; border: none; border-radius: 0!important;}
 .card__side {
-display: flex;
-flex-direction: column;
-height: 100%;
--webkit-transition: all .8s ease;
-transition: all .8s ease;
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
--webkit-backface-visibility: hidden;
-backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    -webkit-transition: all .8s ease;
+    transition: all .8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 .card__side--front {
-display: inline-block;
-position: relative;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-z-index: 1;
+    display: inline-block;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
 }
 .card__side--back {
-justify-content: center;
-align-items: center;
-transform: translateX(400px);z-index: 100;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(400px);z-index: 100;
 }
 .card:hover .card__side--back {
-transform: translateX(0px);
-transition-timing-function : ease-out;
-background-color: #58133C;
+    transform: translateX(0px);
+    transition-timing-function : ease-out;
+    background-color: #58133C;
 }
 #nav-portfolio li a{cursor: pointer!important;}
 #nav-portfolio li a:hover,#nav-portfolio li .active2{color: rgb(60,0,34)!important;}
@@ -227,14 +226,8 @@ input{padding: 1rem 0; height: 40px;}
     padding: 0 0 0 .5rem;
     margin: .5rem 0;
 }
-#page-contact [type='submit']{
-    width: 100%;
-    background-color: rgb(60,0,34); 
-    color: #fff; 
-    border: none; 
-    font-size: 1.5rem;
-    padding: 0!important;
-}
+[type='submit']{width: 100%;border: none;font-size: 1.5rem;padding: 0!important;}
+input.user-login, input.user-pass{padding-left: 1rem;}
 textarea{height: 150px;}
 #link-rs-footer a{margin-right: 1rem;}
 #link-rs a{margin-right: 1.5rem;}
@@ -244,8 +237,8 @@ textarea{height: 150px;}
 /* Les autres pages */
 #breadcrumbs{font-size: .8rem;}
 .bouton{border: none; font-size: 1.5rem;padding: .3rem .5rem;}
-.btn-url{color:#fff; background: rgb(60,0,34);}
-.btn-url:hover{color:rgb(60,0,34); background: rgb(97,190,223); }
+.btn-url,[type='submit']{color: #fff; background: rgb(60,0,34);}
+.btn-url:hover,[type='submit']:hover{color:rgb(60,0,34); background: rgb(97,190,223); }
 .partage-reseaux-sociaux a i{font-size: 1.5rem;}
 #login-form .login-username, #login-form .login-password{display: flex; flex-direction: column;}
 #login-form p{padding-bottom: 1rem;}
@@ -303,6 +296,7 @@ textarea{height: 150px;}
     .font-size-18{font-size: 1.3rem;}
     .bg-graphiste-small{ background: url(https://akaleya.fr/wp-content/uploads/2021/05/graphiste-1900-2.webp) center no-repeat;}
     #archive-portfolio h2{width: 25%;}
+    .bg-graphiste-small {background-size: cover;}
 
 }
 

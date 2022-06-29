@@ -50,30 +50,30 @@
             </p>
             <div class='col-12 col-sm-6 col-lg-3 d-flex flex-column'>
                 <!-- <span class='contact-order mb-3'>1</span> -->
-                <img src='<?php echo get_template_directory_uri(); ?>/images/icons8-contact-BL.png' width='100' height='100' class='img-zone-contact'/>
+                <img src='<?php echo get_template_directory_uri(); ?>/images/icons8-contact-BL.png' alt='Contact par mail' width='100' height='100' class='img-zone-contact'/>
                 <p>Description du projet par mail</p>
 
             </div>
             <div class='col-12 col-sm-6 col-lg-3 d-flex flex-column'>
                 <!-- <span class='contact-order mb-3'>2</span> -->
-                <img src='<?php echo get_template_directory_uri(); ?>/images/icons8-communication-BL.png' width='100' height='100' class='img-zone-contact'/>
+                <img src='<?php echo get_template_directory_uri(); ?>/images/icons8-communication-BL.png' alt='Echanges autour du projet' width='100' height='100' class='img-zone-contact'/>
 
                 <p>Discutons un peu de votre projet</p>
 
             </div>
             <div class='col-12 col-sm-6 col-lg-3 d-flex flex-column'>
                 <!-- <span class='contact-order mb-3'>3</span>-->
-                <img src='<?php echo get_template_directory_uri(); ?>/images/devis.png' width='100' height='100' class='img-zone-contact'/>
+                <img src='<?php echo get_template_directory_uri(); ?>/images/devis.png' alt='Devis' width='100' height='100' class='img-zone-contact'/>
                 <p>Réalisation du devis sur-mesure</p>
 
             </div>
             <div class='col-12 col-sm-6 col-lg-3 d-flex flex-column'>
                 <!-- <span class='contact-order mb-3'>4</span> -->
-                <img src='<?php echo get_template_directory_uri(); ?>/images/wacom-tablet-BL.png' width='100' height='100' class='img-zone-contact'/>
+                <img src='<?php echo get_template_directory_uri(); ?>/images/wacom-tablet-BL.png' alt='Maquette et réalisation' width='100' height='100' class='img-zone-contact'/>
                 <p>Maquettage et conception du projet</p>
             </div>
             <div class='col-12 pt-3'>
-                <a href='https://akaleya.fr/contactez-nous/' class='bouton btn-blue'>Contactez-nous</a>
+                <a href='https://akaleya.fr/contactez-nous/' target='_blank' class='bouton btn-blue'>Contactez-nous</a>
             </div>
         </div>
     </div>

@@ -19,6 +19,7 @@ assets/js/popper.min.js
 assets/js/validator.min.js
 font/
 template-parts/header/head-meta-google.php
+template-parts/header/head-meta.php
 template-parts/content/content-portfolio-img-copy.php
 
 # Node rules:

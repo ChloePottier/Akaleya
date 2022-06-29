@@ -376,7 +376,7 @@ function add_custom_shortcode(){
             $output = '';
             $loop_services = new WP_Query(array('post_type' => 'service', 'order' => 'ASC','posts_per_page' => '9','post_parent'=> 0));
             while ($loop_services->have_posts()) : $loop_services->the_post();
-            $output .= '<div class="col-12 col-md-6 col-lg-4 service py-5 px-md-4 px-xl-5">
+            $output .= '<div class="col-12 col-md-6 col-lg-4 service py-5">
             <div class="bg-prune-dark card-body"> <div class="title d-flex flex-row align-items-center align-items-md-start align-items-lg-center justify-content-md-center mb-3">';                          
             $image = get_field('icone');
                 if( !empty( $image ) ):

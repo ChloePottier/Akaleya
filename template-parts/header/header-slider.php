@@ -2,7 +2,8 @@
     <div class='row'>
         <!-- Conteneur du slider -->
         <div class='col slider-wrapper my-auto '>
-            <nav class='slider-nav position-absolute '>
+            <!-- <nav class='slider-nav position-absolute '> -->
+            <nav class='slider-nav'>
                 <span class='slider-prev mt-5'></span>
                 <span class='slider-next mt-5'></span>
                 <span class='clear'></span>
