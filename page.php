@@ -1,7 +1,7 @@
 <?php /* Template Name: Modèle de page Akaleya */ 
 get_template_part('template-parts/header/head', 'meta');
 get_template_part('template-parts/header/header', 'page');?>
-<section class='container-fluid content' id='page-'>
+<section class='container-fluid content content-page' id='page-<?php the_ID(); ?>'>
     <div class='container'>
         <div class='row py-5'>
             <?php if (have_posts()) :

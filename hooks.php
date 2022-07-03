@@ -52,3 +52,8 @@ add_action( 'edit_user_profile_update', 'save_extra_user_profile_fields' );
 add_action('shutdown', function() {
     while (@ob_end_flush());
  });
+// stopper contact form 7
+add_filter( 'wpcf7_load_js', '__return_false' );
+add_filter( 'wpcf7_load_css', '__return_false' );
+//activer contact form 7 uniquement sur page contact
+add_action('wp_enqueue_scripts', 'load_wpcf7_scripts');

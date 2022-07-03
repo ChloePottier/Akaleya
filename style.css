@@ -29,10 +29,10 @@ figcaption{font-size: .8rem;font-style: italic;}
 .clear{clear: both;}
 /* Colors */
 .text-black,::placeholder{color:#000!important;}
-.text-prune-dark,h1,#all-posts h2,h2,.btn-blue{color: rgb(91,19,60)!important;}
+.text-prune-dark,h1,#all-posts h2,h2,.btn-blue,.content-page h2{color: rgb(91,19,60)!important;}
 .text-white,#navbarTop ul li a,#navigation ul li a,#copy-akaleya{ color: #fff!important;}
 .text-white-op8{color: rgba(255,255,255,.8);} 
-.text-prune,.partage-reseaux-sociaux a:hover,#breadcrumbs a:hover{color: rgb(145,33,92)!important;}
+.text-prune,.partage-reseaux-sociaux a:hover,#breadcrumbs a:hover,.content-page h3{color: rgb(145,33,92)!important;}
 #wt-cli-privacy-save-btn,.text-blue,#navbarTop ul li a:hover,#navigation ul li a:hover,#nav-portfolio li a,.service h3,#breadcrumbs,.partage-reseaux-sociaux a,
 #footer-menu-legalenotice li a,#copy-akaleya:hover,.services-link{ color: rgb(97,190,223)!important;}
 #link-rs a,.menu-nav ul li a,.link,.partagez,#breadcrumbs a,#page-contact [type='submit']:hover{color: rgb(91,19,60)!important;}
@@ -77,7 +77,7 @@ h3{font-size: 1.8rem;}
 .font-size-24{font-size: 1.5rem;}
 .font-size-21,.block-75 h3{font-size: 1.31rem;}
 .font-size-18{font-size: 1.125rem;}
-.font-size-13,.block-75 p{font-size: .8rem;}
+.font-size-13,.block-75 p,.cli-style-v2{font-size: .8rem;}
 .text-underline{text-decoration: underline;}
 .line-height{line-height: 1.8rem;}
 .bold, #login-form a{font-weight: 600;}

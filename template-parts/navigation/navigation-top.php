@@ -5,7 +5,7 @@
         </div>
         <div class='col d-flex justify-content-end'>
             <nav class='menu-nav text-right d-none d-lg-flex' >
-                <ul class='  d-flex justify-content-end font-family-bebas font-size-21 align-items-center mb-0' itemscope itemtype='https://schema.org/BreadcrumbList'>
+                <ul class='  d-flex justify-content-end font-family-bebas font-size-21 align-items-center mb-0' itemscope itemtype="https://schema.org/BreadcrumbList">
                     <?php  get_template_part('template-parts/navigation/navigation', 'items');?>                    
                 </ul>
             </nav>

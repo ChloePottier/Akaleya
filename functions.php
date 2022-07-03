@@ -4,6 +4,7 @@ require 'hooks.php';
 function akaleya_styles_scripts(){
     wp_enqueue_style('bootstrap', ''. get_template_directory_uri() .'/assets/bootstrap-5.2/bootstrap.min.css');
     wp_enqueue_style('font-awesome', get_template_directory_uri() .'/assets/fontawesome6/css/all.css');
+    wp_enqueue_script('friendly-captcha', get_template_directory_uri() .'/assets/js/friendly-captcha.js');
     wp_enqueue_script('jquery');
     wp_enqueue_script( 'validator',''.get_template_directory_uri(). '/assets/js/validator.min.js' );
     wp_enqueue_script('bootstrap-js', ''.get_template_directory_uri() .'/assets/bootstrap-5.2/bootstrap.min.js', array('jquery', 'popper'), 1, true);
@@ -384,7 +385,7 @@ function add_custom_shortcode(){
                 endif; 
                 $output .= '<h3 class="text-center mb-0">'.get_the_title().'</h3>';
                 $output .= '</div>';
-                $output .= '<p>'. get_field('resume_service').'</p>';
+                $output .= get_field('resume_service');
                 $output .= '<a href='. esc_url(get_permalink()).' class="savoir-plus font-size-24" title="en savoir plus...">+</a>' ;         
                 $output .= '<div class="clear"></div>';
                 $output .= '</div></div>';
@@ -480,4 +481,16 @@ function save_extra_user_profile_fields( $user_id ) {
 	}
 	update_user_meta( $user_id, 'website_user', $_POST['website_user'] );
     update_user_meta( $user_id, 'dashboard_user', $_POST['dashboard_user'] );	
+}
+
+//activer contact form 7 uniquement sur page contact
+function load_wpcf7_scripts() {
+  if ( is_page('contactez-nous') ) {
+    if ( function_exists( 'wpcf7_enqueue_scripts' ) ) {
+      wpcf7_enqueue_scripts();
+    }
+    if ( function_exists( 'wpcf7_enqueue_styles' ) ) {
+      wpcf7_enqueue_styles();
+    }
+  }
 }

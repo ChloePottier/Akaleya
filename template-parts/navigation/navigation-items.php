@@ -1,12 +1,14 @@
-    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'>
+    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
         <a href='http://akaleya.fr/service' itemprop='item'>
-            <span itemprop='name'>Services</span><meta itemprop='position' content='2'/>
+            <span itemprop='name'>Services</span>
         </a>
+        <meta itemprop='position' content='1'/>
     </li>
     <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'>
         <a href='https://akaleya.fr/realisation' itemprop='item'>
-            <span itemprop='name'>Réalisations</span><meta itemprop='position' content='3'/>
+            <span itemprop='name'>Réalisations</span>
         </a>
+        <meta itemprop='position' content='2'/>
     </li>
     
     <!-- <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'>
@@ -17,24 +19,28 @@
     <?php if (! is_user_logged_in()) :?>
         <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'>
         <a href='https://akaleya.fr/contactez-nous/' itemprop='item'>
-            <span itemprop='name'>Contact</span><meta itemprop='position' content='4'/>
+            <span itemprop='name'>Contact</span>
         </a>
+        <meta itemprop='position' content='3'/>
     </li>
     <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'>
         <a href='https://akaleya.fr/espace-membres' itemprop='item'>
-            <span itemprop='name'>Se connecter</span><meta itemprop='position' content='6'/>
+            <span itemprop='name'>Se connecter</span>
         </a>
+        <meta itemprop='position' content='4'/>
     </li>
     <?php else: ?>
     <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'>
         <a href='https://akaleya.fr/espace-membres' class='text-prune-dark' itemprop='item'>
-            <span itemprop='name'>Mon espace</span><meta itemprop='position' content='5'/>
+            <span itemprop='name'>Mon espace</span>
         </a>
+        <meta itemprop='position' content='3'/>
     </li>
     <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'>
         <a href='https://akaleya.fr/contactez-nous/' itemprop='item'>
-            <span itemprop='name'>Contact</span><meta itemprop='position' content='6'/>
+            <span itemprop='name'>Contact</span>
         </a>
+        <meta itemprop='position' content='4'/>
     </li>
         <!-- A activer quand formulaire modification sera créé -->
     <!-- <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'>
@@ -47,17 +53,7 @@
     <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'>
         <a href='<?php echo wp_logout_url(site_url('/')) ?>' class='text-prune-dark' itemprop='item'>
             <span itemprop='name'>Se déconnecter</span>
-            <meta itemprop='position' content='7'/>
         </a>
+        <meta itemprop='position' content='5'/>
     </li>
     <?php endif; ?>
-<!-- 
-
-
-    <nav>
-        <ul>
-            <li>
-                <a href=""></a>
-            </li>
-        </ul>
-    </nav> -->
