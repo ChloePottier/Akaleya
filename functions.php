@@ -2,9 +2,10 @@
 require 'hooks.php';
 // Chargement des styles et des scripts Bootstrap sur WordPress
 function akaleya_styles_scripts(){
+    // wp_enqueue_style('iconcaptcha', ''. get_template_directory_uri() .'/assets/iconcaptcha/assets/css/icon-captcha.min.css');
     wp_enqueue_style('bootstrap', ''. get_template_directory_uri() .'/assets/bootstrap-5.2/bootstrap.min.css');
     wp_enqueue_style('font-awesome', get_template_directory_uri() .'/assets/fontawesome6/css/all.css');
-    wp_enqueue_script('friendly-captcha', get_template_directory_uri() .'/assets/js/friendly-captcha.js');
+    // wp_enqueue_script( 'iconcaptcha-js',''.get_template_directory_uri(). '/assets/iconcaptcha/assets/js/icon-captcha.min.js' );
     wp_enqueue_script('jquery');
     wp_enqueue_script( 'validator',''.get_template_directory_uri(). '/assets/js/validator.min.js' );
     wp_enqueue_script('bootstrap-js', ''.get_template_directory_uri() .'/assets/bootstrap-5.2/bootstrap.min.js', array('jquery', 'popper'), 1, true);
@@ -483,14 +484,26 @@ function save_extra_user_profile_fields( $user_id ) {
     update_user_meta( $user_id, 'dashboard_user', $_POST['dashboard_user'] );	
 }
 
-//activer contact form 7 uniquement sur page contact
+// activer contact form 7 uniquement sur page contact
 function load_wpcf7_scripts() {
-  if ( is_page('contactez-nous') ) {
-    if ( function_exists( 'wpcf7_enqueue_scripts' ) ) {
-      wpcf7_enqueue_scripts();
-    }
-    if ( function_exists( 'wpcf7_enqueue_styles' ) ) {
-      wpcf7_enqueue_styles();
-    }
+  if ( !is_page('contactez-nous') ) {
+    wp_deregister_script( 'contact-form-7' );
   }
+}
+function load_recaptcha_on_contact() {
+	// Dequeue wpcf7-recaptcha
+    wp_dequeue_script('wpcf7-recaptcha');	
+	// Dequeue google-recaptcha
+	wp_dequeue_script( 'google-recaptcha' );
+    global $post;
+    if ( isset( $post->post_content ) AND has_shortcode( $post->post_content, 'contact-form-7' ) ) {
+        if ( function_exists( 'wpcf7_enqueue_scripts' ) ) {
+            wpcf7_enqueue_scripts();
+			wp_enqueue_script('wpcf7-recaptcha');
+            wp_enqueue_script( 'google-recaptcha' );
+        }
+        if ( function_exists( 'wpcf7_enqueue_styles' ) ) {
+			wpcf7_enqueue_styles();
+		}
+    }
 }

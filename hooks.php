@@ -55,5 +55,6 @@ add_action('shutdown', function() {
 // stopper contact form 7
 add_filter( 'wpcf7_load_js', '__return_false' );
 add_filter( 'wpcf7_load_css', '__return_false' );
-//activer contact form 7 uniquement sur page contact
+//activer contact form 7 et recaptcha uniquement sur contact
 add_action('wp_enqueue_scripts', 'load_wpcf7_scripts');
+add_action( 'wp_enqueue_scripts', 'load_recaptcha_on_contact', 20, 0 );

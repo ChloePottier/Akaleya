@@ -77,7 +77,7 @@ h3{font-size: 1.8rem;}
 .font-size-24{font-size: 1.5rem;}
 .font-size-21,.block-75 h3{font-size: 1.31rem;}
 .font-size-18{font-size: 1.125rem;}
-.font-size-13,.block-75 p,.cli-style-v2{font-size: .8rem;}
+.font-size-13,.block-75 p,.cli-style-v2,.form-consent{font-size: .8rem;}
 .text-underline{text-decoration: underline;}
 .line-height{line-height: 1.8rem;}
 .bold, #login-form a{font-weight: 600;}
@@ -87,7 +87,8 @@ h3{font-size: 1.8rem;}
 .text-align-center, #footer-menu-legalenotice{text-align: center;}
 .padding-1rem{padding: 1rem;}
 #all-services .card-body{padding: 1.5rem;}
-#section-services .card-body{padding: 0 3rem!important;}
+form p {margin-bottom: 0;}
+div.form-consent{margin-bottom: 1rem;}
 /* Menus */
 header{overflow: hidden;}
 .fondu{ animation: 0.5s fondu linear;}
@@ -226,6 +227,9 @@ input{padding: 1rem 0; height: 40px;}
     padding: 0 0 0 .5rem;
     margin: .5rem 0;
 }
+.wpcf7-list-item label{display: flex;}
+[type='checkbox']{margin-right: .7rem;}
+
 [type='submit']{width: 100%;border: none;font-size: 1.5rem;padding: 0!important;}
 input.user-login, input.user-pass{padding-left: 1rem;}
 textarea{height: 150px;}
@@ -290,6 +294,8 @@ textarea{height: 150px;}
     .service .title{ height: 37px!important;   white-space: nowrap; overflow:hidden;}
     #archive-portfolio h2{width: 30%;}
     .block-75 p{font-size: .9rem;}
+    #section-services .card-body{padding: 0 1rem!important;}
+
  }
 /* xl */
 @media only screen and  (min-width: 1024px) {

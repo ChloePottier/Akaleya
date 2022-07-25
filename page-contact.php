@@ -2,6 +2,7 @@
 <?php
 get_template_part('template-parts/header/head', 'meta');
 get_template_part('template-parts/header/header', 'page'); ?>
+
 <section class='container-fluid' id='page-contact'>
     <div class='container'>
         <div class='row py-5'>
@@ -11,7 +12,7 @@ get_template_part('template-parts/header/header', 'page'); ?>
                 <p class=' mb-4'>Vous avez un projet graphique ou web ? Quelque soit vos envies, nous pouvons construire une solution à votre image. Contactez-nous ici pour toute demande de renseignements, de devis ou encore de rendez-vous téléphonique.</p>
                 <p class='contact-print'>N'hésitez pas à nous contacter par mail : contact@akaleya.fr</p>
             </div>
-            <div class='col-12 col-md-6 d-flex justify-content-center flex-column pt-2 pt-md-0'>
+            <div class='col-12 col-md-6 d-flex justify-content-center flex-column pt-2 pt-md-0 mb-5'>
                 <img src='https://akaleya.fr/wp-content/uploads/2021/01/Akaleya-logo.svg' alt='Akaleya - web and print logo' title='Akaleya - création graphique et web - Jura' width='289' height='289' class='mx-auto' />
                 <p class='font-family-bebas text-prune-dark font-size-31 line-height text-center pt-5'>
                     Retrouvez-nous <br />aussi sur :</p>
