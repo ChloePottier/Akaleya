@@ -7,7 +7,7 @@ get_template_part('template-parts/header/header', 'page'); ?>
     <div class='container'>
         <div class='row py-5'>
 
-            <div class='col-12 text-prune-dark'>
+            <div class='col-12 '>
                 <h1 class='pt-0 pt-sm-5'>Contactez Akaleya - Web & Print</h1>
                 <p class=' mb-4'>Vous avez un projet graphique ou web ? Quelque soit vos envies, nous pouvons construire une solution à votre image. Contactez-nous ici pour toute demande de renseignements, de devis ou encore de rendez-vous téléphonique.</p>
                 <p class='contact-print'>N'hésitez pas à nous contacter par mail : contact@akaleya.fr</p>

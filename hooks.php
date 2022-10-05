@@ -4,6 +4,8 @@ add_action( 'wp_enqueue_scripts', 'remove_block_library_css' );
 add_filter('upload_mimes', 'wpm_myme_types', 1, 1);
 add_action( 'after_setup_theme', 'akaleya_theme_setup' );
 
+//CPT
+add_action( 'init', 'cp_change_post_object' ); // changer nom articles
 add_action( 'init', 'cpt_slider_init' );
 add_action( 'init', 'cpt_presentation_init' );
 add_action( 'init', 'cpt_services_init' );
@@ -52,9 +54,3 @@ add_action( 'edit_user_profile_update', 'save_extra_user_profile_fields' );
 add_action('shutdown', function() {
     while (@ob_end_flush());
  });
-// stopper contact form 7
-add_filter( 'wpcf7_load_js', '__return_false' );
-add_filter( 'wpcf7_load_css', '__return_false' );
-//activer contact form 7 et recaptcha uniquement sur contact
-add_action('wp_enqueue_scripts', 'load_wpcf7_scripts');
-add_action( 'wp_enqueue_scripts', 'load_recaptcha_on_contact', 20, 0 );

@@ -2,6 +2,7 @@
 .gitignore
 .htaccess
 .git
+--style.css
 screenshot.png
 favicon.ico
 Modification du site.txt

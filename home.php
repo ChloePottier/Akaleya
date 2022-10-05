@@ -1,4 +1,4 @@
-<?php /*Template Name: Akaleya Home*/
+<?php /*Template Name: Akaleya Blog*/
 get_template_part('template-parts/header/head', 'meta');
 get_template_part('template-parts/header/header', 'page');
 

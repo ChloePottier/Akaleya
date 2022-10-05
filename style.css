@@ -1,10 +1,10 @@
 /* Theme Name: Akaleya Espace Membres
 Author: Chloé Pottier
-Description: Thème Akaleya : graphisme et développement web. Création d'un espace membres
-Version: 1.6
+Description: Thème Akaleya : graphisme et développement web. Création d'un espace membres, blog
+Version: 1.7
 Licence: 1.0
 License URI: https://github.com/Akaleya
-Text Domain: akaleya-espacemembres-1.6*/
+Text Domain: akaleya-espacemembres-1.7*/
 /* #wpadminbar{display: none!important;} */
 .font-arial,body{font-family: Arial, Helvetica, sans-serif;}
 body{font-size: 100%!important;}
@@ -16,26 +16,24 @@ a:hover{color: rgb(91,19,60);}
 .pt-9{padding-top: 9rem;}
 .mt-7{margin-top: 1rem;}
 .pb-sm-6{padding-bottom: 4rem;}
-ul li {list-style: none;}
-#content-post ul{margin-left: 2rem;}
-/* #content-post ul li{list-style: inside;list-style-image:url(https://localhost/akaleya/wp-content/themes/akaleya-espace-membres2/images/Star1-blue.svg);} */
-#content-post ul li{list-style: inside;list-style-image:url(https://akaleya.fr/wp-content/themes/akaleya-espacemembres-1.6/images/Star1-blue.svg);}
-#content-post h1,#content-post h2,#content-post h3,#content-post h4{padding-bottom: 1rem;}
-#content-post p{padding: 0 0 1rem 1rem;}
-/* ul{margin-bottom: 0!important; padding-left: 0!important;} */
-ul{padding-left: 0!important;}
+nav ul{padding-left: 0!important;}
+nav ul li {list-style: none;}
+ul li{list-style: inside;list-style-image:url(https://akaleya.fr/wp-content/themes/akaleya-espacemembres-1.7/images/Star1-blue.svg);}
+h1:not(.home h1),h2:not(.home h2),h3:not(.home h3),h4:not(.home h4){padding-bottom: 1rem;}
+article p{padding: 0 0 1rem 1rem;}  
 img{height: auto!important; vertical-align: middle;}
-figcaption{font-size: .8rem;font-style: italic;}
+figcaption{font-style: italic;}
 .clear{clear: both;}
 /* Colors */
 .text-black,::placeholder{color:#000!important;}
+.text-prune-extra-dark,#portfolio p:not(.home #portfolio p), #page-contact{color: #3e0224 !important;}
 .text-prune-dark,h1,#all-posts h2,h2,.btn-blue,.content-page h2{color: rgb(91,19,60)!important;}
-.text-white,#navbarTop ul li a,#navigation ul li a,#copy-akaleya{ color: #fff!important;}
+.text-white,#navbarTop ul li a,#navigation ul li a,#copy-akaleya,a.lien-bg-blue:hover{ color: #fff!important;}
 .text-white-op8{color: rgba(255,255,255,.8);} 
 .text-prune,.partage-reseaux-sociaux a:hover,#breadcrumbs a:hover,.content-page h3{color: rgb(145,33,92)!important;}
 #wt-cli-privacy-save-btn,.text-blue,#navbarTop ul li a:hover,#navigation ul li a:hover,#nav-portfolio li a,.service h3,#breadcrumbs,.partage-reseaux-sociaux a,
 #footer-menu-legalenotice li a,#copy-akaleya:hover,.services-link{ color: rgb(97,190,223)!important;}
-#link-rs a,.menu-nav ul li a,.link,.partagez,#breadcrumbs a,#page-contact [type='submit']:hover{color: rgb(91,19,60)!important;}
+#link-rs a,.menu-nav ul li a,.link,.partagez,#breadcrumbs a,#page-contact [type='submit']:hover, a.lien-bg-blue{color: rgb(91,19,60)!important;}
 #link-rs-footer,#link-rs a:hover, .link:hover,.savoir-plus:hover{color: rgb(97,190,223)!important;}
 .text-yellow, #footer-menu-legalenotice li a:hover,.services-link:hover,#link-rs-footer a:hover,.btn-blog:hover,
 .savoir-plus{ color: #FFDF30!important;}
@@ -76,19 +74,21 @@ h3{font-size: 1.8rem;}
 .font-size-56{font-size: 2rem;}
 .font-size-24{font-size: 1.5rem;}
 .font-size-21,.block-75 h3{font-size: 1.31rem;}
+#content-post, #content-service{font-size: 1.1rem;}
 .font-size-18{font-size: 1.125rem;}
-.font-size-13,.block-75 p,.cli-style-v2,.form-consent{font-size: .8rem;}
+.font-size-13,.block-75 p,.cli-style-v2,figcaption,#breadcrumbs,.form-consent, .date-article{font-size: .8rem;}
 .text-underline{text-decoration: underline;}
 .line-height{line-height: 1.8rem;}
 .bold, #login-form a{font-weight: 600;}
-.text-justify{text-align: justify;}
+.text-justify,#content-post p,#content-espacemembres p,article p{text-align: justify;}
 .text-shadow{text-shadow: 5px 5px 5px black;}
-#all-posts .card img, #espace_membres .card img{width: 100%;}
+#all-posts .card img, #espace_membres .card img, #blog .card img{width: 100%;}
 .text-align-center, #footer-menu-legalenotice{text-align: center;}
 .padding-1rem{padding: 1rem;}
 #all-services .card-body{padding: 1.5rem;}
 form p {margin-bottom: 0;}
 div.form-consent{margin-bottom: 1rem;}
+/* iframe{width: auto!important;} */
 /* Menus */
 header{overflow: hidden;}
 .fondu{ animation: 0.5s fondu linear;}
@@ -160,8 +160,6 @@ li .separate-menu{background: #fff; height: 3px; display: inline-block; width: 1
 /* CONTENT */
 .content{min-height: 75vh;}
 /* SERVICES */
-/* .service{margin-bottom: 3rem;} */
-/* .service:last-child{margin-bottom: 0;} */
 .service .title{ height: 37px!important;   white-space: nowrap; overflow:hidden;}
 .service h3{ font-size: 1.5rem!important;}
 .service p {text-align: justify; line-height: 1.8rem;}
@@ -169,7 +167,6 @@ li .separate-menu{background: #fff; height: 3px; display: inline-block; width: 1
     line-height: 13px;
     padding: 5px;}
 /* PORTFOLIO */
- /* #portfolio .card{height:auto;} */
 .portfolio-gallery-container{height: auto; max-width: 370px;}
 .card{overflow: hidden; border: none; border-radius: 0!important;}
 .card__side {
@@ -207,12 +204,12 @@ li .separate-menu{background: #fff; height: 3px; display: inline-block; width: 1
 #nav-portfolio li a:hover,#nav-portfolio li .active2{color: rgb(60,0,34)!important;}
 .h-250{height:250px;}
 .border{border: solid 1px #b2b2b2 !important;}
-#portfolio p,#content-post p{text-align: justify;}
 /* Contact */
 .img-zone-contact{margin: 0 auto;}
 .contact-print{display: none;}
 .btn-portfolio{top:0;}
 input{padding: 1rem 0; height: 40px;}
+#matomo_optout_checkbox{height:auto!important;}
 #contact .w-75, .wp-block-contact-form-7-contact-form-selector{width: 100%!important;}
 #contact .w-75{font-size: .9rem; text-align: justify;}
 .wp-block-contact-form-7-contact-form-selector{padding-bottom: 4rem;}
@@ -228,8 +225,7 @@ input{padding: 1rem 0; height: 40px;}
     margin: .5rem 0;
 }
 .wpcf7-list-item label{display: flex;}
-[type='checkbox']{margin-right: .7rem;}
-
+[type='checkbox']{margin-right: .7rem;accent-color: rgb(97,190,223);}
 [type='submit']{width: 100%;border: none;font-size: 1.5rem;padding: 0!important;}
 input.user-login, input.user-pass{padding-left: 1rem;}
 textarea{height: 150px;}
@@ -237,9 +233,7 @@ textarea{height: 150px;}
 #link-rs a{margin-right: 1.5rem;}
 #link-rs a:last-child,#link-rs-footer a:last-child{margin-right: 0;}
 .envoi{ top: 26vh; width: 100vw;}
-.grecaptcha-badge{visibility: hidden;}
 /* Les autres pages */
-#breadcrumbs{font-size: .8rem;}
 .bouton{border: none; font-size: 1.5rem;padding: .3rem .5rem;}
 .btn-url,[type='submit']{color: #fff; background: rgb(60,0,34);}
 .btn-url:hover,[type='submit']:hover{color:rgb(60,0,34); background: rgb(97,190,223); }
@@ -249,8 +243,8 @@ textarea{height: 150px;}
 #login-form p label{text-align: center; font-weight: 600;}
 #login-form .login-remember label{display: flex; align-items: center;}
 #login-form .login-remember label input{margin-right: .8rem;}
-#content-post .wp-block-image img{box-shadow: #cfcfcf 2px 2px 8px;}
-#content-post .box-shadow-none img{box-shadow: none!important;}
+#content-post .wp-block-image img,#content-espacemembres .wp-block-image img{box-shadow: #cfcfcf 2px 2px 8px;}
+#content-post .box-shadow-none img,#content-espacemembres .box-shadow-none img{box-shadow: none!important;}
 .wp-block-image .aligncenter{text-align: center;}
 .page-404{height: 90vh;}
 /* sm */
@@ -267,6 +261,8 @@ textarea{height: 150px;}
     .slider-prev{background:url(https://akaleya.fr/wp-content/uploads/2021/01/precedent.png); float:left;}
     .slider-next{background:url(https://akaleya.fr/wp-content/uploads/2021/01/suivant.png);float:right;}
     .service h3{font-size: 1.75rem!important;}
+    #content-post, #content-service{font-size: 1.2rem;}
+
 }
 /* md */
 @media only screen and (min-width: 768px){
