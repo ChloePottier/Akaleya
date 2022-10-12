@@ -1,5 +1,6 @@
 <?php
 require 'hooks.php';
+require 'hcaptcha.php';
 // Chargement des styles et des scripts Bootstrap sur WordPress
 function akaleya_styles_scripts(){
     wp_enqueue_style('bootstrap', ''. get_template_directory_uri() .'/assets/bootstrap-5.2/bootstrap.min.css');
@@ -399,12 +400,12 @@ function add_custom_shortcode(){
             $loop_services = new WP_Query(array('post_type' => 'service', 'order' => 'ASC','posts_per_page' => '9','post_parent'=> 0));
             while ($loop_services->have_posts()) : $loop_services->the_post();
             $output .= '<div class="col-12 col-md-6 col-lg-4 service py-5">
-            <div class="bg-prune-dark card-body"> <div class="title d-flex flex-row align-items-center align-items-md-start align-items-lg-center justify-content-md-center mb-3">';                          
+            <div class="bg-prune-dark card-body"> <div class="title">';                          
             $image = get_field('icone');
                 if( !empty( $image ) ):
-                    $output .= '<img src="'. esc_url($image['url']) .'" width="40" height="30" alt="'.  esc_attr($image['alt']) .'" class="me-3"/>';
+                    $output .= '<img src="'. esc_url($image['url']) .'" width="150" height="125" alt="'.  esc_attr($image['alt']) .'" class="d-block mx-auto"/>';
                 endif; 
-                $output .= '<h3 class="text-center mb-0 pb-0">'.get_the_title().'</h3>';
+                $output .= '<h3 class="text-center mb-3 pb-0">'.get_the_title().'</h3>';
                 $output .= '</div>';
                 $output .= get_field('resume_service');
                 $output .= '<a href='. esc_url(get_permalink()).' class="savoir-plus font-size-24" title="en savoir plus...">+</a>' ;         
@@ -503,3 +504,5 @@ function save_extra_user_profile_fields( $user_id ) {
 	update_user_meta( $user_id, 'website_user', $_POST['website_user'] );
     update_user_meta( $user_id, 'dashboard_user', $_POST['dashboard_user'] );	
 }
+
+

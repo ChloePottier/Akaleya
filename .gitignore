@@ -2,6 +2,7 @@
 .gitignore
 .htaccess
 .git
+hcaptcha.php
 --style.css
 screenshot.png
 favicon.ico
