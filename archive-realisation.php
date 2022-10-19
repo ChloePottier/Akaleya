@@ -1,7 +1,8 @@
 <?php /* Template Name: Modèle des archives Réalisations */ ?>
 
-<?php get_template_part('template-parts/header/head', 'meta');
-get_template_part('template-parts/header/header', 'page'); ?>
+<?php get_template_part('template-parts/header/head', 'meta'); ?>
+ <meta property=" og:image " content='<?php echo get_template_directory_uri(); ?>/images/akaleya-header.jpg'/>
+ <?php get_template_part('template-parts/header/header', 'page'); ?>
 <section id='archive-portfolio' class='container-fluid'>
     <div class='container py-5'>
         <div class='row '>

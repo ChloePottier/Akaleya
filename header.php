@@ -6,6 +6,7 @@
  * @version 1.0
  */
 ?>
+</head>
 <body id='top' <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <header>

@@ -1,7 +1,8 @@
 <?php /* Template Name: Page Contact Akaleya */ ?>
 <?php
-get_template_part('template-parts/header/head', 'meta');
-get_template_part('template-parts/header/header', 'page'); ?>
+get_template_part('template-parts/header/head', 'meta'); ?>
+<meta property=" og:image " content='<?php echo get_template_directory_uri(); ?>/images/akaleya-header.jpg'/>
+<?php get_template_part('template-parts/header/header', 'page'); ?>
 
 <section class='container-fluid' id='page-contact'>
     <div class='container'>

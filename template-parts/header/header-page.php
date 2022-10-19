@@ -6,6 +6,7 @@
  * @version 1.0
  */
 ?>
+</head>
 <body id='top'>
     <?php if ( is_front_page() ) {
         echo '<header onload=sliding() class="">';

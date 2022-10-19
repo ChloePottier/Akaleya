@@ -1,6 +1,7 @@
 <?php /* Template Name: Modèle des archives Espace Membres Akaleya */ 
-get_template_part('template-parts/header/head', 'meta');
-get_template_part('template-parts/header/header', 'page');?>
+get_template_part('template-parts/header/head', 'meta'); ?>
+<meta property=" og:image " content='<?php echo get_template_directory_uri(); ?>/images/akaleya-header.jpg'/>
+<?php get_template_part('template-parts/header/header', 'page');?>
 <scroll-page id='espace_membres'>
     <section class='container-fluid content' id='private_zone'>
         <div class='container pb-5'>

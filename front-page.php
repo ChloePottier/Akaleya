@@ -1,7 +1,8 @@
 <?php /*Template Name: AkaleyaAccueil*/?>
 
-<?php get_template_part('template-parts/header/head','meta');
-    get_header(); 
+<?php get_template_part('template-parts/header/head','meta');?>
+    <meta property=" og:image " content='<?php echo get_template_directory_uri(); ?>/images/akaleya-header.jpg'/>
+    <?php get_header(); 
     get_template_part('template-parts/content/content','home');
 ?>
 
