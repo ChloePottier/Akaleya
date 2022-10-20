@@ -184,7 +184,7 @@ function create_galerie_tax() {
         'show_in_rest'      => true,
         'rest_base'         => 'genre',
     );
-    register_taxonomy('type',array('realisation'),$args);
+    register_taxonomy('type','realisation',$args);
 }
 //Custom post type liens Externes
 function cpt_link_init() {
