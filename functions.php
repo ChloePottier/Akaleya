@@ -297,7 +297,7 @@ function create_tutos_tax() {
         'show_in_rest'      => true,
         'rest_base'         => 'categories-tutos',
     );
-    register_taxonomy('categorie-tutos',array('espace-membres'),$args);
+    register_taxonomy('categorie-tutos','espace-membres',$args);
 }
 
 /*** BOUTONS DE PARTAGE RESEAUX SOCIAUX ***/
