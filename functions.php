@@ -49,8 +49,7 @@ function cp_change_post_object() {
         $labels->not_found_in_trash = 'Aucun article dans la corbeille';
         $labels->all_items = 'Tous les articles';
         $labels->menu_name = 'Blog';
-        $labels->name_admin_bar = 'Blog';
-    
+        $labels->name_admin_bar = 'Blog';    
 }
 
 //Custom post type
