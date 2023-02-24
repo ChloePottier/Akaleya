@@ -5,7 +5,7 @@ get_template_part('template-parts/header/head', 'meta');?>
 <section class='container-fluid content' id='index'>
     <div class='container'>
         <div class='row py-5'>
-        <?php get_template_part('template-parts/content/loop/loop', 'template-file-post'); ?>  
+            <?php get_template_part('template-parts/content/loop/loop', 'template-file-post'); ?>  
         </div>
     </div>
 </section>

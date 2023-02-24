@@ -16,12 +16,7 @@
         </a>
         <meta itemprop='position' content='3'/>
     </li>
-    
-    <!-- <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'>
-        <a href='<?php //echo esc_url( home_url( "/" ) ); ?>category/non-classe/' itemprop='item'>
-            <span itemprop='name'>Blog</span><meta itemprop='position' content='5'/>
-        </a>
-    </li> -->
+
     <?php if (! is_user_logged_in()) :?>
         <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'>
         <a href='https://akaleya.fr/contactez-nous/' itemprop='item'>
@@ -31,7 +26,7 @@
     </li>
     <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'>
         <a href='https://akaleya.fr/espace-membres' itemprop='item'>
-            <span itemprop='name'>Se connecter</span>
+            <span itemprop='name'>Espace Membres</span>
         </a>
         <meta itemprop='position' content='5'/>
     </li>

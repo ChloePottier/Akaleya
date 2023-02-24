@@ -310,7 +310,10 @@ function my_sharing_buttons($content) {
         $linkedInURL = esc_url( 'https://www.linkedin.com/shareArticle?mini=true&url='.$myCurrentURL );
         $email_share = esc_url( 'mailto:?subject='.$myCurrentTitle.'&BODY=Voici un article intéressant sur "'.$myCurrentTitle.'". En savoir plus : '.$myCurrentURL) ;
         // Ajout des bouton en bas des articles et des pages
-        $content .= '<div class="text-end date-article pt-0 py-sm-3 text-prune-extra-dark">publié le '.get_the_date().'</div>';
+        if(get_post_type() != 'realisation'):
+            $content .= '<div class="text-end date-article pt-0 py-sm-3 text-prune-extra-dark">publié le '.get_the_date().'</div>';
+
+        endif;
         $content .= '<div class="partage-reseaux-sociaux  d-flex align-items-center justify-content-end">';
         $content .= __('<span class="fw-bold me-2 partagez">Partagez  : </span>');
         $content .= '<a class="share-facebook me-2" href="'.$facebookURL.'&t='.$myCurrentTitle.'" target="_blank" rel="noopener"><i class="fab fa-facebook"></i></a>';
@@ -395,16 +398,23 @@ function add_custom_shortcode(){
                 'type' => 'service',
                 'perpage' => 9
             ), $atts));
-            $output = '';
+            if(is_front_page(  )):
+                $output = '<div class="row  d-flex justify-content-md-center justify-content-lg-start">
+                        <div class="col-12 text-center pb-3">
+                            <h2 class="text-white pb-3 font-size-56">Les services proposés</h2>
+                        </div>';
+            else:
+                $output = '';
+            endif;
             $loop_services = new WP_Query(array('post_type' => 'service', 'order' => 'ASC','posts_per_page' => '9','post_parent'=> 0));
             while ($loop_services->have_posts()) : $loop_services->the_post();
             $output .= '<div class="col-12 col-md-6 col-lg-4 service py-5">
-            <div class="bg-prune-dark card-body"> <div class="title">';                          
+                            <div class="bg-prune-dark card-body"> <div class="title">';                          
             $image = get_field('icone');
                 if( !empty( $image ) ):
                     $output .= '<img src="'. esc_url($image['url']) .'" width="150" height="125" alt="'.  esc_attr($image['alt']) .'" class="d-block mx-auto"/>';
                 endif; 
-                $output .= '<h3 class="text-center mb-3 pb-0">'.get_the_title().'</h3>';
+                $output .= '<h3 class="text-center mb-3 pb-0 text-white">'.get_the_title().'</h3>';
                 $output .= '</div>';
                 $output .= get_field('resume_service');
                 $output .= '<a href='. esc_url(get_permalink()).' class="savoir-plus font-size-24" title="en savoir plus...">+</a>' ;         
