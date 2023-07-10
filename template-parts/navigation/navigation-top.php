@@ -1,7 +1,9 @@
 <div class='container d-none d-lg-block'>
     <div class='row bg-white'>
         <div class='col d-flex align-items-center'>
-            <?php the_custom_logo(  ) ?>
+            <?php if (function_exists('the_custom_logo')){
+                the_custom_logo();
+        } ?>
         </div>
         <div class='col d-flex justify-content-end'>
             <nav class='menu-nav text-right d-none d-lg-flex' >

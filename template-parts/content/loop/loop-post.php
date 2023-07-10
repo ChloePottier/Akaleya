@@ -4,7 +4,6 @@ if ($loop->have_posts()) :
         <div class='card col-12 col-md-6 col-lg-4 mt-5' >
             <div class='card d-md-none'><?php the_post_thumbnail('thumbnail_blog_xs'); ?></div>
             <div class='card d-none d-md-block '><?php the_post_thumbnail('thumbnail_blog_md'); ?></div>
-            <!-- <div class='card d-none d-lg-block'><?php //the_post_thumbnail('thumbnail_blog_lg'); ?></div> -->
             <div class='card-body bg-prune-dark text-white-op8'>
                 <h4 class='card-title font-family-bebas text-white'><?php the_title(); ?></h4>
                 <?php the_excerpt(); ?>

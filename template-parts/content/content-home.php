@@ -37,7 +37,7 @@
   <?php get_template_part('template-parts/content/content', 'gallery'); ?>
 </scroll-page>
 
-<scroll-page id='section-contact'>
+<scroll-page id='section-contact' class='container-fluid'>
     <div class='container mb-5'>
         <div class='row bg-prune-medium text-white py-5 text-center'>
             <h2 class='col-12 text-white mb-2'>Un projet graphique ou web ?</h2>

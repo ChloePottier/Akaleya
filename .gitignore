@@ -2,6 +2,7 @@
 .gitignore
 .htaccess
 .git
+style copy.css
 hcaptcha.php
 --style.css
 screenshot.png

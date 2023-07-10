@@ -6,7 +6,7 @@
                     <?php $loop = new WP_Query(array('post_type' => 'liens',  'order'   => 'ASC'));
                     if ($loop->have_posts()) :
                         while ($loop->have_posts()) : $loop->the_post(); ?>
-                            <a href='<?php the_field("url_profil"); ?>' target='_blank' class='d-flex'>
+                            <a href='<?php the_field('url_profil'); ?>' target='_blank' class='d-flex' arial-label='<?php the_title(); ?>, profil Akaleya'>
                                 <?php the_field('icone'); ?>
                             </a>
                     <?php endwhile;

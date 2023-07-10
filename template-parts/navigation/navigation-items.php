@@ -1,11 +1,11 @@
 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-        <a href='http://akaleya.fr/blog' itemprop='item'>
+        <a href='https://akaleya.fr/blog' itemprop='item'>
             <span itemprop='name'>Blog</span>
         </a>
         <meta itemprop='position' content='1'/>
     </li>
     <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-        <a href='http://akaleya.fr/service' itemprop='item'>
+        <a href='https://akaleya.fr/service' itemprop='item'>
             <span itemprop='name'>Services</span>
         </a>
         <meta itemprop='position' content='2'/>

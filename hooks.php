@@ -52,3 +52,4 @@ add_action( 'edit_user_profile_update', 'save_extra_user_profile_fields' );
 add_action('shutdown', function() {
     while (@ob_end_flush());
  });
+ add_action( 'wp_enqueue_scripts', 'wps_deregister_styles', 100 );

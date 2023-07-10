@@ -18,7 +18,7 @@
             <div class='row'>
                 <div class='col d-flex align-items-center'>
                     <a href='<?php echo esc_url( home_url( '/' ) ); ?>'>
-                        <img class='py-4 py-md-5' src= '<?php echo esc_url( home_url( '/' ) ); ?>wp-content/uploads/2021/01/akaleya-logo-menu-bl.png' />
+                        <img class='py-4 py-md-5' src= '<?php echo esc_url( home_url( '/' ) ); ?>wp-content/uploads/2023/07/Akaleya-logo-menu-200x60-BL.svg' />
                     </a>
                 </div>
                 <div class='col d-flex justify-content-end' id='menu-page'>

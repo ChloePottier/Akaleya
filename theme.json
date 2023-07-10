@@ -6,17 +6,17 @@
                 {
                     "name": "Prune Dark",
                     "slug": "prune_dark",
-                    "color": "#5b133c"
+                    "color": "#420330"
                 },
                 {
                     "name": "Prune",
                     "slug": "prune",
-                    "color": "#91215c"
+                    "color": "#54043E"
                 },
                 {
                     "name": "Bleu",
                     "slug": "bleu",
-                    "color": "#61bedf"
+                    "color": "rgb(162,218,234)"
                 },
                 {
                     "name": "Light Grey",
@@ -27,6 +27,11 @@
                     "name": "Blanc",
                     "slug": "blanc",
                     "color": "#ffffff"
+                },
+                {
+                    "name": "Blanc cassé",
+                    "slug": "blanc-casse",
+                    "color": "rgba(255,255,255,.8)"
                 }
             ]
         },

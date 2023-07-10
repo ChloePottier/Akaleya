@@ -7,7 +7,7 @@
                 </div>
             </div>
             <div class='row pb-5'>
-                <?php $loop = new WP_Query( array('post_type'  => 'post', 'post_status' => 'publish','order' => 'ASC', 'paged' => $paged) );
+                <?php $loop = new WP_Query( array('post_type'  => 'post', 'post_status' => 'publish','order' => 'DESC', 'paged' => $paged) );
                 if(isset($loop->posts[0])):
                     require 'loop/loop-post.php';
                 else:

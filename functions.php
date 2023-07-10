@@ -1,6 +1,8 @@
 <?php
 require 'hooks.php';
 require 'hcaptcha.php';
+
+
 // Chargement des styles et des scripts Bootstrap sur WordPress
 function akaleya_styles_scripts(){
     wp_enqueue_style('bootstrap', ''. get_template_directory_uri() .'/assets/bootstrap-5.2/bootstrap.min.css');
@@ -28,9 +30,9 @@ function akaleya_theme_setup(){
     add_theme_support( 'title-tag' );
     add_theme_support( 'post-thumbnails' );
     add_theme_support( 'custom-logo',array(
-        'height'      => 52,
+        'height'      => 60,
         'width'       => 200,
-        'flex-width'  => true,
+        'flex-width'  => false,
     ) );
 }
 // Articles devient Blog
@@ -513,5 +515,7 @@ function save_extra_user_profile_fields( $user_id ) {
 	update_user_meta( $user_id, 'website_user', $_POST['website_user'] );
     update_user_meta( $user_id, 'dashboard_user', $_POST['dashboard_user'] );	
 }
-
-
+// Disabled guthenberg styles
+function wps_deregister_styles() {
+    wp_dequeue_style( 'global-styles' );
+}
